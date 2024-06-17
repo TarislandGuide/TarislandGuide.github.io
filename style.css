@@ -108,10 +108,13 @@ body {
 .yellow {
     color: gold;
 }
+.red {
+    color: rgb(216, 134, 27)
+}
 .dot {
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #9b6e38;
+    background-color: #a56921;
     border-radius: 50%;
 }
 .treeItem p {
