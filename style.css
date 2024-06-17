@@ -11,11 +11,9 @@ body {
     background: var(--brown);
     min-height: 100vh;
     box-sizing: border-box;
-    padding-top: 1.5rem;
     min-width: 100vw;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    margin: 0 auto 5rem auto;
-    color: black;
+    color: var(--beige);
   }
 
 .wrapper {
