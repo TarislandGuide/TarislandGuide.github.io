@@ -1,8 +1,17 @@
+:root {
+    --brown: rgb(65, 56, 49);
+    --beige: #ffe4c4;
+    --sepia: #9b6e38;
+    --green: rgb(40, 202, 40);
+    --yellow: gold;
+    --red: rgb(216, 134, 27);
+    }
+
 body {
-    background: rgb(65, 56, 49);
+    background: var(--brown);
     min-height: 100vh;
-      box-sizing: border-box;
-      padding-top: 1.5rem;
+    box-sizing: border-box;
+    padding-top: 1.5rem;
     min-width: 100vw;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     margin: 0 auto 5rem auto;
@@ -23,7 +32,7 @@ body {
 
 .levelReq {
     display: grid;
-    background-image: linear-gradient(90deg, #ffe4c4 0%, #ffe4c4 55%, #9b6e38 55%, #9b6e38 70%, #ffe4c4 70%, #ffe4c4 100%);
+    background-image: linear-gradient(90deg, var(--beige) 0%, var(--beige) 55%, var(--sepia) 55%, var(--sepia) 70%, var(--beige) 70%, var(--beige) 100%);
     grid-gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -34,7 +43,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto auto auto;
-    background-color: #ffe4c4;
+    background-color: var(--beige);
     grid-gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -43,7 +52,7 @@ body {
 }
 .corePassives {
     display: grid;
-    background-color: #9b6e38;
+    background-color: var(--sepia);
     grid-template-rows: auto auto auto auto auto auto auto auto;
     grid-gap: 1rem;
     padding-top: 1rem;
@@ -55,18 +64,18 @@ body {
     display: grid;
     grid-template-columns: 2rem 4fr;
     grid-gap: 0;
-    background-color: #ffe4c4;
+    background-color: var(--beige);
 }
 .ultimateSkills {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-.treeItem {
+.treeItem, .skillitem {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,6 +84,10 @@ body {
 .treeItem img, .popup img {
     width: 5rem;
     border-radius: 0.5rem;
+}
+.skillItem img {
+    width: 5rem;
+    border-radius: 50%;
 }
 .blank {
     height: 4.6rem;
@@ -94,8 +107,8 @@ body {
     position: relative;
     width: 25rem;
     min-height: 20rem;
-    background-color: rgb(59, 54, 50);
-    color:beige;
+    background-color: var(--brown);
+    color:var(--beige);
     margin: auto;
     margin-top: 2.5rem;
     z-index: 10;
@@ -103,29 +116,29 @@ body {
     border-radius: 1rem;
 }
 .green {
-    color: rgb(40, 202, 40);
+    color: var(--green);
 }
 .yellow {
-    color: gold;
+    color: var(--yellow);
 }
 .red {
-    color: rgb(216, 134, 27)
+    color: var(--red);
 }
 .dot {
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #a56921;
+    background-color: var(--sepia);
     border-radius: 50%;
 }
 .treeItem p {
     position: absolute;
     z-index: 3;
-    color:beige;
+    color:var(--beige);
 }
 
 @media screen and (max-width: 450px) {
     body {
-        background-color: bisque;
+        background-color: var(--beige);
     }
     .popup {
         width: 20rem;
