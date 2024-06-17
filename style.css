@@ -92,7 +92,6 @@ body {
 .blank {
     height: 4.6rem;
 }
-
 #skillOverlay {
     transition: opacity 5ms;
     display: none;
@@ -129,6 +128,18 @@ body {
     width: 1.5rem;
     background-color: var(--sepia);
     border-radius: 50%;
+}
+.rotate {
+    writing-mode:vertical-rl;
+    color: var(--beige);
+    z-index: 3;
+    position: absolute;
+}
+.rect {
+    height: 7rem;
+    width: 1.5rem;
+    background-color: var(--sepia);
+    border-radius: 0.5rem;
 }
 .treeItem p {
     position: absolute;
