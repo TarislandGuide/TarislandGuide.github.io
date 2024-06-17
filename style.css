@@ -171,6 +171,9 @@ body {
     .treeItem img, .popup img {
         max-width: 4.5rem;
     }
+    .skillItem img {
+        max-width: 4rem;
+    }
     .talents {
         grid-gap: 0.75rem;
     }
