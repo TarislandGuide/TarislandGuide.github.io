@@ -25,3 +25,8 @@ function ultPopup(value) {
     document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: " 
     + skill.range + "<br>Cast Time: " + skill.speed + "<br>Cooldown: " + skill.cooldown + "<br><br>" + skill.description;
 }
+
+function selectSpec(active, inactive) {
+    document.getElementById(active).style.display = "block"
+    document.getElementById(inactive).style.display = "none"
+}
