@@ -21,24 +21,13 @@ body {
     max-width: 30rem;
     position: relative;
 }
-#paladin {
+#warrior, #paladinGuard, #bardSolo, #warrWarShield, #mageFrost, #rangerHunting {
     display: block;
 }
-#paladinGuard {
-    display: block;
-}
-#paladinJustice {
+#bard, #paladin, #necro, #mage, #ranger, #priest, #barbarian, #shadow, #paladinJustice, #bardHarmony, #warrWrathful, #mageFlame, #rangerTamedBeast {
     display: none;
 }
-#bard {
-    display: none;
-}
-#bardSolo {
-    display: block;
-}
-#bardHarmony {
-    display: none;
-}
+
 .skillTree {
     display: grid;
     grid-template-columns: 2rem 3fr 1fr;
