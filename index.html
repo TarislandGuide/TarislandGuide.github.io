@@ -33,14 +33,14 @@
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
                 <div class="ultimateSkills">
-                    <div class="skillItem blank"></div>
-                    <div class="skillItem"><img loading="lazy" src="./Icons/Warrior/WarShield/warShield.png" onclick="selectSpec('warrWarShield', 'warrWrathful')"></div>
-                    <div class="skillItem"><img loading="lazy" src="./Icons/Warrior/Wrathful/wrathful.png" onclick="selectSpec('warrWrathful', 'warrWarShield')"></div>
-                    <div class="skillItem blank"></div>
+                    <div class="blank right"><p><b>War<br>Shield</b></p></div>
+                    <div class="skillItem"><img loading="lazy" src="./Icons/Warrior/WarShield/warShield.png" onclick="selectSpec('warriorWarShield', 'warriorWrathful')"></div>
+                    <div class="skillItem"><img loading="lazy" src="./Icons/Warrior/Wrathful/wrathful.png" onclick="selectSpec('warriorWrathful', 'warriorWarShield')"></div>
+                    <div class="blank left"><p><b>Wrathful</b></p></div>
                 </div>
             </div>
 
-            <div id="warrWarShield">
+            <div id="warriorWarShield">
             <div class="ultimates">
             <div class="levelReq">
                 <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
@@ -134,7 +134,7 @@
             </div>
             </div>
 
-            <div id="warrWrathful">
+            <div id="warriorWrathful">
             <div class="ultimates">
             <div class="levelReq">
                 <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
@@ -236,10 +236,10 @@
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
                 <div class="ultimateSkills">
-                    <div class="skillItem blank"></div>
+                    <div class="blank right"><p><b>Frost</b></p></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Mage/Frost/frost.png" onclick="selectSpec('mageFrost', 'mageFlame')"></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Mage/Flame/flame.png" onclick="selectSpec('mageFlame', 'mageFrost')"></div>
-                    <div class="skillItem blank"></div>
+                    <div class="blank left"><p><b>Flame</b></p></div>
                 </div>
             </div>
 
@@ -439,10 +439,10 @@
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
                 <div class="ultimateSkills">
-                    <div class="skillItem blank"></div>
+                    <div class="blank right"><p><b>Hunting</b></p></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Ranger/Hunting/hunting.png" onclick="selectSpec('rangerHunting', 'rangerTamedBeast')"></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Ranger/TamedBeast/tamedBeast.png" onclick="selectSpec('rangerTamedBeast', 'rangerHunting')"></div>
-                    <div class="skillItem blank"></div>
+                    <div class="blank left"><p><b>Tamed<br>&nbsp;Beast</b></p></div>
                 </div>
             </div>
 
@@ -642,10 +642,10 @@
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
                 <div class="ultimateSkills">
-                    <div class="skillItem blank"></div>
+                    <div class="blank right"><p><b>Solo</b></p></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Bard/Solo/Solo.png" onclick="selectSpec('bardSolo', 'bardHarmony')"></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Bard/Harmony/harmony.png" onclick="selectSpec('bardHarmony', 'bardSolo')"></div>
-                    <div class="skillItem blank"></div>
+                    <div class="blank left"><p><b>Harmony</b></p></div>
                 </div>
             </div>
 
@@ -848,10 +848,10 @@
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
                 <div class="ultimateSkills">
-                    <div class="skillItem blank"></div>
+                    <div class="blank right"><p><b>Guard</b></p></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Paladin/Guard/guard.png" onclick="selectSpec('paladinGuard', 'paladinJustice')"></div>
                     <div class="skillItem"><img loading="lazy" src="./Icons/Paladin/Justice/justice.png" onclick="selectSpec('paladinJustice', 'paladinGuard')"></div>
-                    <div class="skillItem blank"></div>
+                    <div class="blank left"><p><b>Justice</b></p></div>
                 </div>
             </div>
 
@@ -1039,6 +1039,209 @@
             <div class="treeItem"><img loading="lazy" src="./Icons/Paladin/Guard/ult6.jpg" onclick="ultPopup('Punishment')"></div>
             <div class="treeItem"><img loading="lazy" src="./Icons/Paladin/Guard/ult7.jpg" onclick="ultPopup('Scourge')"></div>
             <div class="treeItem"><img loading="lazy" src="./Icons/Paladin/Guard/ult8.jpg" onclick="ultPopup('Brilliance')"></div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="talentTree" id="priest">
+            <div class="spec">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                    <div class="blank right"><p><b>Grace</b></p></div>
+                    <div class="skillItem"><img loading="lazy" src="./Icons/Priest/Grace/grace.png" onclick="selectSpec('priestGrace', 'priestRetribution')"></div>
+                    <div class="skillItem"><img loading="lazy" src="./Icons/Priest/Retribution/retribution.png" onclick="selectSpec('priestRetribution', 'priestGrace')"></div>
+                    <div class="blank left"><p><b>Retrib<br>-ution</b></p></div>
+                </div>
+            </div>
+
+            <div id="priestGrace">
+            <div class="ultimates">
+            <div class="levelReq">
+                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+            </div>
+            <div class="ultimateSkills">
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="skillPopup('blah')"></div>
+            </div>
+            </div>
+            <div class="skillTree">
+            <div class="levelReq">
+                <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+            </div>
+            <div class="talents">
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG1.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG2.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG3.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG4.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG5.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG6.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG7.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG8.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG9.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG10.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG11.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG12.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG13.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG14.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG15.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG16.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG17.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG18.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG19.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG20.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG21.jpg" onclick="skillPopup('blah')"></div>
+            </div>
+            <div class="corePassives">
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG22.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG23.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG24.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG25.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Grace/priestG26.jpg" onclick="skillPopup('blah')"></div>
+            </div>
+            </div>
+            <div class="ultimates">
+            <div class="levelReq">
+                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
+            </div>
+            <div class="ultimateSkills">
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult1.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult2.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult3.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult4.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult5.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult6.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult7.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img src="./Icons/Priest/Grace/ult8.jpg" onclick="ultPopup('blah')"></div>
+            </div>
+            </div>
+            </div>
+
+            <div id="priestRetribution">
+            <div class="ultimates">
+            <div class="levelReq">
+                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+            </div>
+            <div class="ultimateSkills">
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="ultPopup('blah')"></div>
+            <div class="skillItem"><img loading="lazy" src="./Icons/blah.png" onclick="skillPopup('blah')"></div>
+            </div>
+            </div>
+            <div class="skillTree">
+            <div class="levelReq">
+                <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+            </div>
+            <div class="talents">
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR1.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR2.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR3.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR4.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR5.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR6.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR7.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR8.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR9.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR10.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR11.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR12.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR13.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR14.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR15.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR15.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR16.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR17.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR18.jpg" onclick="skillPopup('blah')"></div>
+
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR19.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR20.jpg" onclick="skillPopup('blah')"></div>
+
+            </div>
+            <div class="corePassives">
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR21.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR22.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR23.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR24.jpg" onclick="skillPopup('blah')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/priestR25.jpg" onclick="skillPopup('blah')"></div>
+            </div>
+            </div>
+            <div class="ultimates">
+            <div class="levelReq">
+                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
+            </div>
+            <div class="ultimateSkills">
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult1.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult2.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult3.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult4.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult5.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult6.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult7.jpg" onclick="ultPopup('blah')"></div>
+            <div class="treeItem"><img loading="lazy" src="./Icons/Priest/Retribution/ult8.jpg" onclick="ultPopup('blah')"></div>
             </div>
             </div>
             </div>
