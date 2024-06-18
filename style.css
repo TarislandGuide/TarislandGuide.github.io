@@ -21,10 +21,22 @@ body {
     max-width: 30rem;
     position: relative;
 }
+#paladin {
+    display: block;
+}
 #paladinGuard {
     display: block;
 }
 #paladinJustice {
+    display: none;
+}
+#bard {
+    display: none;
+}
+#bardSolo {
+    display: block;
+}
+#bardHarmony {
     display: none;
 }
 .skillTree {
@@ -37,6 +49,16 @@ body {
     grid-template-columns: 2rem 1fr;
     background-color: var(--beige);
     gap: 0;
+}
+.selectClass {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--beige);
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
 }
 .levelReq {
     display: grid;
@@ -95,6 +117,11 @@ body {
 }
 .skillItem img {
     width: 5rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+.classItem img {
+    width: 6.5rem;
     border-radius: 50%;
     margin-left: 0.5rem;
 }
@@ -173,6 +200,12 @@ body {
     }
     .skillItem img {
         max-width: 4rem;
+    }
+    .classItem {
+        max-width: 5rem;
+    }
+    .selectClass {
+        padding-left: 0.5rem;
     }
     .talents {
         grid-gap: 0.75rem;

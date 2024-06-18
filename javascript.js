@@ -30,3 +30,10 @@ function selectSpec(active, inactive) {
     document.getElementById(active).style.display = "block"
     document.getElementById(inactive).style.display = "none"
 }
+
+function selectClass(active) {
+overlayList = document.getElementsByClassName("talentTree"); 
+for (i = 0; i < overlayList.length; i++) {
+  overlayList[i].style.display = "none";}
+  document.getElementById(active).style.display = "block"
+}
