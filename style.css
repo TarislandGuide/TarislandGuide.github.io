@@ -21,11 +21,12 @@ body {
     max-width: 30rem;
     position: relative;
 }
-#warrior, #paladinGuard, #bardSolo, #warriorWarShield, #mageFrost, #rangerHunting, #priestGrace {
+#warrior, #paladinGuard, #bardSolo, #warriorWarShield, #mageFrost, #rangerHunting, #priestGrace, #barbarianFrozen, 
+#shadowCunning, #necroHealing {
     display: block;
 }
 #bard, #paladin, #necro, #mage, #ranger, #priest, #barbarian, #shadow, #paladinJustice, #bardHarmony, #warriorWrathful, 
-#mageFlame, #rangerTamedBeast, #priestRetribution{
+#mageFlame, #rangerTamedBeast, #priestRetribution, #barbarianThunder, #shadowDuel, #necroSnatch {
     display: none;
 }
 
