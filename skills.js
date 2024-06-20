@@ -1,5 +1,6 @@
-// Paladin Guard
-const talents = [{"id":"PAGUT01","name":"Divine Body","description":"Your Stamina is increased by <span class = 'green'><b>3/6/9%</b></span> and your Physical Defense is increased by <span class = 'green' ><b>10/20/30%</b></span>.","max-level":3,"icon":"./Icons/Paladin/Guard/palaG1.jpg","cooldown":null,"range":null,"speed":""},
+const talents = [{"id":"blah","name":"Unknown","description":"skill information coming soon","icon":"./Icons/blah.png"},
+    // Paladin Guard
+    {"id":"PAGUT01","name":"Divine Body","description":"Your Stamina is increased by <span class = 'green'><b>3/6/9%</b></span> and your Physical Defense is increased by <span class = 'green' ><b>10/20/30%</b></span>.","max-level":3,"icon":"./Icons/Paladin/Guard/palaG1.jpg","cooldown":null,"range":null,"speed":""},
     {"id":"PAGUT02","name":"Notarization","description":"<span class = 'yellow' ><b>Holy Sword</b></span> causes the target to miss <span class = 'green' ><b>3/6/9%</b></span> of its attacks for <span class = 'green' ><b>10</b></span> seconds.","max-level":3,"icon":"./Icons/Paladin/Guard/palaG2.jpg","cooldown":null,"range":null,"speed":""},
     {"id":"PAGUT03","name":"Mental Focus","description":"Increase your Glancing chance by <span class = 'green' ><b>1/2/3%</b></span>.","max-level":3,"icon":"./Icons/Paladin/Guard/palaG3.jpg","cooldown":null,"range":null,"speed":""},
     {"id":"PAGUT04","name":"Holy Hammer+","description":"<span class = 'yellow' ><b>Holy Hammer</b></span> deals <span class = 'green' ><b>5/10/15%</b></span> more damage and increases your Glancing chance by an additional <span class = 'green' ><b>2.5/5/10%</b></span>.","max-level":3,"icon":"./Icons/Paladin/Guard/palaG4.jpg","cooldown":null,"range":null,"speed":""},
