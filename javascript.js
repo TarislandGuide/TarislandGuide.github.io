@@ -3,23 +3,52 @@ function closeOverlay() {
 }
 
 
-function skillPopup(value) {
+function talentPopup(value) {
     document.getElementById("skillOverlay").style.display = "block";
     function search(v){
-        return value === v.name;
+        return value === v.id;
     }
     let skill = talents.find(search);
     document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>" + skill.description;
 }
 
-function ultPopup(value) {
+function passivePopup(value) {
     document.getElementById("skillOverlay").style.display = "block";
     function search(v){
-        return value === v.name;
+        return value === v.id;
+    }
+    let skill = talents.find(search);
+    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>" + skill.description;
+}
+
+function skillPopup(value) {
+    document.getElementById("skillOverlay").style.display = "block";
+    function search(v){
+        return value === v.id;
     }
     let skill = talents.find(search);
     document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: " 
     + skill.range + "<br>Cast Time: " + skill.speed + "<br>Cooldown: " + skill.cooldown + "<br><br>" + skill.description;
+}
+
+function skillCostPopup(value) {
+    document.getElementById("skillOverlay").style.display = "block";
+    function search(v){
+        return value === v.id;
+    }
+    let skill = talents.find(search);
+    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: " 
+    + skill.range + "<br>Skill Cost: " + skill.cost + "<br>Cast Time: " + skill.speed + "<br>Cooldown: " + skill.cooldown + "<br><br>" + skill.description;
+}
+
+function ultPopup(value) {
+    document.getElementById("skillOverlay").style.display = "block";
+    function search(v){
+        return value === v.id;
+    }
+    let skill = talents.find(search);
+    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: " 
+    + skill.range + "<br>Cooldown: " + skill.cooldown + "<br><br>" + skill.description;
 }
 
 function selectSpec(active, inactive) {
