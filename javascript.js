@@ -27,8 +27,8 @@ function skillPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: " 
-    + skill.range + "<br>Cast Time: " + skill.speed + "<br>Cooldown: " + skill.cooldown + "<br><br>" + skill.description;
+    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'red'><b>" 
+    + skill.range + " m</b></span><br>Cast Time: <span class = 'red'><b>" + skill.speed + "</b></span><br>Cooldown: <span class = 'red'><b>" + skill.cooldown + " sec</b></span><br><br>" + skill.description;
 }
 
 function skillCostPopup(value) {
@@ -37,8 +37,8 @@ function skillCostPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: " 
-    + skill.range + "<br>Skill Cost: " + skill.cost + "<br>Cast Time: " + skill.speed + "<br>Cooldown: " + skill.cooldown + "<br><br>" + skill.description;
+    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'red'><b>" 
+    + skill.range + " m</b></span><br>Resource: <span class = 'red'><b>" + skill.cost + "</b></span><br>Cast Time: <span class = 'red'><b>" + skill.speed + "</b></span><br>Cooldown: <span class = 'red'><b>" + skill.cooldown + " sec</b></span><br><br>" + skill.description;
 }
 
 function ultPopup(value) {
@@ -47,8 +47,8 @@ function ultPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: " 
-    + skill.range + "<br>Cooldown: " + skill.cooldown + "<br><br>" + skill.description;
+    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'red'><b>" 
+    + skill.range + " m</b></span><br>Cooldown: <span class = 'red'><b>" + skill.cooldown + " sec</b></span><br><br>" + skill.description;
 }
 
 function selectSpec(active, inactive) {
