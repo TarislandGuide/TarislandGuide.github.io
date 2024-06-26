@@ -308,7 +308,9 @@ const talents = [{"id":"blah","name":"Unknown","description":"skill information 
         {"id":"BBTHS04","name":"Earthquake","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Thunder/barbTsk4.png","cooldown":35,"range":2.5,"speed":"Instant"},
         {"id":"BBTHS05","name":"Cyclone Turmoil","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Thunder/barbTsk5.png","cooldown":5,"range":2.5,"speed":"Instant"},
         {"id":"BBTHS06","name":"Bloodlust","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Thunder/barbTsk6.png","cooldown":120,"range":2.5,"speed":"Instant"},
+        {"id":"BBTHS07","name":"Wrath of Thunder","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Thunder/barbTsk7.png","cooldown":0,"range":2.5,"speed":"Instant"},
         {"id":"BBTHA01","name":"Beast & Sanity","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Thunder/barbT5.jpg","cooldown":null,"range":null,"speed":""},
+        
         
 
 // Barbarian Frozen
@@ -349,8 +351,9 @@ const talents = [{"id":"blah","name":"Unknown","description":"skill information 
     {"id":"BBFZS01","name":"Frost Strike","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/barbFsk1.png","cooldown":8,"range":4,"speed":"Instant"},
     {"id":"BBFZS02","name":"Chill Strike","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/barbFsk2.png","cooldown":3,"range":2.5,"speed":"Instant"},
     {"id":"BBFZS03","name":"Frost Cross","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/BarbF8.jpg","cooldown":12,"range":4,"speed":"Instant"},
-    {"id":"BBFZS04","name":"Axe Cylclone","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/BarbF6.jpg","cooldown":4,"range":2.5,"speed":"Instant"},
+    {"id":"BBFZS04","name":"Axe Cylclone","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/barbFsk4.png","cooldown":4,"range":2.5,"speed":"Instant"},
     {"id":"BBFZS05","name":"Death Fight","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/barbFsk5.png","cooldown":90,"range":2.5,"speed":"Instant"},
     {"id":"BBFZS06","name":"Frost Outbreak","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/barbFsk6.png","cooldown":120,"range":2.5,"speed":"Instant"},
+    {"id":"BBFZS07","name":"Storm Flying Axe","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/barbFsk7.png","cooldown":9.9,"range":8,"speed":"Instant"},
     {"id":"BBFZA01","name":"Frozen Rune","description":"skill information coming soon","max-level":0,"icon":"./Icons/Barbarian/Frozen/BarbF22.jpg","cooldown":null,"range":null,"speed":""}]
     
