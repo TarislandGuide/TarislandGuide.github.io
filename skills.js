@@ -130,7 +130,7 @@ const talents = [{"id":"blah","name":"Unknown","description":"skill information 
         {"id":"WAWSS05","name":"Storm Trample","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/WarShield/warrSWsk5.png","cooldown":4,"range":2.5,"speed":"Instant","cost":"20 AP"},
         {"id":"WAWSS06","name":"Last Stand","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/WarShield/warrSWsk6.png","cooldown":90,"range":2.5,"speed":"Instant","cost":""},
         {"id":"WAWSS07","name":"Impenentrable","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/WarShield/warrSWsk7.png","cooldown":120,"range":2.5,"speed":"Instant","cost":""},
-        {"id":"WAWSA01","name":"Tenacity","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/WarShield/warrSWsk8.png","cooldown":null,"range":null,"speed":"","cost":""},
+        {"id":"WAWSA01","name":"Tenacity","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/WarShield/warrWS2.jpg","cooldown":null,"range":null,"speed":"","cost":""},
         
 
 // Warrior Wrathful
@@ -175,7 +175,7 @@ const talents = [{"id":"blah","name":"Unknown","description":"skill information 
     {"id":"WAWRS05","name":"Armor Penetration","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/Wrathful/warrWrsk5.png","cooldown":30,"range":2.5,"speed":"Instant"},
     {"id":"WAWRS06","name":"Blade Cyclone","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/Wrathful/warrWrsk6.png","cooldown":25,"range":2.5,"speed":"Instant"},
     {"id":"WAWRS07","name":"Infinite Rage","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/Wrathful/warrWrsk7.png","cooldown":90,"range":2.5,"speed":"Instant"},
-    {"id":"WAWRA01","name":"Outrage","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/Wrathful/warrWr5.jpg","cooldown":null,"range":null,"speed":""},
+    {"id":"WAWRA01","name":"Outrage","description":"skill information coming soon","max-level":0,"icon":"./Icons/Warrior/Wrathful/warrWr1.jpg","cooldown":null,"range":null,"speed":""},
     
     // Necro Healing
     {"id":"PNSHT01","name":"Soul Herb+","description":"skill information coming soon","max-level":3,"icon":"./Icons/Necro/SoulHealing/necroH1.jpg","cooldown":null,"range":null,"speed":"","cost":""},
