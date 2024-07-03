@@ -4,7 +4,10 @@
     --sepia: #9b6e38;
     --green: rgb(40, 202, 40);
     --yellow: gold;
-    --red: rgb(216, 134, 27);
+    --orange: rgb(216, 134, 27);
+    --red: rgb(212, 55, 55);
+    --blue: rgb(46, 142, 197);
+    --purple: rgb(156, 70, 236);
     }
 
 body {
@@ -153,6 +156,15 @@ body {
 .red {
     color: var(--red);
 }
+.orange{
+    color: var(--orange);
+}
+.blue{
+    color: var(--blue);
+}
+.purple{
+    color: var(--purple);
+}
 .dot {
     height: 1.5rem;
     width: 1.5rem;
@@ -187,6 +199,9 @@ body {
 }
 .left {
     justify-content: left;
+}
+.notes {
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 450px) {
