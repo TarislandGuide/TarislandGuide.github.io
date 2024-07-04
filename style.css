@@ -1,4 +1,5 @@
 :root {
+    --darkTrans: #22222280;
     --brown: rgb(65, 56, 49);
     --beige: #ffe4c4;
     --sepia: #9b6e38;
@@ -24,12 +25,10 @@ body {
     max-width: 30rem;
     position: relative;
 }
-#warrior, #paladinGuard, #bardSolo, #warriorWarShield, #mageFrost, #rangerHunting, #priestGrace, #barbarianFrozen, 
-#shadowCunning, #necroHealing {
+#warrior, #PAGU, #BASL, #WAWS, #MAFR, #RAHU, #PRDG, #BBFZ, #SSCU, #PNSH {
     display: block;
 }
-#bard, #paladin, #necro, #mage, #ranger, #priest, #barbarian, #shadow, #paladinJustice, #bardHarmony, #warriorWrathful, 
-#mageFlame, #rangerTamedBeast, #priestRetribution, #barbarianThunder, #shadowDuel, #necroSnatch {
+#bard, #paladin, #necro, #mage, #ranger, #priest, #barbarian, #shadow, #PAJU, #BAHA, #WAWR, #MAFL, #RATB, #PRDR, #BBTH, #SSDU, #PNSS {
     display: none;
 }
 
@@ -100,9 +99,38 @@ body {
     padding-right: 0.5rem;
 }
 .treeItem, .skillitem {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.skillCalc {
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    background-color: var(--darkTrans);
+    color: var(--beige);
+    margin: 0;
+    line-height: 1;
+    padding: 2px 4px;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 0.5rem 0 0.5rem 0;
+}
+.req, .long {
+    position: absolute;
+    right: 2.75rem;
+    background-color: var(--sepia);
+    width: 0.5rem;
+}
+.req {
+    height: 3rem;
+    bottom: -3rem;
+}
+.long {
+    height: 7rem;
+    bottom: -7rem;
 }
 
 .treeItem img, .popup img {
