@@ -132,8 +132,19 @@ body {
     height: 7rem;
     bottom: -7rem;
 }
-
-.treeItem img, .popup img {
+.plusMinus {
+    width: 3rem;
+    padding-left: 0.5rem;
+}
+.popImg{
+    padding-right: 5rem;
+}
+.popSkillCalc {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.treeItem img, .popImg {
     width: 5rem;
     border-radius: 0.5rem;
 }
@@ -253,8 +264,11 @@ body {
     .popup {
         width: 20rem;
     }
-    .treeItem img, .popup img {
+    .treeItem img, .popImg {
         max-width: 4.5rem;
+    }
+    .popImg{
+        padding-right: 1rem;
     }
     .skillItem img {
         max-width: 4rem;

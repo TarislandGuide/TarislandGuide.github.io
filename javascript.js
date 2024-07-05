@@ -11,7 +11,8 @@ function talentPopup(value) {
     }
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><span> " + skillCode[pos] + "/" + skill.max + " </span><img src='./Icons/plus.png' onclick='plusSkill(\"" + skill.id + "\")'></span><img src='./Icons/minus.png' onclick='minusSkill(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + skill.description;
+    document.getElementById("skillPopup").innerHTML = "<img class= 'popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + skillCode[pos] + "/" + skill.max + " </span><img class='plusMinus' src='./Icons/minus.png' onclick='minusSkill(\"" 
+    + skill.id + "\")'>  </span><img class='plusMinus' src='./Icons/plus.png' onclick='plusSkill(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + skill.description;
 }
 
 function passivePopup(value) {
