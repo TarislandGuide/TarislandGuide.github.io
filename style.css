@@ -201,6 +201,12 @@ body {
 .purple{
     color: var(--purple);
 }
+.gray {
+    filter: grayscale(80%);
+}
+.colour {
+    filter: grayscale(0%);
+}
 .dot {
     height: 1.5rem;
     width: 1.5rem;

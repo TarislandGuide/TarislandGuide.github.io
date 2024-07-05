@@ -84,20 +84,24 @@ function plusSkill(id) {
     talentPopup(id);
     }
     }
+    if (skillCode[pos] > 0){
+        document.getElementById(id.substr(2)).className = "colour";
+    }
     document.getElementById(id).innerHTML = skillCode[pos];
+
 }
 
 function minusSkill(id) {
     pos = id.replace(/^[A-Z0]+/, '');
-    function search(v){
-        return id === v.id;
-    }
     if (skillCode[pos] >= 1){
         skillCode[pos]--
         talentPopup(id);
+        document.getElementById(id).innerHTML = skillCode[pos];
     }
-    document.getElementById(id).innerHTML = skillCode[pos];
-}
+    if (skillCode[pos] === 0){
+        document.getElementById(id.substr(2)).className = "gray";
+    }
+    }
 
 function skillTotal() {
     let sum = 0
