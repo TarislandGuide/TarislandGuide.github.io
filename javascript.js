@@ -11,7 +11,7 @@ function talentPopup(value) {
     }
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img class= 'popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + skillCode[pos] + "/" + skill.max + " </span><img class='plusMinus' src='./Icons/minus.png' onclick='minusSkill(\"" 
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + skillCode[pos] + "/" + skill.max + " </span><img class='plusMinus' src='./Icons/minus.png' onclick='minusSkill(\"" 
     + skill.id + "\")'>  </span><img class='plusMinus' src='./Icons/plus.png' onclick='plusSkill(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + skill.description;
 }
 
@@ -21,7 +21,7 @@ function passivePopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>" + skill.description;
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>" + skill.description;
 }
 
 function skillPopup(value) {
@@ -30,7 +30,7 @@ function skillPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'><b>" 
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'><b>" 
     + skill.range + " m</b></span><br>Cast Time: <span class = 'orange'><b>" + skill.speed + "</b></span><br>Cooldown: <span class = 'orange'><b>" + skill.cooldown + " sec</b></span><br><br>" + skill.description;
 }
 
@@ -40,7 +40,7 @@ function skillCostPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'><b>" 
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'><b>" 
     + skill.range + " m</b></span><br>Resource: <span class = 'orange'><b>" + skill.cost + "</b></span><br>Cast Time: <span class = 'orange'><b>" + skill.speed + "</b></span><br>Cooldown: <span class = 'orange'><b>" + skill.cooldown + " sec</b></span><br><br>" + skill.description;
 }
 
@@ -50,7 +50,7 @@ function ultPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    document.getElementById("skillPopup").innerHTML = "<img src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'><b>" 
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'><b>" 
     + skill.range + " m</b></span><br>Cooldown: <span class = 'orange'><b>" + skill.cooldown + " sec</b></span><br><br>" + skill.description;
 }
 
