@@ -268,7 +268,7 @@ body {
         max-width: 4.5rem;
     }
     .popImg{
-        padding-right: 1rem;
+        padding-right: 3rem;
     }
     .skillItem img {
         max-width: 4rem;
@@ -298,5 +298,12 @@ body {
     }
     .req {
         bottom: -2.97rem;
+    }
+    .plusMinus {
+        width: 2.5rem;
+    }
+    .popSkillCalc {
+        font-size: 2.75rem;
+        font-weight: 300;
     }
 }
