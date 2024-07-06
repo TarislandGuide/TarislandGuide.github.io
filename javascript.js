@@ -2,7 +2,7 @@ function closeOverlay() {
     document.getElementById("skillOverlay").style.display = "none";
 }
 
-const skillCode = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+const skillCode = ['WAWS',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 function talentPopup(value) {
     document.getElementById("skillOverlay").style.display = "block";

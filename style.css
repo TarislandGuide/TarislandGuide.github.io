@@ -288,4 +288,15 @@ body {
     .blank {
         min-height: 4.5rem;
     }
+    .skillCalc {
+        bottom: 0.05rem;
+        right: 0.4rem;
+        line-height: 1;
+    }
+    .req, .long {
+        right: 2.25rem;
+    }
+    .req {
+        bottom: -2.97rem;
+    }
 }
