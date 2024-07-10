@@ -155,6 +155,7 @@ body {
     margin-left: 0.5rem;
 }
 .classItem img {
+    max-width: 100px;
     width: 6.5rem;
     border-radius: 50%;
     margin-left: 0.5rem;
