@@ -2,7 +2,7 @@ function closeOverlay() {
     document.getElementById("skillOverlay").style.display = "none";
 }
 
-const skillCode = ['WAWS',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+let skillCode = ['WAWS',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 function talentPopup(value) {
     document.getElementById("skillOverlay").style.display = "block";
@@ -60,10 +60,10 @@ function selectSpec(active, inactive) {
     skillCode[0] = active
     for (i = 1; i < skillCode.length; i++) {
         skillCode[i] = 0;}
-    console.log(skillCode)
     reset = document.getElementsByClassName("zero");
     for (i = 0; i < reset.length; i++) {
         reset[i].innerHTML = "0";}
+    document.getElementById("codeBox").value = '';
 }
 
 function selectClass(active) {
@@ -89,7 +89,7 @@ function plusSkill(id) {
         document.getElementById(id.substr(2)).className = "colour";
     }
     document.getElementById(id).innerHTML = skillCode[pos];
-
+    document.getElementById("codeBox").value = skillCode.join('')
 }
 
 function minusSkill(id) {
@@ -103,6 +103,27 @@ function minusSkill(id) {
         document.getElementById(id.substr(2)).className = "gray";
     }
     }
+
+function copy() {
+    var copyText = document.getElementById("codeBox");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+}
+
+function importCode() {
+    var code = document.getElementById("codeBox").value
+    var num = code.replace(/[A-Z]/g, '');
+    var numArray = num.split('').map(Number)
+    var spec = code.replace(/[0-9]/g, '');
+    skillCode = [spec, ...numArray];
+    console.log(skillCode)
+
+    specList = document.getElementsByClassName("specList"); 
+    for (i = 0; i < specList.length; i++) {
+    specList[i].style.display = "none";}
+    document.getElementById(spec).style.display = "block"
+}
 
 function skillTotal() {
     let sum = 0

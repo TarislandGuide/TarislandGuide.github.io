@@ -214,6 +214,9 @@ body {
 .purple{
     color: var(--purple);
 }
+.brown {
+    color: var(--midBrown)
+}
 .gray {
     filter: grayscale(80%);
 }
@@ -258,7 +261,29 @@ body {
 .notes {
     font-size: 2rem;
 }
-
+.textBox {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    font-size: medium;
+    background-color: var(--beige);
+    color: var(--midBrown);
+    outline: none;
+    border: 1px solid var(--brown);
+}
+.button{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    font-size: medium;
+    background-color: var(--midBrown);
+    color: var(--beige);
+    outline: none;
+    border: 1px solid var(--brown);;
+}
+input::placeholder{
+    color: var(--brown);
+  }
 @media screen and (max-width: 450px) {
     body {
         background-color: var(--beige);
