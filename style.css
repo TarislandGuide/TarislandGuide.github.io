@@ -26,10 +26,10 @@ body {
     max-width: 30rem;
     position: relative;
 }
-#warrior, #PAGU, #BASL, #WAWS, #MAFR, #RAHU, #PRDG, #BBFZ, #SSCU, #PNSH {
+#WA, #PAGU, #BASL, #WAWS, #MAFR, #RAHU, #PRDG, #BBFZ, #SSCU, #PNSH {
     display: block;
 }
-#bard, #paladin, #necro, #mage, #ranger, #priest, #barbarian, #shadow, #PAJU, #BAHA, #WAWR, #MAFL, #RATB, #PRDR, #BBTH, #SSDU, #PNSS {
+#BD, #PA, #PN, #MA, #RA, #PR, #BB, #SS, #PAJU, #BAHA, #WAWR, #MAFL, #RATB, #PRDR, #BBTH, #SSDU, #PNSS {
     display: none;
 }
 
@@ -133,7 +133,7 @@ body {
     height: 7rem;
     bottom: -7rem;
 }
-.plusMinus {
+#plus, #minus {
     width: 3rem;
     padding-left: 0.5rem;
 }
@@ -218,10 +218,14 @@ body {
     color: var(--midBrown)
 }
 .gray {
-    filter: grayscale(80%);
+    filter: grayscale(85%);
 }
 .colour {
     filter: grayscale(0%);
+    filter: brightness(100%);
+}
+.bright {
+    filter: brightness(50%);
 }
 .dot {
     height: 1.5rem;

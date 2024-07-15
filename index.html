@@ -13,24 +13,24 @@
   </head>
 <body>
     <div class="wrapper">
-        <div class="spec">
+        <div class="spec">   <!--Class Select-->
             <div class="levelReq">
                 <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Classes</b></span></div>
             </div>
             <div class="selectClass">
-                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" onclick="selectClass('warrior')"></div>
-                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" onclick="selectClass('mage')"></div>
-                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" onclick="selectClass('ranger')"></div>
-                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" onclick="selectClass('bard')"></div>
-                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" onclick="selectClass('paladin')"></div>
-                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" onclick="selectClass('priest')"></div>
-                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" onclick="selectClass('barbarian')"></div>
-                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" onclick="selectClass('shadow')"></div>
-                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" onclick="selectClass('necro')"></div>
+                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" onclick="selectClass('BDSL')"></div>
+                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" onclick="selectClass('PNSH')"></div>
             </div>
         </div>
 
-        <div class="talentTree" id="warrior">
+        <div class="talentTree" id="WA">   <!--Warrior-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -233,7 +233,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="mage">
+        <div class="talentTree" id="MA">   <!--Mage-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -437,7 +437,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="ranger">
+        <div class="talentTree" id="RA">   <!--Ranger-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -640,7 +640,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="bard">
+        <div class="talentTree" id="BD">   <!--Bard-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -849,7 +849,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="paladin">
+        <div class="talentTree" id="PA">   <!--Paladin-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -1051,7 +1051,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="priest">
+        <div class="talentTree" id="PR">   <!--Priest-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -1256,7 +1256,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="barbarian">
+        <div class="talentTree" id="BB">   <!--Barbarian-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -1459,7 +1459,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="shadow">
+        <div class="talentTree" id="SS">   <!--Shadow-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -1663,7 +1663,7 @@
             </div>
         </div>
 
-        <div class="talentTree" id="necro">
+        <div class="talentTree" id="PN">   <!--Necro-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -1866,15 +1866,31 @@
             </div>
             </div>
         </div>
-        <div class="spec">
+
+        <div class="spec">   <!--SkillCode-->
             <div class="levelReq">
                 <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Code</b></span></div>
             </div>
             <div>
                 <input type="text" id="codeBox" class="textBox" placeholder="Paste Skillcode"><input class= "button" type="submit" value="Copy" onclick="copy()"><input class= "button" type="submit" value="Import" onclick="importCode()">
-                <div class="brown">&NonBreakingSpace;&NonBreakingSpace;***Work in Progress! Import button not working yet, if the page breaks / weird shit happens try refreshing the page***</div>
             </div>
         </div>
+        <!--<div class="ultimates">  Raid Builds
+            <div class="levelReq">
+                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Raid Builds</b></span></div>
+            </div>
+            <div class="ultimateSkills">   
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Warrior/WarShield/warrWS9.jpg" onclick="blah('blah')"><span class="skillCalc right">Warrior<br>Tank</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Warrior/Wrathful/warrWr8.jpg" onclick="blah('blah')"><span class="skillCalc right">Warrior<br>DPS</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Mage/Frost/mageFr8.jpg" onclick="blah('blah')"><span class="skillCalc right">Mage<br>Frost</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Mage/Flame/mageFl8.jpg" onclick="blah('blah')"><span class="skillCalc right">Mage<br>Skyfire</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Mage/Flame/mageFlsk1.png" onclick="blah('blah')"><span class="skillCalc right">Mage<br>Fireball</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Guard/palaGsk2.png" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Tank Sw</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Guard/palaG8.jpg" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Bash</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Justice/palaJsk3.png" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Strike</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Justice/palaJ9.jpg" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Sword</span></div>
+            </div>
+            </div>-->
     </div>
     <div id="skillOverlay">
         <div class="overlay" onclick="closeOverlay()"></div>
