@@ -102,6 +102,7 @@ function minusSkill(id) {
     if (skillCode[pos] === 0){
         document.getElementById(id.substr(2)).className = "gray";
     }
+    document.getElementById("codeBox").value = skillCode.join('')
     }
 
 function copy() {
