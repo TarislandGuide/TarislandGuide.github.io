@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
     <script src="skills.js"></script>
+    <script src="builds.js"></script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -1875,22 +1876,25 @@
                 <input type="text" id="codeBox" class="textBox" placeholder="Paste Skillcode"><input class= "button" type="submit" value="Copy" onclick="copy()"><input class= "button" type="submit" value="Import" onclick="importCode()">
             </div>
         </div>
-        <!--<div class="ultimates">  Raid Builds
+        <div class="ultimates">  <!--Raid Builds-->
             <div class="levelReq">
                 <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Raid Builds</b></span></div>
             </div>
             <div class="ultimateSkills">   
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Warrior/WarShield/warrWS9.jpg" onclick="blah('blah')"><span class="skillCalc right">Warrior<br>Tank</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Warrior/Wrathful/warrWr8.jpg" onclick="blah('blah')"><span class="skillCalc right">Warrior<br>DPS</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Mage/Frost/mageFr8.jpg" onclick="blah('blah')"><span class="skillCalc right">Mage<br>Frost</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Mage/Flame/mageFl8.jpg" onclick="blah('blah')"><span class="skillCalc right">Mage<br>Skyfire</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Mage/Flame/mageFlsk1.png" onclick="blah('blah')"><span class="skillCalc right">Mage<br>Fireball</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Guard/palaGsk2.png" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Tank Sw</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Guard/palaG8.jpg" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Bash</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Justice/palaJsk3.png" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Strike</span></div>
-            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Paladin/Justice/palaJ9.jpg" onclick="blah('blah')"><span class="skillCalc right">Paladin<br>Sword</span></div>
+            <!--<div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Warrior/WarShield/warrWS9.jpg" onclick="raidBuilds('blah')"><span class="skillCalc right">Warrior<br>Tank</span></div>
+            <div class="treeItem" id="blah"><img loading="lazy" src="./Icons/Warrior/Wrathful/warrWr8.jpg" onclick="raidBuilds('blah')"><span class="skillCalc right">Warrior<br>DPS</span></div>-->
+            <div class="treeItem" id="MAFRB1"><img loading="lazy" src="./Icons/Mage/Frost/mageFr8.jpg" onclick="raidBuilds('MAFRB1')"><span class="skillCalc right">Mage<br>Frost</span></div>
+            <div class="treeItem" id="MAFLB2"><img loading="lazy" src="./Icons/Mage/Flame/mageFl8.jpg" onclick="raidBuilds('MAFLB2')"><span class="skillCalc right">Mage<br>Skyfire</span></div>
+            <div class="treeItem" id="MAFLB1"><img loading="lazy" src="./Icons/Mage/Flame/mageFlsk1.png" onclick="raidBuilds('MAFLB1')"><span class="skillCalc right">Mage<br>Fireball</span></div>
+            <div class="treeItem" id="PAGUB1"><img loading="lazy" src="./Icons/Paladin/Guard/palaGsk2.png" onclick="raidBuilds('PAGUB1')"><span class="skillCalc right">Paladin<br>Tank Sw</span></div>
+            <div class="treeItem" id="PAGUB2"><img loading="lazy" src="./Icons/Paladin/Guard/palaG8.jpg" onclick="raidBuilds('PAGUB2')"><span class="skillCalc right">Paladin<br>Bash</span></div>
+            <div class="treeItem" id="PAJUB1"><img loading="lazy" src="./Icons/Paladin/Justice/palaJsk3.png" onclick="raidBuilds('PAJUB1')"><span class="skillCalc right">Paladin<br>Strike</span></div>
+            <div class="treeItem" id="PAJUB2"><img loading="lazy" src="./Icons/Paladin/Justice/palaJ9.jpg" onclick="raidBuilds('PAJUB2')"><span class="skillCalc right">Paladin<br>Sword</span></div>
+            <div class="treeItem" id="SSCUB1"><img loading="lazy" src="./Icons/Shadow/Cunning/shadC8.jpg" onclick="raidBuilds('SSCUB1')"><span class="skillCalc right">Shadow<br>Cunning</span></div>
+            <div class="treeItem" id="SSDUB1"><img loading="lazy" src="./Icons/Shadow/Duel/shadD14.jpg" onclick="raidBuilds('SSDUB1')"><span class="skillCalc right">Shadow<br>Duel</span></div>
+            <div><span class='brown'>More builds coming soon</span></div>
+        </div>
             </div>
-            </div>-->
     </div>
     <div id="skillOverlay">
         <div class="overlay" onclick="closeOverlay()"></div>

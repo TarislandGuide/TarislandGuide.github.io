@@ -117,6 +117,7 @@ body {
     padding: 2px 4px;
     -webkit-user-select: none;
     user-select: none;
+    pointer-events: none;
     border-radius: 0.5rem 0 0.5rem 0;
 }
 .req, .long {

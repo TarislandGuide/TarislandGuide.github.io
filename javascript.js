@@ -159,3 +159,11 @@ function skillTotal() {
     }
     return sum;
 }
+
+function raidBuilds(value) {
+    function search(v){
+        return value === v.Id;
+    }
+    let code = builds.find(search);
+    reset(code.SkillCode);
+}
