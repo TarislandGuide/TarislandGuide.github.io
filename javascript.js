@@ -152,6 +152,11 @@ function reset(code) {
     }
 }
 
+function resetBtn() {
+    code = skillCode[0] + '000000000000000000000'
+    reset(code);
+}
+
 function skillTotal() {
     let sum = 0
     for (let i = 1; i < skillCode.length; i++) {

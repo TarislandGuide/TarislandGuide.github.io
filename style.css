@@ -284,11 +284,15 @@ body {
     background-color: var(--midBrown);
     color: var(--beige);
     outline: none;
-    border: 1px solid var(--brown);;
+    border: 1px solid var(--midbrown);
+    border-radius: 0.25rem;
 }
 input::placeholder{
     color: var(--brown);
   }
+.nudge {
+    margin-left: 2rem;
+}
 @media screen and (max-width: 450px) {
     body {
         background-color: var(--beige);
