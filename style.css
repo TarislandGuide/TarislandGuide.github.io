@@ -278,7 +278,7 @@ body {
 }
 .button{
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     padding: 0.3rem;
     font-size: medium;
     background-color: var(--midBrown);
@@ -304,7 +304,7 @@ input::placeholder{
         max-width: 4.5rem;
     }
     .popImg{
-        margin-right: 3rem;
+        margin-right: 2.5rem;
     }
     .skillItem img {
         max-width: 4rem;
