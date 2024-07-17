@@ -155,6 +155,7 @@ function reset(code) {
 function resetBtn() {
     code = skillCode[0] + '000000000000000000000'
     reset(code);
+    document.getElementById("codeBox").value = '';
 }
 
 function skillTotal() {
