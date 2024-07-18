@@ -172,4 +172,5 @@ function raidBuilds(value) {
     }
     let code = builds.find(search);
     reset(code.SkillCode);
+    document.getElementById("codeBox").value = code.SkillCode;
 }
