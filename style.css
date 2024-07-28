@@ -8,7 +8,7 @@
     --yellow: gold;
     --orange: rgb(216, 134, 27);
     --red: rgb(212, 55, 55);
-    --blue: rgb(46, 142, 197);
+    --blue: rgb(71, 162, 214);
     --purple: rgb(156, 70, 236);
     }
 
@@ -45,14 +45,21 @@ body {
     gap: 0;
 }
 .selectClass {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    overflow: scroll;
+    -webkit-user-select: none;
+    user-select: none;
     background-color: var(--beige);
     gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1.5rem;
     padding-right: 1rem;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
 }
 .levelReq {
     display: grid;
@@ -160,6 +167,9 @@ body {
     width: 6.5rem;
     border-radius: 50%;
     margin-left: 0.5rem;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .blank {
     height: 4.6rem;
@@ -312,6 +322,9 @@ input::placeholder{
     .classItem {
         max-width: 5rem;
     }
+    .classItem img {
+        max-width: 5rem;
+    }
     .selectClass {
         padding-left: 0.5rem;
     }
@@ -326,7 +339,7 @@ input::placeholder{
     }
     .skillCalc {
         bottom: 0.05rem;
-        right: 0.4rem;
+        right: 0.35rem;
         line-height: 1;
     }
     .req, .long {

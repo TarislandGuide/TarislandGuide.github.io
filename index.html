@@ -16,7 +16,7 @@
     <div class="wrapper">
         <div class="spec">   <!--Class Select-->
             <div class="levelReq">
-                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Classes</b></span></div>
+                <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
             </div>
             <div class="selectClass">
                 <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" onclick="selectClass('WAWS')"></div>
@@ -1954,7 +1954,7 @@
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
                 </div>
                 <div class="ultimateSkills">   
-                <div class="treeItem" id="PNSHB1"><img loading="lazy" src="./Icons/Necro/SoulHealing/necroH9.jpg" onclick="raidBuilds('PNSHB1')"><span class="skillCalc right">Heal<br>Soulguard</span></div>
+                <div class="treeItem" id="PNSHB1"><img loading="lazy" src="./Icons/Necro/SoulHealing/necroH9.jpg" onclick="raidBuilds('PNSHB1')"><span class="skillCalc right">Heal<br>Soulgd</span></div>
                 <div class="treeItem" id="PNSHB2"><img loading="lazy" src="./Icons/Necro/SoulHealing/necroH7.jpg" onclick="raidBuilds('PNSHB2')"><span class="skillCalc right">Heal<br>Tainted</span></div>
                 <div class="treeItem" id="PNSSB1"><img loading="lazy" src="./Icons/Necro/SoulSnatch/necroS2.jpg" onclick="raidBuilds('PNSSB1')"><span class="skillCalc right">DPS</span></div>
                 </div>
@@ -1970,6 +1970,7 @@
                 <div><input class= "button nudge" type="submit" value="Copy" onclick="copy()"><input class= "button" type="submit" value="Import" onclick="importCode()"><input class= "button" type="submit" value="Reset" onclick="resetBtn()"></div>
             </div>
         </div>
+        <div class="orange">WIP, Any errors / typos please DM tall.bird on discord, thanks!</div>
     </div>
     <div id="skillOverlay">
         <div class="overlay" onclick="closeOverlay()"></div>
@@ -1978,4 +1979,11 @@
         </div>
     </div>
 </body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+</script>
 </html>
