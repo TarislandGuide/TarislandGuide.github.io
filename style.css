@@ -112,7 +112,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .skillCalc {
     position: absolute;
     bottom: 0;
@@ -122,10 +121,8 @@ body {
     margin: 0;
     line-height: 1;
     padding: 2px 4px;
-    -webkit-user-select: none;
-    user-select: none;
-    pointer-events: none;
     border-radius: 0.5rem 0 0.5rem 0;
+    pointer-events: none; 
 }
 .req, .long {
     position: absolute;
@@ -157,6 +154,10 @@ body {
     width: 5rem;
     border-radius: 0.5rem;
 }
+.skillItem img, .classItem img, .popImg, .popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay {
+    -webkit-user-select: none;
+    user-select: none;
+}
 .skillItem img {
     width: 5rem;
     border-radius: 50%;
@@ -167,9 +168,6 @@ body {
     width: 6.5rem;
     border-radius: 50%;
     margin-left: 0.5rem;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    user-select: none;
 }
 .blank {
     height: 4.6rem;
