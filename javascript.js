@@ -7,6 +7,9 @@ const y = "<span class='yellow'>"
 const g = "<span class='green'>"
 const b = "<span class='blue'>"
 const s = "</span>"
+const rn = "&nbsp;<span class = 'red notes'><b>&#9834;</b></span>&nbsp;"
+const bn = "&nbsp;<span class = 'blue notes'><b>&#9835;</b></span>&nbsp;"
+const pn = "&nbsp;<span class = 'purple notes'><b>&#9835;</b></span>&nbsp;"
 
 function test(value) { 
     function search(v){
@@ -58,7 +61,7 @@ function skillPopup(value) {
     }
     let skill = talents.find(search);
     const info = skill.variable.split(",");
-    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'>" 
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "</h2><br>Cast Range: <span class = 'orange'>" 
     + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
 }
 
