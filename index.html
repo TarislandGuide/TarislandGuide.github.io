@@ -12,7 +12,7 @@
     <meta name="description" content="Plan your skill tree and share it with friends, check out the top raid builds to maximise your progress">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Warrior, War Shield, Talent Build">
-    <meta property="og:description" content="Tarisland Talent Tree Calcualtor">
+    <meta property="og:description" content="Tarisland Talent Tree Calculator">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/Warrior.png'>
     <meta name="twitter:card" content="summary_large_image">
     <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
@@ -24,15 +24,15 @@
                 <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
             </div>
             <div class="selectClass">
-                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS', 'Warrior')"></div>
-                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
-                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
-                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
-                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
-                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
-                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
-                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
-                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS', 'Warrior', 'War Shield')"></div>
+                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR', 'Mage', 'Frost')"></div>
+                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU', 'Ranger', 'Hunting')"></div>
+                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL', 'Bard', 'Solo')"></div>
+                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU', 'Paladin', 'Guard')"></div>
+                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG', 'Priest', 'Grace')"></div>
+                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ', 'Barbarian', 'Frozen')"></div>
+                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU', 'Shadow', 'Cunning')"></div>
+                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH', 'Necro', 'Soul Healing')"></div>
             </div>
         </div>
 
@@ -43,8 +43,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>War<br>Shield</b><br><small>Tank</small></p></div>
-                    <div class="skillItem"><img alt="War Shield" loading="lazy" src="./Icons/Warrior/WarShield/warShield.png" onclick="selectSpec('WAWS', 'WAWR')"></div>
-                    <div class="skillItem"><img alt="Wrathful" loading="lazy" src="./Icons/Warrior/Wrathful/wrathful.png" onclick="selectSpec('WAWR', 'WAWS')"></div>
+                    <div class="skillItem"><img alt="War Shield" loading="lazy" src="./Icons/Warrior/WarShield/warShield.png" onclick="selectSpec('WAWS', 'Warrior', 'War Shield')"></div>
+                    <div class="skillItem"><img alt="Wrathful" loading="lazy" src="./Icons/Warrior/Wrathful/wrathful.png" onclick="selectSpec('WAWR', 'Warrior', 'Wrathful')"></div>
                     <div class="blank left"><p><b>Wrathful</b><br><small>Melee</small></p></div>
                 </div>
             </div>
@@ -257,8 +257,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Frost</b><br><small>Ranged</small></p></div>
-                    <div class="skillItem"><img alt="Frost" loading="lazy" src="./Icons/Mage/Frost/frost.png" onclick="selectSpec('MAFR', 'MAFL')"></div>
-                    <div class="skillItem"><img alt="Flame" loading="lazy" src="./Icons/Mage/Flame/flame.png" onclick="selectSpec('MAFL', 'MAFR')"></div>
+                    <div class="skillItem"><img alt="Frost" loading="lazy" src="./Icons/Mage/Frost/frost.png" onclick="selectSpec('MAFR', 'Mage', 'Frost')"></div>
+                    <div class="skillItem"><img alt="Flame" loading="lazy" src="./Icons/Mage/Flame/flame.png" onclick="selectSpec('MAFL', 'Mage', 'Flame')"></div>
                     <div class="blank left"><p><b>Flame</b><br><small>Ranged</small></p></div>
                 </div>
             </div>
@@ -472,8 +472,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Hunting</b><br><small>Ranged</small></p></div>
-                    <div class="skillItem"><img alt="Hunting" loading="lazy" src="./Icons/Ranger/Hunting/hunting.png" onclick="selectSpec('RAHU', 'RATB')"></div>
-                    <div class="skillItem"><img alt="Tamed Beast" loading="lazy" src="./Icons/Ranger/TamedBeast/tamedBeast.png" onclick="selectSpec('RATB', 'RAHU')"></div>
+                    <div class="skillItem"><img alt="Hunting" loading="lazy" src="./Icons/Ranger/Hunting/hunting.png" onclick="selectSpec('RAHU', 'Ranger', 'Hunting')"></div>
+                    <div class="skillItem"><img alt="Tamed Beast" loading="lazy" src="./Icons/Ranger/TamedBeast/tamedBeast.png" onclick="selectSpec('RATB', 'Ranger', 'Tamed Beast')"></div>
                     <div class="blank left"><p><b>Tamed<br>&nbsp;Beast</b><br><small>&nbsp;Ranged</small></p></div>
                 </div>
             </div>
@@ -685,8 +685,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Solo</b><br><small>Ranged</small></p></div>
-                    <div class="skillItem"><img alt="Solo" loading="lazy" src="./Icons/Bard/Solo/Solo.png" onclick="selectSpec('BDSL', 'BDHA')"></div>
-                    <div class="skillItem"><img alt="Harmony" loading="lazy" src="./Icons/Bard/Harmony/harmony.png" onclick="selectSpec('BDHA', 'BDSL')"></div>
+                    <div class="skillItem"><img alt="Solo" loading="lazy" src="./Icons/Bard/Solo/Solo.png" onclick="selectSpec('BDSL', 'Bard', 'Solo')"></div>
+                    <div class="skillItem"><img alt="Harmony" loading="lazy" src="./Icons/Bard/Harmony/harmony.png" onclick="selectSpec('BDHA', 'Bard', 'Harmony')"></div>
                     <div class="blank left"><p><b>Harmony</b><br><small>Heal</small></p></div>
                 </div>
             </div>
@@ -909,8 +909,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Guard</b><br><small>Tank</small></p></div>
-                    <div class="skillItem"><img alt="Guard" loading="lazy" src="./Icons/Paladin/Guard/guard.png" onclick="selectSpec('PAGU', 'PAJU')"></div>
-                    <div class="skillItem"><img alt="Justice" loading="lazy" src="./Icons/Paladin/Justice/justice.png" onclick="selectSpec('PAJU', 'PAGU')"></div>
+                    <div class="skillItem"><img alt="Guard" loading="lazy" src="./Icons/Paladin/Guard/guard.png" onclick="selectSpec('PAGU', 'Paladin', 'Guard')"></div>
+                    <div class="skillItem"><img alt="Justice" loading="lazy" src="./Icons/Paladin/Justice/justice.png" onclick="selectSpec('PAJU', 'Paladin', 'Justice')"></div>
                     <div class="blank left"><p><b>Justice</b><br><small>Melee</small></p></div>
                 </div>
             </div>
@@ -1122,8 +1122,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Grace</b><br><small>Heal</small></p></div>
-                    <div class="skillItem"><img alt="Grace" loading="lazy" src="./Icons/Priest/Grace/grace.png" onclick="selectSpec('PRDG', 'PRDR')"></div>
-                    <div class="skillItem"><img alt="Retribution" loading="lazy" src="./Icons/Priest/Retribution/retribution.png" onclick="selectSpec('PRDR', 'PRDG')"></div>
+                    <div class="skillItem"><img alt="Grace" loading="lazy" src="./Icons/Priest/Grace/grace.png" onclick="selectSpec('PRDG', 'Priest', 'Grace')"></div>
+                    <div class="skillItem"><img alt="Retribution" loading="lazy" src="./Icons/Priest/Retribution/retribution.png" onclick="selectSpec('PRDR', 'Priest', 'Retribution')"></div>
                     <div class="blank left"><p><b>Retrib<br>-ution</b><br><small>Ranged</small></p></div>
                 </div>
             </div>
@@ -1337,8 +1337,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Frozen</b><br><small>Tank</small></p></div>
-                    <div class="skillItem"><img alt="Frozen" loading="lazy" src="./Icons/Barbarian/Frozen/Frozen.png" onclick="selectSpec('BBFZ', 'BBTH')"></div>
-                    <div class="skillItem"><img alt="Thunder" loading="lazy" src="./Icons/Barbarian/Thunder/thunder.png" onclick="selectSpec('BBTH', 'BBFZ')"></div>
+                    <div class="skillItem"><img alt="Frozen" loading="lazy" src="./Icons/Barbarian/Frozen/Frozen.png" onclick="selectSpec('BBFZ', 'Barbarian', 'Frozen')"></div>
+                    <div class="skillItem"><img alt="Thunder" loading="lazy" src="./Icons/Barbarian/Thunder/thunder.png" onclick="selectSpec('BBTH', 'Barbarian', 'Frozen')"></div>
                     <div class="blank left"><p><b>Thunder</b><br><small>&nbsp;Melee</small></p></div>
                 </div>
             </div>
@@ -1550,8 +1550,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Cunning</b><br><small>Melee</small></p></div>
-                    <div class="skillItem"><img alt="Cunning" loading="lazy" src="./Icons/Shadow/Cunning/cunning.png" onclick="selectSpec('SSCU', 'SSDU')"></div>
-                    <div class="skillItem"><img alt="Duel" loading="lazy" src="./Icons/Shadow/Duel/duel.png" onclick="selectSpec('SSDU', 'SSCU')"></div>
+                    <div class="skillItem"><img alt="Cunning" loading="lazy" src="./Icons/Shadow/Cunning/cunning.png" onclick="selectSpec('SSCU', 'Shadow', 'Cunning')"></div>
+                    <div class="skillItem"><img alt="Duel" loading="lazy" src="./Icons/Shadow/Duel/duel.png" onclick="selectSpec('SSDU', 'Shadow', 'Duel')"></div>
                     <div class="blank left"><p><b>Duel</b><br><small>Melee</small></p></div>
                 </div>
             </div>
@@ -1764,8 +1764,8 @@
                 </div>
                 <div class="ultimateSkills">
                     <div class="blank right"><p><b>Soul<br>Healing</b><br><small>Heal</small></p></div>
-                    <div class="skillItem"><img alt="Healing" loading="lazy" src="./Icons/Necro/SoulHealing/healing.png" onclick="selectSpec('PNSH', 'PNSS')"></div>
-                    <div class="skillItem"><img alt="Snatch" loading="lazy" src="./Icons/Necro/SoulSnatch/snatch.png" onclick="selectSpec('PNSS', 'PNSH')"></div>
+                    <div class="skillItem"><img alt="Healing" loading="lazy" src="./Icons/Necro/SoulHealing/healing.png" onclick="selectSpec('PNSH', 'Necro', 'Soul Healing')"></div>
+                    <div class="skillItem"><img alt="Snatch" loading="lazy" src="./Icons/Necro/SoulSnatch/snatch.png" onclick="selectSpec('PNSS', 'Necro', 'Soul Snatch')"></div>
                     <div class="blank left"><p><b>Soul<br>Snatch</b><br><small>Ranged</small></p></div>
                 </div>
             </div>
