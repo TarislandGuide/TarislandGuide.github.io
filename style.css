@@ -47,8 +47,6 @@ body {
 .selectClass {
     display: flex;
     overflow: scroll;
-    -webkit-user-select: none;
-    user-select: none;
     background-color: var(--beige);
     gap: 1rem;
     padding-top: 1rem;
@@ -154,9 +152,12 @@ body {
     width: 5rem;
     border-radius: 0.5rem;
 }
-.skillItem img, .classItem img, .popImg, .popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay {
-    -webkit-user-select: none;
+.skillItem img, .classItem img, .popImg, .popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay .selectClass{
+    -webkit-user-drag: none;
     user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 .skillItem img {
     width: 5rem;
