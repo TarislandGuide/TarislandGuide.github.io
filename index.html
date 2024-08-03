@@ -5,14 +5,19 @@
     <script src="javascript.js"></script>
     <script src="skills.js"></script>
     <script src="builds.js"></script>
+    <script> 
+        var link = document.createElement('meta');
+        link.setAttribute('property', 'og:title');
+        link.content = 'this is a test!';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      </script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
     <title>Tarisland Talent Tree Calculator</title>
     <meta name="description" content="Plan your skill tree and share it with friends, check out the top raid builds to maximise your progress">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Warrior, War Shield, Talent Build">
-    <script> document.head.querySelector('meta[property="og:title"]').content = 'arrrrgh'</script>
+    <!--<meta property="og:title" content="Warrior, War Shield, Talent Build">-->
     <meta property="og:description" content="Tarisland Talent Tree Calculator">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/Warrior.png'>
     <meta name="twitter:card" content="summary_large_image">
