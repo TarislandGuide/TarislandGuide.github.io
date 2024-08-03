@@ -10,6 +10,7 @@ const s = "</span>"
 const rn = "&nbsp;<span class = 'red notes'><b>&#9834;</b></span>&nbsp;"
 const bn = "&nbsp;<span class = 'blue notes'><b>&#9835;</b></span>&nbsp;"
 const pn = "&nbsp;<span class = 'purple notes'><b>&#9835;</b></span>&nbsp;"
+var params = new URLSearchParams(location.search);
 
 function test(value) { 
     function search(v){
@@ -110,6 +111,7 @@ function plusSkill(id) {
     }
     document.getElementById(id).innerHTML = skillCode[pos];
     document.getElementById("codeBox").value = skillCode.join('')
+    setParams(skillCode.join(''));
 }
 
 function minusSkill(id) {
@@ -123,6 +125,7 @@ function minusSkill(id) {
         document.getElementById(id.substr(2)).className = "gray";
     }
     document.getElementById("codeBox").value = skillCode.join('')
+    setParams(skillCode.join(''));
     }
 
 function copy() {
@@ -162,6 +165,7 @@ function reset(code) {
         }
         else document.getElementById(id.substr(2)).className = "gray";
     }
+    setParams(code);
 }
 
 function resetBtn() {
@@ -185,8 +189,14 @@ function raidBuilds(value) {
     let code = builds.find(search);
     reset(code.SkillCode);
     document.getElementById("codeBox").value = code.SkillCode;
+    setParams(code.SkillCode)
 }
 
+function setParams(code) {
+    params.set('skill', code);
+    console.log(params)
+    window.history.replaceState({}, '', `${location.pathname}?${params}`);
+}
 let mouseDown = false;
 let startX, scrollLeft;
 

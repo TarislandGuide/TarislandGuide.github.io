@@ -24,7 +24,7 @@
                 <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
             </div>
             <div class="selectClass">
-                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS', 'Warrior')"></div>
                 <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
                 <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
                 <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
@@ -1995,5 +1995,12 @@
     slider.addEventListener('mousedown', startDragging, false);
     slider.addEventListener('mouseup', stopDragging, false);
     slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+            if (params.has('skill') === true) {
+                reset(params.get('skill'));
+            }
+            else setParams(skillCode.join(''));
+        }
+    window.onload = loadParams;
 </script>
 </html>
