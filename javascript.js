@@ -92,16 +92,16 @@ function selectSpec(active, classIn, specIn) {
     var code = active + '000000000000000000000'
     reset(code);
     document.getElementById("codeBox").value = '';
-    document.head.querySelector('meta[property="og:title"]').content = classIn + ', ' + specIn + ', Talent Build';
-    document.head.querySelector('meta[property="og:image"]').content = 'https://tarislandguide.github.io/embeds/' + classIn + '.png'
+    //document.head.querySelector('meta[property="og:title"]').content = classIn + ', ' + specIn + ', Talent Build';
+    //document.head.querySelector('meta[property="og:image"]').content = 'https://tarislandguide.github.io/embeds/' + classIn + '.png'
 }
 
 function selectClass(active, classIn, specIn) {
     var code = active + '000000000000000000000'
     reset(code);
     document.getElementById("codeBox").value = '';
-    document.head.querySelector('meta[property="og:title"]').content = classIn + ', ' + specIn + ', Talent Build';
-    document.head.querySelector('meta[property="og:image"]').content = 'https://tarislandguide.github.io/embeds/' + classIn + '.png'
+    //document.head.querySelector('meta[property="og:title"]').content = classIn + ', ' + specIn + ', Talent Build';
+    //document.head.querySelector('meta[property="og:image"]').content = 'https://tarislandguide.github.io/embeds/' + classIn + '.png'
 }
 
 function plusSkill(id) {
@@ -198,7 +198,6 @@ function raidBuilds(value) {
 
 function setParams(code) {
     params.set('skill', code);
-    console.log(params)
     window.history.replaceState({}, '', `${location.pathname}?${params}`);
 }
 let mouseDown = false;
