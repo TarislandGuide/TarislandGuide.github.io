@@ -88,20 +88,13 @@ function ultPopup(value) {
     + skill.range + " m</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
 }
 
-function selectSpec(active, classIn, specIn) {
+function selectClass(active) {
+    if(dragging) {
+        dragging = false;
+        return;
+    } else
     var code = active + '000000000000000000000'
-    reset(code);
-    document.getElementById("codeBox").value = '';
-    //document.head.querySelector('meta[property="og:title"]').content = classIn + ', ' + specIn + ', Talent Build';
-    //document.head.querySelector('meta[property="og:image"]').content = 'https://tarislandguide.github.io/embeds/' + classIn + '.png'
-}
-
-function selectClass(active, classIn, specIn) {
-    var code = active + '000000000000000000000'
-    reset(code);
-    document.getElementById("codeBox").value = '';
-    //document.head.querySelector('meta[property="og:title"]').content = classIn + ', ' + specIn + ', Talent Build';
-    //document.head.querySelector('meta[property="og:image"]').content = 'https://tarislandguide.github.io/embeds/' + classIn + '.png'
+    location.replace("./" + active + ".html?skill=" + code);
 }
 
 function plusSkill(id) {
@@ -114,7 +107,6 @@ function plusSkill(id) {
         document.getElementById(id.substr(2)).className = "colour";
     }
     document.getElementById(id).innerHTML = skillCode[pos];
-    document.getElementById("codeBox").value = skillCode.join('')
     setParams(skillCode.join(''));
 }
 
@@ -128,38 +120,14 @@ function minusSkill(id) {
     if (skillCode[pos] === 0){
         document.getElementById(id.substr(2)).className = "gray";
     }
-    document.getElementById("codeBox").value = skillCode.join('')
     setParams(skillCode.join(''));
     }
-
-function copy() {
-    var copyText = document.getElementById("codeBox");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-}
-
-function importCode() {
-    var code = document.getElementById("codeBox").value
-    reset(code);
-}
 
 function reset(code) {
     var num = code.replace(/[A-Z]/g, '');
     var numArray = num.split('').map(Number)
     var spec = code.replace(/[0-9]/g, '');
-    var getClass = spec.slice(0, 2);
     skillCode = [spec, ...numArray];
-
-    talentTree = document.getElementsByClassName("talentTree"); 
-    for (i = 0; i < talentTree.length; i++) {
-    talentTree[i].style.display = "none";}
-    document.getElementById(getClass).style.display = "block"
-
-    specList = document.getElementsByClassName("specList"); 
-    for (i = 0; i < specList.length; i++) {
-    specList[i].style.display = "none";}
-    document.getElementById(spec).style.display = "block"
 
     for (let i = 1; i < skillCode.length; i++) {
         let id = skillCode[0] + 'T' + String(i).padStart(2, '0')
@@ -170,12 +138,6 @@ function reset(code) {
         else document.getElementById(id.substr(2)).className = "gray";
     }
     setParams(code);
-}
-
-function resetBtn() {
-    code = skillCode[0] + '000000000000000000000'
-    reset(code);
-    document.getElementById("codeBox").value = '';
 }
 
 function skillTotal() {
@@ -192,7 +154,6 @@ function raidBuilds(value) {
     }
     let code = builds.find(search);
     reset(code.SkillCode);
-    document.getElementById("codeBox").value = code.SkillCode;
     setParams(code.SkillCode)
 }
 
@@ -202,6 +163,7 @@ function setParams(code) {
 }
 let mouseDown = false;
 let startX, scrollLeft;
+var dragging = false;
 
 const startDragging = (e) => {
   mouseDown = true;
@@ -219,4 +181,5 @@ const move = (e) => {
   const x = e.pageX - slider.offsetLeft;
   const scroll = x - startX;
   slider.scrollLeft = scrollLeft - scroll;
+  dragging = true;
 }

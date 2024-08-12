@@ -26,12 +26,7 @@ body {
     max-width: 30rem;
     position: relative;
 }
-#WA, #PAGU, #BASL, #WAWS, #MAFR, #RAHU, #PRDG, #BBFZ, #SSCU, #PNSH {
-    display: block;
-}
-#BD, #PA, #PN, #MA, #RA, #PR, #BB, #SS, #PAJU, #BAHA, #WAWR, #MAFL, #RATB, #PRDR, #BBTH, #SSDU, #PNSS {
-    display: none;
-}
+
 
 .skillTree {
     display: grid;

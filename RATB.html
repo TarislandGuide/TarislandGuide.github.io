@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <script src="JSON/skills.js"></script>
+    <script src="JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent Tree Calculator</title>
+    <meta name="description" content="Plan your skill tree and share it with friends, check out the top raid builds to maximise your progress">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ranger, Tamed Beast, Talent Build">
+    <meta property="og:description" content="Tarisland Talent Tree Calculator">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/Embed.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="levelReq">
+                <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
+                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+        <div class="talentTree" id="RA">   <!--Ranger-->
+            <div class="spec">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                    <div class="blank right"><p><b>Hunting</b><br><small>Ranged</small></p></div>
+                    <div class="skillItem"><img alt="Hunting" src="./Icons/Ranger/Hunting/hunting.png" onclick="selectClass('RAHU')"></div>
+                    <div class="skillItem"><img alt="Tamed Beast" src="./Icons/Ranger/TamedBeast/tamedBeast.png"></div>
+                    <div class="blank left"><p><b>Tamed<br>&nbsp;Beast</b><br><small>&nbsp;Ranged</small></p></div>
+                </div>
+            </div>
+
+            <div id="RATB" class="specList">  <!--Ranger Tamed Beast-->
+                <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="skillItem" id="RATBS01"><img src="./Icons/Ranger/TamedBeast/huntTBsk1.png" onclick="skillCostPopup('RATBS01')"></div>
+                <div class="skillItem" id="RATBS02"><img src="./Icons/Ranger/TamedBeast/huntTBsk2.png" onclick="skillPopup('RATBS02')"></div>
+                <div class="skillItem" id="RATBS03"><img src="./Icons/Ranger/TamedBeast/huntTB8.jpg" onclick="skillPopup('RATBS03')"></div>
+                <div class="skillItem" id="RATBS04"><img src="./Icons/Ranger/TamedBeast/huntTBsk3.png" onclick="skillCostPopup('RATBS04')"></div>
+                <div class="skillItem" id="RATBS05"><img src="./Icons/Ranger/TamedBeast/huntTBsk4.png" onclick="skillPopup('RATBS05')"></div>
+                <div class="skillItem" id="RATBS06"><img src="./Icons/Ranger/TamedBeast/huntTBsk5.png" onclick="skillCostPopup('RATBS06')"></div>
+                <div class="skillItem" id="RATBS07"><img src="./Icons/Ranger/TamedBeast/huntTBsk6.png" onclick="skillCostPopup('RATBS07')"></div>
+                <div class="treeItem" id="RATBA01"><img src="./Icons/Ranger/TamedBeast/huntTBsk7.png" onclick="passivePopup('RATBA01')"></div>
+                </div>
+                </div>
+                <div class="skillTree">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+                </div>
+                <div class="talents">
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "TBT01" class="gray" src="./Icons/Ranger/TamedBeast/huntTB1.jpg" onclick="talentPopup('RATBT01')"><span class="skillCalc"><span id="RATBT01" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "TBT02" class="gray" src="./Icons/Ranger/TamedBeast/huntTB2.jpg" onclick="talentPopup('RATBT02')"><span class="skillCalc"><span id="RATBT02" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "TBT03" class="gray" src="./Icons/Ranger/TamedBeast/huntTB3.jpg" onclick="talentPopup('RATBT03')"><span class="skillCalc"><span id="RATBT03" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "TBT04" class="gray" src="./Icons/Ranger/TamedBeast/huntTB4.jpg" onclick="talentPopup('RATBT04')"><span class="skillCalc"><span id="RATBT04" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "TBT05" class="gray" src="./Icons/Ranger/TamedBeast/huntTB5.jpg" onclick="talentPopup('RATBT05')"><span class="skillCalc"><span id="RATBT05" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "TBT06" class="gray" src="./Icons/Ranger/TamedBeast/huntTB6.jpg" onclick="talentPopup('RATBT06')"><span class="skillCalc"><span id="RATBT06" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "TBT07" class="gray" src="./Icons/Ranger/TamedBeast/huntTB7.jpg" onclick="talentPopup('RATBT07')"><span class="skillCalc"><span id="RATBT07" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "TBT08" class="gray" src="./Icons/Ranger/TamedBeast/huntTB8.jpg" onclick="talentPopup('RATBT08')"><span class="skillCalc"><span id="RATBT08" class="zero">0</span>/1</span><span class="req"></span></div>
+                    <div class="treeItem"><img id = "TBT09" class="gray" src="./Icons/Ranger/TamedBeast/huntTB9.jpg" onclick="talentPopup('RATBT09')"><span class="skillCalc"><span id="RATBT09" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "TBT10" class="gray" src="./Icons/Ranger/TamedBeast/huntTB10.jpg" onclick="talentPopup('RATBT10')"><span class="skillCalc"><span id="RATBT10" class="zero">0</span>/2</span></div>
+    
+                    <div class="treeItem"><img id = "TBT11" class="gray" src="./Icons/Ranger/TamedBeast/huntTB11.jpg" onclick="talentPopup('RATBT11')"><span class="skillCalc"><span id="RATBT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                    <div class="treeItem"><img id = "TBT12" class="gray" src="./Icons/Ranger/TamedBeast/huntTB12.jpg" onclick="talentPopup('RATBT12')"><span class="skillCalc"><span id="RATBT12" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem"><img id = "TBT13" class="gray" src="./Icons/Ranger/TamedBeast/huntTB13.jpg" onclick="talentPopup('RATBT13')"><span class="skillCalc"><span id="RATBT13" class="zero">0</span>/2</span><span class="req"></span></div>
+                    <div class="treeItem"><img id = "TBT14" class="gray" src="./Icons/Ranger/TamedBeast/huntTB14.jpg" onclick="talentPopup('RATBT14')"><span class="skillCalc"><span id="RATBT14" class="zero">0</span>/2</span></div>
+                    <div class="treeItem"><img id = "TBT15" class="gray" src="./Icons/Ranger/TamedBeast/huntTB15.jpg" onclick="talentPopup('RATBT15')"><span class="skillCalc"><span id="RATBT15" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "TBT16" class="gray" src="./Icons/Ranger/TamedBeast/huntTB16.jpg" onclick="talentPopup('RATBT16')"><span class="skillCalc"><span id="RATBT16" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "TBT17" class="gray" src="./Icons/Ranger/TamedBeast/huntTB17.jpg" onclick="talentPopup('RATBT17')"><span class="skillCalc"><span id="RATBT17" class="zero">0</span>/2</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "TBT18" class="gray" src="./Icons/Ranger/TamedBeast/huntTB18.jpg" onclick="talentPopup('RATBT18')"><span class="skillCalc"><span id="RATBT18" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "TBT19" class="gray" src="./Icons/Ranger/TamedBeast/huntTB19.jpg" onclick="talentPopup('RATBT19')"><span class="skillCalc"><span id="RATBT29" class="zero">0</span>/2</span><span class="req"></span></div>
+    
+                    <div class="treeItem"><img id = "TBT20" class="gray" src="./Icons/Ranger/TamedBeast/huntTB20.jpg" onclick="talentPopup('RATBT20')"><span class="skillCalc"><span id="RATBT20" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "TBT21" class="gray" src="./Icons/Ranger/TamedBeast/huntTB21.jpg" onclick="talentPopup('RATBT21')"><span class="skillCalc"><span id="RATBT21" class="zero">0</span>/2</span></div>
+    
+                </div>
+                <div class="corePassives">
+                    <div class="treeItem" id="RATBP01"><img src="./Icons/Ranger/TamedBeast/huntTB22.jpg" onclick="passivePopup('RATBP01')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem" id="RATBP02"><img src="./Icons/Ranger/TamedBeast/huntTB23.jpg" onclick="passivePopup('RATBP02')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem" id="RATBP03"><img src="./Icons/Ranger/TamedBeast/huntTB24.jpg" onclick="passivePopup('RATBP03')"></div>
+                    <div class="treeItem" id="RATBP04"><img src="./Icons/Ranger/TamedBeast/huntTB25.jpg" onclick="passivePopup('RATBP04')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem" id="RATBP05"><img src="./Icons/Ranger/TamedBeast/huntTB26.jpg" onclick="passivePopup('RATBP05')"></div>
+                </div>
+                </div>
+                <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="treeItem" id="RATBU01"><img src="./Icons/Ranger/TamedBeast/ult1.jpg" onclick="ultPopup('RATBU01')"></div>
+                <div class="treeItem" id="RATBU02"><img src="./Icons/Ranger/TamedBeast/ult2.jpg" onclick="ultPopup('RATBU02')"></div>
+                <div class="treeItem" id="RATBU03"><img src="./Icons/Ranger/TamedBeast/ult3.jpg" onclick="ultPopup('RATBU03')"></div>
+                <div class="treeItem" id="RATBU04"><img src="./Icons/Ranger/TamedBeast/ult4.jpg" onclick="ultPopup('RATBU04')"></div>
+                <div class="treeItem" id="RATBU05"><img src="./Icons/Ranger/TamedBeast/ult5.jpg" onclick="ultPopup('RATBU05')"></div>
+                <div class="treeItem" id="RATBU06"><img src="./Icons/Ranger/TamedBeast/ult6.jpg" onclick="ultPopup('RATBU06')"></div>
+                <div class="treeItem" id="RATBU07"><img src="./Icons/Ranger/TamedBeast/ult7.jpg" onclick="ultPopup('RATBU07')"></div>
+                <div class="treeItem" id="RATBU08"><img src="./Icons/Ranger/TamedBeast/ult8.jpg" onclick="ultPopup('RATBU08')"></div>
+                </div>
+                </div>
+                </div>
+
+            <div class="ultimates">  <!--Raid Builds-->
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="ultimateSkills">   
+                <div class="treeItem" id="RATBB1"><img src="./Icons/Ranger/TamedBeast/huntTB5.jpg" onclick="raidBuilds('RATBB1')"><span class="skillCalc right">Beast</span></div>    
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('RATB000000000000000000000')"><span class="skillCalc right">Reset</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="popup" id="skillPopup">
+        <p>Error<br>try refreshing the page or clearing the cache<br>if error persists please contact tall.bird on discord</p>
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+            if (params.has('skill') === true) {
+                reset(params.get('skill'));
+            }
+            else setParams(skillCode.join(''));
+        }
+    window.onload = loadParams;
+    document.getElementById("classScroll").scrollLeft = 200;
+</script>
+</html>

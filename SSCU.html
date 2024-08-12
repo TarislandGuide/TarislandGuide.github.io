@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <script src="JSON/skills.js"></script>
+    <script src="JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent Tree Calculator</title>
+    <meta name="description" content="Plan your skill tree and share it with friends, check out the top raid builds to maximise your progress">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shadow, Cunning, Talent Build">
+    <meta property="og:description" content="Tarisland Talent Tree Calculator">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/Embed.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="levelReq">
+                <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
+                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+        <div class="talentTree" id="SS">   <!--Shadow-->
+            <div class="spec">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                    <div class="blank right"><p><b>Cunning</b><br><small>Melee</small></p></div>
+                    <div class="skillItem"><img alt="Cunning" src="./Icons/Shadow/Cunning/cunning.png"></div>
+                    <div class="skillItem"><img alt="Duel" src="./Icons/Shadow/Duel/duel.png" onclick="selectClass('SSDU')"></div>
+                    <div class="blank left"><p><b>Duel</b><br><small>Melee</small></p></div>
+                </div>
+            </div>
+
+            <div id="SSCU" class="specList">  <!--Shadow Cunning-->
+                <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="skillItem" id="SSCUS01"><img src="./Icons/Shadow/Cunning/shadCsk2.png" onclick="skillCostPopup('SSCUS01')"></div>
+                <div class="skillItem" id="SSCUS02"><img src="./Icons/Shadow/Cunning/shadC2.jpg" onclick="skillCostPopup('SSCUS02')"></div>
+                <div class="skillItem" id="SSCUS03"><img src="./Icons/Shadow/Cunning/shadCsk3.png" onclick="skillCostPopup('SSCUS03')"></div>
+                <div class="skillItem" id="SSCUS04"><img src="./Icons/Shadow/Cunning/shadCsk4.png" onclick="skillCostPopup('SSCUS04')"></div>
+                <div class="skillItem" id="SSCUS05"><img src="./Icons/Shadow/Cunning/shadC12.jpg" onclick="skillCostPopup('SSCUS05')"></div>
+                <div class="skillItem" id="SSCUS06"><img src="./Icons/Shadow/Cunning/shadCsk5.png" onclick="skillPopup('SSCUS06')"></div>
+                <div class="skillItem" id="SSCUS07"><img src="./Icons/Shadow/Cunning/shadCsk6.png" onclick="skillCostPopup('SSCUS07')"></div>
+                <div class="skillItem" id="SSCUS08"><img src="./Icons/Shadow/Cunning/shadCsk7.png" onclick="skillPopup('SSCUS08')"></div>
+                <div class="treeItem" id="SSCUA01"><img src="./Icons/Shadow/Cunning/shadCsk1.png" onclick="passivePopup('SSCUA01')"></div>
+                </div>
+                </div>
+                <div class="skillTree">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+                </div>
+                <div class="talents">
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "CUT01" class="gray"   src="./Icons/Shadow/Cunning/shadC1.jpg" onclick="talentPopup('SSCUT01')"><span class="skillCalc"><span id="SSCUT01" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "CUT02" class="gray"   src="./Icons/Shadow/Cunning/shadC2.jpg" onclick="talentPopup('SSCUT02')"><span class="skillCalc"><span id="SSCUT02" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "CUT03" class="gray" src="./Icons/Shadow/Cunning/shadC3.jpg" onclick="talentPopup('SSCUT03')"><span class="skillCalc"><span id="SSCUT03" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "CUT04" class="gray" src="./Icons/Shadow/Cunning/shadC4.jpg" onclick="talentPopup('SSCUT04')"><span class="skillCalc"><span id="SSCUT04" class="zero">0</span>/2</span></div>
+                    <div class="treeItem"><img id = "CUT05" class="gray" src="./Icons/Shadow/Cunning/shadC5.jpg" onclick="talentPopup('SSCUT05')"><span class="skillCalc"><span id="SSCUT05" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "CUT06" class="gray" src="./Icons/Shadow/Cunning/shadC6.jpg" onclick="talentPopup('SSCUT06')"><span class="skillCalc"><span id="SSCUT06" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "CUT07" class="gray" src="./Icons/Shadow/Cunning/shadC7.jpg" onclick="talentPopup('SSCUT07')"><span class="skillCalc"><span id="SSCUT07" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem"><img id = "CUT08" class="gray" src="./Icons/Shadow/Cunning/shadC8.jpg" onclick="talentPopup('SSCUT08')"><span class="skillCalc"><span id="SSCUT08" class="zero">0</span>/1</span><span class="req"></span></div>
+                    <div class="treeItem"><img id = "CUT09" class="gray" src="./Icons/Shadow/Cunning/shadC9.jpg" onclick="talentPopup('SSCUT09')"><span class="skillCalc"><span id="SSCUT09" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "CUT10" class="gray" src="./Icons/Shadow/Cunning/shadC10.jpg" onclick="talentPopup('SSCUT10')"><span class="skillCalc"><span id="SSCUT10" class="zero">0</span>/2</span></div>
+    
+                    <div class="treeItem"><img id = "CUT11" class="gray" src="./Icons/Shadow/Cunning/shadC11.jpg" onclick="talentPopup('SSCUT11')"><span class="skillCalc"><span id="SSCUT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "CUT12" class="gray" src="./Icons/Shadow/Cunning/shadC12.jpg" onclick="talentPopup('SSCUT12')"><span class="skillCalc"><span id="SSCUT12" class="zero">0</span>/2</span></div>
+    
+                    <div class="treeItem"><img id = "CUT13" class="gray" src="./Icons/Shadow/Cunning/shadC13.jpg" onclick="talentPopup('SSCUT13')"><span class="skillCalc"><span id="SSCUT13" class="zero">0</span>/2</span><span class="req"></span></div>
+                    <div class="treeItem"><img id = "CUT14" class="gray" src="./Icons/Shadow/Cunning/shadC14.jpg" onclick="talentPopup('SSCUT14')"><span class="skillCalc"><span id="SSCUT14" class="zero">0</span>/2</span></div>
+                    <div class="treeItem"><img id = "CUT15" class="gray" src="./Icons/Shadow/Cunning/shadC15.jpg" onclick="talentPopup('SSCUT15')"><span class="skillCalc"><span id="SSCUT15" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "CUT16" class="gray" src="./Icons/Shadow/Cunning/shadC16.jpg" onclick="talentPopup('SSCUT16')"><span class="skillCalc"><span id="SSCUT16" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "CUT17" class="gray" src="./Icons/Shadow/Cunning/shadC17.jpg" onclick="talentPopup('SSCUT17')"><span class="skillCalc"><span id="SSCUT17" class="zero">0</span>/2</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "CUT18" class="gray" src="./Icons/Shadow/Cunning/shadC18.jpg" onclick="talentPopup('SSCUT18')"><span class="skillCalc"><span id="SSCUT18" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "CUT19" class="gray" src="./Icons/Shadow/Cunning/shadC19.jpg" onclick="talentPopup('SSCUT19')"><span class="skillCalc"><span id="SSCUT19" class="zero">0</span>/2</span><span class="req"></span></div>
+    
+                    <div class="treeItem"><img id = "CUT20" class="gray" src="./Icons/Shadow/Cunning/shadC20.jpg" onclick="talentPopup('SSCUT20')"><span class="skillCalc"><span id="SSCUT20" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "CUT21" class="gray" src="./Icons/Shadow/Cunning/shadC21.jpg" onclick="talentPopup('SSCUT21')"><span class="skillCalc"><span id="SSCUT21" class="zero">0</span>/2</span></div>
+                </div>
+                <div class="corePassives">
+                    <div class="treeItem"><img src="./Icons/Shadow/Cunning/shadC22.jpg" onclick="passivePopup('SSCUP01')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="./Icons/Shadow/Cunning/shadC23.jpg" onclick="passivePopup('SSCUP02')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="./Icons/Shadow/Cunning/shadC24.jpg" onclick="passivePopup('SSCUP03')"></div>
+                    <div class="treeItem"><img src="./Icons/Shadow/Cunning/shadC25.jpg" onclick="passivePopup('SSCUP04')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="./Icons/Shadow/Cunning/shadC26.jpg" onclick="passivePopup('SSCUP05')"></div>
+                </div>
+                </div>
+                <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="treeItem" id="SSCUU01"><img src="./Icons/Shadow/Cunning/ult1.jpg" onclick="ultPopup('SSCUU01')"></div>
+                <div class="treeItem" id="SSCUU02"><img src="./Icons/Shadow/Cunning/ult2.jpg" onclick="ultPopup('SSCUU02')"></div>
+                <div class="treeItem" id="SSCUU03"><img src="./Icons/Shadow/Cunning/ult3.jpg" onclick="ultPopup('SSCUU03')"></div>
+                <div class="treeItem" id="SSCUU04"><img src="./Icons/Shadow/Cunning/ult4.jpg" onclick="ultPopup('SSCUU04')"></div>
+                <div class="treeItem" id="SSCUU05"><img src="./Icons/Shadow/Cunning/ult5.jpg" onclick="ultPopup('SSCUU05')"></div>
+                <div class="treeItem" id="SSCUU06"><img src="./Icons/Shadow/Cunning/ult6.jpg" onclick="ultPopup('SSCUU06')"></div>
+                <div class="treeItem" id="SSCUU07"><img src="./Icons/Shadow/Cunning/ult7.jpg" onclick="ultPopup('SSCUU07')"></div>
+                <div class="treeItem" id="SSCUU08"><img src="./Icons/Shadow/Cunning/ult8.jpg" onclick="ultPopup('SSCUU08')"></div>
+                </div>
+                </div>
+                </div>
+
+            <div class="ultimates">  <!--Raid Builds-->
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="ultimateSkills">   
+                <div class="treeItem" id="SSCUB1"><img   src="./Icons/Shadow/Cunning/shadC8.jpg" onclick="raidBuilds('SSCUB1')"><span class="skillCalc right">Cunning<br>DoT</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('SSCU000000000000000000000')"><span class="skillCalc right">Reset</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="popup" id="skillPopup">
+        <p>Error<br>try refreshing the page or clearing the cache<br>if error persists please contact tall.bird on discord</p>
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+            if (params.has('skill') === true) {
+                reset(params.get('skill'));
+            }
+            else setParams(skillCode.join(''));
+        }
+    window.onload = loadParams;
+    document.getElementById("classScroll").scrollLeft = 700;
+</script>
+</html>
