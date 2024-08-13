@@ -94,7 +94,7 @@ function selectClass(active) {
         return;
     } else
     var code = active + '000000000000000000000'
-    location.replace("./" + active + ".html?skill=" + code);
+    location.assign("./" + active + ".html?skill=" + code);
 }
 
 function plusSkill(id) {
