@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <script>
+    function loadParams() {
+      var params = new URLSearchParams(location.search);
+            if (params.has('skill') === true) {
+              var code = params.get('skill');
+              var spec = code.replace(/[0-9]/g, '');
+              window.location = `./${spec}.html?skill=${code}`
+            }
+        }
+    loadParams();
+      </script>
     <meta http-equiv="refresh" content="0; url=./WAWS.html">
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
