@@ -3,6 +3,7 @@
     --brown: rgb(65, 56, 49);
     --midBrown: rgb(104, 77, 55);
     --beige: #ffe4c4;
+    --darkBeige: #dabf9e;
     --sepia: #ac7e46;
     --green: rgb(40, 202, 40);
     --yellow: gold;
@@ -296,6 +297,15 @@ input::placeholder{
   }
 .nudge {
     margin-left: 2rem;
+}
+.border {
+    outline: 3px solid var(--sepia);
+    outline-offset: -3px;
+}
+.bground {
+    background-color: var(--darkBeige);
+    outline: 4px solid var(--beige);
+    outline-offset: -3px;
 }
 @media screen and (max-width: 450px) {
     body {
