@@ -170,12 +170,15 @@
     slider.addEventListener('mouseup', stopDragging, false);
     slider.addEventListener('mouseleave', stopDragging, false);
     function loadParams() {
+        var params = new URLSearchParams(location.search);
             if (params.has('skill') === true) {
-                reset(params.get('skill'));
+                setTalents(params.get('skill'));
             }
-            else setParams(skillCode.join(''));
+            else {setParams(skillCode.join(''));
+            }
         }
-    window.onload = loadParams;
+    window.onpageshow = loadParams; 
+    window.onpopstate = () => setTimeout(loadParams, 0);
     document.getElementById("classScroll").scrollLeft = 400;
 </script>
 </html>

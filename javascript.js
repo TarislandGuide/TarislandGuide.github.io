@@ -107,7 +107,7 @@ function plusSkill(id) {
         document.getElementById(id.substr(2)).className = "colour";
     }
     document.getElementById(id).innerHTML = skillCode[pos];
-    setParams(skillCode.join(''));
+    updateParams(skillCode.join(''));
 }
 
 function minusSkill(id) {
@@ -120,10 +120,15 @@ function minusSkill(id) {
     if (skillCode[pos] === 0){
         document.getElementById(id.substr(2)).className = "gray";
     }
-    setParams(skillCode.join(''));
+    updateParams(skillCode.join(''));
     }
 
 function reset(code) {
+    setTalents(code);
+    setParams(code);
+}
+
+function setTalents(code) {
     var num = code.replace(/[A-Z]/g, '');
     var numArray = num.split('').map(Number)
     var spec = code.replace(/[0-9]/g, '');
@@ -137,7 +142,6 @@ function reset(code) {
         }
         else document.getElementById(id.substr(2)).className = "gray";
     }
-    setParams(code);
 }
 
 function skillTotal() {
@@ -152,14 +156,19 @@ function raidBuilds(value) {
     function search(v){
         return value === v.Id;
     }
-    let code = builds.find(search);
-    reset(code.SkillCode);
-    setParams(code.SkillCode)
+    let buildCode = builds.find(search);
+    setTalents(buildCode.SkillCode);
+    setParams(buildCode.SkillCode);
+}
+
+function updateParams(code) {
+    params.set('skill', code);
+    history.replaceState({}, '', `${location.pathname}?${params}`);
 }
 
 function setParams(code) {
     params.set('skill', code);
-    window.history.replaceState({}, '', `${location.pathname}?${params}`);
+    history.pushState({}, '', `${location.pathname}?${params}`);
 }
 let mouseDown = false;
 let startX, scrollLeft;
