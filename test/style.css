@@ -445,7 +445,7 @@ input::placeholder{
     .popImg{
         margin-right: 2.5rem;
     }
-    .skillItem img {
+    .skillItem img, .treeIcon img {
         max-width: 4rem;
     }
     .classItem {
