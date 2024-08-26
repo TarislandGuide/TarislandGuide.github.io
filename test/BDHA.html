@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <script src="JSON/BDHA.js"></script>
+    <script src="JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent Tree Calculator</title>
+    <meta name="description" content="Plan your skill tree and share it with friends, check out the top raid builds to maximise your progress">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bard, Harmony, Talent Build">
+    <meta property="og:description" content="Tarisland Talent Tree Calculator">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/Embed.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="levelReq">
+                <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')" class="border"></div>
+                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+        <div class="talentTree" id="BD">   <!--Bard-->
+            <div class="spec">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                    <div class="blank right"><p><b>Solo</b><br><small>Ranged</small></p></div>
+                    <div class="skillItem"><img alt="Solo" src="./Icons/Bard/Solo/Solo.png" onclick="selectClass('BDSL')"></div>
+                    <div class="skillItem"><img alt="Harmony" src="./Icons/Bard/Harmony/harmony.png" class="bground"></div>
+                    <div class="blank left"><p><b>Harmony</b><br><small>Heal</small></p></div>
+                </div>
+            </div>
+
+            <div id="BDHA" class="specList">  <!--Bard Harmony-->
+                <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="skillItem" id="BDHAS01"><img src="./Icons/Bard/Harmony/bardHsk1.png" onclick="skillPopup('BDHAS01')"></div>
+                <div class="skillItem" id="BDHAS02"><img src="./Icons/Bard/Harmony/bardHsk2.png" onclick="skillPopup('BDHAS02')"></div>
+                <div class="skillItem" id="BDHAS03"><img src="./Icons/Bard/Harmony/bardHsk3.png" onclick="skillPopup('BDHAS03')"></div>
+                <div class="skillItem" id="BDHAS04"><img src="./Icons/Bard/Harmony/bardHsk7.png" onclick="skillPopup('BDHAS04')"></div>
+                <div class="skillItem" id="BDHAS05"><img src="./Icons/Bard/Harmony/bardHsk4.png" onclick="skillPopup('BDHAS05')"></div>
+                <div class="skillItem" id="BDHAS06"><img src="./Icons/Bard/Harmony/bardHsk5.png" onclick="skillPopup('BDHAS06')"></div>
+                <div class="skillItem" id="BDHAS07"><img src="./Icons/Bard/Harmony/bardHsk6.png" onclick="skillPopup('BDHAS07')"></div>
+                <div class="treeItem" id="BDHAA01"><img src="./Icons/Bard/Harmony/bardHsk8.png" onclick="passivePopup('BDHAA01')"></div>
+                </div>
+                </div>
+                <div class="skillTree">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+                </div>
+                <div class="talents">
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "HAT01" class="gray"   src="./Icons/Bard/Harmony/bardH1.jpg" onclick="talentPopup('BDHAT01')"><span class="skillCalc"><span id="BDHAT01" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "HAT02" class="gray"   src="./Icons/Bard/Harmony/bardH2.jpg" onclick="talentPopup('BDHAT02')"><span class="skillCalc"><span id="BDHAT02" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "HAT03" class="gray"   src="./Icons/Bard/Harmony/bardH3.jpg" onclick="talentPopup('BDHAT03')"><span class="skillCalc"><span id="BDHAT03" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "HAT04" class="gray"   src="./Icons/Bard/Harmony/bardH4.jpg" onclick="talentPopup('BDHAT04')"><span class="skillCalc"><span id="BDHAT04" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "HAT05" class="gray" src="./Icons/Bard/Harmony/bardH5.jpg" onclick="talentPopup('BDHAT05')"><span class="skillCalc"><span id="BDHAT05" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "HAT06" class="gray" src="./Icons/Bard/Harmony/bardH6.jpg" onclick="talentPopup('BDHAT06')"><span class="skillCalc"><span id="BDHAT06" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "HAT07" class="gray" src="./Icons/Bard/Harmony/bardH7.jpg" onclick="talentPopup('BDHAT07')"><span class="skillCalc"><span id="BDHAT07" class="zero">0</span>/2</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem"><img id = "HAT08" class="gray" src="./Icons/Bard/Harmony/bardH8.jpg" onclick="talentPopup('BDHAT08')"><span class="skillCalc"><span id="BDHAT08" class="zero">0</span>/1</span><span class="req"></span></div>
+                    <div class="treeItem"><img id = "HAT09" class="gray" src="./Icons/Bard/Harmony/bardH9.jpg" onclick="talentPopup('BDHAT09')"><span class="skillCalc"><span id="BDHAT09" class="zero">0</span>/2</span></div>
+                    <div class="treeItem"><img id = "HAT10" class="gray" src="./Icons/Bard/Harmony/bardH9.jpg" onclick="talentPopup('BDHAT10')"><span class="skillCalc"><span id="BDHAT10" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "HAT11" class="gray" src="./Icons/Bard/Harmony/bardH10.jpg" onclick="talentPopup('BDHAT11')"><span class="skillCalc"><span id="BDHAT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                    <div class="treeItem"><img id = "HAT12" class="gray" src="./Icons/Bard/Harmony/bardH11.jpg" onclick="talentPopup('BDHAT12')"><span class="skillCalc"><span id="BDHAT12" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "HAT13" class="gray" src="./Icons/Bard/Harmony/bardH12.jpg" onclick="talentPopup('BDHAT13')"><span class="skillCalc"><span id="BDHAT13" class="zero">0</span>/2</span></div>
+    
+                    <div class="treeItem"><img id = "HAT14" class="gray" src="./Icons/Bard/Harmony/bardH13.jpg" onclick="talentPopup('BDHAT14')"><span class="skillCalc"><span id="BDHAT14" class="zero">0</span>/2</span><span class="req"></span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "HAT15" class="gray" src="./Icons/Bard/Harmony/bardH14.jpg" onclick="talentPopup('BDHAT15')"><span class="skillCalc"><span id="BDHAT15" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id = "HAT16" class="gray" src="./Icons/Bard/Harmony/bardH15.jpg" onclick="talentPopup('BDHAT16')"><span class="skillCalc"><span id="BDHAT16" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "HAT17" class="gray" src="./Icons/Bard/Harmony/bardH16.jpg" onclick="talentPopup('BDHAT17')"><span class="skillCalc"><span id="BDHAT17" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "HAT18" class="gray" src="./Icons/Bard/Harmony/bardH17.jpg" onclick="talentPopup('BDHAT18')"><span class="skillCalc"><span id="BDHAT18" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id = "HAT19" class="gray" src="./Icons/Bard/Harmony/bardH18.jpg" onclick="talentPopup('BDHAT19')"><span class="skillCalc"><span id="BDHAT19" class="zero">0</span>/2</span><span class="req"></span></div>
+    
+                    <div class="treeItem"><img id = "HAT20" class="gray" src="./Icons/Bard/Harmony/bardH19.jpg" onclick="talentPopup('BDHAT20')"><span class="skillCalc"><span id="BDHAT20" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id = "HAT21" class="gray" src="./Icons/Bard/Harmony/bardH20.jpg" onclick="talentPopup('BDHAT21')"><span class="skillCalc"><span id="BDHAT21" class="zero">0</span>/2</span></div>
+    
+                </div>
+                <div class="corePassives">
+                    <div class="treeItem" id="BDHAP01"><img src="./Icons/Bard/Harmony/bardH21.jpg" onclick="passivePopup('BDHAP01')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem" id="BDHAP02"><img src="./Icons/Bard/Harmony/bardH22.jpg" onclick="passivePopup('BDHAP02')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem" id="BDHAP03"><img src="./Icons/Bard/Harmony/bardH23.jpg" onclick="passivePopup('BDHAP03')"></div>
+                    <div class="treeItem" id="BDHAP04"><img src="./Icons/Bard/Harmony/bardH24.jpg" onclick="passivePopup('BDHAP04')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem" id="BDHAP05"><img src="./Icons/Bard/Harmony/bardH25.jpg" onclick="passivePopup('BDHAP05')"></div>
+                </div>
+                </div>
+                <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="treeItem" id="BDHAU01"><img src="./Icons/Bard/Harmony/ult1.jpg" onclick="ultPopup('BDHAU01')"></div>
+                <div class="treeItem" id="BDHAU02"><img src="./Icons/Bard/Harmony/ult2.jpg" onclick="ultPopup('BDHAU02')"></div>
+                <div class="treeItem" id="BDHAU03"><img src="./Icons/Bard/Harmony/ult3.jpg" onclick="ultPopup('BDHAU03')"></div>
+                <div class="treeItem" id="BDHAU04"><img src="./Icons/Bard/Harmony/ult4.jpg" onclick="ultPopup('BDHAU04')"></div>
+                <div class="treeItem" id="BDHAU05"><img src="./Icons/Bard/Harmony/ult5.jpg" onclick="ultPopup('BDHAU05')"></div>
+                <div class="treeItem" id="BDHAU06"><img   src="./Icons/Bard/Harmony/ult6.jpg" onclick="ultPopup('BDHAU06')"></div>
+                <div class="treeItem" id="BDHAU07"><img src="./Icons/Bard/Harmony/ult7.jpg" onclick="ultPopup('BDHAU07')"></div>
+                <div class="treeItem" id="BDHAU08"><img src="./Icons/Bard/Harmony/ult8.jpg" onclick="ultPopup('BDHAU08')"></div>
+                </div>
+                </div>
+                </div>
+
+            <div class="ultimates">  <!--Raid Builds-->
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="ultimateSkills">   
+                <div class="treeItem" id="BDHAB1"><img   src="./Icons/Bard/Harmony/bardH8.jpg" onclick="raidBuilds('BDHAB1')"><span class="skillCalc right">Heal<br>Harp</span></div>
+                <div class="treeItem" id="BDHAB2"><img   src="./Icons/Bard/Harmony/bardH1.jpg" onclick="raidBuilds('BDHAB2')"><span class="skillCalc right">Heal<br>Wall</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('BDHA000000000000000000000')"><span class="skillCalc right">Reset</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="popup" id="skillPopup">
+        <p>Error<br>try refreshing the page or clearing the cache<br>if error persists please contact tall.bird on discord</p>
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+        var params = new URLSearchParams(location.search);
+            if (params.has('skill') === true) {
+                setTalents(params.get('skill'));
+            }
+            else {setParams(skillCode.join(''));
+            }
+        }
+    window.onpageshow = loadParams; 
+    window.onpopstate = () => setTimeout(loadParams, 0);
+    document.getElementById("classScroll").scrollLeft = 300;
+</script>
+</html>
