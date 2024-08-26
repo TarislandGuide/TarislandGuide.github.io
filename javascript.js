@@ -53,7 +53,7 @@ function talentPopup(value) {
     }
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
-    //const info = skill.variable.split(",");
+    const info = skill.variable.split(",");
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + skillCode[pos] + "/" + skill.max + " </span><img id='minus' src='./Icons/minus.png' onclick='minusSkill(\"" 
     + skill.id + "\")'>  </span><img id='plus' src='./Icons/plus.png' onclick='plusSkill(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
     if (test(value) === true) {
@@ -73,7 +73,7 @@ function stonePopup(value, shape) {
     }
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
-    //const info = skill.variable.split(",");
+    const info = skill.variable.split(",");
     document.getElementById("skillPopup").innerHTML = "<img class='popImg " + shape + "' src='"+ skill.icon + "'><span class='popSkillCalc'> " + stoneCode[pos] + "/" + skill.max + " </span><img id='minus' src='./Icons/minus.png' onclick='minusStone(\"" 
     + skill.id + '\",\" ' + shape + "\")'>  </span><img id='plus' src='./Icons/plus.png' onclick='plusStone(\"" + skill.id + '\",\" ' + shape + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
     if (testStone(value) === true) {
@@ -92,7 +92,7 @@ function passivePopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    //const info = skill.variable.split(",");
+    const info = skill.variable.split(",");
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
 }
 
@@ -102,7 +102,7 @@ function skillPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    //const info = skill.variable.split(",");
+    const info = skill.variable.split(",");
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "</h2><br>Cast Range: <span class = 'orange'>" 
     + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
 }
@@ -113,7 +113,7 @@ function skillCostPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    //const info = skill.variable.split(",");
+    const info = skill.variable.split(",");
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'>" 
     + skill.range + " m</span><br>Resource: <span class = 'orange'>" + skill.cost + "</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
 }
@@ -124,7 +124,7 @@ function ultPopup(value) {
         return value === v.id;
     }
     let skill = talents.find(search);
-    //const info = skill.variable.split(",");
+    const info = skill.variable.split(",");
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'>" 
     + skill.range + " m</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
 }
@@ -224,7 +224,6 @@ function setTalents(code) {
 function setStone(code, classCode) {
     var num = code.replace(/[A-Z]/g, '');
     var numArray = num.split('').map(Number)
-    //var spec = code.replace(/[0-9]/g, '');
     stoneCode = [...numArray];
 
     for (let i = 1; i < stoneCode.length; i++) {
