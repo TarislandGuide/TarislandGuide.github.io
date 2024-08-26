@@ -24,6 +24,7 @@
                 <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
             </div>
             <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Home" src="./Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')"></div>
                 <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
                 <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
                 <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
@@ -36,7 +37,6 @@
             </div>
         </div>
 
-        <div class="talentTree" id="PR">   <!--Priest-->
             <div class="spec">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
@@ -49,6 +49,7 @@
                 </div>
             </div>
 
+        <div class="talentTree" id="PR">   <!--Priest-->
             <div id="PRDR" class="specList">  <!--Priest Retribution-->
                 <div class="ultimates">
                 <div class="levelReq">
@@ -181,6 +182,6 @@
         }
     window.onpageshow = loadParams; 
     window.onpopstate = () => setTimeout(loadParams, 0);
-    document.getElementById("classScroll").scrollLeft = 600;
+    document.getElementById("classScroll").scrollLeft = 700;
 </script>
 </html>
