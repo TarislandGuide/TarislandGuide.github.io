@@ -2,6 +2,7 @@
     --darkTrans: #22222280;
     --brown: rgb(65, 56, 49);
     --midBrown: rgb(104, 77, 55);
+    --pale: rgb(153, 136, 122);
     --beige: #ffe4c4;
     --darkBeige: #dabf9e;
     --sepia: #ac7e46;
@@ -27,8 +28,12 @@ body {
     max-width: 30rem;
     position: relative;
 }
-
-
+#Talents {
+    display: block;
+}
+#Stone {
+    display: none;
+}
 .skillTree {
     display: grid;
     grid-template-columns: 2rem 3fr 1fr;
@@ -41,14 +46,20 @@ body {
     gap: 0;
 }
 .selectClass {
-    display: flex;
     overflow: scroll;
-    background-color: var(--beige);
     gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+.newsFeed, .infoFeed, .selectClass {
+    display: flex;
+    background-color: var(--beige);
     padding-left: 1.5rem;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
+}
+.newsFeed{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -75,6 +86,13 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+.tree {
+    display: grid;
+    grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
+    background-color: var(--beige);
+    margin-bottom: 1rem;
+    gap: 0;
+}
 .corePassives {
     display: grid;
     background-color: var(--sepia);
@@ -100,23 +118,80 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-.treeItem, .skillitem {
+.treeItem, .skillitem, .treeIcon {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.skillCalc {
+.stoneTree {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 2rem;
+    grid-column-gap: 0.5rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; 
+    background-color: var(--beige);
+}
+.stoneItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skillCalc, .stoneCalc, .resetText {
     position: absolute;
-    bottom: 0;
-    right: 0.5rem;
     background-color: var(--darkTrans);
     color: var(--beige);
     margin: 0;
     line-height: 1;
     padding: 2px 4px;
-    border-radius: 0.5rem 0 0.5rem 0;
     pointer-events: none; 
+    z-index: 5;
+}
+.skillCalc {
+    border-radius: 0.5rem 0 0.5rem 0;
+    bottom: 0;
+    right: 0.5rem;
+}
+.stoneCalc {
+    border-radius: 0.5rem;
+    font-size: small;
+    bottom: 0.2rem;
+    right: 1rem;
+}
+.resetText {
+    border-radius: 0.5rem 0 0.5rem 0;
+    font-size: small;
+    bottom: 0rem;
+    right: 0.2rem;
+}
+.linkB {
+    position: absolute;
+    left: 1.75rem;
+    height: 2rem;
+    bottom: -2rem;
+}
+.linkBR {
+    left: 2.75rem;
+    height: 4rem;
+    bottom: -3.2rem;
+    transform: rotate(-38deg);
+}
+.linkBL {
+    right: 2.75rem;
+    height: 4rem;
+    bottom: -3.2rem;
+    transform: rotate(38deg);
+}
+.linkB, .linkBL, .linkBR {
+    position: absolute;
+    width: 2px;
+    background-color: var(--sepia);
+    transform-origin: top center;
+    z-index: auto;
 }
 .req, .long {
     position: absolute;
@@ -148,6 +223,10 @@ body {
     width: 5rem;
     border-radius: 0.5rem;
 }
+.stoneItem img {
+    width: 3.5rem;
+    z-index: 3;
+}
 .skillItem img, .classItem img, .popImg, .popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay .selectClass{
     -webkit-user-drag: none;
     user-select: none;
@@ -172,6 +251,14 @@ body {
     align-items: center;
     color: var(--midBrown);
 }
+.stoneBlank {
+    display: flex;
+    align-items: center;
+}
+.treeIcon img {
+    border-radius: 50%;
+    width: 5rem;
+}
 #skillOverlay {
     display: none;
     transition: opacity 5ms;
@@ -180,7 +267,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 5;
 }
 .overlay {
     position: fixed;
@@ -198,7 +285,7 @@ body {
     color:var(--beige);
     margin: auto;
     margin-top: 2.5rem;
-    z-index: 10;
+    z-index: 7;
     padding: 1.5rem;
     border-radius: 1rem;
 }
@@ -232,6 +319,35 @@ body {
 }
 .bright {
     filter: brightness(50%);
+}
+#iconWeapon {
+    filter: opacity(40%);
+}
+.circle {
+    border-radius: 50%;
+    outline: 1px solid var(--sepia);
+    outline-offset: -1px;
+}
+.square {
+    border-radius: 0.5rem;
+    outline: 1px solid var(--sepia);
+    outline-offset: -1px;
+}
+.octagon {
+    clip-path: polygon(50% 0, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0 50%, 15% 15%);
+}
+.diamond {
+    clip-path: polygon(50% 1%, 98% 50%, 50% 99%, 1% 50%);
+    position: absolute;
+    top: -2.4rem;
+    left: -1.8rem;
+}
+.shadow {
+    filter: 
+        drop-shadow( 1px  0px 0px var(--sepia)) 
+        drop-shadow(-1px  0px 0px var(--sepia))
+        drop-shadow( 0px  1px 0px var(--sepia)) 
+        drop-shadow( 0px -1px 0px var(--sepia));
 }
 .dot {
     height: 1.5rem;
@@ -267,6 +383,11 @@ body {
 }
 .left {
     justify-content: left;
+}
+.below {
+    position: absolute;
+    bottom: -0.7rem;
+    color: var(--midBrown);
 }
 .notes {
     font-size: 2rem;
@@ -311,6 +432,18 @@ input::placeholder{
     body {
         background-color: var(--beige);
     }
+    .stoneTree {
+        grid-row-gap: 1.75rem;
+        grid-column-gap: 0.25rem;
+        padding-left: 0rem;
+        padding-right: 0.3rem; 
+    }
+    .stoneItem img {
+        max-width: 3rem;
+    }
+    .stoneCalc {
+        right: 0.8rem;
+    }
     .popup {
         width: 20rem;
     }
@@ -320,7 +453,7 @@ input::placeholder{
     .popImg{
         margin-right: 2.5rem;
     }
-    .skillItem img {
+    .skillItem img, .treeIcon img {
         max-width: 4rem;
     }
     .classItem {
@@ -346,17 +479,34 @@ input::placeholder{
         right: 0.35rem;
         line-height: 1;
     }
+    .linkB {
+        left: 1.55rem;
+        bottom: -1.75rem;
+    }
+    .linkBL {
+        left: 1rem;
+    }
+    .linkBR {
+        left: 2.1rem;
+    }
     .req, .long {
         right: 2.25rem;
     }
     .req {
         bottom: -2.97rem;
     }
+    .diamond {
+        top: -2rem;
+        left: -1.45rem;
+        }
     .plusMinus {
         width: 2.5rem;
     }
     .popSkillCalc {
         font-size: 2.75rem;
         font-weight: 300;
+    }
+    .below {
+        right: 2.25rem;
     }
 }
