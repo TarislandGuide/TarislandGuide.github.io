@@ -4,13 +4,7 @@ function closeOverlay() {
 
 let skillCode = ['WAWS',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 let stoneCode = [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-const y = "<span class='yellow'>"
-const g = "<span class='green'>"
-const b = "<span class='blue'>"
-const s = "</span>"
-const rn = "&nbsp;<span class = 'red notes'><b>&#9834;</b></span>&nbsp;"
-const bn = "&nbsp;<span class = 'blue notes'><b>&#9835;</b></span>&nbsp;"
-const pn = "&nbsp;<span class = 'purple notes'><b>&#9835;</b></span>&nbsp;"
+const u = {"y":"<span class='yellow'>","g":"<span class='green'>","b":"<span class='blue'>","s":"</span>","rn":"&nbsp;<span class = 'red notes'><b>&#9834;</b></span>&nbsp;","bn":"&nbsp;<span class = 'blue notes'><b>&#9835;</b></span>&nbsp;","pn":"&nbsp;<span class = 'purple notes'><b>&#9835;</b></span>&nbsp;"}
 var params = new URLSearchParams(location.search);
 
 function test(value) { 
@@ -44,6 +38,12 @@ function selectTree(active, inactive1) {
     document.getElementById(inactive1).style.display = "none";
     document.getElementById('icon' + active).className = "bground";
     document.getElementById('icon' + inactive1).className = "blah";
+    if (active === 'Stone' && params.has('stone') === true) {
+        setStone(params.get('stone'), skillCode[0]);
+        setParams(stoneCode.join(''), 'stone');
+    } else {
+        setParams(stoneCode.join(''), 'stone');
+    }
 }
 
 function talentPopup(value) {
@@ -151,7 +151,7 @@ function plusSkill(id) {
         document.getElementById(id.substr(2)).className = "colour";
     }
     document.getElementById(id).innerHTML = skillCode[pos];
-    updateParams(skillCode.join(''));
+    updateParams(skillCode.join(''), 'skill');
 }
 
 function plusStone(id, shape) {
@@ -165,7 +165,7 @@ function plusStone(id, shape) {
         document.getElementById(id.substr(2)).classList.remove('gray');
     }
     document.getElementById(id).innerHTML = stoneCode[pos];
-    //updateParams(stoneCode.join(''));
+    updateParams(stoneCode.join(''), 'stone');
 }
 
 function minusSkill(id) {
@@ -178,7 +178,7 @@ function minusSkill(id) {
     if (skillCode[pos] === 0){
         document.getElementById(id.substr(2)).className = "gray";
     }
-    updateParams(skillCode.join(''));
+    updateParams(skillCode.join(''), 'skill');
     }
 
 function minusStone(id, shape) {
@@ -192,16 +192,17 @@ function minusStone(id, shape) {
         document.getElementById(id.substr(2)).classList.remove('colour');
         document.getElementById(id.substr(2)).classList.add('gray');
     }
-    //updateParams(skillCode.join(''));
+    updateParams(stoneCode.join(''), 'stone');
     }
 
 function reset(code) {
     setTalents(code);
-    setParams(code);
+    setParams(code, 'skill');
 }
 
 function resetStone(code, classCode) {
     setStone(code, classCode);
+    setParams(code, 'stone')
 }
 
 
@@ -260,16 +261,16 @@ function raidBuilds(value) {
     }
     let buildCode = builds.find(search);
     setTalents(buildCode.SkillCode);
-    setParams(buildCode.SkillCode);
+    setParams(buildCode.SkillCode, 'skill');
 }
 
-function updateParams(code) {
-    params.set('skill', code);
+function updateParams(code, key) {
+    params.set(key, code);
     history.replaceState({}, '', `${location.pathname}?${params}`);
 }
 
-function setParams(code) {
-    params.set('skill', code);
+function setParams(code, key) {
+    params.set(key, code);
     history.pushState({}, '', `${location.pathname}?${params}`);
 }
 let mouseDown = false;
@@ -294,3 +295,9 @@ const move = (e) => {
   slider.scrollLeft = scrollLeft - scroll;
   dragging = true;
 }
+
+//for (let a = 0; a < 16; a++) {
+//let bb = a.toString(16)
+//let c= parseInt(bb, 16)
+//console.log(a, bb, c)
+//}

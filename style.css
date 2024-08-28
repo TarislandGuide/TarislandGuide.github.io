@@ -357,6 +357,20 @@ body {
     background-color: var(--midBrown);
     border-radius: 50%;
 }
+.star {
+    position: absolute;
+    top: -1.8rem;
+    right: 0.8rem;
+    color: var(--green);
+    filter: drop-shadow(0 0 0.75rem black)
+}
+.triangle {
+    position: absolute;
+    top: -1.3rem;
+    right: 0.5rem;
+    color: var(--red);
+    filter: drop-shadow(0 0 0.75rem black)
+}
 .rotate {
     writing-mode:vertical-rl;
     color: var(--beige);
