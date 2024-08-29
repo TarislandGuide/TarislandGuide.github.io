@@ -49,7 +49,21 @@
                 </div>
             </div>
 
-        <div class="talentTree" id="BB">   <!--Barbarian-->
+            <div class="spec"> <!-- select tree type-->
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Tree</b></span></div>
+                </div>
+                <div class="tree">
+                    <div class="blank"></div>
+                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone')"><span class="below"><b><small>Skills</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents')"><span class="below"><b><small>Stone</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconWeapon" class="blah" alt="God Weapon" src="./Icons/sword.png" onclick="selectTree(blah)"><span class="below"><b><small>Weapon</small></b></span></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+
+
+        <div class="talentTree" id="Talents">   <!--Barbarian-->
             <div id="BBTH" class="specList">  <!--Barbarian Thunder-->
                 <div class="ultimates">
                 <div class="levelReq">
@@ -128,6 +142,17 @@
                     <div class="treeItem" id="BBTHP05"><img src="./Icons/Barbarian/Thunder/barbT26.jpg" onclick="passivePopup('BBTHP05')"></div>
                 </div>
                 </div>
+                <div class="ultimates">  <!--Raid Builds-->
+                    <div class="levelReq">
+                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
+                    </div>
+                    <div class="ultimateSkills">   
+                    <div class="treeItem" id="BBTHB1"><img   src="./Icons/Barbarian/Thunder/barbTsk7.png" onclick="raidBuilds('BBTHB1')"><span class="skillCalc right">DPS</span><span class="star">&#9733;</span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('BBTH000000000000000000000')"><span class="skillCalc right">Reset</span></div>
+                    </div>
+                </div>
                 <div class="ultimates">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
@@ -143,18 +168,145 @@
                 <div class="treeItem" id="BBTHU08"><img src="./Icons/Barbarian/Thunder/ult8.jpg" onclick="ultPopup('BBTHU08')"></div>
                 </div>
                 </div>
+                <div class="ultimates">  <!--PvP-->
+                    <div class="levelReq">
+                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="ultimateSkills">
+                    <div class="treeItem" id="BBTHU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('BBTHU09')"></div>
+                    <div class="treeItem" id="BBTHU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('BBTHU10')"></div>
+                    <div class="treeItem" id="BBTHU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('BBTHU11')"></div>
+                    <div class="treeItem" id="BBTHU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('BBTHU12')"></div>
+                    <div class="treeItem" id="BBTHU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('BBTHU13')"></div>
+                    <div class="treeItem" id="BBTHU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('BBTHU14')"></div>
+                    <div class="treeItem" id="BBTHU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('BBTHU15')"></div>
+                    <div class="treeItem" id="BBTHU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('BBTHU16')"></div>
+                    </div>
+                    </div>
                 </div>
+        </div>
 
-            <div class="ultimates">  <!--Raid Builds-->
-                <div class="levelReq">
-                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
-                </div>
-                <div class="ultimateSkills">   
-                <div class="treeItem" id="BBTHB1"><img   src="./Icons/Barbarian/Thunder/barbTsk7.png" onclick="raidBuilds('BBTHB1')"><span class="skillCalc right">DPS</span></div>
-                <div class="treeItem blank"></div>
-                <div class="treeItem blank"></div>
-                <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('BBTH000000000000000000000')"><span class="skillCalc right">Reset</span></div>
-                </div>
+        <div id="Stone">
+            <div class="stoneTree">
+                <div class="stoneItem"><span class="shadow"><img id = "THI58" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('BBTHI58', 'octagon')"></span><span class="stoneCalc"><span id="BBTHI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img class="diamond gray" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('BBTHC04')"></span><span class="stoneCalc"><span class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img id = "THI57" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('BBTHI57', 'octagon')"></span><span class="stoneCalc"><span id="BBTHI57" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id = "THI56" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('BBTHI56', 'square')"><span class="stoneCalc"><span id="BBTHI56" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI55" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI55', 'circle')"><span class="stoneCalc"><span id="BBTHI55" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI54" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI54', 'circle')"><span class="stoneCalc"><span id="BBTHI54" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI53" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('BBTHI53', 'square')"><span class="stoneCalc"><span id="BBTHI53" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI52" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI52', 'circle')"><span class="stoneCalc"><span id="BBTHI52" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI51" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI51', 'circle')"><span class="stoneCalc"><span id="BBTHI51" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI50" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('BBTHI50', 'square')"><span class="stoneCalc"><span id="BBTHI50" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id = "THI49" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI49', 'circle')"><span class="stoneCalc"><span id="BBTHI49" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI48" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI48', 'circle')"><span class="stoneCalc"><span id="BBTHI48" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI47" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI47', 'circle')"><span class="stoneCalc"><span id="BBTHI47" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI46" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI46', 'circle')"><span class="stoneCalc"><span id="BBTHI46" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI45" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI45', 'circle')"><span class="stoneCalc"><span id="BBTHI45" class="zero">0</span>/3</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id = "THI44" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI44', 'circle')"><span class="stoneCalc"><span id="BBTHI44" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI43" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('BBTHI43', 'square')"><span class="stoneCalc"><span id="BBTHI43" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><span class="shadow"><img id = "THI42" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('BBTHI42', 'octagon')"></span><span class="stoneCalc"><span id="BBTHI42" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI41" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('BBTHI41', 'square')"><span class="stoneCalc"><span id="BBTHI41" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI40" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI40', 'circle')"><span class="stoneCalc"><span id="BBTHI40" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id = "THI39" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI39', 'circle')"><span class="stoneCalc"><span id="BBTHI39" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI38" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI38', 'circle')"><span class="stoneCalc"><span id="BBTHI38" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI37" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI37', 'circle')"><span class="stoneCalc"><span id="BBTHI37" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI36" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI36', 'circle')"><span class="stoneCalc"><span id="BBTHI36" class="zero">0</span>/3</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id = "THI35" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('BBTHI35', 'square')"><span class="stoneCalc"><span id="BBTHI35" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI34" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI34', 'circle')"><span class="stoneCalc"><span id="BBTHI34" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI33" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI33', 'circle')"><span class="stoneCalc"><span id="BBTHI33" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI32" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('BBTHI32', 'square')"><span class="stoneCalc"><span id="BBTHI32" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img id = "THI31" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('BBTHI31', 'octagon')"></span><span class="stoneCalc"><span id="BBTHI31" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI30" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('BBTHI30', 'square')"><span class="stoneCalc"><span id="BBTHI30" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img id = "THI29" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('BBTHI29', 'octagon')"></span><span class="stoneCalc"><span id="BBTHI29" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id = "THI28" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI28', 'circle')"><span class="stoneCalc"><span id="BBTHI28" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI27" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI27', 'circle')"><span class="stoneCalc"><span id="BBTHI27" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><span class="shadow"><img class="diamond gray" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('BBTHC03')"></span><span class="stoneCalc"><span class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI26" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI26', 'circle')"><span class="stoneCalc"><span id="BBTHI26" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI25" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI25', 'circle')"><span class="stoneCalc"><span id="BBTHI25" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI24" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI24', 'circle')"><span class="stoneCalc"><span id="BBTHI24" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI23" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI23', 'circle')"><span class="stoneCalc"><span id="BBTHI23" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI22" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('BBTHI22', 'square')"><span class="stoneCalc"><span id="BBTHI22" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI21" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI21', 'circle')"><span class="stoneCalc"><span id="BBTHI21" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI20" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI20', 'circle')"><span class="stoneCalc"><span id="BBTHI20" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id = "THI19" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('BBTHI19', 'square')"><span class="stoneCalc"><span id="BBTHI19" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI18" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI18', 'circle')"><span class="stoneCalc"><span id="BBTHI18" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI17" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('BBTHI17', 'square')"><span class="stoneCalc"><span id="BBTHI17" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI16" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('BBTHI16', 'square')"><span class="stoneCalc"><span id="BBTHI16" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI15" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI15', 'circle')"><span class="stoneCalc"><span id="BBTHI15" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI14" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('BBTHI14', 'square')"><span class="stoneCalc"><span id="BBTHI14" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI13" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI13', 'circle')"><span class="stoneCalc"><span id="BBTHI13" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id = "THI12" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI12', 'circle')"><span class="stoneCalc"><span id="BBTHI12" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI11" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI11', 'circle')"><span class="stoneCalc"><span id="BBTHI11" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><span class="shadow"><img class="diamond gray" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('BBTHC02')"></span><span id="BBTHC02" class="stoneCalc"><span class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI10" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI10', 'circle')"><span class="stoneCalc"><span id="BBTHI10" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI09" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI09', 'circle')"><span class="stoneCalc"><span id="BBTHI09" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI08" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('BBTHI08', 'square')"><span class="stoneCalc"><span id="BBTHI08" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI07" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('BBTHI07', 'circle')"><span class="stoneCalc"><span id="BBTHI07" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI06" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('BBTHI06', 'square')"><span class="stoneCalc"><span id="BBTHI06" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI05" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('BBTHI05', 'circle')"><span class="stoneCalc"><span id="BBTHI05" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI04" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('BBTHI04', 'square')"><span class="stoneCalc"><span id="BBTHI04" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THI03" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI03', 'circle')"><span class="stoneCalc"><span id="BBTHI03" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "THI02" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('BBTHI02', 'square')"><span class="stoneCalc"><span id="BBTHI02" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "THI01" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('BBTHI01', 'circle')"><span class="stoneCalc"><span id="BBTHI01" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="./Icons/Stone/Skill7.png" onclick="skillPopup('BBTHS08')"><span class="resetText">Skill 7</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "THC01" class="circle" loading="lazy" src="./Icons/Stone/start.png" onclick="passivePopup('BBTHC01', 'circle')"><span class="stoneCalc"><span id="BBTHC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="./Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'BBTH')"><span class="resetText">Reset</span></div>
+                <div class="stoneItem stoneBlank"></div>
             </div>
         </div>
     </div>

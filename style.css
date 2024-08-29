@@ -358,18 +358,20 @@ body {
     border-radius: 50%;
 }
 .star {
-    position: absolute;
-    top: -1.8rem;
-    right: 0.8rem;
-    color: var(--green);
-    filter: drop-shadow(0 0 0.75rem black)
+    font-size: 2.5rem;
+    top: -0.7rem;
+    right: 0.7rem;
 }
 .triangle {
-    position: absolute;
-    top: -1.3rem;
+    font-size: 2rem;
+    top: 0rem;
     right: 0.5rem;
-    color: var(--red);
-    filter: drop-shadow(0 0 0.75rem black)
+}
+.star, .triangle {
+    position: absolute;
+    text-shadow: 0px 0px 0.5rem black;
+    pointer-events: none; 
+    color: var(--beige);
 }
 .rotate {
     writing-mode:vertical-rl;
@@ -514,7 +516,16 @@ input::placeholder{
     .diamond {
         top: -2rem;
         left: -1.45rem;
-        }
+    }
+    .star {
+        top: -0.45rem;
+        right: 0.4rem;
+        font-size: 2rem;
+    }
+    .triangle {
+        right: 0.4rem;
+        font-size: 1.75rem;
+    }   
     .plusMinus {
         width: 2.5rem;
     }

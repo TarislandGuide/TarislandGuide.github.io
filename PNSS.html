@@ -49,7 +49,20 @@
                 </div>
             </div>
 
-        <div class="talentTree" id="PN">   <!--Necro-->
+            <div class="spec"> <!-- select tree type-->
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Tree</b></span></div>
+                </div>
+                <div class="tree">
+                    <div class="blank"></div>
+                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone')"><span class="below"><b><small>Skills</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents')"><span class="below"><b><small>Stone</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconWeapon" class="blah" alt="God Weapon" src="./Icons/sword.png" onclick="selectTree(blah)"><span class="below"><b><small>Weapon</small></b></span></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+
+        <div class="talentTree" id="Talents">   <!--Necro-->
             <div id="PNSS" class="specList">  <!--Necro Snatch-->
                 <div class="ultimates">
                 <div class="levelReq">
@@ -129,6 +142,17 @@
                     <div class="treeItem" id="PNSSP05"><img src="./Icons/Necro/SoulSnatch/necroS26.jpg" onclick="passivePopup('PNSSP05')"></div>
                 </div>
                 </div>
+                <div class="ultimates">  <!--Raid Builds-->
+                    <div class="levelReq">
+                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
+                    </div>
+                    <div class="ultimateSkills">   
+                    <div class="treeItem" id="PNSSB1"><img   src="./Icons/Necro/SoulSnatch/necroS2.jpg" onclick="raidBuilds('PNSSB1')"><span class="skillCalc right">Bone<br>Spirit</span></div>
+                    <div class="treeItem" id="PNSSB2"><img   src="./Icons/Necro/SoulSnatch/necroS8.jpg" onclick="raidBuilds('PNSSB2')"><span class="skillCalc right">Tangled</span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('PNSS000000000000000000000')"><span class="skillCalc right">Reset</span></div>
+                    </div>
+                </div>
                 <div class="ultimates">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
@@ -144,18 +168,145 @@
                 <div class="treeItem" id="PNSSU08"><img src="./Icons/Necro/SoulSnatch/ult8.jpg" onclick="ultPopup('PNSSU08')"></div>
                 </div>
                 </div>
+                <div class="ultimates">  <!--PvP-->
+                    <div class="levelReq">
+                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="ultimateSkills">
+                    <div class="treeItem" id="PNSSU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('PNSSU09')"></div>
+                    <div class="treeItem" id="PNSSU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('PNSSU10')"></div>
+                    <div class="treeItem" id="PNSSU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('PNSSU11')"></div>
+                    <div class="treeItem" id="PNSSU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('PNSSU12')"></div>
+                    <div class="treeItem" id="PNSSU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('PNSSU13')"></div>
+                    <div class="treeItem" id="PNSSU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('PNSSU14')"></div>
+                    <div class="treeItem" id="PNSSU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('PNSSU15')"></div>
+                    <div class="treeItem" id="PNSSU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('PNSSU16')"></div>
+                    </div>
+                    </div>
                 </div>
+        </div>
 
-            <div class="ultimates">  <!--Raid Builds-->
-                <div class="levelReq">
-                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
-                </div>
-                <div class="ultimateSkills">   
-                <div class="treeItem" id="PNSSB1"><img   src="./Icons/Necro/SoulSnatch/necroS2.jpg" onclick="raidBuilds('PNSSB1')"><span class="skillCalc right">DPS</span></div>
-                <div class="treeItem blank"></div>
-                <div class="treeItem blank"></div>
-                <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('PNSS000000000000000000000')"><span class="skillCalc right">Reset</span></div>
-                </div>
+        <div id="Stone">
+            <div class="stoneTree">
+                <div class="stoneItem"><span class="shadow"><img id = "SSI58" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('PNSSI58', 'octagon')"></span><span class="stoneCalc"><span id="PNSSI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img class="diamond gray" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('PNSSC04')"></span><span class="stoneCalc"><span class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img id = "SSI57" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('PNSSI57', 'octagon')"></span><span class="stoneCalc"><span id="PNSSI57" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id = "SSI56" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('PNSSI56', 'square')"><span class="stoneCalc"><span id="PNSSI56" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI55" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI55', 'circle')"><span class="stoneCalc"><span id="PNSSI55" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI54" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI54', 'circle')"><span class="stoneCalc"><span id="PNSSI54" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI53" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('PNSSI53', 'square')"><span class="stoneCalc"><span id="PNSSI53" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI52" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI52', 'circle')"><span class="stoneCalc"><span id="PNSSI52" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI51" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI51', 'circle')"><span class="stoneCalc"><span id="PNSSI51" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI50" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('PNSSI50', 'square')"><span class="stoneCalc"><span id="PNSSI50" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id = "SSI49" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI49', 'circle')"><span class="stoneCalc"><span id="PNSSI49" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI48" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI48', 'circle')"><span class="stoneCalc"><span id="PNSSI48" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI47" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI47', 'circle')"><span class="stoneCalc"><span id="PNSSI47" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI46" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI46', 'circle')"><span class="stoneCalc"><span id="PNSSI46" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI45" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI45', 'circle')"><span class="stoneCalc"><span id="PNSSI45" class="zero">0</span>/3</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id = "SSI44" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI44', 'circle')"><span class="stoneCalc"><span id="PNSSI44" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI43" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('PNSSI43', 'square')"><span class="stoneCalc"><span id="PNSSI43" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><span class="shadow"><img id = "SSI42" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('PNSSI42', 'octagon')"></span><span class="stoneCalc"><span id="PNSSI42" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI41" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('PNSSI41', 'square')"><span class="stoneCalc"><span id="PNSSI41" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI40" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI40', 'circle')"><span class="stoneCalc"><span id="PNSSI40" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id = "SSI39" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI39', 'circle')"><span class="stoneCalc"><span id="PNSSI39" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI38" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI38', 'circle')"><span class="stoneCalc"><span id="PNSSI38" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI37" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI37', 'circle')"><span class="stoneCalc"><span id="PNSSI37" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI36" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI36', 'circle')"><span class="stoneCalc"><span id="PNSSI36" class="zero">0</span>/3</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id = "SSI35" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('PNSSI35', 'square')"><span class="stoneCalc"><span id="PNSSI35" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI34" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI34', 'circle')"><span class="stoneCalc"><span id="PNSSI34" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI33" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI33', 'circle')"><span class="stoneCalc"><span id="PNSSI33" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI32" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('PNSSI32', 'square')"><span class="stoneCalc"><span id="PNSSI32" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img id = "SSI31" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('PNSSI31', 'octagon')"></span><span class="stoneCalc"><span id="PNSSI31" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI30" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('PNSSI30', 'square')"><span class="stoneCalc"><span id="PNSSI30" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><span class="shadow"><img id = "SSI29" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('PNSSI29', 'octagon')"></span><span class="stoneCalc"><span id="PNSSI29" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id = "SSI28" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI28', 'circle')"><span class="stoneCalc"><span id="PNSSI28" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI27" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI27', 'circle')"><span class="stoneCalc"><span id="PNSSI27" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><span class="shadow"><img class="diamond gray" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('PNSSC03')"></span><span class="stoneCalc"><span class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI26" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI26', 'circle')"><span class="stoneCalc"><span id="PNSSI26" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI25" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI25', 'circle')"><span class="stoneCalc"><span id="PNSSI25" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI24" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI24', 'circle')"><span class="stoneCalc"><span id="PNSSI24" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI23" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI23', 'circle')"><span class="stoneCalc"><span id="PNSSI23" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI22" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('PNSSI22', 'square')"><span class="stoneCalc"><span id="PNSSI22" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI21" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI21', 'circle')"><span class="stoneCalc"><span id="PNSSI21" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI20" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI20', 'circle')"><span class="stoneCalc"><span id="PNSSI20" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id = "SSI19" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('PNSSI19', 'square')"><span class="stoneCalc"><span id="PNSSI19" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI18" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI18', 'circle')"><span class="stoneCalc"><span id="PNSSI18" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI17" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('PNSSI17', 'square')"><span class="stoneCalc"><span id="PNSSI17" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI16" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('PNSSI16', 'square')"><span class="stoneCalc"><span id="PNSSI16" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI15" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI15', 'circle')"><span class="stoneCalc"><span id="PNSSI15" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI14" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('PNSSI14', 'square')"><span class="stoneCalc"><span id="PNSSI14" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI13" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI13', 'circle')"><span class="stoneCalc"><span id="PNSSI13" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="circle" loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id = "SSI12" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI12', 'circle')"><span class="stoneCalc"><span id="PNSSI12" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI11" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI11', 'circle')"><span class="stoneCalc"><span id="PNSSI11" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><span class="shadow"><img class="diamond gray" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('PNSSC02')"></span><span id="PNSSC02" class="stoneCalc"><span class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI10" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI10', 'circle')"><span class="stoneCalc"><span id="PNSSI10" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI09" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI09', 'circle')"><span class="stoneCalc"><span id="PNSSI09" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI08" class="square gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stonePopup('PNSSI08', 'square')"><span class="stoneCalc"><span id="PNSSI08" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI07" class="circle gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stonePopup('PNSSI07', 'circle')"><span class="stoneCalc"><span id="PNSSI07" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI06" class="square gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stonePopup('PNSSI06', 'square')"><span class="stoneCalc"><span id="PNSSI06" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI05" class="circle gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stonePopup('PNSSI05', 'circle')"><span class="stoneCalc"><span id="PNSSI05" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI04" class="square gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stonePopup('PNSSI04', 'square')"><span class="stoneCalc"><span id="PNSSI04" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSI03" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI03', 'circle')"><span class="stoneCalc"><span id="PNSSI03" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id = "SSI02" class="square gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stonePopup('PNSSI02', 'square')"><span class="stoneCalc"><span id="PNSSI02" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id = "SSI01" class="circle gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stonePopup('PNSSI01', 'circle')"><span class="stoneCalc"><span id="PNSSI01" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="./Icons/Stone/Skill7.png" onclick="skillPopup('PNSSS09')"><span class="resetText">Skill 7</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id = "SSC01" class="circle" loading="lazy" src="./Icons/Stone/start.png" onclick="passivePopup('PNSSC01', 'circle')"><span class="stoneCalc"><span id="PNSSC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="./Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'PNSS')"><span class="resetText">Reset</span></div>
+                <div class="stoneItem stoneBlank"></div>
             </div>
         </div>
     </div>

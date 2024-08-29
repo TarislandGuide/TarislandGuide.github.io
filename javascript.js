@@ -33,16 +33,32 @@ function testStone(value) {
 return false
 }
 
+function encode(x) {
+    return x.
+    reduce((ac, cv, ix, arr) => ix % 2 ? ac.concat([[arr[ix - 1], arr[ix]]]) : ac, []).
+    map( ([a,b]) => 4*a+b ).
+    map( v => v.toString(16) ).
+    join("")
+}
+
+function decode(x) {
+    return x.
+    split("").
+    map(v => parseInt(v, 16)).
+    map((v) =>  [Math.floor(v/4), v % 4]).
+    reduce((a, c) => a.concat(c))
+}
+
 function selectTree(active, inactive1) {
     document.getElementById(active).style.display = "block";
     document.getElementById(inactive1).style.display = "none";
     document.getElementById('icon' + active).className = "bground";
     document.getElementById('icon' + inactive1).className = "blah";
     if (active === 'Stone' && params.has('stone') === true) {
-        setStone(params.get('stone'), skillCode[0]);
-        setParams(stoneCode.join(''), 'stone');
+        setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);       
     } else {
-        setParams(stoneCode.join(''), 'stone');
+        let [a, ...rest] = stoneCode
+        setParams(encode(rest), 'stone');
     }
 }
 
@@ -165,7 +181,8 @@ function plusStone(id, shape) {
         document.getElementById(id.substr(2)).classList.remove('gray');
     }
     document.getElementById(id).innerHTML = stoneCode[pos];
-    updateParams(stoneCode.join(''), 'stone');
+    let [a, ...rest] = stoneCode
+    updateParams(encode(rest), 'stone');
 }
 
 function minusSkill(id) {
@@ -192,7 +209,8 @@ function minusStone(id, shape) {
         document.getElementById(id.substr(2)).classList.remove('colour');
         document.getElementById(id.substr(2)).classList.add('gray');
     }
-    updateParams(stoneCode.join(''), 'stone');
+    let [a, ...rest] = stoneCode
+    updateParams(encode(rest), 'stone');
     }
 
 function reset(code) {
@@ -202,7 +220,8 @@ function reset(code) {
 
 function resetStone(code, classCode) {
     setStone(code, classCode);
-    setParams(code, 'stone')
+    let [a, ...rest] = stoneCode
+    setParams(encode(rest), 'stone');
 }
 
 
@@ -223,9 +242,8 @@ function setTalents(code) {
 }
 
 function setStone(code, classCode) {
-    var num = code.replace(/[A-Z]/g, '');
-    var numArray = num.split('').map(Number)
-    stoneCode = [...numArray];
+    var numArray = code.split('').map(Number)
+    stoneCode = [ ...numArray];
 
     for (let i = 1; i < stoneCode.length; i++) {
         let id = classCode + 'I' + String(i).padStart(2, '0')
@@ -295,9 +313,3 @@ const move = (e) => {
   slider.scrollLeft = scrollLeft - scroll;
   dragging = true;
 }
-
-//for (let a = 0; a < 16; a++) {
-//let bb = a.toString(16)
-//let c= parseInt(bb, 16)
-//console.log(a, bb, c)
-//}
