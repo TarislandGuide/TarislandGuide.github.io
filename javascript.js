@@ -49,11 +49,12 @@ function decode(x) {
     reduce((a, c) => a.concat(c))
 }
 
-function selectTree(active, inactive1) {
+function selectTree(active, inactive1, ults) {
     document.getElementById(active).style.display = "block";
     document.getElementById(inactive1).style.display = "none";
     document.getElementById('icon' + active).className = "bground";
     document.getElementById('icon' + inactive1).className = "blah";
+    document.getElementById('Ults').style.display = ults;
     if (active === 'Stone' && params.has('stone') === true) {
         setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);       
     } else {

@@ -41,34 +41,39 @@
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
-                <div class="ultimateSkills">
+                <div class="specSelect">
+                    <div></div>
                     <div class="blank right"><p><b>Solo</b><br><small>Ranged</small></p></div>
                     <div class="skillItem"><img alt="Solo" src="./Icons/Bard/Solo/Solo.png" onclick="selectClass('BDSL')"></div>
                     <div class="skillItem"><img alt="Harmony" src="./Icons/Bard/Harmony/harmony.png" class="bground"></div>
                     <div class="blank left"><p><b>Harmony</b><br><small>Heal</small></p></div>
+                    <div></div>
                 </div>
             </div>
 
+            <div id="treeSelect">
             <div class="spec"> <!-- select tree type-->
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Tree</b></span></div>
                 </div>
                 <div class="tree">
                     <div class="blank"></div>
-                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone')"><span class="below"><b><small>Skills</small></b></span></div>
-                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents')"><span class="below"><b><small>Stone</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone', 'block')"><span class="below"><b><small>Skills</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'none')"><span class="below"><b><small>Stone</small></b></span></div>
                     <div class="treeIcon"><img id ="iconWeapon" class="blah" alt="God Weapon" src="./Icons/sword.png" onclick="selectTree(blah)"><span class="below"><b><small>Weapon</small></b></span></div>
                     <div class="blank"></div>
                 </div>
             </div>
+            </div>
 
-            <div class="talentTree" id="Talents">   <!--Bard-->
+            <div id="Trees" class="showTrees">
+                <div class="talentTree" id="Talents">   <!--Bard-->
                 <div id="BDHA" class="specList">  <!--Bard Harmony-->
                     <div class="ultimates">
                     <div class="levelReq">
                         <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
                     </div>
-                    <div class="ultimateSkills">
+                    <div class="Skills">
                     <div class="skillItem" id="BDHAS01"><img src="./Icons/Bard/Harmony/bardHsk1.png" onclick="skillPopup('BDHAS01')"></div>
                     <div class="skillItem" id="BDHAS02"><img src="./Icons/Bard/Harmony/bardHsk2.png" onclick="skillPopup('BDHAS02')"></div>
                     <div class="skillItem" id="BDHAS03"><img src="./Icons/Bard/Harmony/bardHsk3.png" onclick="skillPopup('BDHAS03')"></div>
@@ -145,47 +150,25 @@
                         <div class="levelReq">
                             <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
                         </div>
-                        <div class="ultimateSkills">   
+                        <div class="Skills">   
                         <div class="treeItem" id="BDHAB1"><img   src="./Icons/Bard/Harmony/bardH8.jpg" onclick="raidBuilds('BDHAB1')"><span class="skillCalc right">Heal<br>Harp</span></div>
                         <div class="treeItem" id="BDHAB2"><img   src="./Icons/Bard/Harmony/bardH1.jpg" onclick="raidBuilds('BDHAB2')"><span class="skillCalc right">Heal<br>Wall</span></div>
                         <div class="treeItem blank"></div>
                         <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('BDHA000000000000000000000')"><span class="skillCalc right">Reset</span></div>
                         </div>
                     </div>
-                    <div class="ultimates">
-                    <div class="levelReq">
-                        <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
-                    </div>
-                    <div class="ultimateSkills">
-                    <div class="treeItem" id="BDHAU01"><img src="./Icons/Bard/Harmony/ult1.jpg" onclick="ultPopup('BDHAU01')"></div>
-                    <div class="treeItem" id="BDHAU02"><img src="./Icons/Bard/Harmony/ult2.jpg" onclick="ultPopup('BDHAU02')"></div>
-                    <div class="treeItem" id="BDHAU03"><img src="./Icons/Bard/Harmony/ult3.jpg" onclick="ultPopup('BDHAU03')"></div>
-                    <div class="treeItem" id="BDHAU04"><img src="./Icons/Bard/Harmony/ult4.jpg" onclick="ultPopup('BDHAU04')"></div>
-                    <div class="treeItem" id="BDHAU05"><img src="./Icons/Bard/Harmony/ult5.jpg" onclick="ultPopup('BDHAU05')"></div>
-                    <div class="treeItem" id="BDHAU06"><img   src="./Icons/Bard/Harmony/ult6.jpg" onclick="ultPopup('BDHAU06')"></div>
-                    <div class="treeItem" id="BDHAU07"><img src="./Icons/Bard/Harmony/ult7.jpg" onclick="ultPopup('BDHAU07')"></div>
-                    <div class="treeItem" id="BDHAU08"><img src="./Icons/Bard/Harmony/ult8.jpg" onclick="ultPopup('BDHAU08')"></div>
-                    </div>
-                    </div>
-                    <div class="ultimates">  <!--PvP-->
+                    <div class="ultimates" id="blankTree">
                         <div class="levelReq">
-                            <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                            <div class="treeItem"></div>
                         </div>
-                        <div class="ultimateSkills">
-                        <div class="treeItem" id="BDHAU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('BDHAU09')"></div>
-                        <div class="treeItem" id="BDHAU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('BDHAU10')"></div>
-                        <div class="treeItem" id="BDHAU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('BDHAU11')"></div>
-                        <div class="treeItem" id="BDHAU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('BDHAU12')"></div>
-                        <div class="treeItem" id="BDHAU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('BDHAU13')"></div>
-                        <div class="treeItem" id="BDHAU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('BDHAU14')"></div>
-                        <div class="treeItem" id="BDHAU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('BDHAU15')"></div>
-                        <div class="treeItem" id="BDHAU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('BDHAU16')"></div>
-                        </div>
+                        <div class="Skills">   
+                        <div><span class="blank"></span></div>
                         </div>
                     </div>
-            </div>
+                    </div>
+                </div>
 
-            <div id="Stone">
+                <div id="Stone">
                 <div class="stoneTree">
                     <div class="stoneItem"><span class="shadow"><img id = "HAI58" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('BDHAI58', 'octagon')"></span><span class="stoneCalc"><span id="BDHAI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
                     <div class="stoneItem stoneBlank"></div>
@@ -307,6 +290,40 @@
                     <div class="stoneItem"><img class="square" src="./Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'BDHA')"><span class="resetText">Reset</span></div>
                     <div class="stoneItem stoneBlank"></div>
                 </div>
+                </div>
+            </div>
+
+            <div id="Ults" class="ultsWrapper">
+            <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="treeItem" id="BDHAU01"><img src="./Icons/Bard/Harmony/ult1.jpg" onclick="ultPopup('BDHAU01')"></div>
+                <div class="treeItem" id="BDHAU02"><img src="./Icons/Bard/Harmony/ult2.jpg" onclick="ultPopup('BDHAU02')"></div>
+                <div class="treeItem" id="BDHAU03"><img src="./Icons/Bard/Harmony/ult3.jpg" onclick="ultPopup('BDHAU03')"></div>
+                <div class="treeItem" id="BDHAU04"><img src="./Icons/Bard/Harmony/ult4.jpg" onclick="ultPopup('BDHAU04')"></div>
+                <div class="treeItem" id="BDHAU05"><img src="./Icons/Bard/Harmony/ult5.jpg" onclick="ultPopup('BDHAU05')"></div>
+                <div class="treeItem" id="BDHAU06"><img   src="./Icons/Bard/Harmony/ult6.jpg" onclick="ultPopup('BDHAU06')"></div>
+                <div class="treeItem" id="BDHAU07"><img src="./Icons/Bard/Harmony/ult7.jpg" onclick="ultPopup('BDHAU07')"></div>
+                <div class="treeItem" id="BDHAU08"><img src="./Icons/Bard/Harmony/ult8.jpg" onclick="ultPopup('BDHAU08')"></div>
+                </div>
+                </div>
+            <div class="ultimates">  <!--PvP-->
+                    <div class="levelReq">
+                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="ultimateSkills">
+                    <div class="treeItem" id="BDHAU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('BDHAU09')"></div>
+                    <div class="treeItem" id="BDHAU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('BDHAU10')"></div>
+                    <div class="treeItem" id="BDHAU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('BDHAU11')"></div>
+                    <div class="treeItem" id="BDHAU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('BDHAU12')"></div>
+                    <div class="treeItem" id="BDHAU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('BDHAU13')"></div>
+                    <div class="treeItem" id="BDHAU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('BDHAU14')"></div>
+                    <div class="treeItem" id="BDHAU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('BDHAU15')"></div>
+                    <div class="treeItem" id="BDHAU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('BDHAU16')"></div>
+                    </div>
+                </div>
             </div>
     </div>
     <div id="skillOverlay">
@@ -326,8 +343,9 @@
         var params = new URLSearchParams(location.search);
             if (params.has('skill') === true) {
                 setTalents(params.get('skill'));
-            }
-            else {setParams(skillCode.join(''));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
             }
         }
     window.onpageshow = loadParams; 

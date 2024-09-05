@@ -41,35 +41,39 @@
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
-                <div class="ultimateSkills">
+                <div class="specSelect">
+                    <div></div>
                     <div class="blank right"><p><b>Frozen</b><br><small>Tank</small></p></div>
                     <div class="skillItem"><img alt="Frozen" src="./Icons/Barbarian/Frozen/Frozen.png" onclick="selectClass('BBFZ')"></div>
                     <div class="skillItem"><img alt="Thunder" src="./Icons/Barbarian/Thunder/thunder.png" class="bground"></div>
                     <div class="blank left"><p><b>Thunder</b><br><small>&nbsp;Melee</small></p></div>
+                    <div></div>
                 </div>
             </div>
 
+            <div id="treeSelect">
             <div class="spec"> <!-- select tree type-->
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Tree</b></span></div>
                 </div>
                 <div class="tree">
                     <div class="blank"></div>
-                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone')"><span class="below"><b><small>Skills</small></b></span></div>
-                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents')"><span class="below"><b><small>Stone</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone', 'block')"><span class="below"><b><small>Skills</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'none')"><span class="below"><b><small>Stone</small></b></span></div>
                     <div class="treeIcon"><img id ="iconWeapon" class="blah" alt="God Weapon" src="./Icons/sword.png" onclick="selectTree(blah)"><span class="below"><b><small>Weapon</small></b></span></div>
                     <div class="blank"></div>
                 </div>
             </div>
+            </div>
 
-
-        <div class="talentTree" id="Talents">   <!--Barbarian-->
+            <div id="Trees" class="showTrees">
+                <div class="talentTree" id="Talents">   <!--Barbarian-->
             <div id="BBTH" class="specList">  <!--Barbarian Thunder-->
                 <div class="ultimates">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
                 </div>
-                <div class="ultimateSkills">
+                <div class="Skills">
                 <div class="skillItem" id="BBTHS02"><img src="./Icons/Barbarian/Thunder/barbTsk2.png" onclick="skillPopup('BBTHS02')"></div>
                 <div class="skillItem" id="BBTHS01"><img src="./Icons/Barbarian/Thunder/barbTsk1.png" onclick="skillPopup('BBTHS01')"></div>
                 <div class="skillItem" id="BBTHS07"><img src="./Icons/Barbarian/Thunder/barbTsk7.png" onclick="skillPopup('BBTHS07')"></div>
@@ -146,47 +150,25 @@
                     <div class="levelReq">
                         <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
                     </div>
-                    <div class="ultimateSkills">   
+                    <div class="Skills">   
                     <div class="treeItem" id="BBTHB1"><img   src="./Icons/Barbarian/Thunder/barbTsk7.png" onclick="raidBuilds('BBTHB1')"><span class="skillCalc right">DPS</span><span class="star">&#9733;</span></div>
                     <div class="treeItem blank"></div>
                     <div class="treeItem blank"></div>
                     <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('BBTH000000000000000000000')"><span class="skillCalc right">Reset</span></div>
                     </div>
                 </div>
-                <div class="ultimates">
-                <div class="levelReq">
-                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
-                </div>
-                <div class="ultimateSkills">
-                <div class="treeItem" id="BBTHU01"><img src="./Icons/Barbarian/Thunder/ult1.jpg" onclick="ultPopup('BBTHU01')"></div>
-                <div class="treeItem" id="BBTHU02"><img src="./Icons/Barbarian/Thunder/ult2.jpg" onclick="ultPopup('BBTHU02')"></div>
-                <div class="treeItem" id="BBTHU03"><img src="./Icons/Barbarian/Thunder/ult3.jpg" onclick="ultPopup('BBTHU03')"></div>
-                <div class="treeItem" id="BBTHU04"><img src="./Icons/Barbarian/Thunder/ult4.jpg" onclick="ultPopup('BBTHU04')"></div>
-                <div class="treeItem" id="BBTHU05"><img src="./Icons/Barbarian/Thunder/ult5.jpg" onclick="ultPopup('BBTHU05')"></div>
-                <div class="treeItem" id="BBTHU06"><img src="./Icons/Barbarian/Thunder/ult6.jpg" onclick="ultPopup('BBTHU06')"></div>
-                <div class="treeItem" id="BBTHU07"><img src="./Icons/Barbarian/Thunder/ult7.jpg" onclick="ultPopup('BBTHU07')"></div>
-                <div class="treeItem" id="BBTHU08"><img src="./Icons/Barbarian/Thunder/ult8.jpg" onclick="ultPopup('BBTHU08')"></div>
-                </div>
-                </div>
-                <div class="ultimates">  <!--PvP-->
+                <div class="ultimates" id="blankTree">
                     <div class="levelReq">
-                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                        <div class="treeItem"></div>
                     </div>
-                    <div class="ultimateSkills">
-                    <div class="treeItem" id="BBTHU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('BBTHU09')"></div>
-                    <div class="treeItem" id="BBTHU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('BBTHU10')"></div>
-                    <div class="treeItem" id="BBTHU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('BBTHU11')"></div>
-                    <div class="treeItem" id="BBTHU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('BBTHU12')"></div>
-                    <div class="treeItem" id="BBTHU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('BBTHU13')"></div>
-                    <div class="treeItem" id="BBTHU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('BBTHU14')"></div>
-                    <div class="treeItem" id="BBTHU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('BBTHU15')"></div>
-                    <div class="treeItem" id="BBTHU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('BBTHU16')"></div>
-                    </div>
+                    <div class="Skills">   
+                    <div><span class="blank"></span></div>
                     </div>
                 </div>
-        </div>
+                </div>
+                </div>
 
-        <div id="Stone">
+                <div id="Stone">
             <div class="stoneTree">
                 <div class="stoneItem"><span class="shadow"><img id = "THI58" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('BBTHI58', 'octagon')"></span><span class="stoneCalc"><span id="BBTHI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
                 <div class="stoneItem stoneBlank"></div>
@@ -308,7 +290,41 @@
                 <div class="stoneItem"><img class="square" src="./Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'BBTH')"><span class="resetText">Reset</span></div>
                 <div class="stoneItem stoneBlank"></div>
             </div>
-        </div>
+                </div>
+            </div>
+
+            <div id="Ults" class="ultsWrapper">
+            <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="treeItem" id="BBTHU01"><img src="./Icons/Barbarian/Thunder/ult1.jpg" onclick="ultPopup('BBTHU01')"></div>
+                <div class="treeItem" id="BBTHU02"><img src="./Icons/Barbarian/Thunder/ult2.jpg" onclick="ultPopup('BBTHU02')"></div>
+                <div class="treeItem" id="BBTHU03"><img src="./Icons/Barbarian/Thunder/ult3.jpg" onclick="ultPopup('BBTHU03')"></div>
+                <div class="treeItem" id="BBTHU04"><img src="./Icons/Barbarian/Thunder/ult4.jpg" onclick="ultPopup('BBTHU04')"></div>
+                <div class="treeItem" id="BBTHU05"><img src="./Icons/Barbarian/Thunder/ult5.jpg" onclick="ultPopup('BBTHU05')"></div>
+                <div class="treeItem" id="BBTHU06"><img src="./Icons/Barbarian/Thunder/ult6.jpg" onclick="ultPopup('BBTHU06')"></div>
+                <div class="treeItem" id="BBTHU07"><img src="./Icons/Barbarian/Thunder/ult7.jpg" onclick="ultPopup('BBTHU07')"></div>
+                <div class="treeItem" id="BBTHU08"><img src="./Icons/Barbarian/Thunder/ult8.jpg" onclick="ultPopup('BBTHU08')"></div>
+                </div>
+                </div>
+            <div class="ultimates">  <!--PvP-->
+                    <div class="levelReq">
+                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="ultimateSkills">
+                    <div class="treeItem" id="BBTHU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('BBTHU09')"></div>
+                    <div class="treeItem" id="BBTHU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('BBTHU10')"></div>
+                    <div class="treeItem" id="BBTHU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('BBTHU11')"></div>
+                    <div class="treeItem" id="BBTHU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('BBTHU12')"></div>
+                    <div class="treeItem" id="BBTHU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('BBTHU13')"></div>
+                    <div class="treeItem" id="BBTHU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('BBTHU14')"></div>
+                    <div class="treeItem" id="BBTHU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('BBTHU15')"></div>
+                    <div class="treeItem" id="BBTHU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('BBTHU16')"></div>
+                    </div>
+                </div>
+            </div>
     </div>
     <div id="skillOverlay">
         <div class="overlay" onclick="closeOverlay()"></div>
@@ -327,8 +343,9 @@
         var params = new URLSearchParams(location.search);
             if (params.has('skill') === true) {
                 setTalents(params.get('skill'));
-            }
-            else {setParams(skillCode.join(''));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
             }
         }
     window.onpageshow = loadParams; 

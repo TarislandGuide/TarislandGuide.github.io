@@ -41,34 +41,39 @@
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
-                <div class="ultimateSkills">
+                <div class="specSelect">
+                    <div></div>
                     <div class="blank right"><p><b>Soul<br>Healing</b><br><small>Heal</small></p></div>
                     <div class="skillItem"><img alt="Healing" src="./Icons/Necro/SoulHealing/healing.png" onclick="selectClass('PNSH')"></div>
                     <div class="skillItem"><img alt="Snatch" src="./Icons/Necro/SoulSnatch/snatch.png" class="bground"></div>
                     <div class="blank left"><p><b>Soul<br>Snatch</b><br><small>Ranged</small></p></div>
+                    <div></div>
                 </div>
             </div>
 
+            <div id="treeSelect">
             <div class="spec"> <!-- select tree type-->
                 <div class="levelReq">
                     <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Tree</b></span></div>
                 </div>
                 <div class="tree">
                     <div class="blank"></div>
-                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone')"><span class="below"><b><small>Skills</small></b></span></div>
-                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents')"><span class="below"><b><small>Stone</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone', 'block')"><span class="below"><b><small>Skills</small></b></span></div>
+                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'none')"><span class="below"><b><small>Stone</small></b></span></div>
                     <div class="treeIcon"><img id ="iconWeapon" class="blah" alt="God Weapon" src="./Icons/sword.png" onclick="selectTree(blah)"><span class="below"><b><small>Weapon</small></b></span></div>
                     <div class="blank"></div>
                 </div>
             </div>
+            </div>
 
-        <div class="talentTree" id="Talents">   <!--Necro-->
+            <div id="Trees" class="showTrees">
+                <div class="talentTree" id="Talents">   <!--Necro-->
             <div id="PNSS" class="specList">  <!--Necro Snatch-->
                 <div class="ultimates">
                 <div class="levelReq">
                     <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
                 </div>
-                <div class="ultimateSkills">
+                <div class="Skills">
                 <div class="skillItem" id="PNSSS01"><img src="./Icons/Necro/SoulSnatch/necroSsk1.png" onclick="skillPopup('PNSSS01')"></div>
                 <div class="skillItem" id="PNSSS08"><img src="./Icons/Necro/SoulSnatch/necroSsk2.png" onclick="skillPopup('PNSSS08')"></div>
                 <div class="skillItem" id="PNSSS02"><img src="./Icons/Necro/SoulSnatch/necroSsk3.png" onclick="skillPopup('PNSSS02')"></div>
@@ -146,47 +151,25 @@
                     <div class="levelReq">
                         <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
                     </div>
-                    <div class="ultimateSkills">   
+                    <div class="Skills">   
                     <div class="treeItem" id="PNSSB1"><img   src="./Icons/Necro/SoulSnatch/necroS2.jpg" onclick="raidBuilds('PNSSB1')"><span class="skillCalc right">Bone<br>Spirit</span></div>
                     <div class="treeItem" id="PNSSB2"><img   src="./Icons/Necro/SoulSnatch/necroS8.jpg" onclick="raidBuilds('PNSSB2')"><span class="skillCalc right">Tangled</span></div>
                     <div class="treeItem blank"></div>
                     <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('PNSS000000000000000000000')"><span class="skillCalc right">Reset</span></div>
                     </div>
                 </div>
-                <div class="ultimates">
-                <div class="levelReq">
-                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Ultimates</b></span></div>
-                </div>
-                <div class="ultimateSkills">
-                <div class="treeItem" id="PNSSU01"><img src="./Icons/Necro/SoulSnatch/ult1.jpg" onclick="ultPopup('PNSSU01')"></div>
-                <div class="treeItem" id="PNSSU02"><img src="./Icons/Necro/SoulSnatch/ult2.jpg" onclick="ultPopup('PNSSU02')"></div>
-                <div class="treeItem" id="PNSSU03"><img src="./Icons/Necro/SoulSnatch/ult3.jpg" onclick="ultPopup('PNSSU03')"></div>
-                <div class="treeItem" id="PNSSU04"><img src="./Icons/Necro/SoulSnatch/ult4.jpg" onclick="ultPopup('PNSSU04')"></div>
-                <div class="treeItem" id="PNSSU05"><img src="./Icons/Necro/SoulSnatch/ult5.jpg" onclick="ultPopup('PNSSU05')"></div>
-                <div class="treeItem" id="PNSSU06"><img src="./Icons/Necro/SoulSnatch/ult6.jpg" onclick="ultPopup('PNSSU06')"></div>
-                <div class="treeItem" id="PNSSU07"><img src="./Icons/Necro/SoulSnatch/ult7.jpg" onclick="ultPopup('PNSSU07')"></div>
-                <div class="treeItem" id="PNSSU08"><img src="./Icons/Necro/SoulSnatch/ult8.jpg" onclick="ultPopup('PNSSU08')"></div>
-                </div>
-                </div>
-                <div class="ultimates">  <!--PvP-->
+                <div class="ultimates" id="blankTree">
                     <div class="levelReq">
-                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                        <div class="treeItem"></div>
                     </div>
-                    <div class="ultimateSkills">
-                    <div class="treeItem" id="PNSSU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('PNSSU09')"></div>
-                    <div class="treeItem" id="PNSSU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('PNSSU10')"></div>
-                    <div class="treeItem" id="PNSSU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('PNSSU11')"></div>
-                    <div class="treeItem" id="PNSSU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('PNSSU12')"></div>
-                    <div class="treeItem" id="PNSSU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('PNSSU13')"></div>
-                    <div class="treeItem" id="PNSSU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('PNSSU14')"></div>
-                    <div class="treeItem" id="PNSSU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('PNSSU15')"></div>
-                    <div class="treeItem" id="PNSSU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('PNSSU16')"></div>
-                    </div>
+                    <div class="Skills">   
+                    <div></div>
                     </div>
                 </div>
-        </div>
+                </div>
+                </div>
 
-        <div id="Stone">
+                <div id="Stone">
             <div class="stoneTree">
                 <div class="stoneItem"><span class="shadow"><img id = "SSI58" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('PNSSI58', 'octagon')"></span><span class="stoneCalc"><span id="PNSSI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
                 <div class="stoneItem stoneBlank"></div>
@@ -308,7 +291,41 @@
                 <div class="stoneItem"><img class="square" src="./Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'PNSS')"><span class="resetText">Reset</span></div>
                 <div class="stoneItem stoneBlank"></div>
             </div>
-        </div>
+                </div>
+            </div>
+
+            <div id="Ults" class="ultsWrapper">
+            <div class="ultimates">
+                <div class="levelReq">
+                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="ultimateSkills">
+                <div class="treeItem" id="PNSSU01"><img src="./Icons/Necro/SoulSnatch/ult1.jpg" onclick="ultPopup('PNSSU01')"></div>
+                <div class="treeItem" id="PNSSU02"><img src="./Icons/Necro/SoulSnatch/ult2.jpg" onclick="ultPopup('PNSSU02')"></div>
+                <div class="treeItem" id="PNSSU03"><img src="./Icons/Necro/SoulSnatch/ult3.jpg" onclick="ultPopup('PNSSU03')"></div>
+                <div class="treeItem" id="PNSSU04"><img src="./Icons/Necro/SoulSnatch/ult4.jpg" onclick="ultPopup('PNSSU04')"></div>
+                <div class="treeItem" id="PNSSU05"><img src="./Icons/Necro/SoulSnatch/ult5.jpg" onclick="ultPopup('PNSSU05')"></div>
+                <div class="treeItem" id="PNSSU06"><img src="./Icons/Necro/SoulSnatch/ult6.jpg" onclick="ultPopup('PNSSU06')"></div>
+                <div class="treeItem" id="PNSSU07"><img src="./Icons/Necro/SoulSnatch/ult7.jpg" onclick="ultPopup('PNSSU07')"></div>
+                <div class="treeItem" id="PNSSU08"><img src="./Icons/Necro/SoulSnatch/ult8.jpg" onclick="ultPopup('PNSSU08')"></div>
+                </div>
+                </div>
+            <div class="ultimates">  <!--PvP-->
+                    <div class="levelReq">
+                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="ultimateSkills">
+                    <div class="treeItem" id="PNSSU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('PNSSU09')"></div>
+                    <div class="treeItem" id="PNSSU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('PNSSU10')"></div>
+                    <div class="treeItem" id="PNSSU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('PNSSU11')"></div>
+                    <div class="treeItem" id="PNSSU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('PNSSU12')"></div>
+                    <div class="treeItem" id="PNSSU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('PNSSU13')"></div>
+                    <div class="treeItem" id="PNSSU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('PNSSU14')"></div>
+                    <div class="treeItem" id="PNSSU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('PNSSU15')"></div>
+                    <div class="treeItem" id="PNSSU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('PNSSU16')"></div>
+                    </div>
+                </div>
+            </div>
     </div>
     <div id="skillOverlay">
         <div class="overlay" onclick="closeOverlay()"></div>
@@ -327,8 +344,9 @@
         var params = new URLSearchParams(location.search);
             if (params.has('skill') === true) {
                 setTalents(params.get('skill'));
-            }
-            else {setParams(skillCode.join(''));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
             }
         }
     window.onpageshow = loadParams; 

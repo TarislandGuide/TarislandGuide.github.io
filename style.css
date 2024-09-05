@@ -25,14 +25,20 @@ body {
 
 .wrapper {
     margin: auto;
-    max-width: 30rem;
+    max-width: 60rem;
     position: relative;
+    background: var(--beige);
 }
-#Talents {
+#Talents, #Stone, #Ults, #newsPC {
     display: block;
 }
-#Stone {
+#treeSelect, #newsMobile {
     display: none;
+}
+.showTrees {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 2rem;
+    gap: 2rem;
 }
 .skillTree {
     display: grid;
@@ -53,15 +59,20 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.newsFeed, .infoFeed {
+.newsFeed {
     display: flex;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     background-color: var(--beige);
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-.newsFeed{
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     padding-bottom: 0.5rem;
+}
+.infoFeed{
+    display: flex;
+    background-color: var(--darkBeige);
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -113,12 +124,38 @@ body {
 }
 .ultimateSkills {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.Skills {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+.specSelect {
+    display: grid;
+    grid-template-columns: 2fr 0.7fr 6rem 6rem 1fr 2fr;
+    grid-gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
 }
 .treeItem, .skillitem, .treeIcon {
     position: relative;
@@ -535,5 +572,25 @@ input::placeholder{
     }
     .below {
         right: 2.25rem;
+    }
+    #Stone, #blankTree, #newsPC {
+        display: none;
+    }
+    #treeSelect, #newsMobile {
+        display: block;
+    }
+    .showTrees {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .specSelect {
+        grid-template-columns: 0 1fr 1fr 1fr 1fr 0;
+    }
+    .ultimateSkills {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .feed {
+        grid-template-columns: 1fr;
     }
 }
