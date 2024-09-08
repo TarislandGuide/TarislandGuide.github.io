@@ -279,8 +279,10 @@ function raidBuilds(value) {
         return value === v.Id;
     }
     let buildCode = builds.find(search);
-    setTalents(buildCode.SkillCode);
-    setParams(buildCode.SkillCode, 'skill');
+    setTalents(buildCode.Skill);
+    setStone([1, ...decode(buildCode.Stone)].join(''), skillCode[0]);   
+    setParams(buildCode.Skill, 'skill');
+    setParams(buildCode.Stone, 'stone');
 }
 
 function updateParams(code, key) {
