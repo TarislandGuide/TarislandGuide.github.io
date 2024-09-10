@@ -21,6 +21,9 @@ body {
     min-width: 100vw;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     color: var(--beige);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
 .wrapper {
@@ -29,10 +32,10 @@ body {
     position: relative;
     background: var(--beige);
 }
-#Talents, #Stone, #Ults, #newsPC {
+#Talents, #Stone, #Ults {
     display: block;
 }
-#treeSelect, #newsMobile {
+#treeSelect {
     display: none;
 }
 .showTrees {
@@ -58,14 +61,6 @@ body {
     gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-.newsFeed {
-    display: flex;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    background-color: var(--beige);
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
 }
 .infoFeed{
     display: flex;
@@ -193,13 +188,13 @@ body {
 .skillCalc {
     border-radius: 0.5rem 0 0.5rem 0;
     bottom: 0;
-    right: 0.5rem;
+    right: 0.25rem;
 }
 .stoneCalc {
     border-radius: 0.5rem;
     font-size: small;
     bottom: 0.2rem;
-    right: 1rem;
+    right: 0.85rem;
 }
 .resetText {
     border-radius: 0.5rem 0 0.5rem 0;
@@ -210,8 +205,8 @@ body {
 .linkB {
     position: absolute;
     left: 1.75rem;
-    height: 2rem;
-    bottom: -2rem;
+    height: 2.5rem;
+    bottom: -2.5rem;
 }
 .linkBR {
     left: 2.75rem;
@@ -266,6 +261,10 @@ body {
     width: 3.5rem;
     z-index: 3;
 }
+.octagon {
+    position: absolute;
+    width: 4rem !important;
+}
 .skillItem img, .classItem img, .popImg, .popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay .selectClass{
     -webkit-user-drag: none;
     user-select: none;
@@ -293,6 +292,7 @@ body {
 .stoneBlank {
     display: flex;
     align-items: center;
+    height: 3.5rem;
 }
 .treeIcon img {
     border-radius: 50%;
@@ -331,11 +331,24 @@ body {
 .green {
     color: var(--green);
 }
+.bgGreen {
+    background-color: var(--green);
+    opacity: 0.5;
+    filter: grayscale(35%);
+}
 .yellow {
     color: var(--yellow);
 }
+.bgYellow {
+    background-color: var(--yellow);
+    opacity: 0.5;
+}
 .red {
     color: var(--red);
+}
+.bgRed {
+    background: rgb(121,9,9);
+    background: linear-gradient(90deg, rgba(121,9,9,0.5102415966386555) 0%, rgba(218,191,158,1) 100%);
 }
 .orange{
     color: var(--orange);
@@ -345,6 +358,10 @@ body {
 }
 .purple{
     color: var(--purple);
+}
+.bgPurple {
+    background: rgb(71,9,121);
+    background: linear-gradient(90deg, rgba(71,9,121,0.5102415966386555) 0%, rgba(218,191,158,1) 100%);
 }
 .brown {
     color: var(--midBrown)
@@ -362,31 +379,14 @@ body {
 #iconWeapon {
     filter: opacity(40%);
 }
-.circle {
-    border-radius: 50%;
-    outline: 1px solid var(--sepia);
-    outline-offset: -1px;
+.diamond {
+    position: absolute;
+    width: 4.5rem !important;
+    top: -1.25rem;
+    left: -0.5rem;
 }
 .square {
     border-radius: 0.5rem;
-    outline: 1px solid var(--sepia);
-    outline-offset: -1px;
-}
-.octagon {
-    clip-path: polygon(50% 0, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0 50%, 15% 15%);
-}
-.diamond {
-    clip-path: polygon(50% 1%, 98% 50%, 50% 99%, 1% 50%);
-    position: absolute;
-    top: -2.4rem;
-    left: -1.8rem;
-}
-.shadow {
-    filter: 
-        drop-shadow( 1px  0px 0px var(--sepia)) 
-        drop-shadow(-1px  0px 0px var(--sepia))
-        drop-shadow( 0px  1px 0px var(--sepia)) 
-        drop-shadow( 0px -1px 0px var(--sepia));
 }
 .dot {
     height: 1.5rem;
@@ -493,8 +493,19 @@ input::placeholder{
         padding-left: 0rem;
         padding-right: 0.3rem; 
     }
+    .octagon {
+        width: 3.5rem !important;
+    }
+    .diamond {
+        width: 3.5rem !important;
+        top: -0.5rem;
+        left: 0.1rem;
+    }
     .stoneItem img {
         max-width: 3rem;
+    }
+    .stoneBlank {
+        height: 3rem;
     }
     .stoneCalc {
         right: 0.8rem;
@@ -550,10 +561,6 @@ input::placeholder{
     .req {
         bottom: -2.97rem;
     }
-    .diamond {
-        top: -2rem;
-        left: -1.45rem;
-    }
     .star {
         top: -0.45rem;
         right: 0.4rem;
@@ -573,10 +580,10 @@ input::placeholder{
     .below {
         right: 2.25rem;
     }
-    #Stone, #blankTree, #newsPC {
+    #Stone, #blankTree {
         display: none;
     }
-    #treeSelect, #newsMobile {
+    #treeSelect {
         display: block;
     }
     .showTrees {
