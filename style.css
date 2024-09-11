@@ -63,7 +63,8 @@ body {
     padding-bottom: 1rem;
 }
 .infoFeed{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: var(--darkBeige);
     border-radius: 0.5rem;
     padding-left: 1rem;
@@ -261,9 +262,9 @@ body {
     width: 3.5rem;
     z-index: 3;
 }
-.octagon {
+.stoneItem img.octagon {
     position: absolute;
-    width: 4rem !important;
+    width: 4rem;
 }
 .skillItem img, .classItem img, .popImg, .popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay .selectClass{
     -webkit-user-drag: none;
@@ -379,14 +380,18 @@ body {
 #iconWeapon {
     filter: opacity(40%);
 }
-.diamond {
+.stoneItem img.diamond {
     position: absolute;
-    width: 4.5rem !important;
+    width: 4.5rem;
     top: -1.25rem;
     left: -0.5rem;
 }
 .square {
     border-radius: 0.5rem;
+}
+.treeItem img.circle {
+    width: 4rem;
+    border-radius: 50%;
 }
 .dot {
     height: 1.5rem;
@@ -487,22 +492,25 @@ input::placeholder{
     body {
         background-color: var(--beige);
     }
+    .wrapper {
+        max-width: 100vw;
+    }
     .stoneTree {
         grid-row-gap: 1.75rem;
         grid-column-gap: 0.25rem;
         padding-left: 0rem;
         padding-right: 0.3rem; 
     }
-    .octagon {
-        width: 3.5rem !important;
-    }
-    .diamond {
-        width: 3.5rem !important;
-        top: -0.5rem;
-        left: 0.1rem;
-    }
     .stoneItem img {
-        max-width: 3rem;
+        width: 3rem;
+    }
+    .stoneItem img.diamond {
+        width: 4rem;
+        top: -1;
+        left: -0.3rem;
+    }
+    .stoneItem img.octagon {
+        width: 3.5rem;
     }
     .stoneBlank {
         height: 3rem;
@@ -546,14 +554,14 @@ input::placeholder{
         line-height: 1;
     }
     .linkB {
-        left: 1.55rem;
-        bottom: -1.75rem;
+        left: 1.6rem;
+        bottom: -2rem;
     }
     .linkBL {
-        left: 1rem;
+        left: 0.9rem;
     }
     .linkBR {
-        left: 2.1rem;
+        left: 2.4rem;
     }
     .req, .long {
         right: 2.25rem;
