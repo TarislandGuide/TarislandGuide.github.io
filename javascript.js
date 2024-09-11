@@ -225,6 +225,15 @@ function resetStone(code, classCode) {
     setParams(encode(rest), 'stone');
 }
 
+function copy(value) {
+    window.navigator.clipboard.writeText(value);
+    document.getElementById("copy1").innerHTML = "Copied";
+    document.getElementById("copy2").innerHTML = "Copied";
+    setTimeout( function() {
+        document.getElementById("copy1").innerHTML = "Copy";
+        document.getElementById("copy2").innerHTML = "Copy";
+    }, 1500);
+}
 
 function setTalents(code) {
     var num = code.replace(/[A-Z]/g, '');
