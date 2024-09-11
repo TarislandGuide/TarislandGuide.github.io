@@ -546,7 +546,7 @@ input::placeholder{
         grid-gap: 0.75rem;
     }
     .blank {
-        min-height: 4.5rem;
+        height: 4.5rem;
     }
     .skillCalc {
         bottom: 0.05rem;
@@ -607,5 +607,66 @@ input::placeholder{
     }
     .feed {
         grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 360px) {
+    .talents {
+        grid-gap: 0.2rem;
+    }
+    .Skills {
+        grid-gap:0rem;
+        grid-row-gap: 0.5rem;
+    }
+    .skillItem img, .treeIcon img {
+        max-width: 3.8rem;
+    }
+    .classItem img {
+        max-width: 4.5rem;
+    }
+    .treeItem img, .popImg {
+        max-width: 4rem;
+    }
+    .blank {
+        height: 3.5rem;
+    }
+    .skillCalc {
+        bottom: 0.1rem;
+        right: 0.4rem;
+        line-height: 0.8;
+    }
+    .stoneCalc {
+        right: 0.7rem;
+    }
+    .req {
+        bottom: -2.85rem;
+    }
+    .popup {
+        width: 19rem;
+        padding: 1rem;
+        margin-left: 1rem;
+    }
+    #plus, #minus {
+        max-width: 2.7rem;
+    }
+    .stoneItem img {
+        width: 2.8rem;
+    }
+    .stoneItem img.diamond {
+        width: 3.7rem;
+        top: -1;
+        left: -0.3rem;
+    }
+    .stoneItem img.octagon {
+        width: 3.3rem;
+    }
+    .linkB {
+        left: 1.45rem;
+        bottom: -2rem;
+    }
+    .linkBL {
+        left: 0.7rem;
+    }
+    .linkBR {
+        left: 2.2rem;
     }
 }
