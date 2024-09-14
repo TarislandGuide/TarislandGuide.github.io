@@ -1,6 +1,7 @@
 :root {
     --darkTrans: #22222280;
     --brown: rgb(65, 56, 49);
+    --brownTrans :rgba(65, 56, 49, 0.9);
     --midBrown: rgb(104, 77, 55);
     --pale: rgb(153, 136, 122);
     --beige: #ffe4c4;
@@ -9,9 +10,12 @@
     --green: rgb(40, 202, 40);
     --yellow: gold;
     --orange: rgb(216, 134, 27);
+    --darkOrange: rgb(117, 56, 20, 0.85);
     --red: rgb(212, 55, 55);
+    --darkRed: rgb(95, 11, 11, 0.85);
     --blue: rgb(94, 177, 224);
     --purple: rgb(156, 70, 236);
+    --darkPurple: rgba(42, 15, 65, 0.85);
     }
 
 body {
@@ -64,8 +68,10 @@ body {
 }
 .infoFeed{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 0.7fr 0.7fr;
+    grid-gap: 0.5rem;
     background-color: var(--darkBeige);
+    color: var(--beige);
     border-radius: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -158,6 +164,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.treeItem.builds {
+    align-items: end;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .stoneTree {
     display: grid;
@@ -290,6 +301,9 @@ body {
     align-items: center;
     color: var(--midBrown);
 }
+.blankSmall {
+    height: 2rem;
+}
 .stoneBlank {
     display: flex;
     align-items: center;
@@ -332,24 +346,11 @@ body {
 .green {
     color: var(--green);
 }
-.bgGreen {
-    background-color: var(--green);
-    opacity: 0.5;
-    filter: grayscale(35%);
-}
 .yellow {
     color: var(--yellow);
 }
-.bgYellow {
-    background-color: var(--yellow);
-    opacity: 0.5;
-}
 .red {
     color: var(--red);
-}
-.bgRed {
-    background: rgb(121,9,9);
-    background: linear-gradient(90deg, rgba(121,9,9,0.5102415966386555) 0%, rgba(218,191,158,1) 100%);
 }
 .orange{
     color: var(--orange);
@@ -360,12 +361,26 @@ body {
 .purple{
     color: var(--purple);
 }
-.bgPurple {
-    background: rgb(71,9,121);
-    background: linear-gradient(90deg, rgba(71,9,121,0.5102415966386555) 0%, rgba(218,191,158,1) 100%);
-}
 .brown {
     color: var(--midBrown)
+}
+.bgBarb {
+    background: linear-gradient(90deg, var(--brownTrans) 0%, var(--darkOrange) 100%);
+}
+.bgWarr {
+    background: linear-gradient(90deg, var(--brownTrans) 0%, var(--darkRed) 100%);
+}
+.bgYellow {
+    background-color: var(--yellow);
+    opacity: 0.5;
+}
+.bgGreen {
+    background-color: var(--green);
+    opacity: 0.5;
+    filter: grayscale(35%);
+}
+.bgShadow {
+    background: linear-gradient(90deg, var(--brownTrans) 0%, var(--darkPurple) 100%);
 }
 .gray {
     filter: grayscale(85%);
@@ -524,11 +539,14 @@ input::placeholder{
     .treeItem img, .popImg {
         max-width: 4.5rem;
     }
+    .treeItem img.circle {
+        width: 3.3rem;
+    }
     .popImg{
         margin-right: 2.5rem;
     }
     .skillItem img, .treeIcon img {
-        max-width: 4rem;
+        width: 4.3rem;
     }
     .classItem {
         max-width: 5rem;
