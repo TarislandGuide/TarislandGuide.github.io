@@ -68,7 +68,7 @@ body {
 }
 .infoFeed{
     display: grid;
-    grid-template-columns: 2fr 0.7fr 0.7fr;
+    grid-template-columns: 1fr;
     grid-gap: 0.5rem;
     background-color: var(--darkBeige);
     color: var(--beige);
