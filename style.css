@@ -1,21 +1,19 @@
 :root {
     --darkTrans: #22222280;
-    --brown: rgb(65, 56, 49);
-    --brownTrans :rgba(65, 56, 49, 0.9);
-    --midBrown: rgb(104, 77, 55);
+    --brown: rgb(54, 49, 45);
+    --brownTrans :rgba(65, 56, 49, 0.85);
+    --brownPale:rgba(109, 79, 57, 0.589);
+    --midBrown: rgb(83, 67, 53);
     --pale: rgb(153, 136, 122);
-    --beige: #ffe4c4;
-    --darkBeige: #dabf9e;
-    --sepia: #ac7e46;
+    --beige: #f1dcc2;
+    --darkBeige: #d1bca3;
+    --sepia: #af8c61;
     --green: rgb(40, 202, 40);
     --yellow: gold;
-    --orange: rgb(216, 134, 27);
-    --darkOrange: rgb(117, 56, 20, 0.85);
+    --orange: rgb(224, 138, 25);
     --red: rgb(212, 55, 55);
-    --darkRed: rgb(95, 11, 11, 0.85);
     --blue: rgb(94, 177, 224);
     --purple: rgb(156, 70, 236);
-    --darkPurple: rgba(42, 15, 65, 0.85);
     }
 
 body {
@@ -67,11 +65,13 @@ body {
     padding-bottom: 1rem;
 }
 .infoFeed{
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 0.7fr 0.7fr;
     grid-gap: 0.5rem;
     background-color: var(--darkBeige);
-    color: var(--beige);
+    color: var(--midBrown);
+    border: solid 1px var(--pale);
     border-radius: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -364,23 +364,8 @@ body {
 .brown {
     color: var(--midBrown)
 }
-.bgBarb {
-    background: linear-gradient(90deg, var(--brownTrans) 0%, var(--darkOrange) 100%);
-}
-.bgWarr {
-    background: linear-gradient(90deg, var(--brownTrans) 0%, var(--darkRed) 100%);
-}
-.bgYellow {
-    background-color: var(--yellow);
-    opacity: 0.5;
-}
-.bgGreen {
-    background-color: var(--green);
-    opacity: 0.5;
-    filter: grayscale(35%);
-}
-.bgShadow {
-    background: linear-gradient(90deg, var(--brownTrans) 0%, var(--darkPurple) 100%);
+.bgPale {
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--brownPale) 100%);
 }
 .gray {
     filter: grayscale(85%);
@@ -467,30 +452,15 @@ body {
 .notes {
     font-size: 2rem;
 }
-.textBox {
-    margin-left: 2rem;
-    margin-top: 1rem;
-    padding: 0.3rem;
-    font-size: medium;
-    background-color: var(--beige);
-    color: var(--midBrown);
-    outline: none;
-    border: 1px solid var(--brown);
+.role {
+    width: 2rem;
 }
-.button{
-    margin-left: 1rem;
-    margin-top: 0.75rem;
-    padding: 0.3rem;
-    font-size: medium;
-    background-color: var(--midBrown);
-    color: var(--beige);
-    outline: none;
-    border: 1px solid var(--midbrown);
-    border-radius: 0.25rem;
+.roleIcon {
+    width: 10rem;
+    position: absolute;
+    opacity: 15%;
+    top: -1.75rem;
 }
-input::placeholder{
-    color: var(--brown);
-  }
 .nudge {
     margin-left: 2rem;
 }
