@@ -133,15 +133,12 @@ body {
     padding-right: 0.5rem;
 }
 .talents {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto auto auto;
     background-color: var(--beige);
     gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 .tree {
     display: grid;
@@ -151,14 +148,11 @@ body {
     gap: 0;
 }
 .corePassives {
-    display: grid;
     background-color: var(--sepia);
     grid-template-rows: auto auto auto auto auto auto auto auto;
     grid-gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 .ultimates {
     display: grid;
@@ -167,31 +161,30 @@ body {
     background-color: var(--beige);
 }
 .ultimateSkills {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 0.5rem;
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 .Skills {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     padding-top: 2rem;
-    padding-bottom: 1.5rem;
+}
+.buildsGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.Skills, .ultimateSkills, .buildsGrid, .specSelect, .corePassives, .talents {
+    display: grid;
+    margin-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 .specSelect {
-    display: grid;
     grid-template-columns: 2fr 0.7fr 6rem 6rem 1fr 2fr;
     grid-gap: 1rem;
     padding-top: 2rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 .feed {
     display: grid;
@@ -247,6 +240,9 @@ body {
     border-radius: 0.5rem 0 0.5rem 0;
     bottom: 0;
     right: 0.25rem;
+}
+.buildsGrid .skillCalc {
+    right: 0.4rem;
 }
 .stoneCalc {
     border-radius: 0.5rem;
@@ -342,7 +338,7 @@ body {
     margin-left: 0.5rem;
 }
 .blank {
-    height: 4.6rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     color: var(--midBrown);
@@ -486,10 +482,6 @@ body {
     top: -0.7rem;
     right: 0.2rem;
 }
-.starBuilds {
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-}
 .triangle {
     font-size: 2rem;
     top: 0rem;
@@ -500,6 +492,14 @@ body {
     text-shadow: 0px 0px 0.5rem black;
     pointer-events: none; 
     color: var(--beige);
+}
+.buildsGrid .star {
+    top: -0.8rem;
+    right: 0.5rem;
+}
+.buildsGrid .triangle {
+    top: 0.15rem;
+    right: 0.4rem;
 }
 .rotate {
     writing-mode:vertical-rl;
@@ -688,6 +688,10 @@ body {
         right: 0.35rem;
         line-height: 1;
     }
+    .buildsGrid .skillCalc {
+        right: 0.4rem;
+        bottom: 0.2rem;
+    }
     .linkB {
         left: 1.6rem;
         bottom: -2rem;
@@ -715,6 +719,14 @@ body {
     }   
     .plusMinus {
         width: 2.5rem;
+    }
+    .buildsGrid .star {
+        top: -0.4rem;
+        right: 0.4rem;
+    }
+    .buildsGrid .triangle {
+        top: 0.15rem;
+        right: 0.4rem;
     }
     .popSkillCalc {
         font-size: 2.75rem;
@@ -765,6 +777,16 @@ body {
         bottom: 0.1rem;
         right: 0.4rem;
         line-height: 0.8;
+    }
+    .buildsGrid .skillCalc {
+        right: 0.3rem;
+        bottom: 0.5rem;
+    }
+    .buildsGrid .star {
+        top: 0rem;
+    }
+    .buildsGrid .triangle {
+        top: 0.5rem;
     }
     .stoneCalc {
         right: 0.7rem;
