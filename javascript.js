@@ -124,12 +124,34 @@ function skillPopup(value) {
     + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
 }
 
+function buildsPopup(value) {
+    document.getElementById("skillOverlay").style.display = "block";
+    function search(v){
+        return value === v.id;
+    }
+    let skill = builds.find(search);
+    const info = skill.variable.split(",");
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "</h2><br>Cast Range: <span class = 'orange'>" 
+    + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
+}
+
 function skillCostPopup(value) {
     document.getElementById("skillOverlay").style.display = "block";
     function search(v){
         return value === v.id;
     }
     let skill = talents.find(search);
+    const info = skill.variable.split(",");
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'>" 
+    + skill.range + " m</span><br>Resource: <span class = 'orange'>" + skill.cost + "</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
+}
+
+function buildsCostPopup(value) {
+    document.getElementById("skillOverlay").style.display = "block";
+    function search(v){
+        return value === v.id;
+    }
+    let skill = builds.find(search);
     const info = skill.variable.split(",");
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + skill.name + "</h2><br>Cast Range: <span class = 'orange'>" 
     + skill.range + " m</span><br>Resource: <span class = 'orange'>" + skill.cost + "</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
@@ -285,13 +307,21 @@ function stoneTotal() {
 
 function raidBuilds(value) {
     function search(v){
-        return value === v.Id;
+        return value === v.id;
     }
     let buildCode = builds.find(search);
     setTalents(buildCode.Skill);
     setStone([1, ...decode(buildCode.Stone)].join(''), skillCode[0]);   
     setParams(buildCode.Skill, 'skill');
     setParams(buildCode.Stone, 'stone');
+}
+
+function linkBuilds(value) {
+    function search(v){
+        return value === v.id;
+    }
+    let buildCode = builds.find(search);
+    window.location =  `./${value.slice(0, 4)}.html?skill=${buildCode.Skill}&stone=${buildCode.Stone}`;
 }
 
 function updateParams(code, key) {

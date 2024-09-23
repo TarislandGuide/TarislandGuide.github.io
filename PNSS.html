@@ -21,8 +21,8 @@
 <body>
     <div class="wrapper">
         <div class="spec">   <!--Class Select-->
-            <div class="levelReq">
-                <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Class</b></span></div>
+            <div class="sideBar">
+                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Class</b></span></div>
             </div>
             <div class="selectClass" id="classScroll">
                 <div class="classItem"><img alt="Home" src="./Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')"></div>
@@ -39,8 +39,8 @@
         </div>
 
             <div class="spec">
-                <div class="levelReq">
-                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Spec</b></span></div>
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Spec</b></span></div>
                 </div>
                 <div class="specSelect">
                     <div></div>
@@ -54,8 +54,8 @@
 
             <div id="treeSelect">
             <div class="spec"> <!-- select tree type-->
-                <div class="levelReq">
-                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Tree</b></span></div>
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Tree</b></span></div>
                 </div>
                 <div class="tree">
                     <div class="blank"></div>
@@ -71,7 +71,7 @@
                 <div class="talentTree" id="Talents">   <!--Necro-->
             <div id="PNSS" class="specList">  <!--Necro Snatch-->
                 <div class="ultimates">
-                <div class="levelReq">
+                <div class="sideBar">
                     <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
                 </div>
                 <div class="Skills">
@@ -87,7 +87,7 @@
                 </div>
                 </div>
                 <div class="skillTree">
-                <div class="levelReq">
+                <div class="sideBar">
                     <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
                     <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
                     <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
@@ -149,10 +149,10 @@
                 </div>
                 </div>
                 <div class="ultimates">  <!--Raid Builds-->
-                    <div class="levelReq">
-                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Builds</b></span></div>
+                    <div class="sideBar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
                     </div>
-                    <div class="Skills">   
+                    <div class="ultimateSkills">   
                     <div class="treeItem" id="PNSSB1"><img   src="./Icons/Necro/SoulSnatch/necroS2.jpg" onclick="raidBuilds('PNSSB1')"><span class="skillCalc right">Bone<br>Spirit</span></div>
                     <div class="treeItem" id="PNSSB2"><img   src="./Icons/Necro/SoulSnatch/necroS8.jpg" onclick="raidBuilds('PNSSB2')"><span class="skillCalc right">Tangled</span></div>
                     <div class="treeItem"><img src="./Icons/copy.png" onclick="copy(window.location)"><span id="copy1" class="skillCalc right">Copy</span></div>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
                 <div class="ultimates" id="blankTree">
-                    <div class="levelReq">
+                    <div class="sideBar">
                         <div class="treeItem"></div>
                     </div>
                     <div class="Skills">   
@@ -297,8 +297,8 @@
 
             <div id="Ults" class="ultsWrapper">
             <div class="ultimates">
-                <div class="levelReq">
-                    <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>Ults</b></span></div>
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
                 </div>
                 <div class="ultimateSkills">
                 <div class="treeItem" id="PNSSU01"><img src="./Icons/Necro/SoulSnatch/ult1.jpg" onclick="ultPopup('PNSSU01')"></div>
@@ -312,8 +312,8 @@
                 </div>
                 </div>
             <div class="ultimates">  <!--PvP-->
-                    <div class="levelReq">
-                        <div class="treeItem"><span class="rectSpec"></span><span class="rotate"><b>PvP</b></span></div>
+                    <div class="sideBar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
                     </div>
                     <div class="ultimateSkills">
                     <div class="treeItem" id="PNSSU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('PNSSU09')"></div>
@@ -331,7 +331,7 @@
     <div id="skillOverlay">
         <div class="overlay" onclick="closeOverlay()"></div>
         <div class="popup" id="skillPopup">
-        <p>Error<br>try refreshing the page or clearing the cache<br>if error persists please contact tall.bird on discord</p>
+            <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report bug <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">here</a> on the discord thread</p>
         </div>
     </div>
 </body>

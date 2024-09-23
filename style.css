@@ -2,18 +2,27 @@
     --darkTrans: #22222280;
     --brown: rgb(54, 49, 45);
     --brownTrans :rgba(65, 56, 49, 0.85);
-    --brownPale:rgba(109, 79, 57, 0.589);
     --midBrown: rgb(83, 67, 53);
     --pale: rgb(153, 136, 122);
+    --grayPale: rgba(145, 137, 131, 0.712);
     --beige: #f1dcc2;
     --darkBeige: #d1bca3;
     --sepia: #af8c61;
     --green: rgb(40, 202, 40);
+    --greenTrans: rgba(118, 145, 118, 0.651);
+    --seaGreenTrans: rgba(122, 173, 171, 0.651);
+    --necroGreenTrans: rgba(119, 155, 149, 0.651);
     --yellow: gold;
+    --yellowTrans: rgba(180, 143, 93, 0.651);
     --orange: rgb(224, 138, 25);
+    --orangeTrans: rgba(160, 105, 54, 0.651);
     --red: rgb(212, 55, 55);
+    --redTrans: rgba(158, 99, 99, 0.651);
     --blue: rgb(94, 177, 224);
+    --blueTrans: rgba(99, 141, 158, 0.651);
     --purple: rgb(156, 70, 236);
+    --purpleTrans: rgba(116, 89, 141, 0.651);
+    --bright: rgb(255, 253, 242);
     }
 
 body {
@@ -27,7 +36,11 @@ body {
     -ms-user-select: none;
     user-select: none;
   }
-
+  a:-webkit-any-link {
+    color: var(--sepia);
+    cursor: pointer;
+    text-decoration: underline;
+}
 .wrapper {
     margin: auto;
     max-width: 60rem;
@@ -37,7 +50,7 @@ body {
 #Talents, #Stone, #Ults {
     display: block;
 }
-#treeSelect {
+#treeSelect, #noBuilds {
     display: none;
 }
 .showTrees {
@@ -64,24 +77,53 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.infoFeed{
+.buildsFeed {
     position: relative;
-    display: grid;
+    display: none;
     grid-template-columns: 2fr 0.7fr 0.7fr;
-    grid-gap: 0.5rem;
+    grid-template-areas:
+    'name skill build'
+    'tags skill build';
+    grid-column-gap: 0.5rem;
     background-color: var(--darkBeige);
     color: var(--midBrown);
-    border: solid 1px var(--pale);
+    max-height: 7rem;
     border-radius: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+.infoFeed {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+.filterList {
+    background-color: var(--darkBeige);
+    color: var(--midBrown);
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.gridName { 
+    padding-top: 0.9rem;
+    grid-area: name; 
+}
+.gridSkill { 
+    grid-area: skill; 
+}
+.gridBuild { 
+    grid-area: build; 
 }
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
     background: transparent;
 }
-.levelReq {
+.sideBar {
     display: grid;
     background-image: linear-gradient(90deg, var(--beige) 0%, var(--beige) 55%, var(--midBrown) 55%, var(--midBrown) 70%, var(--beige) 70%, var(--beige) 100%);
     gap: 1rem;
@@ -154,12 +196,16 @@ body {
 .feed {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem;
+    height: 85vh;
+    overflow-y: scroll;
     grid-gap: 1.5rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 1rem;
 }
-.treeItem, .skillitem, .treeIcon {
+.treeItem, .skillitem, .treeIcon, .filterBarItem {
     position: relative;
     display: flex;
     align-items: center;
@@ -277,7 +323,7 @@ body {
     position: absolute;
     width: 4rem;
 }
-.skillItem img, .classItem img, .popImg, .popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay .selectClass{
+.popSkillCalc, .skillCalc, h2, #plus, #minus, #skillOverlay .selectClass, img{
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -365,7 +411,31 @@ body {
     color: var(--midBrown)
 }
 .bgPale {
-    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--brownPale) 100%);
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--grayPale) 100%);
+}
+.bgGreen{
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--greenTrans) 100%);
+}
+.bgSeaGreen {
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--seaGreenTrans) 100%);
+}
+.bgNecro {
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--necroGreenTrans) 100%);
+}
+.bgRed{
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--redTrans) 100%);
+}
+.bgOrange{
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--orangeTrans) 100%);
+}
+.bgYellow{
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--yellowTrans) 100%);
+}
+.bgBlue{
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--blueTrans) 100%);
+}
+.bgPurple{
+    background: linear-gradient(90deg, var(--darkBeige) 0%, var(--purpleTrans) 100%);
 }
 .gray {
     filter: grayscale(85%);
@@ -379,6 +449,18 @@ body {
 }
 #iconWeapon {
     filter: opacity(40%);
+}
+.unpop {
+    opacity: 0.7;
+    filter: grayscale(50%);
+}
+.Popular {
+    outline: 3px solid var(--beige);
+    outline-offset: -2px;
+    filter: drop-shadow(0 0 0.15rem var(--brown));
+}
+.normal {
+    box-shadow: 0 0 0rem var(--brown);
 }
 .stoneItem img.diamond {
     position: absolute;
@@ -402,12 +484,16 @@ body {
 .star {
     font-size: 2.5rem;
     top: -0.7rem;
-    right: 0.7rem;
+    right: 0.2rem;
+}
+.starBuilds {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
 }
 .triangle {
     font-size: 2rem;
     top: 0rem;
-    right: 0.5rem;
+    right: 0.2rem;
 }
 .star, .triangle {
     position: absolute;
@@ -424,11 +510,22 @@ body {
 .rect {
     height: 7rem;
 }
-.rectSpec {
+.rectSmall {
     height: 4.5rem;
 }
-.rect, .rectSpec {
+.rectLong {
+    height: 13rem;
+}
+.rectFilter {
+    height: 19rem;
+}
+.rect, .rectSmall {
     width: 1.5rem;
+    background-color: var(--midBrown);
+    border-radius: 0.5rem;
+}
+.rectFilter, .rectLong {
+    width: 2rem;
     background-color: var(--midBrown);
     border-radius: 0.5rem;
 }
@@ -449,20 +546,56 @@ body {
     bottom: -0.7rem;
     color: var(--midBrown);
 }
+.filterBar {
+    grid-template-rows: 19rem 13rem auto;
+    padding-top: 0rem;
+    padding-left: 0.25rem;
+}
+.filterBar img {
+    width: 1.6rem;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
+}
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    padding-inline: 0px;
+    padding-block: 0px;
+}
+.filterBarItem .btn {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(2491%) hue-rotate(304deg) brightness(98%) contrast(92%);
+} 
+.btn.active {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(326%) hue-rotate(353deg) brightness(94%) contrast(85%);
+}
+.show {
+    display: grid;
+}
+.top {
+    align-items: start;
+}
 .notes {
     font-size: 2rem;
 }
+.role img {
+    width: 2.5rem;
+}
 .role {
-    width: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 .roleIcon {
     width: 10rem;
     position: absolute;
     opacity: 15%;
-    top: -1.75rem;
+    top: -1.5rem;
+    left: 4rem;
 }
 .nudge {
-    margin-left: 2rem;
+    margin-top: 0.3rem;
 }
 .border {
     outline: 3px solid var(--sepia);
@@ -507,13 +640,16 @@ body {
         width: 20rem;
     }
     .treeItem img, .popImg {
-        max-width: 4.5rem;
+        width: 4.5rem;
     }
     .treeItem img.circle {
         width: 3.3rem;
     }
     .popImg{
         margin-right: 2.5rem;
+    }
+    .role img {
+        width: 2rem;
     }
     .skillItem img, .treeIcon img {
         width: 4.3rem;
@@ -533,8 +669,19 @@ body {
     .corePassives {
         grid-gap: 0.75rem;
     }
+    .roleIcon {
+        top: -1.7rem;
+    }
     .blank {
         height: 4.5rem;
+    }
+    .blankSmall {
+        height: 0.5rem;
+    }
+    .Skills {
+        padding-top: 1.5rem;
+        grid-gap:0rem;
+        grid-row-gap: 0.5rem;
     }
     .skillCalc {
         bottom: 0.05rem;
@@ -558,12 +705,12 @@ body {
         bottom: -2.97rem;
     }
     .star {
-        top: -0.45rem;
-        right: 0.4rem;
+        top: -0.5rem;
+        right: 0.2rem;
         font-size: 2rem;
     }
     .triangle {
-        right: 0.4rem;
+        right: 0.2rem;
         font-size: 1.75rem;
     }   
     .plusMinus {
@@ -595,15 +742,12 @@ body {
     }
     .feed {
         grid-template-columns: 1fr;
+        grid-template-rows: 6.5rem 6.5rem 6.5rem 6.5rem 6.5rem 6.5rem;
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
     .talents {
         grid-gap: 0.2rem;
-    }
-    .Skills {
-        grid-gap:0rem;
-        grid-row-gap: 0.5rem;
     }
     .skillItem img, .treeIcon img {
         max-width: 3.8rem;
@@ -612,7 +756,7 @@ body {
         max-width: 4.5rem;
     }
     .treeItem img, .popImg {
-        max-width: 4rem;
+        width: 4rem;
     }
     .blank {
         height: 3.5rem;
@@ -646,6 +790,16 @@ body {
     }
     .stoneItem img.octagon {
         width: 3.3rem;
+    }
+    .gridName, .role {
+        font-size: 0.8rem;
+    }
+    .blank {
+        font-size: 0.9rem;
+    }
+    .feed {
+        grid-template-rows: 6rem 6rem 6rem 6rem auto;
+        height: 75vh
     }
     .linkB {
         left: 1.45rem;
