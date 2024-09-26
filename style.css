@@ -47,10 +47,10 @@ body {
     position: relative;
     background: var(--beige);
 }
-#Talents, #Stone, #Ults {
+#Talents, #Stone .ultsWrapper {
     display: block;
 }
-#treeSelect, #noBuilds {
+#treeSelect, #noBuilds, #PvP, #Ults {
     display: none;
 }
 .showTrees {
@@ -77,9 +77,8 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.buildsFeed {
+.buildsFeed, .buildsShow {
     position: relative;
-    display: none;
     grid-template-columns: 2fr 0.7fr 0.7fr;
     grid-template-areas:
     'name skill build'
@@ -91,6 +90,12 @@ body {
     border-radius: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+.buildsFeed {
+    display: none;
+}
+.buildsShow {
+    display: grid;
 }
 .infoFeed {
     display: grid;
@@ -186,17 +191,23 @@ body {
     grid-gap: 1rem;
     padding-top: 2rem;
 }
-.feed {
+.feed, .feedSmall {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 1rem;
+}
+.feed {
     grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem;
     height: 85vh;
     overflow-y: scroll;
-    grid-gap: 1.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 1rem;
+}
+.feedSmall {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .treeItem, .skillitem, .treeIcon, .filterBarItem {
     position: relative;
@@ -752,8 +763,10 @@ body {
     .ultimateSkills {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    .feed {
+    .feed, .feedSmall {
         grid-template-columns: 1fr;
+    }
+    .feed{
         grid-template-rows: 6.5rem 6.5rem 6.5rem 6.5rem 6.5rem 6.5rem;
     }
 }

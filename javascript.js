@@ -168,6 +168,11 @@ function ultPopup(value) {
     + skill.range + " m</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
 }
 
+function buildsInfo(value) {
+    document.getElementById("skillOverlay").style.display = "block";
+    document.getElementById("skillPopup").innerHTML = "build summary coming soon to soonish :)";
+}
+
 function selectClass(active) {
     if(dragging) {
         dragging = false;
@@ -322,6 +327,15 @@ function linkBuilds(value) {
     }
     let buildCode = builds.find(search);
     window.location =  `./${value.slice(0, 4)}.html?skill=${buildCode.Skill}&stone=${buildCode.Stone}`;
+}
+
+function accordian(value) {
+    var x = document.getElementById(value);
+    if (x.style.display === "grid") {
+        x.style.display = "none";
+   } else {
+        x.style.display = "grid";
+   }
 }
 
 function updateParams(code, key) {
