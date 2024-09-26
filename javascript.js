@@ -55,6 +55,8 @@ function selectTree(active, inactive1, ults) {
     document.getElementById('icon' + active).className = "bground";
     document.getElementById('icon' + inactive1).className = "blah";
     document.getElementById('Ults').style.display = ults;
+    document.getElementById('PvP').style.display = ults;
+    document.getElementById('Builds').style.display = ults;
     if (active === 'Stone' && params.has('stone') === true) {
         setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);       
     } else {
