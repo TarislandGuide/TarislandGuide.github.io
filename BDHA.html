@@ -336,21 +336,26 @@
                         <div class="gridName"><b>Aurora's Harp</b><br>Raid Healer</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Bard/Harmony/bardHsk7.png" onclick="buildsCostPopup('BDHAB1')" alt="aurora's harp"></div>
                         <div class="treeItem gridBuild builds" id="BDHAB1"><img src="./Icons/Bard/Harmony/bardH15.jpg" onclick="raidBuilds('BDHAB1')" alt="bard heal build 1"></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('BDHAB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div>
                       <div class="buildsShow Bard Heal all bgSeaGreen normal"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Bard.png" alt="bard">
                         <div class="gridName"><b>Music Wall</b><br>Raid Healer</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Bard/Harmony/bardHsk3.png" onclick="buildsCostPopup('BDHAB2')" alt="music wall"></div>
                         <div class="treeItem gridBuild builds" id="BDHAB2"><img src="./Icons/Bard/Harmony/bardH3.jpg" onclick="raidBuilds('BDHAB2')" alt="bard heal build 2"></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('BDHAB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div>
                 </div>
             </div>
     </div>
     <div id="skillOverlay">
-        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
         <div class="popup" id="skillPopup">
             <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
+        </div>
     </div>
 </body>
 <script>

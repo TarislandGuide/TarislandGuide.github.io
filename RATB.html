@@ -336,22 +336,27 @@
                         <div class="gridName"><b>Viper Shot</b><br>Raid Ranged Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Ranger/TamedBeast/huntTBsk2.png" onclick="buildsPopup('RATBB1')" alt="viper shot"></div>
                         <div class="treeItem gridBuild builds" id="RATBB1"><img src="./Icons/Ranger/TamedBeast/huntTBsk8.png" onclick="raidBuilds('RATBB1')" alt="ranger beast build 1"><span class="triangle">&#9660;</span></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('RATBB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div>
                       <!--  <div class="buildsShow Ranger Ranged all bgGreen unpop"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Ranger.png" alt="ranger">
                         <div class="gridName"><b>Hornet Shot</b><br>Raid Ranged Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Ranger/TamedBeast/huntTB8.jpg" onclick="buildsPopup('RATBB2')" alt="hornet shot"></div>
                         <div class="treeItem gridBuild builds" id="RATBB2"><img src="./Icons/Ranger/TamedBeast/huntTB7.jpg" onclick="raidBuilds('RATBB2')" alt="ranger beast build 2"></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('RATBB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div>  --> 
                 </div>
             </div>
 
     </div>
     <div id="skillOverlay">
-        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
         <div class="popup" id="skillPopup">
             <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
         </div>
     </div>
 </body>

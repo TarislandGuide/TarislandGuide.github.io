@@ -335,21 +335,26 @@
                     <div class="gridName"><b>Shield Assault</b><br>Raid Tank</div>
                     <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Warrior/WarShield/warrSWsk2.png" onclick="buildsCostPopup('WAWSB1')" alt="shield assault"></div>
                     <div class="treeItem gridBuild builds" id="WAWSB1"><img src="./Icons/Warrior/WarShield/warrWS23.jpg" onclick="raidBuilds('WAWSB1')" alt="warrior tank build 1"><span class="star">&#9733;</span></div>
-                    <div class="role unpop"><img src="./Icons/tank.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                    <div class="role unpop"><img src="./Icons/tank.png" onclick="buildsCreatePopup('WAWSB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                   </div>
                   <div class="buildsShow Warrior Tank all bgRed normal"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Warrior.png" alt="warrior">
                     <div class="gridName"><b>Shatter Shield</b><br>Raid Tank</div>
                     <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Warrior/WarShield/warrWS9.jpg" onclick="buildsCostPopup('WAWSB2')" alt="shatter shield"></div>
                     <div class="treeItem gridBuild builds" id="WAWSB2"><img src="./Icons/Warrior/WarShield/warrWS11.jpg" onclick="raidBuilds('WAWSB2')" alt="warrior tank build 2"></div>
-                    <div class="role unpop"><img src="./Icons/tank.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                    <div class="role unpop"><img src="./Icons/tank.png" onclick="buildsCreatePopup('WAWSB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                   </div>
             </div>
         </div>
     </div>
     <div id="skillOverlay">
-        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
         <div class="popup" id="skillPopup">
             <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
         </div>
     </div>
 </body>

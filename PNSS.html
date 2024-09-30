@@ -337,21 +337,26 @@
                         <div class="gridName"><b>Bone Spirit</b><br>Raid Ranged Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Necro/SoulSnatch/necroSsk5.png" onclick="buildsCostPopup('PNSSB1')" alt="bone spirit"></div>
                         <div class="treeItem gridBuild builds" id="PNSSB1"><img src="./Icons/Necro/SoulSnatch/necroS5.jpg" onclick="raidBuilds('PNSSB1')" alt="necro dps build 1"></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('PNSSB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div>
                       <div class="buildsShow Necro Ranged all bgNecro normal"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Necro.png" alt="necro">
                         <div class="gridName"><b>Tangled Soul</b><br>Raid Ranged Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Necro/SoulSnatch/necroS8.jpg" onclick="buildsCostPopup('PNSSB2')" alt="tangled soul"></div>
                         <div class="treeItem gridBuild builds" id="PNSSB2"><img src="./Icons/Necro/SoulSnatch/necroS21.jpg" onclick="raidBuilds('PNSSB2')" alt="necro dps build 2"></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('PNSSB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div> 
                 </div>
             </div>
     </div>
     <div id="skillOverlay">
-        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
         <div class="popup" id="skillPopup">
             <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
         </div>
     </div>
 </body>

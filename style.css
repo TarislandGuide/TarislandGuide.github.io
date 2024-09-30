@@ -313,12 +313,15 @@ body {
 .popImg{
     margin-right: 5rem;
 }
+.popImgBuild{
+    margin-right: 2rem;
+}
 .popSkillCalc {
     font-size: 3.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
-.treeItem img, .popImg {
+.treeItem img, .popImg, .popImgBuild {
     width: 5rem;
     border-radius: 0.5rem;
 }
@@ -366,7 +369,7 @@ body {
     border-radius: 50%;
     width: 5rem;
 }
-#skillOverlay {
+#skillOverlay, #buildsOverlay {
     display: none;
     transition: opacity 5ms;
     position: fixed;
@@ -395,6 +398,55 @@ body {
     z-index: 7;
     padding: 1.5rem;
     border-radius: 1rem;
+}
+.popupGrid {
+    position: relative;
+    width: 25rem;
+    display: grid;
+    grid-template-areas:
+    'tab1 tab2 tab3 tab4'
+    'main main main main';
+    grid-row-gap: 0rem;
+    grid-column-gap: 0.2rem;
+    margin: auto;
+    margin-top: 2.5rem;
+    z-index: 7;
+}
+.tab1 {
+    grid-area: tab1;
+    width: 5rem;
+    height: 4rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: var(--brown); 
+    color:var(--beige);
+}
+.tab2 {
+    grid-area: tab2;
+    width: 5rem;
+    height: 4rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: var(--brown); 
+    color:var(--beige);
+}
+.tab3 {
+    grid-area: tab3;
+    width: 5rem;
+    height: 4rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: var(--brown); 
+    color:var(--beige);
+}
+.popupMain {
+    grid-area: main;
+    border-radius: 0 1rem 1rem 1rem;
+    width: 20rem;
+    min-height: 20rem;
+    background-color: var(--brown); 
+    color:var(--beige);
+    padding: 1.5rem;
+}
+.inactive {
+    background-color: var(--brownTrans); 
 }
 .green {
     color: var(--green);
@@ -480,6 +532,10 @@ body {
 }
 .treeItem img.circle {
     width: 4rem;
+    border-radius: 50%;
+}
+.popImgBuild.circle {
+    width: 4.5rem;
     border-radius: 50%;
 }
 .dot {
@@ -650,14 +706,20 @@ body {
     .popup {
         width: 20rem;
     }
-    .treeItem img, .popImg {
+    .treeItem img, .popImg, .popImgBuild {
         width: 4.5rem;
     }
-    .treeItem img.circle {
+    .treeItem img.circle{
         width: 3.3rem;
+    }
+    .popImgBuild.circle {
+        width: 4rem;
     }
     .popImg{
         margin-right: 2.5rem;
+    }
+    .popImgBuild {
+        margin-right: 1.5rem;
     }
     .role img {
         width: 2rem;
@@ -780,7 +842,7 @@ body {
     .classItem img {
         max-width: 4.5rem;
     }
-    .treeItem img, .popImg {
+    .treeItem img, .popImg, .popImgBuild {
         width: 4rem;
     }
     .blank {

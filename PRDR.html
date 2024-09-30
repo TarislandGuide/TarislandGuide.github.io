@@ -336,21 +336,26 @@
                     <div class="gridName"><b>Pain Trail</b><br>Raid Ranged Dps</div>
                     <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Priest/Retribution/priestR9.jpg" onclick="buildsPopup('PRDRB1')" alt="pain trail"></div>
                     <div class="treeItem gridBuild builds" id="PRDRB1"><img src="./Icons/Priest/Retribution/ult5.jpg" onclick="raidBuilds('PRDRB1')" alt="priest dps build 1"></div>
-                    <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                    <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('PRDRB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                   </div>
                   <div class="buildsShow Priest Ranged all bgPale normal"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Priest.png" alt="priest">
                     <div class="gridName"><b>Agony Trail</b><br>Raid Ranged Dps</div>
                     <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Priest/Retribution/priestRsk4.png" onclick="buildsPopup('PRDRB2')" alt="agony trail"></div>
                     <div class="treeItem gridBuild builds" id="PRDRB2"><img src="./Icons/Priest/Retribution/ult7.jpg" onclick="raidBuilds('PRDRB2')" alt="priest dps build 2"></div>
-                    <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                    <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('PRDRB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                   </div>
             </div>
         </div>
 </div>
     <div id="skillOverlay">
-        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
         <div class="popup" id="skillPopup">
             <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
         </div>
     </div>
 </body>

@@ -335,21 +335,26 @@
                         <div class="gridName"><b>Icicle Storm</b><br>Raid Ranged Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Mage/Frost/mageFrsk3.png" onclick="buildsCostPopup('MAFRB1')" alt="icicle storm"></div>
                         <div class="treeItem gridBuild builds" id="MAFRB1"><img src="./Icons/Mage/Frost/mageFrsk8.png" onclick="raidBuilds('MAFRB1')" alt="mage frost build 1"><span class="star">&#9733;</span></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('MAFRB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div> 
                       <div class="buildsShow Mage Ranged all bgBlue unpop"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Mage.png" alt="mage">
                         <div class="gridName"><b>Arctic Icicle</b><br>Raid Ranged Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Mage/Frost/mageFr8.jpg" onclick="buildsPopup('MAFRB2')" alt="arctic icicle"></div>
                         <div class="treeItem gridBuild builds" id="MAFRB2"><img src="./Icons/Mage/Frost/mageFrsk10.png" onclick="raidBuilds('MAFRB2')" alt="mage frost build 2"><span class="triangle">&#9660;</span></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('MAFRB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div> 
                 </div>
             </div>
     </div>
     <div id="skillOverlay">
-        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
         <div class="popup" id="skillPopup">
             <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
         </div>
     </div>
 </body>

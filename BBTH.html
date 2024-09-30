@@ -336,21 +336,26 @@
                         <div class="gridName"><b>Thunder Axe</b><br>Raid Melee Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Barbarian/Thunder/barbT9.jpg" onclick="buildsPopup('BBTHB1')" alt="thunder axe"></div>
                         <div class="treeItem gridBuild builds" id="BBTHB1"><img src="./Icons/Barbarian/Thunder/barbT21.jpg" onclick="raidBuilds('BBTHB1')" alt="barbarian dps build 1"><span class="star">&#9733;</span></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('BBTHB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div>
                     <!--<div class="buildsShow Barbarian Melee all bgOrange unpop"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Barbarian.png" alt="barbarian">
                         <div class="gridName"><b>Wrath of Thunder</b><br>Melee Dps</div>
                         <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Barbarian/Thunder/barbTsk7.png" onclick="buildsPopup('BBTHB2')" alt="wrath of thunder"></div>
                         <div class="treeItem gridBuild builds" id="BBTHB2"><img src="./Icons/Barbarian/Thunder/barbT23.jpg" onclick="raidBuilds('BBTHB2')" alt="barbarian dps build 2"></div>
-                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsInfo()" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('BBTHB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                       </div>  -->
                 </div>
             </div>
     </div>
     <div id="skillOverlay">
-        <div class="overlay" onclick="closeOverlay()"></div>
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
         <div class="popup" id="skillPopup">
             <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
         </div>
     </div>
 </body>
