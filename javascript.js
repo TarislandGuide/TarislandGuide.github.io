@@ -179,7 +179,6 @@ function ultPopup(value) {
 }
 
 function buildsCreatePopup(value) {
-
     var tab1 = document.createElement("div");
     tab1.classList.add("tab1");
     tab1.id = "summary";
@@ -266,6 +265,7 @@ function plusSkill(id) {
     }
     document.getElementById(id).innerHTML = skillCode[pos];
     updateParams(skillCode.join(''), 'skill');
+    document.getElementById('talentNum').innerHTML = skillTotal();
 }
 
 function plusStone(id, shape) {
@@ -281,6 +281,7 @@ function plusStone(id, shape) {
     document.getElementById(id).innerHTML = stoneCode[pos];
     let [a, ...rest] = stoneCode
     updateParams(encode(rest), 'stone');
+    document.getElementById('stoneNum').innerHTML = stoneTotal();
 }
 
 function minusSkill(id) {
@@ -294,6 +295,7 @@ function minusSkill(id) {
         document.getElementById(id.substr(2)).className = "gray";
     }
     updateParams(skillCode.join(''), 'skill');
+    document.getElementById('talentNum').innerHTML = skillTotal();
     }
 
 function minusStone(id, shape) {
@@ -309,6 +311,7 @@ function minusStone(id, shape) {
     }
     let [a, ...rest] = stoneCode
     updateParams(encode(rest), 'stone');
+    document.getElementById('stoneNum').innerHTML = stoneTotal();
     }
 
 function reset(code) {
@@ -346,6 +349,7 @@ function setTalents(code) {
         }
         else document.getElementById(id.substr(2)).className = "gray";
     }
+    document.getElementById('talentNum').innerHTML = skillTotal();
 }
 
 function setStone(code, classCode) {
@@ -362,6 +366,7 @@ function setStone(code, classCode) {
         else document.getElementById(id.substr(2)).classList.add('gray');
         document.getElementById(id.substr(2)).classList.remove('colour');
     }
+    document.getElementById('stoneNum').innerHTML = stoneTotal();
 }
 
 function skillTotal() {

@@ -538,6 +538,20 @@ body {
     width: 4.5rem;
     border-radius: 50%;
 }
+#talentNum, #stoneNum {
+    position: absolute;
+    color: var(--midBrown);
+    z-index: 10;
+    font-weight: bold;
+}
+#talentNum {
+    font-size: 2.5rem;
+    top: 0.2rem;
+}
+#stoneNum {
+    font-size: 1.6rem;
+    top: 0.1rem;
+}
 .dot {
     height: 1.5rem;
     width: 1.5rem;
@@ -764,6 +778,14 @@ body {
     .buildsGrid .skillCalc {
         right: 0.4rem;
         bottom: 0.2rem;
+    }
+    #talentNum {
+        font-size: 2.1rem;
+        top: 0.15rem;
+    }
+    #stoneNum {
+        font-size: 1.3rem;
+        top: 0.15rem;
     }
     .linkB {
         left: 1.6rem;
