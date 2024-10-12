@@ -57,14 +57,20 @@ function decode(x) {
     reduce((a, c) => a.concat(c))
 }
 
-function selectTree(active, inactive1, ults) {
-    document.getElementById(active).style.display = "block";
-    document.getElementById(inactive1).style.display = "none";
+function selectTree(active, inactive1, inactive2) {
     document.getElementById('icon' + active).className = "bground";
     document.getElementById('icon' + inactive1).className = "blah";
-    document.getElementById('Ults').style.display = ults;
-    document.getElementById('PvP').style.display = ults;
-    document.getElementById('Builds').style.display = ults;
+    document.getElementById('icon' + inactive2).className = "blah";
+    document.querySelectorAll('.' + active).forEach(item => item.style.display = "grid");
+    document.querySelectorAll('.' + inactive1).forEach(item => item.style.display = "none");
+    document.querySelectorAll('.' + inactive2).forEach(item => item.style.display = "none");
+    if (active === 'Talents') {
+        document.getElementById('Trees').style.gridTemplateAreas = '"talents" "builds"';
+    } else if (active === 'Stone') {
+        document.getElementById('Trees').style.gridTemplateAreas = '"stone"';
+    } else if (active === 'Skills') {
+        document.getElementById('Trees').style.gridTemplateAreas = '"skills" "ults" "pvp"';
+    }
     if (active === 'Stone' && params.has('stone') === true) {
         setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);       
     } else {

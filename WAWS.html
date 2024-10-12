@@ -57,36 +57,20 @@
                 <div class="sideBar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Tree</b></span></div>
                 </div>
-                <div class="tree">
+                <div class="selectTree">
                     <div class="blank"></div>
-                    <div class="treeIcon"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/skills.png" onclick="selectTree('Talents', 'Stone', 'grid')"><span class="below"><b><small>Skills</small></b></span></div>
-                    <div class="treeIcon"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'none')"><span class="below"><b><small>Stone</small></b></span></div>
-                    <div class="treeIcon"><img id ="iconWeapon" class="blah" alt="God Weapon" src="./Icons/sword.png" onclick="selectTree(blah)"><span class="below"><b><small>S1&nbsp;&nbsp;</small></b></span></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/talents.png" onclick="selectTree('Talents', 'Stone', 'Skills')"></span></div><div><span class="selectText"><b><small>Talents</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'Skills')"></span></div><div><span class="selectText"><b><small>Stone</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconSkills" class="blah" alt="God Weapon" src="./Icons/skills.png" onclick="selectTree('Skills', 'Stone', 'Talents')"></span></div><div><span class="selectText"><b><small>Skills</small></b></span></div></div>
                     <div class="blank"></div>
                 </div>
             </div>
             </div>
 
-        <div id="Trees" class="showTrees">
-            <div class="talentTree" id="Talents">   <!--Warrior-->
-            <div id="WAWS" class="specList">  <!--Warrior War Shield-->
-            <div class="ultimates">
-            <div class="sideBar">
-                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
-            </div>
-            <div class="Skills">
-            <div class="skillItem" id="WAWSS01"><img src="./Icons/Warrior/WarShield/warrSWsk1.png" onclick="skillCostPopup('WAWSS01')"></div>
-            <div class="skillItem" id="WAWSS02"><img src="./Icons/Warrior/WarShield/warrSWsk2.png" onclick="skillCostPopup('WAWSS02')"></div>
-            <div class="skillItem" id="WAWSS03"><img src="./Icons/Warrior/WarShield/warrWS9.jpg" onclick="skillCostPopup('WAWSS03')"></div>
-            <div class="skillItem" id="WAWSS04"><img src="./Icons/Warrior/WarShield/warrSWsk4.png" onclick="skillCostPopup('WAWSS04')"></div>
-            <div class="skillItem" id="WAWSS05"><img src="./Icons/Warrior/WarShield/warrSWsk5.png" onclick="skillCostPopup('WAWSS05')"></div>
-            <div class="skillItem" id="WAWSS06"><img src="./Icons/Warrior/WarShield/warrSWsk6.png" onclick="skillPopup('WAWSS06')"></div>
-            <div class="skillItem" id="WAWSS07"><img src="./Icons/Warrior/WarShield/warrSWsk7.png" onclick="skillPopup('WAWSS07')"></div>
-            <div class="treeItem" id="WAWSA01"><img src="./Icons/Warrior/WarShield/warrWS2.jpg" onclick="passivePopup('WAWSA01')"></div>
-            </div>
-            </div>
-            <div class="skillTree">
-            <div class="sideBar">
+        <div id="Trees" class="mainLayoutGridTrees">
+            <div class="gridTalents Talents">     <!--Warrior War Shield-->
+            <div class="talentsTree">
+            <div class="sideBar barNudge">
                 <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
                 <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
                 <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
@@ -97,7 +81,7 @@
                 <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
                 <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
             </div>
-            <div class="talents">
+            <div class="talentsLayout">
                 <div class="treeItem"><img src="./Icons/32.png"><span id="talentNum">0</span></div>
                 <div class="treeItem"><img id="WST01" class="gray" src="./Icons/Warrior/WarShield/warrWS1.jpg" onclick="talentPopup('WAWST01')"><span class="skillCalc"><span id="WAWST01" class="zero">0</span>/3</span></div>
                 <div class="treeItem"><img id="WST02" class="gray" src="./Icons/Warrior/WarShield/warrWS2.jpg" onclick="talentPopup('WAWST02')"><span class="skillCalc"><span id="WAWST02" class="zero">0</span>/3</span></div>
@@ -146,30 +130,19 @@
                 <div class="treeItem" id="WAWSP05"><img src="./Icons/Warrior/WarShield/warrWS26.jpg" onclick="passivePopup('WAWSP05')"></div>
             </div>
             </div>
-            <div class="ultimates">  <!--Actions-->
+            <div class="gridActions">  <!--Actions-->
                 <div class="sideBar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
                 </div>
                 <div class="buildsGrid">   
-                    <div class="treeItem"><img src="./Icons/Warrior/WarShield/ult1.jpg" onclick="accordian('Ults')"><span class="skillCalc right">Ults</span></div>
-                    <div class="treeItem"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="accordian('PvP')"><span class="skillCalc right">PvP</span></div>
+                    <div class="treeItem"></div>
+                    <div class="treeItem"></div>
                     <div class="treeItem"><img src="./Icons/copy.png" onclick="copy(window.location)"><span id="copy1" class="skillCalc right">Copy</span></div>
                     <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('WAWS000000000000000000000')"><span class="skillCalc right">Reset</span></div>
             </div>
             </div>
-            <div class="ultimates" id="blankTree">
-                <div class="sideBar">
-                    <div class="treeItem"></div>
-                </div>
-                <div class="Skills">   
-                <div><span class="blank"></span></div>
-                </div>
             </div>
-            </div>
-            </div>
-
-            <div id="Stone">
-        <div class="stoneTree">
+        <div class="gridStone Stone">
             <div class="stoneItem"><img id="WSI58" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stonePopup('WAWSI58')"><span class="stoneCalc"><span id="WAWSI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
             <div class="stoneItem stoneBlank"></div>
             <div class="stoneItem stoneBlank"></div>
@@ -290,44 +263,8 @@
             <div class="stoneItem"><img class="square" src="./Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
             <div class="stoneItem"><img class="square" src="./Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'WAWS')"><span class="resetText">Reset</span></div>
         </div>
-            </div>
-        </div>
-
-        <div class="ultsWrapper">
-        <div id="Ults" class="ultimates">
-            <div class="sideBar">
-                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
-            </div>
-            <div class="ultimateSkills">
-            <div class="treeItem" id="WAWSU01"><img src="./Icons/Warrior/WarShield/ult1.jpg" onclick="ultPopup('WAWSU01')"></div>
-            <div class="treeItem" id="WAWSU02"><img src="./Icons/Warrior/WarShield/ult2.jpg" onclick="ultPopup('WAWSU02')"></div>
-            <div class="treeItem" id="WAWSU03"><img src="./Icons/Warrior/WarShield/ult3.jpg" onclick="ultPopup('WAWSU03')"></div>
-            <div class="treeItem" id="WAWSU04"><img src="./Icons/Warrior/WarShield/ult4.jpg" onclick="ultPopup('WAWSU04')"></div>
-            <div class="treeItem" id="WAWSU05"><img src="./Icons/Warrior/WarShield/ult5.jpg" onclick="ultPopup('WAWSU05')"></div>
-            <div class="treeItem" id="WAWSU06"><img src="./Icons/Warrior/WarShield/ult6.jpg" onclick="ultPopup('WAWSU06')"></div>
-            <div class="treeItem" id="WAWSU07"><img src="./Icons/Warrior/WarShield/ult7.jpg" onclick="ultPopup('WAWSU07')"></div>
-            <div class="treeItem" id="WAWSU08"><img src="./Icons/Warrior/WarShield/ult8.jpg" onclick="ultPopup('WAWSU08')"></div>
-            </div>
-            </div>
-        <div id="PvP" class="ultimates">  <!--PvP-->
-                <div class="sideBar">
-                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
-                </div>
-                <div class="ultimateSkills">
-                <div class="treeItem" id="WAWSU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('WAWSU09')"></div>
-                <div class="treeItem" id="WAWSU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('WAWSU10')"></div>
-                <div class="treeItem" id="WAWSU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('WAWSU11')"></div>
-                <div class="treeItem" id="WAWSU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('WAWSU12')"></div>
-                <div class="treeItem" id="WAWSU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('WAWSU13')"></div>
-                <div class="treeItem" id="WAWSU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('WAWSU14')"></div>
-                <div class="treeItem" id="WAWSU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('WAWSU15')"></div>
-                <div class="treeItem" id="WAWSU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('WAWSU16')"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="Builds" class="spec"> <!-- builds-->
-            <div class="sideBar">
+        <div class="builds areaBuilds Talents"> <!-- builds-->
+            <div class="sideBar bar">
                 <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
             </div>
             <div class="feedSmall">
@@ -343,6 +280,52 @@
                     <div class="treeItem gridBuild builds" id="WAWSB2"><img src="./Icons/Warrior/WarShield/warrWS11.jpg" onclick="raidBuilds('WAWSB2')" alt="warrior tank build 2"></div>
                     <div class="role unpop"><img src="./Icons/tank.png" onclick="buildsCreatePopup('WAWSB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
                   </div>
+            </div>
+        </div>
+        <div class="gridSkills Skills">
+            <div class="sideBar">
+                <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+            </div>
+            <div class="content">
+            <div class="skillItem" id="WAWSS01"><img src="./Icons/Warrior/WarShield/warrSWsk1.png" onclick="skillCostPopup('WAWSS01')"></div>
+            <div class="skillItem" id="WAWSS02"><img src="./Icons/Warrior/WarShield/warrSWsk2.png" onclick="skillCostPopup('WAWSS02')"></div>
+            <div class="skillItem" id="WAWSS03"><img src="./Icons/Warrior/WarShield/warrWS9.jpg" onclick="skillCostPopup('WAWSS03')"></div>
+            <div class="skillItem" id="WAWSS04"><img src="./Icons/Warrior/WarShield/warrSWsk4.png" onclick="skillCostPopup('WAWSS04')"></div>
+            <div class="skillItem" id="WAWSS05"><img src="./Icons/Warrior/WarShield/warrSWsk5.png" onclick="skillCostPopup('WAWSS05')"></div>
+            <div class="skillItem" id="WAWSS06"><img src="./Icons/Warrior/WarShield/warrSWsk6.png" onclick="skillPopup('WAWSS06')"></div>
+            <div class="skillItem" id="WAWSS07"><img src="./Icons/Warrior/WarShield/warrSWsk7.png" onclick="skillPopup('WAWSS07')"></div>
+            <div class="treeItem" id="WAWSA01"><img src="./Icons/Warrior/WarShield/warrWS2.jpg" onclick="passivePopup('WAWSA01')"></div>
+            </div>
+            </div>
+        <div class="gridUlts Skills">
+            <div class="sideBar bar">
+                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
+            </div>
+            <div class="content">
+            <div class="treeItem" id="WAWSU01"><img src="./Icons/Warrior/WarShield/ult1.jpg" onclick="ultPopup('WAWSU01')"></div>
+            <div class="treeItem" id="WAWSU02"><img src="./Icons/Warrior/WarShield/ult2.jpg" onclick="ultPopup('WAWSU02')"></div>
+            <div class="treeItem" id="WAWSU03"><img src="./Icons/Warrior/WarShield/ult3.jpg" onclick="ultPopup('WAWSU03')"></div>
+            <div class="treeItem" id="WAWSU04"><img src="./Icons/Warrior/WarShield/ult4.jpg" onclick="ultPopup('WAWSU04')"></div>
+            <div class="treeItem" id="WAWSU05"><img src="./Icons/Warrior/WarShield/ult5.jpg" onclick="ultPopup('WAWSU05')"></div>
+            <div class="treeItem" id="WAWSU06"><img src="./Icons/Warrior/WarShield/ult6.jpg" onclick="ultPopup('WAWSU06')"></div>
+            <div class="treeItem" id="WAWSU07"><img src="./Icons/Warrior/WarShield/ult7.jpg" onclick="ultPopup('WAWSU07')"></div>
+            <div class="treeItem" id="WAWSU08"><img src="./Icons/Warrior/WarShield/ult8.jpg" onclick="ultPopup('WAWSU08')"></div>
+            </div>
+            </div>
+        <div class="gridPvP Skills">  <!--PvP-->
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
+                </div>
+                <div class="content">
+                <div class="treeItem" id="WAWSU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('WAWSU09')"></div>
+                <div class="treeItem" id="WAWSU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('WAWSU10')"></div>
+                <div class="treeItem" id="WAWSU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('WAWSU11')"></div>
+                <div class="treeItem" id="WAWSU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('WAWSU12')"></div>
+                <div class="treeItem" id="WAWSU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('WAWSU13')"></div>
+                <div class="treeItem" id="WAWSU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('WAWSU14')"></div>
+                <div class="treeItem" id="WAWSU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('WAWSU15')"></div>
+                <div class="treeItem" id="WAWSU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('WAWSU16')"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -375,5 +358,25 @@
         }
     window.onpageshow = loadParams; 
     window.onpopstate = () => setTimeout(loadParams, 0);
+            
+    var xDown = null, yDown = null, xUp = null, yUp = null;
+    document.addEventListener('touchstart', touchstart, false);        
+    document.addEventListener('touchmove', touchmove, false);
+    document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
+    document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
+    document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
+    function touchstart(evt) { const firstTouch = (evt.touches || evt.originalEvent.touches)[0]; xDown = firstTouch.clientX; yDown = firstTouch.clientY; }
+    function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
+    function touchend(evt, left, active, right) { 
+        var xDiff = xUp - xDown, yDiff = yUp - yDown;
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 0.33 * document.body.clientWidth)) { 
+            if (xDiff < 0) 
+            selectTree(right, active, left);
+            else
+            selectTree(left, active, right);
+        } 
+        xDown = null, yDown = null;
+    }
+
 </script>
 </html>

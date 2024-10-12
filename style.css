@@ -43,25 +43,109 @@ body {
 }
 .wrapper {
     margin: auto;
-    max-width: 60rem;
+    max-width: 85rem;
     position: relative;
     background: var(--beige);
 }
-#Talents, #Stone .ultsWrapper {
-    display: block;
-}
-#treeSelect, #noBuilds, #PvP, #Ults {
+#treeSelect {
     display: none;
 }
-.showTrees {
+.mainLayoutGridTrees {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 2rem;
-    gap: 2rem;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-areas:
+    'talents stone builds'
+    'talents stone skills'
+    'talents stone ults'
+    'talents stone pvp'
+    '. stone .';
+    grid-column-gap: 2rem;
 }
-.skillTree {
+.gridTalents {
+    grid-area: talents;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+.talentsTree {
     display: grid;
     grid-template-columns: 2rem 3fr 1fr;
     gap: 0;
+    height: 54rem;
+    margin-bottom: 1.5rem;
+}
+.gridS1 {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+}
+.s1talents1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    height: 4.5rem;
+}
+.s1talents2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.gridStone {
+    grid-area: stone;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 2rem;
+    grid-column-gap: 0.5rem;
+    height: 80rem;
+    margin-bottom: 2rem;
+}
+.areaBuilds {
+    grid-area: builds;
+}
+.gridSkills {
+    grid-area: skills;
+}
+.gridUlts {
+    grid-area: ults;
+}
+.gridPvP {
+    grid-area: pvp;
+}
+.gridActions{
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    grid-gap: 0;
+    height: 7rem;
+}
+.gridUlts, .gridPvP, .gridSkills, .builds {
+    display: grid;
+    grid-template-areas:
+    'main sidebar';
+    grid-template-columns: 1fr 2rem;
+    grid-gap: 0;
+    margin-right: 0.5rem;
+}
+.gridSkills.extraRow {
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    'main sidebar'
+    'mainChords barChords';
+}
+.treeIcon.gridSelect {
+    display: grid;
+    grid-template-columns: 5rem;
+    grid-template-rows: auto 1rem;
+    color: var(--midBrown);
+}
+.selectText, .treeIcon.gridSelect img {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 .spec {
     display: grid;
@@ -81,8 +165,8 @@ body {
     position: relative;
     grid-template-columns: 2fr 0.7fr 0.7fr;
     grid-template-areas:
-    'name skill build'
-    'tags skill build';
+    'name skill buildLink'
+    'tags skill buildLink';
     grid-column-gap: 0.5rem;
     background-color: var(--darkBeige);
     color: var(--midBrown);
@@ -120,8 +204,17 @@ body {
 .gridSkill { 
     grid-area: skill; 
 }
+.bar {
+    grid-area: sidebar; 
+}
 .gridBuild { 
-    grid-area: build; 
+    grid-area: buildLink; 
+}
+.bar.chords {
+    grid-area: barChords;
+}
+.content.chords {
+    grid-area: mainChords;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -137,19 +230,19 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-.talents {
+.talentsLayout {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto auto auto;
-    background-color: var(--beige);
     gap: 1rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    height: 53rem;
 }
-.tree {
+.selectTree {
     display: grid;
     grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
     background-color: var(--beige);
     margin-bottom: 1rem;
+    margin-top: 1rem;
     gap: 0;
 }
 .corePassives {
@@ -159,46 +252,43 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.ultimates {
-    display: grid;
-    grid-template-columns: 2rem 1fr;
-    grid-gap: 0;
-    background-color: var(--beige);
-}
-.ultimateSkills {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-.Skills {
+.content{
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    padding-top: 2rem;
+    grid-template-rows: 5rem 5rem;
+    column-gap: 0.5rem;
+    row-gap: 1rem;
+    padding-top: 1rem;
+}
+.content {
+    grid-area: main; 
 }
 .buildsGrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    height: 5rem;
 }
-.Skills, .ultimateSkills, .buildsGrid, .specSelect, .corePassives, .talents {
+.buildsGrid, .corePassives, .talentsLayout, .content {
     display: grid;
     margin-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 .specSelect {
+    display: grid;
     grid-template-columns: 2fr 0.7fr 6rem 6rem 1fr 2fr;
     grid-gap: 1rem;
     padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 .feed, .feedSmall {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 1.5rem;
-    padding-top: 0.25rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 .feed {
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem;
     height: 85vh;
     overflow-y: scroll;
@@ -206,6 +296,8 @@ body {
     padding-right: 1.5rem;
 }
 .feedSmall {
+    grid-area: main;
+    grid-template-columns: 1fr;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -220,22 +312,23 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.stoneTree {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-row-gap: 2rem;
-    grid-column-gap: 0.5rem;
-    padding-top: 3rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem; 
-    background-color: var(--beige);
-}
 .stoneItem {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.s1item {
+    background-color: var(--sepia);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+}
+.s1item img {
+    width: 4rem;
+    border-radius: 0.5rem;
 }
 .skillCalc, .stoneCalc, .resetText {
     position: absolute;
@@ -250,7 +343,7 @@ body {
 .skillCalc {
     border-radius: 0.5rem 0 0.5rem 0;
     bottom: 0;
-    right: 0.25rem;
+    right: 0rem;
 }
 .buildsGrid .skillCalc {
     right: 0.4rem;
@@ -265,7 +358,7 @@ body {
     border-radius: 0.5rem 0 0.5rem 0;
     font-size: small;
     bottom: 0rem;
-    right: 0.2rem;
+    right: 0rem;
 }
 .linkB {
     position: absolute;
@@ -506,9 +599,6 @@ body {
 .bright {
     filter: brightness(50%);
 }
-#iconWeapon {
-    filter: opacity(40%);
-}
 .unpop {
     opacity: 0.7;
     filter: grayscale(50%);
@@ -619,6 +709,9 @@ body {
     text-align: right;
     justify-content: right;
 }
+.skillCalc.right {
+    right: 0.15rem;
+}
 .left {
     justify-content: left;
 }
@@ -687,6 +780,240 @@ body {
     outline: 4px solid var(--beige);
     outline-offset: -3px;
 }
+@media all and (max-width:1200px){
+    .wrapper {
+        margin: auto;
+        max-width: 95vw;
+        position: relative;
+        background: var(--beige);
+    }
+    .mainLayoutGridTrees {
+        grid-template-columns: 0.8fr 1.2fr;
+        grid-template-areas:
+        'talents stone'
+        'builds stone'
+        'skills stone'
+        'skills ults'
+        '. pvp';
+        margin-right: 1rem;
+    }
+    .gridSkills, .areaBuilds {
+        grid-template-areas:
+        'sidebar main';
+        grid-template-columns: 2rem 1fr;
+    }
+    .gridSkills.extraRow {
+        grid-template-areas:
+        'sidebar main'
+        'barChords mainChords';
+    }
+    .feed {
+        grid-template-columns: 1fr 1fr;
+    }
+    .skillCalc {
+        right: 0.2rem;
+    }
+    .skillCalc.right {
+        right: 0.35rem;
+    }
+}
+@media screen and (max-aspect-ratio: 1/1) and (max-width:850px) {
+    .wrapper {
+        margin: auto;
+        max-width: 95vw;
+        position: relative;
+        background: var(--beige);
+    }
+    .mainLayoutGridTrees {
+        grid-template-columns: 0.8fr 1.2fr;
+        grid-template-areas:
+        'talents stone'
+        'builds stone'
+        'skills stone'
+        'skills ults'
+        '. pvp';
+        margin-right: 1rem;
+    }
+    .gridStone {
+        grid-row-gap: 1.75rem;
+        grid-column-gap: 0.25rem;
+        padding-left: 0rem;
+        padding-right: 0.3rem; 
+        height: 70rem;
+        margin-top: 2rem;
+    }
+    .stoneBlank {
+        height: 3rem;
+    }
+    .treeItem img.circle{
+        width: 3.3rem;
+    }
+    .popImgBuild.circle {
+        width: 4rem;
+    }
+    .popImg{
+        margin-right: 2.5rem;
+    }
+    .popImgBuild {
+        margin-right: 1.5rem;
+    }
+    .role img {
+        width: 2rem;
+    }
+    .classItem {
+        max-width: 5rem;
+    }
+    .selectClass {
+        padding-left: 0.5rem;
+    }
+    .corePassives, .sideBar {
+        grid-gap: 0.75rem;
+    }
+    .talentsLayout, .corePassives {
+        margin-top: 1rem;
+    }
+    .sideBar.barNudge {
+        padding-top: 2.3rem;
+        padding-bottom: 2.1rem;
+    }
+    .roleIcon {
+        top: -1.7rem;
+    }
+    .blank {
+        height: 4.5rem;
+    }
+    .blankSmall {
+        height: 0.5rem;
+    }
+    .content {
+        grid-template-rows: 4rem 4rem;
+        padding-top: 1rem;
+        column-gap: 0.5rem;
+        row-gap: 0.75rem;
+    }
+    #talentNum {
+        font-size: 2.1rem;
+        top: 0.15rem;
+    }
+    #stoneNum {
+        font-size: 1.3rem;
+        top: 0.15rem;
+    }
+    .star {
+        top: -0.5rem;
+        right: 0.2rem;
+        font-size: 2rem;
+    }
+    .triangle {
+        right: 0.2rem;
+        font-size: 1.75rem;
+    }   
+    .plusMinus {
+        width: 2.5rem;
+    }
+    .buildsGrid .star {
+        top: 0rem;
+        right: 0.4rem;
+    }
+    .buildsGrid .triangle {
+        top: 0.15rem;
+        right: 0.4rem;
+    }
+    .popSkillCalc {
+        font-size: 2.75rem;
+        font-weight: 300;
+    }
+    .below {
+        right: 2.25rem;
+    }
+    #blankTree {
+        display: none;
+    }
+    #treeSelect {
+        display: none;
+    }
+    .specSelect {
+        grid-template-columns: 2fr 0.7fr 6rem 6rem 1fr 2fr;
+        padding-bottom: 0.5rem;
+        padding-top: 1.3rem;
+    }
+    .talentsLayout {
+        grid-gap: 0.3rem;
+        height: 40rem;
+    }
+    .talentsTree {
+        height: 41rem;
+    }
+    .skillItem img, .treeIcon img {
+        max-width: 4rem;
+    }
+    .classItem img {
+        max-width: 4.5rem;
+    }
+    .treeItem img, .popImg, .popImgBuild {
+        width: 4rem;
+    }
+    .blank {
+        height: 3.5rem;
+    }
+    .skillCalc {
+        bottom: 0.1rem;
+        right: 0.5rem;
+        line-height: 0.8;
+    }
+    .resetText {
+        bottom: 0.1rem;
+        right: 0.2rem;
+    }
+    .buildsGrid .skillCalc {
+        right: 0.3rem;
+        bottom: 0.5rem;
+    }
+    .stoneCalc {
+        right: 0.7rem;
+    }
+    .popup {
+        width: 19rem;
+        padding: 1rem;
+        margin-left: 1rem;
+    }
+    .stoneItem img {
+        width: 2.8rem;
+    }
+    .stoneItem img.diamond {
+        width: 3.7rem;
+        top: -1;
+        left: -0.3rem;
+    }
+    .stoneItem img.octagon {
+        width: 3.3rem;
+    }
+    .gridName, .role {
+        font-size: 0.8rem;
+    }
+    .blank {
+        font-size: 0.9rem;
+    }
+    .feed {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6rem 6rem 6rem 6rem auto;
+        height: 75vh
+    }
+    .feedSmall {
+        grid-template-rows: 6rem 6rem;
+        grid-template-columns: 1fr;
+    }
+    .linkB {
+        left: 1.45rem;
+        bottom: -2rem;
+    }
+    .linkBL {
+        left: 0.7rem;
+    }
+    .linkBR {
+        left: 2.2rem;
+    }
+}
 @media screen and (max-width: 450px) {
     body {
         background-color: var(--beige);
@@ -694,11 +1021,39 @@ body {
     .wrapper {
         max-width: 100vw;
     }
-    .stoneTree {
+    .mainLayoutGridTrees {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        'talents'
+        'builds';
+    }
+    .gridStone {
         grid-row-gap: 1.75rem;
         grid-column-gap: 0.25rem;
         padding-left: 0rem;
         padding-right: 0.3rem; 
+        height: 70rem;
+        margin-top: 2rem;
+    }
+    .talentsTree {
+        height: 48.5rem;
+    }
+    .talentsLayout {
+        height: 46rem;
+    }
+    .gridUlts, .gridPvP, .gridSkills, .gridStone {
+        display: none;
+    }
+    .gridUlts, .gridPvP, .gridSkills, .areaBuilds {
+        grid-template-areas:
+        'sidebar main';
+        grid-template-columns: 2rem 1fr;
+    }
+    .gridSkills.extraRow {
+        grid-template-areas:
+        'sidebar main'
+        'barChords mainChords';
     }
     .stoneItem img {
         width: 3rem;
@@ -739,7 +1094,7 @@ body {
         width: 2rem;
     }
     .skillItem img, .treeIcon img {
-        width: 4.3rem;
+        width: 4.5rem;
     }
     .classItem {
         max-width: 5rem;
@@ -750,11 +1105,15 @@ body {
     .selectClass {
         padding-left: 0.5rem;
     }
-    .talents {
+    .talentsLayout, .corePassives, .sideBar {
         grid-gap: 0.75rem;
     }
-    .corePassives {
-        grid-gap: 0.75rem;
+    .talentsLayout, .corePassives {
+        margin-top: 1rem;
+    }
+    .sideBar.barNudge {
+        padding-top: 2.3rem;
+        padding-bottom: 2.1rem;
     }
     .roleIcon {
         top: -1.7rem;
@@ -765,15 +1124,19 @@ body {
     .blankSmall {
         height: 0.5rem;
     }
-    .Skills {
-        padding-top: 1.5rem;
-        grid-gap:0rem;
-        grid-row-gap: 0.5rem;
+    .content {
+        grid-template-rows: 4.5rem 4.5rem;
+        padding-top: 1rem;
+        column-gap: 0.5rem;
+        row-gap: 0.75rem;
     }
     .skillCalc {
         bottom: 0.05rem;
         right: 0.35rem;
         line-height: 1;
+    }
+    .resetText {
+        right: 0.2rem;
     }
     .buildsGrid .skillCalc {
         right: 0.4rem;
@@ -830,36 +1193,38 @@ body {
     .below {
         right: 2.25rem;
     }
-    #Stone, #blankTree {
+    #blankTree {
         display: none;
     }
     #treeSelect {
         display: block;
     }
-    .showTrees {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
     .specSelect {
         grid-template-columns: 0 1fr 1fr 1fr 1fr 0;
-    }
-    .ultimateSkills {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 0.5rem;
+        padding-top: 1.3rem;
     }
     .feed, .feedSmall {
         grid-template-columns: 1fr;
+        grid-template-rows: 6.5rem 6.5rem;
     }
     .feed{
         grid-template-rows: 6.5rem 6.5rem 6.5rem 6.5rem 6.5rem 6.5rem;
     }
 }
 @media screen and (max-width: 375px) {
-    .talents {
-        grid-gap: 0.2rem;
+    .talentsLayout {
+        grid-gap: 0.3rem;
+        height: 40rem;
+    }
+    .talentsTree {
+        height: 41rem;
+    }
+    .content {
+        grid-template-rows: 4rem 4rem;
     }
     .skillItem img, .treeIcon img {
-        max-width: 3.8rem;
+        max-width: 4rem;
     }
     .classItem img {
         max-width: 4.5rem;
@@ -872,8 +1237,12 @@ body {
     }
     .skillCalc {
         bottom: 0.1rem;
-        right: 0.4rem;
+        right: 0.3rem;
         line-height: 0.8;
+    }
+    .resetText {
+        bottom: 0.1rem;
+        right: 0.2rem;
     }
     .buildsGrid .skillCalc {
         right: 0.3rem;
