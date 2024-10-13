@@ -22,7 +22,7 @@ function test(value) {
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
     if (skillTotal() < 32 && skillTotal() >= skill.min && skillCode[pos] < skill.max) {
-    if (skillCode[skill.preq] === parseInt(skill.lvl) || skillCode[skill.preq] === undefined){
+    if (skillCode[skill.preq] === parseInt(skill.lvl) || skillCode[skill.preq] === undefined){  
     return true
 }}
 return false
@@ -34,12 +34,14 @@ function testStone(value) {
     }
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
-    if (stoneTotal() < 100 && stoneTotal() >= skill.min && stoneCode[pos] < skill.max) {
-    if (stoneCode[skill.preq] === parseInt(skill.lvl) || stoneCode[skill.preq] === undefined){
-    return true
-}}
-return false
+    const arr = skill.preq.split(',').map(Number);
+    if (!(stoneTotal() < 100 && stoneTotal() >= skill.min && stoneCode[pos] < skill.max)) { 
+        return false
+    }
+    let blah = (arr.filter(e=> stoneCode[e] >= parseInt(skill.lvl) || stoneCode[e] === undefined).length > 0)
+        return blah
 }
+
 
 function encode(x) {
     return x.
