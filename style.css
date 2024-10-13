@@ -284,7 +284,7 @@ body {
 .feed, .feedSmall {
     display: grid;
     grid-gap: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 0.3rem;
     padding-bottom: 1rem;
 }
 .feed {
@@ -722,7 +722,7 @@ body {
 }
 .filterBar {
     grid-template-rows: 19rem 13rem auto;
-    padding-top: 0rem;
+    padding-top: 0.25rem;
     padding-left: 0.25rem;
 }
 .filterBar img {
