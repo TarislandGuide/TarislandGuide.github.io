@@ -640,6 +640,7 @@ body {
 #stoneNum {
     font-size: 1.6rem;
     top: 0.1rem;
+    z-index: 5;
 }
 .dot {
     height: 1.5rem;
