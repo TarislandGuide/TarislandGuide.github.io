@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://tarislandbuilds.eu/MAFR.html" />
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <script src="JSON/MAFR.js"></script>
+    <script src="JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent & Inscribed Stone Trees Calculator</title>
+    <meta name="description" content="Discover, Create and Share powerful Character builds with our Builds Hub. Our Talents and Inscribed Stone Trees Calculator lets you customize builds, view detailed skill and ability descriptions, and share your setups with friends. Explore, experiment and elevate your game to the next level!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Frost Mage Talent Build">
+    <meta property="og:description" content="Plan your build and share it with friends">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/MAFR.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="sideBar">
+                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Home" src="./Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')"></div>
+                <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')" class="border"></div>
+                <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="./Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
+                <div class="classItem"><img alt="Paladin" src="./Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="./Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="./Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="./Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="./Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+            <div class="spec">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="specSelect">
+                    <div></div>
+                    <div class="blank right"><p><b>Frost</b><br><small>Ranged</small></p></div>
+                    <div class="skillItem"><img alt="Frost" src="./Icons/Mage/Frost/frost.png" class="bground"></div>
+                    <div class="skillItem"><img alt="Flame" src="./Icons/Mage/Flame/flame.png" onclick="selectClass('MAFL')"></div>
+                    <div class="blank left"><p><b>Flame</b><br><small>Ranged</small></p></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="treeSelect">
+            <div class="spec"> <!-- select tree type-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Tree</b></span></div>
+                </div>
+                <div class="selectTree">
+                    <div class="blank"></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconTalents" class="bground" alt="Talent Tree" src="./Icons/talents.png" onclick="selectTree('Talents', 'Stone', 'Skills')"></span></div><div><span class="selectText"><b><small>Talents</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="./Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'Skills')"></span></div><div><span class="selectText"><b><small>Stone</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconSkills" class="blah" alt="God Weapon" src="./Icons/skills.png" onclick="selectTree('Skills', 'Stone', 'Talents')"></span></div><div><span class="selectText"><b><small>Skills</small></b></span></div></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+            </div>
+
+            <div id="Trees" class="mainLayoutGridTrees">
+            <div class="gridTalents Talents">   <!--Mage Frost-->
+            <div class="talentsTree">
+            <div class="sideBar barNudge">
+                <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+            </div>
+            <div class="talentsLayout">
+                <div class="treeItem"><img src="./Icons/32.png"><span id="talentNum">0</span></div>
+                <div class="treeItem"><img id="FRT01" class="gray" src="./Icons/Mage/Frost/mageFr1.jpg" onclick="talentCheck('MAFRT01')" oncontextmenu="talentPopup('MAFRT01')"><span class="skillCalc"><span id="MAFRT01" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="FRT02" class="gray" src="./Icons/Mage/Frost/mageFr2.jpg" onclick="talentCheck('MAFRT02')" oncontextmenu="talentPopup('MAFRT02')"><span class="skillCalc"><span id="MAFRT02" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="FRT03" class="gray" src="./Icons/Mage/Frost/mageFr3.jpg" onclick="talentCheck('MAFRT03')" oncontextmenu="talentPopup('MAFRT03')"><span class="skillCalc"><span id="MAFRT03" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="FRT04" class="gray" src="./Icons/Mage/Frost/mageFr4.jpg" onclick="talentCheck('MAFRT04')" oncontextmenu="talentPopup('MAFRT04')"><span class="skillCalc"><span id="MAFRT04" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="FRT05" class="gray" src="./Icons/Mage/Frost/mageFr5.jpg" onclick="talentCheck('MAFRT05')" oncontextmenu="talentPopup('MAFRT05')"><span class="skillCalc"><span id="MAFRT05" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="FRT06" class="gray" src="./Icons/Mage/Frost/mageFr6.jpg" onclick="talentCheck('MAFRT06')" oncontextmenu="talentPopup('MAFRT06')"><span class="skillCalc"><span id="MAFRT06" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="FRT07" class="gray" src="./Icons/Mage/Frost/mageFr7.jpg" onclick="talentCheck('MAFRT07')" oncontextmenu="talentPopup('MAFRT07')"><span class="skillCalc"><span id="MAFRT07" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="FRT08" class="gray" src="./Icons/Mage/Frost/mageFr8.jpg" onclick="talentCheck('MAFRT08')" oncontextmenu="talentPopup('MAFRT08')"><span class="skillCalc"><span id="MAFRT08" class="zero">0</span>/1</span><span class="req"></span></div>
+                <div class="treeItem"><img id="FRT09" class="gray" src="./Icons/Mage/Frost/mageFr9.jpg" onclick="talentCheck('MAFRT09')" oncontextmenu="talentPopup('MAFRT09')"><span class="skillCalc"><span id="MAFRT09" class="zero">0</span>/2</span></div>
+                <div class="treeItem"><img id="FRT10" class="gray" src="./Icons/Mage/Frost/mageFr10.jpg" onclick="talentCheck('MAFRT10')" oncontextmenu="talentPopup('MAFRT10')"><span class="skillCalc"><span id="MAFRT10" class="zero">0</span>/2</span></div>
+
+                <div class="treeItem"><img id="FRT11" class="gray" src="./Icons/Mage/Frost/mageFr11.jpg" onclick="talentCheck('MAFRT11')" oncontextmenu="talentPopup('MAFRT11')"><span class="skillCalc"><span id="MAFRT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                <div class="treeItem"><img id="FRT12" class="gray" src="./Icons/Mage/Frost/mageFr12.jpg" onclick="talentCheck('MAFRT12')" oncontextmenu="talentPopup('MAFRT12')"><span class="skillCalc"><span id="MAFRT12" class="zero">0</span>/2</span></div>
+                <div class="treeItem"><img id="FRT13" class="gray" src="./Icons/Mage/Frost/mageFr13.jpg" onclick="talentCheck('MAFRT13')" oncontextmenu="talentPopup('MAFRT13')"><span class="skillCalc"><span id="MAFRT13" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="FRT14" class="gray" src="./Icons/Mage/Frost/mageFr14.jpg" onclick="talentCheck('MAFRT14')" oncontextmenu="talentPopup('MAFRT14')"><span class="skillCalc"><span id="MAFRT14" class="zero">0</span>/2</span><span class="req"></span></div>
+                <div class="treeItem"><img id="FRT15" class="gray" src="./Icons/Mage/Frost/mageFr6.jpg" onclick="talentCheck('MAFRT15')" oncontextmenu="talentPopup('MAFRT15')"><span class="skillCalc"><span id="MAFRT15" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem"><img id="FRT16" class="gray" src="./Icons/Mage/Frost/mageFr15.jpg" onclick="talentCheck('MAFRT16')" oncontextmenu="talentPopup('MAFRT16')"><span class="skillCalc"><span id="MAFRT16" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="FRT17" class="gray" src="./Icons/Mage/Frost/mageFr16.jpg" onclick="talentCheck('MAFRT17')" oncontextmenu="talentPopup('MAFRT17')"><span class="skillCalc"><span id="MAFRT17" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="FRT18" class="gray" src="./Icons/Mage/Frost/mageFr17.jpg" onclick="talentCheck('MAFRT18')" oncontextmenu="talentPopup('MAFRT18')"><span class="skillCalc"><span id="MAFRT18" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="FRT19" class="gray" src="./Icons/Mage/Frost/mageFr18.jpg" onclick="talentCheck('MAFRT19')" oncontextmenu="talentPopup('MAFRT19')"><span class="skillCalc"><span id="MAFRT19" class="zero">0</span>/2</span></div>
+
+                <div class="treeItem"><img id="FRT20" class="gray" src="./Icons/Mage/Frost/mageFr19.jpg" onclick="talentCheck('MAFRT20')" oncontextmenu="talentPopup('MAFRT20')"><span class="skillCalc"><span id="MAFRT20" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="FRT21" class="gray" src="./Icons/Mage/Frost/mageFr20.jpg" onclick="talentCheck('MAFRT21')" oncontextmenu="talentPopup('MAFRT21')"><span class="skillCalc"><span id="MAFRT21" class="zero">0</span>/2</span></div>
+            </div>
+            <div class="corePassives">
+                <div class="treeItem" id="MAFRP01"><img src="./Icons/Mage/Frost/mageFr21.jpg" onclick="passivePopup('MAFRP01')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="MAFRP02"><img src="./Icons/Mage/Frost/mageFr22.jpg" onclick="passivePopup('MAFRP02')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="MAFRP03"><img src="./Icons/Mage/Frost/mageFr23.jpg" onclick="passivePopup('MAFRP03')"></div>
+                <div class="treeItem" id="MAFRP04"><img src="./Icons/Mage/Frost/mageFr24.jpg" onclick="passivePopup('MAFRP04')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="MAFRP05"><img src="./Icons/Mage/Frost/mageFr25.jpg" onclick="passivePopup('MAFRP05')"></div>
+            </div>
+            </div>
+            <div class="gridActions">  <!--Actions-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
+                </div>
+                <div class="buildsGrid">   
+                    <div class="treeItem"></div>
+                    <div class="treeItem"><img id="onOffTalents" src="./Icons/on.png" onclick="togglePopups()"><span class="skillCalc right">Popups</span></div>
+                    <div class="treeItem"><img src="./Icons/copy.png" onclick="copy(window.location)"><span id="copy1" class="skillCalc right">Copy</span></div>
+                    <div class="treeItem"><img src="./Icons/reset.png" onclick="reset('MAFR000000000000000000000')"><span class="skillCalc right">Reset</span></div>
+            </div>
+            </div>
+            </div>
+            <div class="gridStone Stone">
+                <div class="stoneItem"><img id="FRI58" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stoneCheck('MAFRI58')" oncontextmenu="stonePopup('MAFRI58')"><span class="stoneCalc"><span id="MAFRI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('MAFRC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI57" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stoneCheck('MAFRI57')" oncontextmenu="stonePopup('MAFRI57')"><span class="stoneCalc"><span id="MAFRI57" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="FRI56" class="gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI56')" oncontextmenu="stonePopup('MAFRI56')"><span class="stoneCalc"><span id="MAFRI56" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI55" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI55')" oncontextmenu="stonePopup('MAFRI55')"><span class="stoneCalc"><span id="MAFRI55" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI54" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI54')" oncontextmenu="stonePopup('MAFRI54')"><span class="stoneCalc"><span id="MAFRI54" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI53" class="gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stoneCheck('MAFRI53')" oncontextmenu="stonePopup('MAFRI53')"><span class="stoneCalc"><span id="MAFRI53" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI52" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI52')" oncontextmenu="stonePopup('MAFRI52')"><span class="stoneCalc"><span id="MAFRI52" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI51" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI51')" oncontextmenu="stonePopup('MAFRI51')"><span class="stoneCalc"><span id="MAFRI51" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI50" class="gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stoneCheck('MAFRI50')" oncontextmenu="stonePopup('MAFRI50')"><span class="stoneCalc"><span id="MAFRI50" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="FRI49" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI49')" oncontextmenu="stonePopup('MAFRI49')"><span class="stoneCalc"><span id="MAFRI49" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI48" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI48')" oncontextmenu="stonePopup('MAFRI48')"><span class="stoneCalc"><span id="MAFRI48" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI47" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI47')" oncontextmenu="stonePopup('MAFRI47')"><span class="stoneCalc"><span id="MAFRI47" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI46" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI46')" oncontextmenu="stonePopup('MAFRI46')"><span class="stoneCalc"><span id="MAFRI46" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI45" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI45')" oncontextmenu="stonePopup('MAFRI45')"><span class="stoneCalc"><span id="MAFRI45" class="zero">0</span>/3</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id="FRI44" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI44')" oncontextmenu="stonePopup('MAFRI44')"><span class="stoneCalc"><span id="MAFRI44" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI43" class="gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stoneCheck('MAFRI43')" oncontextmenu="stonePopup('MAFRI43')"><span class="stoneCalc"><span id="MAFRI43" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI42" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stoneCheck('MAFRI42')" oncontextmenu="stonePopup('MAFRI42')"><span class="stoneCalc"><span id="MAFRI42" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI41" class="gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stoneCheck('MAFRI41')" oncontextmenu="stonePopup('MAFRI41')"><span class="stoneCalc"><span id="MAFRI41" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI40" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI40')" oncontextmenu="stonePopup('MAFRI40')"><span class="stoneCalc"><span id="MAFRI40" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="FRI39" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI39')" oncontextmenu="stonePopup('MAFRI39')"><span class="stoneCalc"><span id="MAFRI39" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI38" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI38')" oncontextmenu="stonePopup('MAFRI38')"><span class="stoneCalc"><span id="MAFRI38" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI37" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI37')" oncontextmenu="stonePopup('MAFRI37')"><span class="stoneCalc"><span id="MAFRI37" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI36" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI36')" oncontextmenu="stonePopup('MAFRI36')"><span class="stoneCalc"><span id="MAFRI36" class="zero">0</span>/3</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id="FRI35" class="gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI35')" oncontextmenu="stonePopup('MAFRI35')"><span class="stoneCalc"><span id="MAFRI35" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI34" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI34')" oncontextmenu="stonePopup('MAFRI34')"><span class="stoneCalc"><span id="MAFRI34" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI33" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI33')" oncontextmenu="stonePopup('MAFRI33')"><span class="stoneCalc"><span id="MAFRI33" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI32" class="gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stoneCheck('MAFRI32')" oncontextmenu="stonePopup('MAFRI32')"><span class="stoneCalc"><span id="MAFRI32" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI31" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stoneCheck('MAFRI31')" oncontextmenu="stonePopup('MAFRI31')"><span class="stoneCalc"><span id="MAFRI31" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI30" class="gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stoneCheck('MAFRI30')" oncontextmenu="stonePopup('MAFRI30')"><span class="stoneCalc"><span id="MAFRI30" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI29" class="octagon gray" loading="lazy" src="./Icons/Stone/spec.png" onclick="stoneCheck('MAFRI29')" oncontextmenu="stonePopup('MAFRI29')"><span class="stoneCalc"><span id="MAFRI29" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="FRI28" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI28')" oncontextmenu="stonePopup('MAFRI28')"><span class="stoneCalc"><span id="MAFRI28" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI27" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI27')" oncontextmenu="stonePopup('MAFRI27')"><span class="stoneCalc"><span id="MAFRI27" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('MAFRC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI26" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI26')" oncontextmenu="stonePopup('MAFRI26')"><span class="stoneCalc"><span id="MAFRI26" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI25" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI25')" oncontextmenu="stonePopup('MAFRI25')"><span class="stoneCalc"><span id="MAFRI25" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI24" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI24')" oncontextmenu="stonePopup('MAFRI24')"><span class="stoneCalc"><span id="MAFRI24" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI23" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI23')" oncontextmenu="stonePopup('MAFRI23')"><span class="stoneCalc"><span id="MAFRI23" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI22" class="gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stoneCheck('MAFRI22')" oncontextmenu="stonePopup('MAFRI22')"><span class="stoneCalc"><span id="MAFRI22" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI21" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI21')" oncontextmenu="stonePopup('MAFRI21')"><span class="stoneCalc"><span id="MAFRI21" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI20" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI20')" oncontextmenu="stonePopup('MAFRI20')"><span class="stoneCalc"><span id="MAFRI20" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="FRI19" class="gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI19')" oncontextmenu="stonePopup('MAFRI19')"><span class="stoneCalc"><span id="MAFRI19" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI18" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI18')" oncontextmenu="stonePopup('MAFRI18')"><span class="stoneCalc"><span id="MAFRI18" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI17" class="gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stoneCheck('MAFRI17')" oncontextmenu="stonePopup('MAFRI17')"><span class="stoneCalc"><span id="MAFRI17" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI16" class="gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stoneCheck('MAFRI16')" oncontextmenu="stonePopup('MAFRI16')"><span class="stoneCalc"><span id="MAFRI16" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI15" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI15')" oncontextmenu="stonePopup('MAFRI15')"><span class="stoneCalc"><span id="MAFRI15" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI14" class="gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stoneCheck('MAFRI14')" oncontextmenu="stonePopup('MAFRI14')"><span class="stoneCalc"><span id="MAFRI14" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI13" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI13')" oncontextmenu="stonePopup('MAFRI13')"><span class="stoneCalc"><span id="MAFRI13" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="./Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="FRI12" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI12')" oncontextmenu="stonePopup('MAFRI12')"><span class="stoneCalc"><span id="MAFRI12" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI11" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI11')" oncontextmenu="stonePopup('MAFRI11')"><span class="stoneCalc"><span id="MAFRI11" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="./Icons/Stone/echo.png" onclick="passivePopup('MAFRC02')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI10" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI10')" oncontextmenu="stonePopup('MAFRI10')"><span class="stoneCalc"><span id="MAFRI10" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI09" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI09')" oncontextmenu="stonePopup('MAFRI09')"><span class="stoneCalc"><span id="MAFRI09" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI08" class="gray" loading="lazy" src="./Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI08')" oncontextmenu="stonePopup('MAFRI08')"><span class="stoneCalc"><span id="MAFRI08" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI07" class="gray" loading="lazy" src="./Icons/Stone/stat.png" onclick="stoneCheck('MAFRI07')" oncontextmenu="stonePopup('MAFRI07')"><span class="stoneCalc"><span id="MAFRI07" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI06" class="gray" loading="lazy" src="./Icons/Stone/res.png" onclick="stoneCheck('MAFRI06')" oncontextmenu="stonePopup('MAFRI06')"><span class="stoneCalc"><span id="MAFRI06" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI05" class="gray" loading="lazy" src="./Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI05')" oncontextmenu="stonePopup('MAFRI05')"><span class="stoneCalc"><span id="MAFRI05" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI04" class="gray" loading="lazy" src="./Icons/Stone/omni.png" onclick="stoneCheck('MAFRI04')" oncontextmenu="stonePopup('MAFRI04')"><span class="stoneCalc"><span id="MAFRI04" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI03" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI03')" oncontextmenu="stonePopup('MAFRI03')"><span class="stoneCalc"><span id="MAFRI03" class="zero">0</span>/3</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI02" class="gray" loading="lazy" src="./Icons/Stone/crit.png" onclick="stoneCheck('MAFRI02')" oncontextmenu="stonePopup('MAFRI02')"><span class="stoneCalc"><span id="MAFRI02" class="zero">0</span>/3</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI01" class="gray" loading="lazy" src="./Icons/Stone/focus.png" onclick="stoneCheck('MAFRI01')" oncontextmenu="stonePopup('MAFRI01')"><span class="stoneCalc"><span id="MAFRI01" class="zero">0</span>/3</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="./Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+        
+                <div class="stoneItem"><img class="square" src="./Icons/100.png"><span id="stoneNum">1</span></div>
+                <div class="stoneItem"><img class="square" src="./Icons/Stone/Skill7.png" onclick="skillPopup('MAFRS08')"><span class="resetText">Skill 7</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRC01" class="circle" loading="lazy" src="./Icons/Stone/start.png" onclick="passivePopup('MAFRC01')"><span class="stoneCalc"><span id="MAFRC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="./Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                <div class="stoneItem"><img class="square" src="./Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'MAFR')"><span class="resetText">Reset</span></div>
+            </div>
+            <div class="builds areaBuilds Talents"> <!-- builds-->
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="feedSmall">
+                    <div class="buildsShow Mage Ranged all bgBlue Popular"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Mage.png" alt="mage">
+                        <div class="gridName"><b>Icicle Storm</b><br>Raid Ranged Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Mage/Frost/mageFrsk3.png" onclick="buildsCostPopup('MAFRB1')" alt="icicle storm"></div>
+                        <div class="treeItem gridBuild builds" id="MAFRB1"><img src="./Icons/Mage/Frost/mageFrsk8.png" onclick="raidBuilds('MAFRB1')" alt="mage frost build 1"><span class="star">&#9733;</span></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('MAFRB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div> 
+                      <div class="buildsShow Mage Ranged all bgBlue unpop"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Mage.png" alt="mage">
+                        <div class="gridName"><b>Arctic Icicle</b><br>Raid Ranged Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="./Icons/Mage/Frost/mageFr8.jpg" onclick="buildsPopup('MAFRB2')" alt="arctic icicle"></div>
+                        <div class="treeItem gridBuild builds" id="MAFRB2"><img src="./Icons/Mage/Frost/mageFrsk10.png" onclick="raidBuilds('MAFRB2')" alt="mage frost build 2"><span class="triangle">&#9660;</span></div>
+                        <div class="role unpop"><img src="./Icons/info.png" onclick="buildsCreatePopup('MAFRB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div> 
+                </div>
+            </div>
+            <div class="gridSkills Skills">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="content">
+                <div class="skillItem" id="MAFRS01"><img src="./Icons/Mage/Frost/mageFrsk1.png" onclick="skillPopup('MAFRS01')"></div>
+                <div class="skillItem" id="MAFRS02"><img src="./Icons/Mage/Frost/mageFrsk2.png" onclick="skillPopup('MAFRS02')"></div>
+                <div class="skillItem" id="MAFRS03"><img src="./Icons/Mage/Frost/mageFrsk3.png" onclick="skillPopup('MAFRS03')"></div>
+                <div class="skillItem" id="MAFRS04"><img src="./Icons/Mage/Frost/mageFr8.jpg" onclick="skillPopup('MAFRS04')"></div>
+                <div class="skillItem" id="MAFRS05"><img src="./Icons/Mage/Frost/mageFrsk5.png" onclick="skillPopup('MAFRS05')"></div>
+                <div class="skillItem" id="MAFRS06"><img src="./Icons/Mage/Frost/mageFrsk6.png" onclick="skillPopup('MAFRS06')"></div>
+                <div class="skillItem" id="MAFRS07"><img src="./Icons/Mage/Frost/mageFrsk8.png" onclick="skillPopup('MAFRS07')"></div>
+                <div class="treeItem" id="MAFRA01"><img src="./Icons/Mage/Frost/mageFrsk9.png" onclick="passivePopup('MAFRA01')"></div>
+                </div>
+                </div>
+            <div class="gridUlts Skills">
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="content">
+                <div class="treeItem" id="MAFRU01"><img src="./Icons/Mage/Frost/ult1.jpg" onclick="ultPopup('MAFRU01')"></div>
+                <div class="treeItem" id="MAFRU02"><img src="./Icons/Mage/Frost/ult2.jpg" onclick="ultPopup('MAFRU02')"></div>
+                <div class="treeItem" id="MAFRU03"><img src="./Icons/Mage/Frost/ult3.jpg" onclick="ultPopup('MAFRU03')"></div>
+                <div class="treeItem" id="MAFRU04"><img src="./Icons/Mage/Frost/ult4.jpg" onclick="ultPopup('MAFRU04')"></div>
+                <div class="treeItem" id="MAFRU05"><img src="./Icons/Mage/Frost/ult5.jpg" onclick="ultPopup('MAFRU05')"></div>
+                <div class="treeItem" id="MAFRU06"><img src="./Icons/Mage/Frost/ult6.jpg" onclick="ultPopup('MAFRU06')"></div>
+                <div class="treeItem" id="MAFRU07"><img src="./Icons/Mage/Frost/ult7.jpg" onclick="ultPopup('MAFRU07')"></div>
+                <div class="treeItem" id="MAFRU08"><img src="./Icons/Mage/Frost/ult8.jpg" onclick="ultPopup('MAFRU08')"></div>
+                </div>
+                </div>
+            <div class="gridPvP Skills">  <!--PvP-->
+                    <div class="sideBar bar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="content">
+                    <div class="treeItem" id="MAFRU09"><img src="./Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('MAFRU09')"></div>
+                    <div class="treeItem" id="MAFRU10"><img src="./Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('MAFRU10')"></div>
+                    <div class="treeItem" id="MAFRU11"><img src="./Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('MAFRU11')"></div>
+                    <div class="treeItem" id="MAFRU12"><img src="./Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('MAFRU12')"></div>
+                    <div class="treeItem" id="MAFRU13"><img src="./Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('MAFRU13')"></div>
+                    <div class="treeItem" id="MAFRU14"><img src="./Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('MAFRU14')"></div>
+                    <div class="treeItem" id="MAFRU15"><img src="./Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('MAFRU15')"></div>
+                    <div class="treeItem" id="MAFRU16"><img src="./Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('MAFRU16')"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
+        <div class="popup" id="skillPopup">
+            <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+        var params = new URLSearchParams(location.search);
+            if (params.has('skill') === true) {
+                setTalents(params.get('skill'));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'))].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
+            }
+        }
+    window.onpageshow = loadParams; 
+    window.onpopstate = () => setTimeout(loadParams, 0);
+    document.getElementById("classScroll").scrollLeft = 200;
+    document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
+    var xDown = null, yDown = null, xUp = null, yUp = null;
+    document.addEventListener('touchstart', touchstart, false);        
+    document.addEventListener('touchmove', touchmove, false);
+    document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
+    document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
+    document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
+    function touchstart(evt) { const firstTouch = (evt.touches || evt.originalEvent.touches)[0]; xDown = firstTouch.clientX; yDown = firstTouch.clientY; }
+    function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
+    function touchend(evt, left, active, right) { 
+        var xDiff = xUp - xDown, yDiff = yUp - yDown;
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+            if (xDiff < 0) 
+            selectTree(right, active, left);
+            else
+            selectTree(left, active, right);
+        } 
+        xDown = null, yDown = null, xUp = null, yUp = null;
+    }
+
+</script>
+</html>
