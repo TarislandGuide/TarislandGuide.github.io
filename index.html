@@ -8,10 +8,13 @@
     <script>
     function loadParams() {
       var params = new URLSearchParams(location.search);
-            if (params.has('skill') === true) {
-              var code = params.get('skill');
-              var spec = code.replace(/[0-9]/g, '');
-              window.location = `./${spec}.html?skill=${code}`
+      var code = params.get('skill');
+      var stone = params.get('stone');
+      var spec = code.replace(/[0-9]/g, '');
+            if (params.has('skill') === true && params.has('stone') === true) {
+              window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
+            } else if (params.has('skill') === true) {
+              window.location = `./S0/${spec}.html?skill=${code}`
             }
         }
     loadParams();
@@ -77,6 +80,7 @@
             <div class="filterBarItem buildsBlank"></div>
           </div>
           <div class="feed">  
+            
             <!--warrior builds-->
             <div class="buildsFeed Warrior Tank all bgRed Popular"><img class="roleIcon" draggable="false" src="./Icons/RoleIcons/Warrior.png" alt="">
               <div class="gridName"><b>War Shield Warrior</b><br>Shield Assault<br></div>
