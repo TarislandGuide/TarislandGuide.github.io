@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tarislandbuilds.eu/S1/SSDU.html" />
-    <link rel="stylesheet" href="../style.css">
-    <script src="../javascript.js"></script>
-    <script src="../JSON/SSDU.js"></script>
-    <script src="../JSON/builds.js"></script>
-    <script>
-        function loadParams() {
-          var params = new URLSearchParams(location.search);
-          var code = params.get('skill');
-          var stone = params.get('stone');
-          var spec = code.replace(/[0-9]/g, '');
-                if (params.has('skill') === true && params.has('stone') === true) {
-                  window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
-                } else if (params.has('skill') === true) {
-                  window.location = `./S0/${spec}.html?skill=${code}`
-                }
-            }
-        loadParams();
-          </script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+    <script src="./JSON/SSDU.js"></script>
+    <script src="./JSON/builds.js"></script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -31,7 +16,7 @@
     <meta property="og:description" content="Plan your build and share it with friends">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/SSDU.png'>
     <meta name="twitter:card" content="summary_large_image">
-    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
   </head>
 <body>
     <div class="wrapper">
@@ -146,6 +131,37 @@
                     <div class="treeItem" id="SSDUP05"><img src="../Icons/Shadow/Duel/shadD26.jpg" onclick="passivePopup('SSDUP05')"></div>
                 </div>
                 </div>
+                <div class="gridS1">
+                    <div class="sideBar">
+                        <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
+                    </div>
+                    <div>
+                    <div class="s1talents1">
+                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="skillPopup('SSDUB01')"></div>
+                </div>
+                <div class="s1talents2">
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk1.png" onclick="skillPopup('SSDUB02')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk2.png" onclick="skillPopup('SSDUB03')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk3.png" onclick="skillPopup('SSDUB04')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk4.png" onclick="skillPopup('SSDUB05')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk5.png" onclick="skillPopup('SSDUB06')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk6.png" onclick="skillPopup('SSDUB07')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk7.png" onclick="skillPopup('SSDUB08')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk8.png" onclick="skillPopup('SSDUB09')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk9.png" onclick="skillPopup('SSDUB10')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk10.png" onclick="skillPopup('SSDUB11')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk11.png" onclick="skillPopup('SSDUB12')"></div>
+                    <div class="s1item"><img src="../Icons/Shadow/Duel/S1sk12.png" onclick="skillPopup('SSDUB13')"></div>
+                </div>
+                    </div>
+                </div>
                 <div class="gridActions">  <!--Actions-->
                     <div class="sideBar">
                         <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
@@ -158,127 +174,151 @@
                     </div>
                 </div>
                 </div>
-            <div class="gridStone Stone">
-                <div class="stoneItem"><img id="DUI58" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI58')" oncontextmenu="stonePopup('SSDUI58')"><span class="stoneCalc"><span id="SSDUI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('SSDUC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI57" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI57')" oncontextmenu="stonePopup('SSDUI57')"><span class="stoneCalc"><span id="SSDUI57" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem"><img id="DUI56" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI56')" oncontextmenu="stonePopup('SSDUI56')"><span class="stoneCalc"><span id="SSDUI56" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI55" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI55')" oncontextmenu="stonePopup('SSDUI55')"><span class="stoneCalc"><span id="SSDUI55" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI54')" oncontextmenu="stonePopup('SSDUI54')"><span class="stoneCalc"><span id="SSDUI54" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI53" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI53')" oncontextmenu="stonePopup('SSDUI53')"><span class="stoneCalc"><span id="SSDUI53" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI52')" oncontextmenu="stonePopup('SSDUI52')"><span class="stoneCalc"><span id="SSDUI52" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI51" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI51')" oncontextmenu="stonePopup('SSDUI51')"><span class="stoneCalc"><span id="SSDUI51" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI50" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI50')" oncontextmenu="stonePopup('SSDUI50')"><span class="stoneCalc"><span id="SSDUI50" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem"><img id="DUI49" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI49')" oncontextmenu="stonePopup('SSDUI49')"><span class="stoneCalc"><span id="SSDUI49" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI48" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI48')" oncontextmenu="stonePopup('SSDUI48')"><span class="stoneCalc"><span id="SSDUI48" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI47')" oncontextmenu="stonePopup('SSDUI47')"><span class="stoneCalc"><span id="SSDUI47" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI46')" oncontextmenu="stonePopup('SSDUI46')"><span class="stoneCalc"><span id="SSDUI46" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI45" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI45')" oncontextmenu="stonePopup('SSDUI45')"><span class="stoneCalc"><span id="SSDUI45" class="zero">0</span>/3</span><span class="linkB"></span></div>
-        
-                <div class="stoneItem"><img id="DUI44" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI44')" oncontextmenu="stonePopup('SSDUI44')"><span class="stoneCalc"><span id="SSDUI44" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI43" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI43')" oncontextmenu="stonePopup('SSDUI43')"><span class="stoneCalc"><span id="SSDUI43" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI42" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI42')" oncontextmenu="stonePopup('SSDUI42')"><span class="stoneCalc"><span id="SSDUI42" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI41" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI41')" oncontextmenu="stonePopup('SSDUI41')"><span class="stoneCalc"><span id="SSDUI41" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI40" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI40')" oncontextmenu="stonePopup('SSDUI40')"><span class="stoneCalc"><span id="SSDUI40" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem"><img id="DUI39" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI39')" oncontextmenu="stonePopup('SSDUI39')"><span class="stoneCalc"><span id="SSDUI39" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI38" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI38')" oncontextmenu="stonePopup('SSDUI38')"><span class="stoneCalc"><span id="SSDUI38" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI37" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI37')" oncontextmenu="stonePopup('SSDUI37')"><span class="stoneCalc"><span id="SSDUI37" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI36" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI36')" oncontextmenu="stonePopup('SSDUI36')"><span class="stoneCalc"><span id="SSDUI36" class="zero">0</span>/3</span><span class="linkB"></span></div>
-        
-                <div class="stoneItem"><img id="DUI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI35')" oncontextmenu="stonePopup('SSDUI35')"><span class="stoneCalc"><span id="SSDUI35" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI34')" oncontextmenu="stonePopup('SSDUI34')"><span class="stoneCalc"><span id="SSDUI34" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI33" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI33')" oncontextmenu="stonePopup('SSDUI33')"><span class="stoneCalc"><span id="SSDUI33" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI32" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI32')" oncontextmenu="stonePopup('SSDUI32')"><span class="stoneCalc"><span id="SSDUI32" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI31" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI31')" oncontextmenu="stonePopup('SSDUI31')"><span class="stoneCalc"><span id="SSDUI31" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI30" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSDUI30')" oncontextmenu="stonePopup('SSDUI30')"><span class="stoneCalc"><span id="SSDUI30" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI29')" oncontextmenu="stonePopup('SSDUI29')"><span class="stoneCalc"><span id="SSDUI29" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="DUI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI28')" oncontextmenu="stonePopup('SSDUI28')"><span class="stoneCalc"><span id="SSDUI28" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI27')" oncontextmenu="stonePopup('SSDUI27')"><span class="stoneCalc"><span id="SSDUI27" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('SSDUC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI26" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI26')" oncontextmenu="stonePopup('SSDUI26')"><span class="stoneCalc"><span id="SSDUI26" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI25')" oncontextmenu="stonePopup('SSDUI25')"><span class="stoneCalc"><span id="SSDUI25" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI24" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI24')" oncontextmenu="stonePopup('SSDUI24')"><span class="stoneCalc"><span id="SSDUI24" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI23" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI23')" oncontextmenu="stonePopup('SSDUI23')"><span class="stoneCalc"><span id="SSDUI23" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI22" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI22')" oncontextmenu="stonePopup('SSDUI22')"><span class="stoneCalc"><span id="SSDUI22" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI21" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI21')" oncontextmenu="stonePopup('SSDUI21')"><span class="stoneCalc"><span id="SSDUI21" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI20" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI20')" oncontextmenu="stonePopup('SSDUI20')"><span class="stoneCalc"><span id="SSDUI20" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="DUI19" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI19')" oncontextmenu="stonePopup('SSDUI19')"><span class="stoneCalc"><span id="SSDUI19" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI18" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI18')" oncontextmenu="stonePopup('SSDUI18')"><span class="stoneCalc"><span id="SSDUI18" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI17" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSDUI17')" oncontextmenu="stonePopup('SSDUI17')"><span class="stoneCalc"><span id="SSDUI17" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI16" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSDUI16')" oncontextmenu="stonePopup('SSDUI16')"><span class="stoneCalc"><span id="SSDUI16" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI15" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI15')" oncontextmenu="stonePopup('SSDUI15')"><span class="stoneCalc"><span id="SSDUI15" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI14" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI14')" oncontextmenu="stonePopup('SSDUI14')"><span class="stoneCalc"><span id="SSDUI14" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI13" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI13')" oncontextmenu="stonePopup('SSDUI13')"><span class="stoneCalc"><span id="SSDUI13" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="DUI12" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI12')" oncontextmenu="stonePopup('SSDUI12')"><span class="stoneCalc"><span id="SSDUI12" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI11" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI11')" oncontextmenu="stonePopup('SSDUI11')"><span class="stoneCalc"><span id="SSDUI11" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('SSDUC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI10" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI10')" oncontextmenu="stonePopup('SSDUI10')"><span class="stoneCalc"><span id="SSDUI10" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI09" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI09')" oncontextmenu="stonePopup('SSDUI09')"><span class="stoneCalc"><span id="SSDUI09" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI08" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI08')" oncontextmenu="stonePopup('SSDUI08')"><span class="stoneCalc"><span id="SSDUI08" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI07')" oncontextmenu="stonePopup('SSDUI07')"><span class="stoneCalc"><span id="SSDUI07" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI06" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI06')" oncontextmenu="stonePopup('SSDUI06')"><span class="stoneCalc"><span id="SSDUI06" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI05')" oncontextmenu="stonePopup('SSDUI05')"><span class="stoneCalc"><span id="SSDUI05" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI04" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI04')" oncontextmenu="stonePopup('SSDUI04')"><span class="stoneCalc"><span id="SSDUI04" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI03')" oncontextmenu="stonePopup('SSDUI03')"><span class="stoneCalc"><span id="SSDUI03" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DUI02" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSDUI02')" oncontextmenu="stonePopup('SSDUI02')"><span class="stoneCalc"><span id="SSDUI02" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DUI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI01')" oncontextmenu="stonePopup('SSDUI01')"><span class="stoneCalc"><span id="SSDUI01" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
-        
-                <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('SSDUS08')"><span class="resetText">Skill 7</span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DUC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('SSDUC01')"><span class="stoneCalc"><span id="SSDUC01" class="zero">1</span>/1</span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'SSDU')"><span class="resetText">Reset</span></div>
-            </div>
+                <div class="gridStone Stone">
+                    <div class="stoneItem"><img id="DUI56" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI56')" oncontextmenu="stonePopup('SSDUI56')"><span class="stoneCalc"><span id="SSDUI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('SSDUC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI55" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI55')" oncontextmenu="stonePopup('SSDUI55')"><span class="stoneCalc"><span id="SSDUI55" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="DUI54" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI54')" oncontextmenu="stonePopup('SSDUI54')"><span class="stoneCalc"><span id="SSDUI54" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI53" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI53')" oncontextmenu="stonePopup('SSDUI53')"><span class="stoneCalc"><span id="SSDUI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI52')" oncontextmenu="stonePopup('SSDUI52')"><span class="stoneCalc"><span id="SSDUI52" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI51" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI51')" oncontextmenu="stonePopup('SSDUI51')"><span class="stoneCalc"><span id="SSDUI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI50')" oncontextmenu="stonePopup('SSDUI50')"><span class="stoneCalc"><span id="SSDUI50" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="DUI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI49')" oncontextmenu="stonePopup('SSDUI49')"><span class="stoneCalc"><span id="SSDUI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI48" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI48')" oncontextmenu="stonePopup('SSDUI48')"><span class="stoneCalc"><span id="SSDUI48" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI47')" oncontextmenu="stonePopup('SSDUI47')"><span class="stoneCalc"><span id="SSDUI47" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="DUI46" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI46')" oncontextmenu="stonePopup('SSDUI46')"><span class="stoneCalc"><span id="SSDUI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI45" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI45')" oncontextmenu="stonePopup('SSDUI45')"><span class="stoneCalc"><span id="SSDUI45" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI44" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI44')" oncontextmenu="stonePopup('SSDUI44')"><span class="stoneCalc"><span id="SSDUI44" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI43" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI43')" oncontextmenu="stonePopup('SSDUI43')"><span class="stoneCalc"><span id="SSDUI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI42" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI42')" oncontextmenu="stonePopup('SSDUI42')"><span class="stoneCalc"><span id="SSDUI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    
+                    <div class="stoneItem"><img id="DUI41" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI41')" oncontextmenu="stonePopup('SSDUI41')"><span class="stoneCalc"><span id="SSDUI41" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI40" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI40')" oncontextmenu="stonePopup('SSDUI40')"><span class="stoneCalc"><span id="SSDUI40" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI39" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI39')" oncontextmenu="stonePopup('SSDUI39')"><span class="stoneCalc"><span id="SSDUI39" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI38" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI38')" oncontextmenu="stonePopup('SSDUI38')"><span class="stoneCalc"><span id="SSDUI38" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outRedCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('SSDUD04')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outBlueCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('SSDUD03')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    
+                    <div class="stoneItem"><img id="DUI37" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI37')" oncontextmenu="stonePopup('SSDUI37')"><span class="stoneCalc"><span id="SSDUI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI36" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI36')" oncontextmenu="stonePopup('SSDUI36')"><span class="stoneCalc"><span id="SSDUI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI35" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI35')" oncontextmenu="stonePopup('SSDUI35')"><span class="stoneCalc"><span id="SSDUI35" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI34')" oncontextmenu="stonePopup('SSDUI34')"><span class="stoneCalc"><span id="SSDUI34" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    
+                    <div class="stoneItem"><img id="DUI33" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI33')" oncontextmenu="stonePopup('SSDUI33')"><span class="stoneCalc"><span id="SSDUI33" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI32')" oncontextmenu="stonePopup('SSDUI32')"><span class="stoneCalc"><span id="SSDUI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI31" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSDUI31')" oncontextmenu="stonePopup('SSDUI31')"><span class="stoneCalc"><span id="SSDUI31" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI30" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI30')" oncontextmenu="stonePopup('SSDUI30')"><span class="stoneCalc"><span id="SSDUI30" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI29" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI29')" oncontextmenu="stonePopup('SSDUI29')"><span class="stoneCalc"><span id="SSDUI29" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI28" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI28')" oncontextmenu="stonePopup('SSDUI28')"><span class="stoneCalc"><span id="SSDUI28" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('SSDUC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI27" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSDUI27')" oncontextmenu="stonePopup('SSDUI27')"><span class="stoneCalc"><span id="SSDUI27" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="DUI26" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI26')" oncontextmenu="stonePopup('SSDUI26')"><span class="stoneCalc"><span id="SSDUI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI25" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI25')" oncontextmenu="stonePopup('SSDUI25')"><span class="stoneCalc"><span id="SSDUI25" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI24" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI24')" oncontextmenu="stonePopup('SSDUI24')"><span class="stoneCalc"><span id="SSDUI24" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI23" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI23')" oncontextmenu="stonePopup('SSDUI23')"><span class="stoneCalc"><span id="SSDUI23" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI22" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI22')" oncontextmenu="stonePopup('SSDUI22')"><span class="stoneCalc"><span id="SSDUI22" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI21" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI21')" oncontextmenu="stonePopup('SSDUI21')"><span class="stoneCalc"><span id="SSDUI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI20" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI20')" oncontextmenu="stonePopup('SSDUI20')"><span class="stoneCalc"><span id="SSDUI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI19" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSDUI19')" oncontextmenu="stonePopup('SSDUI19')"><span class="stoneCalc"><span id="SSDUI19" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI18" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI18')" oncontextmenu="stonePopup('SSDUI18')"><span class="stoneCalc"><span id="SSDUI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="DUI17" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI17')" oncontextmenu="stonePopup('SSDUI17')"><span class="stoneCalc"><span id="SSDUI17" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI16" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI16')" oncontextmenu="stonePopup('SSDUI16')"><span class="stoneCalc"><span id="SSDUI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI15" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI15')" oncontextmenu="stonePopup('SSDUI15')"><span class="stoneCalc"><span id="SSDUI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI14" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI14')" oncontextmenu="stonePopup('SSDUI14')"><span class="stoneCalc"><span id="SSDUI14" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI13" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI13')" oncontextmenu="stonePopup('SSDUI13')"><span class="stoneCalc"><span id="SSDUI13" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('SSDUD02')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outYellowCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('SSDUD01')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem"><img id="DUI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI12')" oncontextmenu="stonePopup('SSDUI12')"><span class="stoneCalc"><span id="SSDUI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSDUI11')" oncontextmenu="stonePopup('SSDUI11')"><span class="stoneCalc"><span id="SSDUI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSDUI10')" oncontextmenu="stonePopup('SSDUI10')"><span class="stoneCalc"><span id="SSDUI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI09')" oncontextmenu="stonePopup('SSDUI09')"><span class="stoneCalc"><span id="SSDUI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI08')" oncontextmenu="stonePopup('SSDUI08')"><span class="stoneCalc"><span id="SSDUI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI07')" oncontextmenu="stonePopup('SSDUI07')"><span class="stoneCalc"><span id="SSDUI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSDUI06')" oncontextmenu="stonePopup('SSDUI06')"><span class="stoneCalc"><span id="SSDUI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSDUI05')" oncontextmenu="stonePopup('SSDUI05')"><span class="stoneCalc"><span id="SSDUI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSDUI04')" oncontextmenu="stonePopup('SSDUI04')"><span class="stoneCalc"><span id="SSDUI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="DUI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI03')" oncontextmenu="stonePopup('SSDUI03')"><span class="stoneCalc"><span id="SSDUI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="DUI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSDUI02')" oncontextmenu="stonePopup('SSDUI02')"><span class="stoneCalc"><span id="SSDUI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="DUI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSDUI01')" oncontextmenu="stonePopup('SSDUI01')"><span class="stoneCalc"><span id="SSDUI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+            
+                    <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('SSDUS08')"><span class="resetText">Skill 7</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="FZC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('SSDUC01')"><span class="stoneCalc"><span id="SSDUC01" class="zero">1</span>/1</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('100000000000000000000000000000000000000000000000000000000', 'SSDU')"><span class="resetText">Reset</span></div>
+                </div>
             <div class="builds areaBuilds Talents"> <!-- builds-->
                 <div class="sideBar bar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
@@ -377,8 +417,8 @@
     document.getElementById("classScroll").scrollLeft = 800;
     document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
     var xDown = null, yDown = null, xUp = null, yUp = null;
-    document.addEventListener('touchstart', touchstart, false);        
-    document.addEventListener('touchmove', touchmove, false);
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
     document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
     document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
     document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
@@ -386,7 +426,7 @@
     function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
     function touchend(evt, left, active, right) { 
         var xDiff = xUp - xDown, yDiff = yUp - yDown;
-        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 1000)) { 
             if (xDiff < 0) 
             selectTree(right, active, left);
             else

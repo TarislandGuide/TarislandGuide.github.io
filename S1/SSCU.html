@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://tarislandbuilds.eu/S1/SSCU.html" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+    <script src="./JSON/SSCU.js"></script>
+    <script src="./JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent & Inscribed Stone Trees Calculator</title>
+    <meta name="description" content="Discover, Create and Share powerful Character builds with our Builds Hub. Our Talents and Inscribed Stone Trees Calculator lets you customize builds, view detailed skill and ability descriptions, and share your setups with friends. Explore, experiment and elevate your game to the next level!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cunning Shadow Swordsman Talent Build">
+    <meta property="og:description" content="Plan your build and share it with friends">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/SSCU.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="sideBar">
+                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Home" src="../Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')"></div>
+                <div class="classItem"><img alt="Warrior" src="../Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="../Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="../Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="../Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
+                <div class="classItem"><img alt="Paladin" src="../Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="../Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="../Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="../Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')" class="border"></div>
+                <div class="classItem"><img alt="Necro" src="../Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+            <div class="spec">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="specSelect">
+                    <div></div>
+                    <div class="blank right"><p><b>Cunning</b><br><small>Melee</small></p></div>
+                    <div class="skillItem"><img alt="Cunning" src="../Icons/Shadow/Cunning/cunning.png" class="bground"></div>
+                    <div class="skillItem"><img alt="Duel" src="../Icons/Shadow/Duel/duel.png" onclick="selectClass('SSDU')"></div>
+                    <div class="blank left"><p><b>Duel</b><br><small>Melee</small></p></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="treeSelect">
+            <div class="spec"> <!-- select tree type-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Tree</b></span></div>
+                </div>
+                <div class="selectTree">
+                    <div class="blank"></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconTalents" class="bground" alt="Talent Tree" src="../Icons/talents.png" onclick="selectTree('Talents', 'Stone', 'Skills')"></span></div><div><span class="selectText"><b><small>Talents</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="../Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'Skills')"></span></div><div><span class="selectText"><b><small>Stone</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconSkills" class="blah" alt="God Weapon" src="../Icons/skills.png" onclick="selectTree('Skills', 'Stone', 'Talents')"></span></div><div><span class="selectText"><b><small>Skills</small></b></span></div></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+            </div>
+
+            <div id="Trees" class="mainLayoutGridTrees">
+                <div class="gridTalents Talents">   <!--Shadow Cunning-->
+                <div class="talentsTree">
+            <div class="sideBar barNudge">
+                    <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+                </div>
+                <div class="talentsLayout">
+                    <div class="treeItem"><img src="../Icons/32.png"><span id="talentNum">0</span></div>
+                    <div class="treeItem"><img id="CUT01" class="gray" src="../Icons/Shadow/Cunning/shadC1.jpg" onclick="talentCheck('SSCUT01')" oncontextmenu="talentPopup('SSCUT01')"><span class="skillCalc"><span id="SSCUT01" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id="CUT02" class="gray" src="../Icons/Shadow/Cunning/shadC2.jpg" onclick="talentCheck('SSCUT02')" oncontextmenu="talentPopup('SSCUT02')"><span class="skillCalc"><span id="SSCUT02" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id="CUT03" class="gray" src="../Icons/Shadow/Cunning/shadC3.jpg" onclick="talentCheck('SSCUT03')" oncontextmenu="talentPopup('SSCUT03')"><span class="skillCalc"><span id="SSCUT03" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id="CUT04" class="gray" src="../Icons/Shadow/Cunning/shadC4.jpg" onclick="talentCheck('SSCUT04')" oncontextmenu="talentPopup('SSCUT04')"><span class="skillCalc"><span id="SSCUT04" class="zero">0</span>/2</span></div>
+                    <div class="treeItem"><img id="CUT05" class="gray" src="../Icons/Shadow/Cunning/shadC5.jpg" onclick="talentCheck('SSCUT05')" oncontextmenu="talentPopup('SSCUT05')"><span class="skillCalc"><span id="SSCUT05" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id="CUT06" class="gray" src="../Icons/Shadow/Cunning/shadC6.jpg" onclick="talentCheck('SSCUT06')" oncontextmenu="talentPopup('SSCUT06')"><span class="skillCalc"><span id="SSCUT06" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id="CUT07" class="gray" src="../Icons/Shadow/Cunning/shadC7.jpg" onclick="talentCheck('SSCUT07')" oncontextmenu="talentPopup('SSCUT07')"><span class="skillCalc"><span id="SSCUT07" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem"><img id="CUT08" class="gray" src="../Icons/Shadow/Cunning/shadC8.jpg" onclick="talentCheck('SSCUT08')" oncontextmenu="talentPopup('SSCUT08')"><span class="skillCalc"><span id="SSCUT08" class="zero">0</span>/1</span><span class="req"></span></div>
+                    <div class="treeItem"><img id="CUT09" class="gray" src="../Icons/Shadow/Cunning/shadC9.jpg" onclick="talentCheck('SSCUT09')" oncontextmenu="talentPopup('SSCUT09')"><span class="skillCalc"><span id="SSCUT09" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id="CUT10" class="gray" src="../Icons/Shadow/Cunning/shadC10.jpg" onclick="talentCheck('SSCUT10')" oncontextmenu="talentPopup('SSCUT10')"><span class="skillCalc"><span id="SSCUT10" class="zero">0</span>/2</span></div>
+    
+                    <div class="treeItem"><img id="CUT11" class="gray" src="../Icons/Shadow/Cunning/shadC11.jpg" onclick="talentCheck('SSCUT11')" oncontextmenu="talentPopup('SSCUT11')"><span class="skillCalc"><span id="SSCUT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id="CUT12" class="gray" src="../Icons/Shadow/Cunning/shadC12.jpg" onclick="talentCheck('SSCUT12')" oncontextmenu="talentPopup('SSCUT12')"><span class="skillCalc"><span id="SSCUT12" class="zero">0</span>/2</span></div>
+    
+                    <div class="treeItem"><img id="CUT13" class="gray" src="../Icons/Shadow/Cunning/shadC13.jpg" onclick="talentCheck('SSCUT13')" oncontextmenu="talentPopup('SSCUT13')"><span class="skillCalc"><span id="SSCUT13" class="zero">0</span>/2</span><span class="req"></span></div>
+                    <div class="treeItem"><img id="CUT14" class="gray" src="../Icons/Shadow/Cunning/shadC14.jpg" onclick="talentCheck('SSCUT14')" oncontextmenu="talentPopup('SSCUT14')"><span class="skillCalc"><span id="SSCUT14" class="zero">0</span>/2</span></div>
+                    <div class="treeItem"><img id="CUT15" class="gray" src="../Icons/Shadow/Cunning/shadC15.jpg" onclick="talentCheck('SSCUT15')" oncontextmenu="talentPopup('SSCUT15')"><span class="skillCalc"><span id="SSCUT15" class="zero">0</span>/3</span></div>
+    
+                    <div class="treeItem"><img id="CUT16" class="gray" src="../Icons/Shadow/Cunning/shadC16.jpg" onclick="talentCheck('SSCUT16')" oncontextmenu="talentPopup('SSCUT16')"><span class="skillCalc"><span id="SSCUT16" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id="CUT17" class="gray" src="../Icons/Shadow/Cunning/shadC17.jpg" onclick="talentCheck('SSCUT17')" oncontextmenu="talentPopup('SSCUT17')"><span class="skillCalc"><span id="SSCUT17" class="zero">0</span>/2</span></div>
+                    <div class="treeItem blank"></div>
+    
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id="CUT18" class="gray" src="../Icons/Shadow/Cunning/shadC18.jpg" onclick="talentCheck('SSCUT18')" oncontextmenu="talentPopup('SSCUT18')"><span class="skillCalc"><span id="SSCUT18" class="zero">0</span>/3</span></div>
+                    <div class="treeItem"><img id="CUT19" class="gray" src="../Icons/Shadow/Cunning/shadC19.jpg" onclick="talentCheck('SSCUT19')" oncontextmenu="talentPopup('SSCUT19')"><span class="skillCalc"><span id="SSCUT19" class="zero">0</span>/2</span><span class="req"></span></div>
+    
+                    <div class="treeItem"><img id="CUT20" class="gray" src="../Icons/Shadow/Cunning/shadC20.jpg" onclick="talentCheck('SSCUT20')" oncontextmenu="talentPopup('SSCUT20')"><span class="skillCalc"><span id="SSCUT20" class="zero">0</span>/3</span></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img id="CUT21" class="gray" src="../Icons/Shadow/Cunning/shadC21.jpg" onclick="talentCheck('SSCUT21')" oncontextmenu="talentPopup('SSCUT21')"><span class="skillCalc"><span id="SSCUT21" class="zero">0</span>/2</span></div>
+                </div>
+                <div class="corePassives">
+                    <div class="treeItem"><img src="../Icons/Shadow/Cunning/shadC22.jpg" onclick="passivePopup('SSCUP01')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="../Icons/Shadow/Cunning/shadC23.jpg" onclick="passivePopup('SSCUP02')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="../Icons/Shadow/Cunning/shadC24.jpg" onclick="passivePopup('SSCUP03')"></div>
+                    <div class="treeItem"><img src="../Icons/Shadow/Cunning/shadC25.jpg" onclick="passivePopup('SSCUP04')"></div>
+                    <div class="treeItem blank"></div>
+                    <div class="treeItem"><img src="../Icons/Shadow/Cunning/shadC26.jpg" onclick="passivePopup('SSCUP05')"></div>
+                </div>
+                </div>
+                <div class="gridS1">
+                    <div class="sideBar">
+                        <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
+                    </div>
+                    <div>
+                    <div class="s1talents1">
+                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="passivePopup('SSCUB01')"></div>
+                </div>
+                <div class="s1talents2">
+                    <div class="s1item"><img id="SSCUB02" class="gray" src="../Icons/Shadow/Cunning/S1sk1.png" onclick="s1Check('SSCUB02')" oncontextmenu="s1Popup('SSCUB02')"></div>
+                    <div class="s1item"><img id="SSCUB03" class="gray" src="../Icons/Shadow/Cunning/S1sk2.png" onclick="s1Check('SSCUB03')" oncontextmenu="s1Popup('SSCUB03')"></div>
+                    <div class="s1item"><img id="SSCUB04" class="gray" src="../Icons/Shadow/Cunning/S1sk3.png" onclick="s1Check('SSCUB04')" oncontextmenu="s1Popup('SSCUB04')"></div>
+                    
+                    <div class="s1item"><img id="SSCUB05" class="gray" src="../Icons/Shadow/Cunning/S1sk4.png" onclick="s1Check('SSCUB05')" oncontextmenu="s1Popup('SSCUB05')"></div>
+                    <div class="s1item"><img id="SSCUB06" class="gray" src="../Icons/Shadow/Cunning/S1sk5.png" onclick="s1Check('SSCUB06')" oncontextmenu="s1Popup('SSCUB06')"></div>
+                    <div class="s1item"><img id="SSCUB07" class="gray" src="../Icons/Shadow/Cunning/S1sk6.png" onclick="s1Check('SSCUB07')" oncontextmenu="s1Popup('SSCUB07')"></div>
+                    
+                    <div class="s1item"><img id="SSCUB08" class="gray" src="../Icons/Shadow/Cunning/S1sk7.png" onclick="s1Check('SSCUB08')" oncontextmenu="s1Popup('SSCUB08')"></div>
+                    <div class="s1item"><img id="SSCUB09" class="gray" src="../Icons/Shadow/Cunning/S1sk8.png" onclick="s1Check('SSCUB09')" oncontextmenu="s1Popup('SSCUB09')"></div>
+                    <div class="s1item"><img id="SSCUB10" class="gray" src="../Icons/Shadow/Cunning/S1sk9.png" onclick="s1Check('SSCUB10')" oncontextmenu="s1Popup('SSCUB10')"></div>
+                    
+                    <div class="s1item"><img id="SSCUB11" class="gray" src="../Icons/Shadow/Cunning/S1sk10.png" onclick="s1Check('SSCUB11')" oncontextmenu="s1Popup('SSCUB11')"></div>
+                    <div class="s1item"><img id="SSCUB12" class="gray" src="../Icons/Stone/S1sk11.png" onclick="s1Check('SSCUB12')" oncontextmenu="s1Popup('SSCUB12')"></div>
+                    <div class="s1item"><img id="SSCUB13" class="gray" src="../Icons/Shadow/Cunning/S1sk12.png" onclick="s1Check('SSCUB13')" oncontextmenu="s1Popup('SSCUB13')"></div>
+                </div>
+                    </div>
+                </div>
+                <div class="gridActions">  <!--Actions-->
+                    <div class="sideBar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
+                    </div>
+                    <div class="buildsGrid">   
+                        <div class="treeItem"></div>
+                        <div class="treeItem"><img id="onOffTalents" src="../Icons/on.png" onclick="togglePopups()"><span class="skillCalc right">Popups</span></div>
+                        <div class="treeItem"><img src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy1" class="skillCalc right">Copy</span></div>
+                        <div class="treeItem"><img src="../Icons/reset.png" onclick="reset('SSCU000000000000000000000', '00000000')"><span class="skillCalc right">Reset</span></div>
+                    </div>
+                </div>
+                </div>
+                <div class="gridStone Stone">
+                    <div class="stoneItem"><img id="CUI60" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSCUI60')" oncontextmenu="stonePopup('SSCUI60')"><span class="stoneCalc"><span id="SSCUI60" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('SSCUC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI59" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSCUI59')" oncontextmenu="stonePopup('SSCUI59')"><span class="stoneCalc"><span id="SSCUI59" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="CUI58" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI58')" oncontextmenu="stonePopup('SSCUI58')"><span class="stoneCalc"><span id="SSCUI58" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI57" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI57')" oncontextmenu="stonePopup('SSCUI57')"><span class="stoneCalc"><span id="SSCUI57" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI56" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI56')" oncontextmenu="stonePopup('SSCUI56')"><span class="stoneCalc"><span id="SSCUI56" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI55" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSCUI55')" oncontextmenu="stonePopup('SSCUI55')"><span class="stoneCalc"><span id="SSCUI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI54')" oncontextmenu="stonePopup('SSCUI54')"><span class="stoneCalc"><span id="SSCUI54" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="CUI53" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI53')" oncontextmenu="stonePopup('SSCUI53')"><span class="stoneCalc"><span id="SSCUI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI52" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI52')" oncontextmenu="stonePopup('SSCUI52')"><span class="stoneCalc"><span id="SSCUI52" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI51" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI51')" oncontextmenu="stonePopup('SSCUI51')"><span class="stoneCalc"><span id="SSCUI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="CUI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI50')" oncontextmenu="stonePopup('SSCUI50')"><span class="stoneCalc"><span id="SSCUI50" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI49')" oncontextmenu="stonePopup('SSCUI49')"><span class="stoneCalc"><span id="SSCUI49" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI48" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSCUI48')" oncontextmenu="stonePopup('SSCUI48')"><span class="stoneCalc"><span id="SSCUI48" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI47" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI47')" oncontextmenu="stonePopup('SSCUI47')"><span class="stoneCalc"><span id="SSCUI47" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI46')" oncontextmenu="stonePopup('SSCUI46')"><span class="stoneCalc"><span id="SSCUI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    
+                    <div class="stoneItem"><img id="CUI45" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSCUI45')" oncontextmenu="stonePopup('SSCUI45')"><span class="stoneCalc"><span id="SSCUI45" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI44" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI44')" oncontextmenu="stonePopup('SSCUI44')"><span class="stoneCalc"><span id="SSCUI44" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI43" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI43')" oncontextmenu="stonePopup('SSCUI43')"><span class="stoneCalc"><span id="SSCUI43" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI42" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSCUI42')" oncontextmenu="stonePopup('SSCUI42')"><span class="stoneCalc"><span id="SSCUI42" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI41" loading="lazy" class="gray outRedCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('SSCUI41')" oncontextmenu="stonePopup('SSCUI41')"><span class="stoneCalc"><span id="SSCUI41" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI40" loading="lazy" class="gray outBlueCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('SSCUI40')" oncontextmenu="stonePopup('SSCUI40')"><span class="stoneCalc"><span id="SSCUI40" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    
+                    <div class="stoneItem"><img id="CUI39" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI39')" oncontextmenu="stonePopup('SSCUI39')"><span class="stoneCalc"><span id="SSCUI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI38" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI38')" oncontextmenu="stonePopup('SSCUI38')"><span class="stoneCalc"><span id="SSCUI38" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI37" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI37')" oncontextmenu="stonePopup('SSCUI37')"><span class="stoneCalc"><span id="SSCUI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI36" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI36')" oncontextmenu="stonePopup('SSCUI36')"><span class="stoneCalc"><span id="SSCUI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    
+                    <div class="stoneItem"><img id="CUI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSCUI35')" oncontextmenu="stonePopup('SSCUI35')"><span class="stoneCalc"><span id="SSCUI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI34')" oncontextmenu="stonePopup('SSCUI34')"><span class="stoneCalc"><span id="SSCUI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI33" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSCUI33')" oncontextmenu="stonePopup('SSCUI33')"><span class="stoneCalc"><span id="SSCUI33" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI32')" oncontextmenu="stonePopup('SSCUI32')"><span class="stoneCalc"><span id="SSCUI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI31" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSCUI31')" oncontextmenu="stonePopup('SSCUI31')"><span class="stoneCalc"><span id="SSCUI31" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI30" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSCUI30')" oncontextmenu="stonePopup('SSCUI30')"><span class="stoneCalc"><span id="SSCUI30" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('SSCUC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('SSCUI29')" oncontextmenu="stonePopup('SSCUI29')"><span class="stoneCalc"><span id="SSCUI29" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="CUI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI28')" oncontextmenu="stonePopup('SSCUI28')"><span class="stoneCalc"><span id="SSCUI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI27')" oncontextmenu="stonePopup('SSCUI27')"><span class="stoneCalc"><span id="SSCUI27" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI26" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSCUI26')" oncontextmenu="stonePopup('SSCUI26')"><span class="stoneCalc"><span id="SSCUI26" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI25')" oncontextmenu="stonePopup('SSCUI25')"><span class="stoneCalc"><span id="SSCUI25" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI24" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI24')" oncontextmenu="stonePopup('SSCUI24')"><span class="stoneCalc"><span id="SSCUI24" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI23" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI23')" oncontextmenu="stonePopup('SSCUI23')"><span class="stoneCalc"><span id="SSCUI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI22" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSCUI22')" oncontextmenu="stonePopup('SSCUI22')"><span class="stoneCalc"><span id="SSCUI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI21" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSCUI21')" oncontextmenu="stonePopup('SSCUI21')"><span class="stoneCalc"><span id="SSCUI21" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI20" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSCUI20')" oncontextmenu="stonePopup('SSCUI20')"><span class="stoneCalc"><span id="SSCUI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="CUI19" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI19')" oncontextmenu="stonePopup('SSCUI19')"><span class="stoneCalc"><span id="SSCUI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI18" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI18')" oncontextmenu="stonePopup('SSCUI18')"><span class="stoneCalc"><span id="SSCUI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI17" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI17')" oncontextmenu="stonePopup('SSCUI17')"><span class="stoneCalc"><span id="SSCUI17" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI16" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI16')" oncontextmenu="stonePopup('SSCUI16')"><span class="stoneCalc"><span id="SSCUI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI15" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI15')" oncontextmenu="stonePopup('SSCUI15')"><span class="stoneCalc"><span id="SSCUI15" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI14" loading="lazy" class="gray outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('SSCUI14')" oncontextmenu="stonePopup('SSCUI14')"><span class="stoneCalc"><span id="SSCUI14" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI13" loading="lazy" class="gray outYellowCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('SSCUI13')" oncontextmenu="stonePopup('SSCUI13')"><span class="stoneCalc"><span id="SSCUI13" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem"><img id="CUI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI12')" oncontextmenu="stonePopup('SSCUI12')"><span class="stoneCalc"><span id="SSCUI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('SSCUI11')" oncontextmenu="stonePopup('SSCUI11')"><span class="stoneCalc"><span id="SSCUI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('SSCUI10')" oncontextmenu="stonePopup('SSCUI10')"><span class="stoneCalc"><span id="SSCUI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI09')" oncontextmenu="stonePopup('SSCUI09')"><span class="stoneCalc"><span id="SSCUI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI08')" oncontextmenu="stonePopup('SSCUI08')"><span class="stoneCalc"><span id="SSCUI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI07')" oncontextmenu="stonePopup('SSCUI07')"><span class="stoneCalc"><span id="SSCUI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('SSCUI06')" oncontextmenu="stonePopup('SSCUI06')"><span class="stoneCalc"><span id="SSCUI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('SSCUI05')" oncontextmenu="stonePopup('SSCUI05')"><span class="stoneCalc"><span id="SSCUI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('SSCUI04')" oncontextmenu="stonePopup('SSCUI04')"><span class="stoneCalc"><span id="SSCUI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI03')" oncontextmenu="stonePopup('SSCUI03')"><span class="stoneCalc"><span id="SSCUI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="CUI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('SSCUI02')" oncontextmenu="stonePopup('SSCUI02')"><span class="stoneCalc"><span id="SSCUI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="CUI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('SSCUI01')" oncontextmenu="stonePopup('SSCUI01')"><span class="stoneCalc"><span id="SSCUI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+            
+                    <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('SSCUS09')"><span class="resetText">Skill 7</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="CUC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('SSCUC01')"><span class="stoneCalc"><span id="SSCUC01" class="zero">1</span>/1</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('1000000000000000000000000000000000000000000000000000000000000', 'SSCU')"><span class="resetText">Reset</span></div>
+                </div>
+            <div class="builds areaBuilds Talents"> <!-- builds-->
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="feedSmall">
+                    <div class="buildsShow Shadow Melee all bgPurple unpop"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Shadow.png" alt="shadow">
+                        <div class="gridName"><b>Twin Blade Slash</b><br>Raid Melee Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Shadow/Cunning/shadCsk3.png" onclick="buildsCostPopup('SSCUB1')" alt="twin blade slash"></div>
+                        <div class="treeItem gridBuild builds" id="SSCUB1"><img src="../Icons/Shadow/Cunning/shadC13.jpg" onclick="raidBuilds('SSCUB1')" alt="shadow cunning build 1"><span class="triangle">&#9660;</span></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('SSCUB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div>
+                      <div class="buildsShow Shadow Melee all bgPurple unpop"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Shadow.png" alt="shadow">
+                        <div class="gridName"><b>Phantom Slashes</b><br>Raid Melee Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Shadow/Cunning/shadC2.jpg" onclick="buildsCostPopup('SSCUB2')" alt="phantom slashes"></div>
+                        <div class="treeItem gridBuild builds" id="SSCUB2"><img src="../Icons/Shadow/Cunning/shadC5.jpg" onclick="raidBuilds('SSCUB2')" alt="shadow cunning build 2"><span class="triangle">&#9660;</span></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('SSCUB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div> 
+                </div>
+            </div>
+            <div class="gridSkills Skills">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="content">
+                <div class="skillItem" id="SSCUS01"><img src="../Icons/Shadow/Cunning/shadCsk2.png" onclick="skillCostPopup('SSCUS01')"></div>
+                <div class="skillItem" id="SSCUS02"><img src="../Icons/Shadow/Cunning/shadC2.jpg" onclick="skillCostPopup('SSCUS02')"></div>
+                <div class="skillItem" id="SSCUS03"><img src="../Icons/Shadow/Cunning/shadCsk3.png" onclick="skillCostPopup('SSCUS03')"></div>
+                <div class="skillItem" id="SSCUS04"><img src="../Icons/Shadow/Cunning/shadCsk4.png" onclick="skillCostPopup('SSCUS04')"></div>
+                <div class="skillItem" id="SSCUS05"><img src="../Icons/Shadow/Cunning/shadCsk8.png" onclick="skillCostPopup('SSCUS05')"></div>
+                <div class="skillItem" id="SSCUS06"><img src="../Icons/Shadow/Cunning/shadCsk5.png" onclick="skillPopup('SSCUS06')"></div>
+                <div class="skillItem" id="SSCUS07"><img src="../Icons/Shadow/Cunning/shadCsk6.png" onclick="skillCostPopup('SSCUS07')"></div>
+                <div class="skillItem" id="SSCUS08"><img src="../Icons/Shadow/Cunning/shadCsk7.png" onclick="skillPopup('SSCUS08')"></div>
+                <div class="treeItem" id="SSCUA01"><img src="../Icons/Shadow/Cunning/shadCsk1.png" onclick="passivePopup('SSCUA01')"></div>
+                </div>
+                </div>
+            <div class="gridUlts Skills">
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="content">
+                <div class="treeItem" id="SSCUU01"><img src="../Icons/Shadow/Cunning/ult1.jpg" onclick="ultPopup('SSCUU01')"></div>
+                <div class="treeItem" id="SSCUU02"><img src="../Icons/Shadow/Cunning/ult2.jpg" onclick="ultPopup('SSCUU02')"></div>
+                <div class="treeItem" id="SSCUU03"><img src="../Icons/Shadow/Cunning/ult3.jpg" onclick="ultPopup('SSCUU03')"></div>
+                <div class="treeItem" id="SSCUU04"><img src="../Icons/Shadow/Cunning/ult4.jpg" onclick="ultPopup('SSCUU04')"></div>
+                <div class="treeItem" id="SSCUU05"><img src="../Icons/Shadow/Cunning/ult5.jpg" onclick="ultPopup('SSCUU05')"></div>
+                <div class="treeItem" id="SSCUU06"><img src="../Icons/Shadow/Cunning/ult6.jpg" onclick="ultPopup('SSCUU06')"></div>
+                <div class="treeItem" id="SSCUU07"><img src="../Icons/Shadow/Cunning/ult7.jpg" onclick="ultPopup('SSCUU07')"></div>
+                <div class="treeItem" id="SSCUU08"><img src="../Icons/Shadow/Cunning/ult8.jpg" onclick="ultPopup('SSCUU08')"></div>
+                </div>
+                </div>
+            <div class="gridPvP Skills">  <!--PvP-->
+                    <div class="sideBar bar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="content">
+                    <div class="treeItem" id="SSCUU09"><img src="../Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('SSCUU09')"></div>
+                    <div class="treeItem" id="SSCUU10"><img src="../Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('SSCUU10')"></div>
+                    <div class="treeItem" id="SSCUU11"><img src="../Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('SSCUU11')"></div>
+                    <div class="treeItem" id="SSCUU12"><img src="../Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('SSCUU12')"></div>
+                    <div class="treeItem" id="SSCUU13"><img src="../Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('SSCUU13')"></div>
+                    <div class="treeItem" id="SSCUU14"><img src="../Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('SSCUU14')"></div>
+                    <div class="treeItem" id="SSCUU15"><img src="../Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('SSCUU15')"></div>
+                    <div class="treeItem" id="SSCUU16"><img src="../Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('SSCUU16')"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
+        <div class="popup" id="skillPopup">
+            <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+        var params = new URLSearchParams(location.search);
+            if (params.has('skill') === true) {
+                setTalents(params.get('skill'));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'), 6, 60)].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
+            }
+        }
+    window.onpageshow = loadParams; 
+    window.onpopstate = () => setTimeout(loadParams, 0);
+    document.getElementById("classScroll").scrollLeft = 800;
+    document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
+    var xDown = null, yDown = null, xUp = null, yUp = null;
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
+    document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
+    document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
+    function touchstart(evt) { const firstTouch = (evt.touches || evt.originalEvent.touches)[0]; xDown = firstTouch.clientX; yDown = firstTouch.clientY; }
+    function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
+    function touchend(evt, left, active, right) { 
+        var xDiff = xUp - xDown, yDiff = yUp - yDown;
+        if (xUp === null) { 
+            return 
+        } else if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+            if (xDiff < 0) 
+            selectTree(right, active, left);
+            else
+            selectTree(left, active, right);
+        } 
+        xDown = null, yDown = null, xUp = null, yUp = null;
+    }
+
+</script>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://tarislandbuilds.eu/S1/PAJU.html" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+    <script src="./JSON/PAJU.js"></script>
+    <script src="./JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent & Inscribed Stone Trees Calculator</title>
+    <meta name="description" content="Discover, Create and Share powerful Character builds with our Builds Hub. Our Talents and Inscribed Stone Trees Calculator lets you customize builds, view detailed skill and ability descriptions, and share your setups with friends. Explore, experiment and elevate your game to the next level!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Justice Paladin DPS Talent Build">
+    <meta property="og:description" content="Plan your build and share it with friends">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/PAJU.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="sideBar">
+                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Home" src="../Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')"></div>
+                <div class="classItem"><img alt="Warrior" src="../Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="../Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="../Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="../Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
+                <div class="classItem"><img alt="Paladin" src="../Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')" class="border"></div>
+                <div class="classItem"><img alt="Priest" src="../Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="../Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="../Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="../Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+            <div class="spec">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="specSelect">
+                    <div></div>
+                    <div class="blank right"><p><b>Guard</b><br><small>Tank</small></p></div>
+                    <div class="skillItem"><img alt="Guard" src="../Icons/Paladin/Guard/guard.png" onclick="selectClass('PAGU')"></div>
+                    <div class="skillItem"><img alt="Justice" src="../Icons/Paladin/Justice/justice.png" class="bground"></div>
+                    <div class="blank left"><p><b>Justice</b><br><small>Melee</small></p></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="treeSelect">
+            <div class="spec"> <!-- select tree type-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Tree</b></span></div>
+                </div>
+                <div class="selectTree">
+                    <div class="blank"></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconTalents" class="bground" alt="Talent Tree" src="../Icons/talents.png" onclick="selectTree('Talents', 'Stone', 'Skills')"></span></div><div><span class="selectText"><b><small>Talents</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="../Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'Skills')"></span></div><div><span class="selectText"><b><small>Stone</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconSkills" class="blah" alt="God Weapon" src="../Icons/skills.png" onclick="selectTree('Skills', 'Stone', 'Talents')"></span></div><div><span class="selectText"><b><small>Skills</small></b></span></div></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+            </div>
+
+            <div id="Trees" class="mainLayoutGridTrees">
+            <div class="gridTalents Talents">   <!--Paladin Justice-->
+            <div class="talentsTree">
+            <div class="sideBar barNudge">
+                <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+            </div>
+            <div class="talentsLayout">
+                <div class="treeItem"><img src="../Icons/32.png"><span id="talentNum">0</span></div>
+                <div class="treeItem"><img id="JUT01" class="gray" src="../Icons/Paladin/Justice/palaJ1.jpg" onclick="talentCheck('PAJUT01')" oncontextmenu="talentPopup('PAJUT01')"><span class="skillCalc"><span id="PAJUT01" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="JUT02" class="gray" src="../Icons/Paladin/Justice/palaJ2.jpg" onclick="talentCheck('PAJUT02')" oncontextmenu="talentPopup('PAJUT02')"><span class="skillCalc"><span id="PAJUT02" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="JUT03" class="gray" src="../Icons/Paladin/Justice/palaJ3.jpg" onclick="talentCheck('PAJUT03')" oncontextmenu="talentPopup('PAJUT03')"><span class="skillCalc"><span id="PAJUT03" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="JUT04" class="gray" src="../Icons/Paladin/Justice/palaJ4.jpg" onclick="talentCheck('PAJUT04')" oncontextmenu="talentPopup('PAJUT04')"><span class="skillCalc"><span id="PAJUT04" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="JUT05" class="gray" src="../Icons/Paladin/Justice/palaJ5.jpg" onclick="talentCheck('PAJUT05')" oncontextmenu="talentPopup('PAJUT05')"><span class="skillCalc"><span id="PAJUT05" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="JUT06" class="gray" src="../Icons/Paladin/Justice/palaJ6.jpg" onclick="talentCheck('PAJUT06')" oncontextmenu="talentPopup('PAJUT06')"><span class="skillCalc"><span id="PAJUT06" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="JUT07" class="gray" src="../Icons/Paladin/Justice/palaJ7.jpg" onclick="talentCheck('PAJUT07')" oncontextmenu="talentPopup('PAJUT07')"><span class="skillCalc"><span id="PAJUT07" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="JUT08" class="gray" src="../Icons/Paladin/Justice/palaJ8.jpg" onclick="talentCheck('PAJUT08')" oncontextmenu="talentPopup('PAJUT08')"><span class="skillCalc"><span id="PAJUT08" class="zero">0</span>/1</span></div>
+
+                <div class="treeItem"><img id="JUT09" class="gray" src="../Icons/Paladin/Justice/palaJ9.jpg" onclick="talentCheck('PAJUT09')" oncontextmenu="talentPopup('PAJUT09')"><span class="skillCalc"><span id="PAJUT09" class="zero">0</span>/1</span><span class="req"></span></div>
+                <div class="treeItem"><img id="JUT10" class="gray" src="../Icons/Paladin/Justice/palaJ10.jpg" onclick="talentCheck('PAJUT10')" oncontextmenu="talentPopup('PAJUT10')"><span class="skillCalc"><span id="PAJUT10" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem"><img id="JUT11" class="gray" src="../Icons/Paladin/Justice/palaJ11.jpg" onclick="talentCheck('PAJUT11')" oncontextmenu="talentPopup('PAJUT11')"><span class="skillCalc"><span id="PAJUT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                <div class="treeItem"><img id="JUT12" class="gray" src="../Icons/Paladin/Justice/palaJ12.jpg" onclick="talentCheck('PAJUT12')" oncontextmenu="talentPopup('PAJUT12')"><span class="skillCalc"><span id="PAJUT12" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="JUT13" class="gray" src="../Icons/Paladin/Justice/palaJ13.jpg" onclick="talentCheck('PAJUT13')" oncontextmenu="talentPopup('PAJUT13')"><span class="skillCalc"><span id="PAJUT13" class="zero">0</span>/2</span></div>
+
+                <div class="treeItem"><img id="JUT14" class="gray" src="../Icons/Paladin/Justice/palaJ14.jpg" onclick="talentCheck('PAJUT14')" oncontextmenu="talentPopup('PAJUT14')"><span class="skillCalc"><span id="PAJUT14" class="zero">0</span>/2</span><span class="req"></span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="JUT15" class="gray" src="../Icons/Paladin/Justice/palaJ15.jpg" onclick="talentCheck('PAJUT15')" oncontextmenu="talentPopup('PAJUT15')"><span class="skillCalc"><span id="PAJUT15" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="JUT16" class="gray" src="../Icons/Paladin/Justice/palaJ16.jpg" onclick="talentCheck('PAJUT16')" oncontextmenu="talentPopup('PAJUT16')"><span class="skillCalc"><span id="PAJUT16" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="JUT17" class="gray" src="../Icons/Paladin/Justice/palaJ17.jpg" onclick="talentCheck('PAJUT17')" oncontextmenu="talentPopup('PAJUT17')"><span class="skillCalc"><span id="PAJUT17" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="JUT18" class="gray" src="../Icons/Paladin/Justice/palaJ18.png" onclick="talentCheck('PAJUT18')" oncontextmenu="talentPopup('PAJUT18')"><span class="skillCalc"><span id="PAJUT18" class="zero">0</span>/2</span></div>
+                <div class="treeItem"><img id="JUT19" class="gray" src="../Icons/Paladin/Justice/palaJ19.jpg" onclick="talentCheck('PAJUT19')" oncontextmenu="talentPopup('PAJUT19')"><span class="skillCalc"><span id="PAJUT19" class="zero">0</span>/2</span><span class="req"></span></div>
+
+                <div class="treeItem"><img id="JUT20" class="gray" src="../Icons/Paladin/Justice/palaJ20.jpg" onclick="talentCheck('PAJUT20')" oncontextmenu="talentPopup('PAJUT20')"><span class="skillCalc"><span id="PAJUT20" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="JUT21" class="gray" src="../Icons/Paladin/Justice/palaJ21.jpg" onclick="talentCheck('PAJUT21')" oncontextmenu="talentPopup('PAJUT21')"><span class="skillCalc"><span id="PAJUT21" class="zero">0</span>/2</span></div>
+            </div>
+            <div class="corePassives">
+                <div class="treeItem" id="PAJUP01"><img src="../Icons/Paladin/Justice/palaJ22.jpg" onclick="passivePopup('PAJUP01')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="PAJUP02"><img src="../Icons/Paladin/Justice/palaJ23.jpg" onclick="passivePopup('PAJUP02')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="PAJUP03"><img src="../Icons/Paladin/Justice/palaJ24.jpg" onclick="passivePopup('PAJUP03')"></div>
+                <div class="treeItem" id="PAJUP04"><img src="../Icons/Paladin/Justice/palaJ25.jpg" onclick="passivePopup('PAJUP04')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="PAJUP05"><img src="../Icons/Paladin/Justice/palaJ26.jpg" onclick="passivePopup('PAJUP05')"></div>
+            </div>
+            </div>
+            <div class="gridS1">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
+                </div>
+                <div>
+                <div class="s1talents1">
+                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="passivePopup('PAJUB01')"></div>
+                </div>
+                <div class="s1talents2">
+                    <div class="s1item"><img id="PAJUB02" class="gray" src="../Icons/Paladin/Justice/S1sk1.png" onclick="s1Check('PAJUB02')" oncontextmenu="s1Popup('PAJUB02')"></div>
+                    <div class="s1item"><img id="PAJUB03" class="gray" src="../Icons/Paladin/Justice/S1sk2.png" onclick="s1Check('PAJUB03')" oncontextmenu="s1Popup('PAJUB03')"></div>
+                    <div class="s1item"><img id="PAJUB04" class="gray" src="../Icons/Paladin/Justice/S1sk3.png" onclick="s1Check('PAJUB04')" oncontextmenu="s1Popup('PAJUB04')"></div>
+                    
+                    <div class="s1item"><img id="PAJUB05" class="gray" src="../Icons/Paladin/Justice/S1sk4.png" onclick="s1Check('PAJUB05')" oncontextmenu="s1Popup('PAJUB05')"></div>
+                    <div class="s1item"><img id="PAJUB06" class="gray" src="../Icons/Paladin/Justice/S1sk5.png" onclick="s1Check('PAJUB06')" oncontextmenu="s1Popup('PAJUB06')"></div>
+                    <div class="s1item"><img id="PAJUB07" class="gray" src="../Icons/Paladin/Justice/S1sk6.png" onclick="s1Check('PAJUB07')" oncontextmenu="s1Popup('PAJUB07')"></div>
+                    
+                    <div class="s1item"><img id="PAJUB08" class="gray" src="../Icons/Paladin/Justice/S1sk7.png" onclick="s1Check('PAJUB08')" oncontextmenu="s1Popup('PAJUB08')"></div>
+                    <div class="s1item"><img id="PAJUB09" class="gray" src="../Icons/Paladin/Justice/S1sk8.png" onclick="s1Check('PAJUB09')" oncontextmenu="s1Popup('PAJUB09')"></div>
+                    <div class="s1item"><img id="PAJUB10" class="gray" src="../Icons/Paladin/Justice/S1sk9.png" onclick="s1Check('PAJUB10')" oncontextmenu="s1Popup('PAJUB10')"></div>
+                    
+                    <div class="s1item"><img id="PAJUB11" class="gray" src="../Icons/Paladin/Justice/S1sk10.png" onclick="s1Check('PAJUB11')" oncontextmenu="s1Popup('PAJUB11')"></div>
+                    <div class="s1item"><img id="PAJUB12" class="gray" src="../Icons/Stone/S1sk11.png" onclick="s1Check('PAJUB12')" oncontextmenu="s1Popup('PAJUB12')"></div>
+                    <div class="s1item"><img id="PAJUB13" class="gray" src="../Icons/Paladin/Justice/S1sk12.png" onclick="s1Check('PAJUB13')" oncontextmenu="s1Popup('PAJUB13')"></div>
+                </div>
+                </div>
+            </div>
+            <div class="gridActions">  <!--Actions-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
+                </div>
+                <div class="buildsGrid">   
+                    <div class="treeItem"></div>
+                    <div class="treeItem"><img id="onOffTalents" src="../Icons/on.png" onclick="togglePopups()"><span class="skillCalc right">Popups</span></div>
+                    <div class="treeItem"><img src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy1" class="skillCalc right">Copy</span></div>
+                    <div class="treeItem"><img src="../Icons/reset.png" onclick="reset('PAJU000000000000000000000', '00000000')"><span class="skillCalc right">Reset</span></div>
+                </div>
+            </div>
+            </div>
+            <div class="gridStone Stone">
+                <div class="stoneItem"><img id="JUI60" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAJUI60')" oncontextmenu="stonePopup('PAJUI60')"><span class="stoneCalc"><span id="PAJUI60" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PAJUC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI59" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAJUI59')" oncontextmenu="stonePopup('PAJUI59')"><span class="stoneCalc"><span id="PAJUI59" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="JUI58" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI58')" oncontextmenu="stonePopup('PAJUI58')"><span class="stoneCalc"><span id="PAJUI58" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI57" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI57')" oncontextmenu="stonePopup('PAJUI57')"><span class="stoneCalc"><span id="PAJUI57" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI56" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI56')" oncontextmenu="stonePopup('PAJUI56')"><span class="stoneCalc"><span id="PAJUI56" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI55" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAJUI55')" oncontextmenu="stonePopup('PAJUI55')"><span class="stoneCalc"><span id="PAJUI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI54')" oncontextmenu="stonePopup('PAJUI54')"><span class="stoneCalc"><span id="PAJUI54" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="JUI53" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI53')" oncontextmenu="stonePopup('PAJUI53')"><span class="stoneCalc"><span id="PAJUI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI52" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI52')" oncontextmenu="stonePopup('PAJUI52')"><span class="stoneCalc"><span id="PAJUI52" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI51" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI51')" oncontextmenu="stonePopup('PAJUI51')"><span class="stoneCalc"><span id="PAJUI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="JUI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI50')" oncontextmenu="stonePopup('PAJUI50')"><span class="stoneCalc"><span id="PAJUI50" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI49')" oncontextmenu="stonePopup('PAJUI49')"><span class="stoneCalc"><span id="PAJUI49" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI48" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAJUI48')" oncontextmenu="stonePopup('PAJUI48')"><span class="stoneCalc"><span id="PAJUI48" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI47" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI47')" oncontextmenu="stonePopup('PAJUI47')"><span class="stoneCalc"><span id="PAJUI47" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI46')" oncontextmenu="stonePopup('PAJUI46')"><span class="stoneCalc"><span id="PAJUI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                
+                <div class="stoneItem"><img id="JUI45" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAJUI45')" oncontextmenu="stonePopup('PAJUI45')"><span class="stoneCalc"><span id="PAJUI45" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI44" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI44')" oncontextmenu="stonePopup('PAJUI44')"><span class="stoneCalc"><span id="PAJUI44" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI43" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI43')" oncontextmenu="stonePopup('PAJUI43')"><span class="stoneCalc"><span id="PAJUI43" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI42" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAJUI42')" oncontextmenu="stonePopup('PAJUI42')"><span class="stoneCalc"><span id="PAJUI42" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI41" loading="lazy" class="gray outRedCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('PAJUI41')" oncontextmenu="stonePopup('PAJUI41')"><span class="stoneCalc"><span id="PAJUI41" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI40" loading="lazy" class="gray outBlueCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('PAJUI40')" oncontextmenu="stonePopup('PAJUI40')"><span class="stoneCalc"><span id="PAJUI40" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                
+                <div class="stoneItem"><img id="JUI39" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI39')" oncontextmenu="stonePopup('PAJUI39')"><span class="stoneCalc"><span id="PAJUI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI38" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI38')" oncontextmenu="stonePopup('PAJUI38')"><span class="stoneCalc"><span id="PAJUI38" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI37" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI37')" oncontextmenu="stonePopup('PAJUI37')"><span class="stoneCalc"><span id="PAJUI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI36" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI36')" oncontextmenu="stonePopup('PAJUI36')"><span class="stoneCalc"><span id="PAJUI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                
+                <div class="stoneItem"><img id="JUI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAJUI35')" oncontextmenu="stonePopup('PAJUI35')"><span class="stoneCalc"><span id="PAJUI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI34')" oncontextmenu="stonePopup('PAJUI34')"><span class="stoneCalc"><span id="PAJUI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI33" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAJUI33')" oncontextmenu="stonePopup('PAJUI33')"><span class="stoneCalc"><span id="PAJUI33" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI32')" oncontextmenu="stonePopup('PAJUI32')"><span class="stoneCalc"><span id="PAJUI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI31" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAJUI31')" oncontextmenu="stonePopup('PAJUI31')"><span class="stoneCalc"><span id="PAJUI31" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI30" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAJUI30')" oncontextmenu="stonePopup('PAJUI30')"><span class="stoneCalc"><span id="PAJUI30" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PAJUC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAJUI29')" oncontextmenu="stonePopup('PAJUI29')"><span class="stoneCalc"><span id="PAJUI29" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="JUI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI28')" oncontextmenu="stonePopup('PAJUI28')"><span class="stoneCalc"><span id="PAJUI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI27')" oncontextmenu="stonePopup('PAJUI27')"><span class="stoneCalc"><span id="PAJUI27" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI26" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAJUI26')" oncontextmenu="stonePopup('PAJUI26')"><span class="stoneCalc"><span id="PAJUI26" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI25')" oncontextmenu="stonePopup('PAJUI25')"><span class="stoneCalc"><span id="PAJUI25" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI24" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI24')" oncontextmenu="stonePopup('PAJUI24')"><span class="stoneCalc"><span id="PAJUI24" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI23" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI23')" oncontextmenu="stonePopup('PAJUI23')"><span class="stoneCalc"><span id="PAJUI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI22" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAJUI22')" oncontextmenu="stonePopup('PAJUI22')"><span class="stoneCalc"><span id="PAJUI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI21" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAJUI21')" oncontextmenu="stonePopup('PAJUI21')"><span class="stoneCalc"><span id="PAJUI21" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI20" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAJUI20')" oncontextmenu="stonePopup('PAJUI20')"><span class="stoneCalc"><span id="PAJUI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="JUI19" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI19')" oncontextmenu="stonePopup('PAJUI19')"><span class="stoneCalc"><span id="PAJUI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI18" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI18')" oncontextmenu="stonePopup('PAJUI18')"><span class="stoneCalc"><span id="PAJUI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI17" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI17')" oncontextmenu="stonePopup('PAJUI17')"><span class="stoneCalc"><span id="PAJUI17" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI16" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI16')" oncontextmenu="stonePopup('PAJUI16')"><span class="stoneCalc"><span id="PAJUI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI15" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI15')" oncontextmenu="stonePopup('PAJUI15')"><span class="stoneCalc"><span id="PAJUI15" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI14" loading="lazy" class="gray outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('PAJUI14')" oncontextmenu="stonePopup('PAJUI14')"><span class="stoneCalc"><span id="PAJUI14" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI13" loading="lazy" class="gray outYellowCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('PAJUI13')" oncontextmenu="stonePopup('PAJUI13')"><span class="stoneCalc"><span id="PAJUI13" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="JUI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI12')" oncontextmenu="stonePopup('PAJUI12')"><span class="stoneCalc"><span id="PAJUI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAJUI11')" oncontextmenu="stonePopup('PAJUI11')"><span class="stoneCalc"><span id="PAJUI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAJUI10')" oncontextmenu="stonePopup('PAJUI10')"><span class="stoneCalc"><span id="PAJUI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI09')" oncontextmenu="stonePopup('PAJUI09')"><span class="stoneCalc"><span id="PAJUI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI08')" oncontextmenu="stonePopup('PAJUI08')"><span class="stoneCalc"><span id="PAJUI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI07')" oncontextmenu="stonePopup('PAJUI07')"><span class="stoneCalc"><span id="PAJUI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAJUI06')" oncontextmenu="stonePopup('PAJUI06')"><span class="stoneCalc"><span id="PAJUI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAJUI05')" oncontextmenu="stonePopup('PAJUI05')"><span class="stoneCalc"><span id="PAJUI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAJUI04')" oncontextmenu="stonePopup('PAJUI04')"><span class="stoneCalc"><span id="PAJUI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI03')" oncontextmenu="stonePopup('PAJUI03')"><span class="stoneCalc"><span id="PAJUI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="JUI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAJUI02')" oncontextmenu="stonePopup('PAJUI02')"><span class="stoneCalc"><span id="PAJUI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="JUI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAJUI01')" oncontextmenu="stonePopup('PAJUI01')"><span class="stoneCalc"><span id="PAJUI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+        
+                <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('PAJUS08')"><span class="resetText">Skill 7</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="JUC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('PAJUC01')"><span class="stoneCalc"><span id="PAJUC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('1000000000000000000000000000000000000000000000000000000000000', 'PAJU')"><span class="resetText">Reset</span></div>
+            </div>
+            <div class="builds areaBuilds Talents"> <!-- builds-->
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="feedSmall">
+                    <div class="buildsShow Paladin Melee all bgYellow Popular"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="paladin">
+                        <div class="gridName"><b>Judgement Strike</b><br>Raid Melee Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Justice/palaJsk3.png" onclick="buildsPopup('PAJUB1')" alt="judgement strike"></div>
+                        <div class="treeItem gridBuild builds" id="PAJUB1"><img src="../Icons/Paladin/Justice/palaJsk9.png" onclick="raidBuilds('PAJUB1')" alt="paladin dps build 1"><span class="star">&#9733;</span></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('PAJUB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div> 
+                      <div class="buildsShow Paladin Melee all bgYellow normal"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="paladin">
+                        <div class="gridName"><b>Judgement Sword</b><br>Raid Melee Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Justice/palaJ9.jpg" onclick="buildsPopup('PAJUB2')" alt="judgement sword"></div>
+                        <div class="treeItem gridBuild builds" id="PAJUB2"><img src="../Icons/Paladin/Justice/palaJ12.jpg" onclick="raidBuilds('PAJUB2')" alt="paladin dps build 2"></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('PAJUB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        </div> 
+                </div>
+            </div>
+            <div class="gridSkills Skills">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="content">
+                <div class="skillItem" id="PAJUS01"><img src="../Icons/Paladin/Justice/palaJsk1.png" onclick="skillPopup('PAJUS01')"></div>
+                <div class="skillItem" id="PAJUS02"><img src="../Icons/Paladin/Justice/palaJsk2.png" onclick="skillPopup('PAJUS02')"></div>
+                <div class="skillItem" id="PAJUS03"><img src="../Icons/Paladin/Justice/palaJsk3.png" onclick="skillPopup('PAJUS03')"></div>
+                <div class="skillItem" id="PAJUS04"><img src="../Icons/Paladin/Justice/palaJ9.jpg" onclick="skillPopup('PAJUS04')"></div>
+                <div class="skillItem" id="PAJUS05"><img src="../Icons/Paladin/Justice/palaJsk5.png" onclick="skillPopup('PAJUS05')"></div>
+                <div class="skillItem" id="PAJUS06"><img src="../Icons/Paladin/Justice/palaJsk6.png" onclick="skillPopup('PAJUS06')"></div>
+                <div class="skillItem" id="PAJUS07"><img src="../Icons/Paladin/Justice/palaJsk7.png" onclick="skillPopup('PAJUS07')"></div>
+                <div class="treeItem" id="PAJUA01"><img src="../Icons/Paladin/Justice/palaJsk8.png" onclick="passivePopup('PAJUA01')"></div>
+                </div>
+                </div>
+            <div class="gridUlts Skills">
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="content">
+                <div class="treeItem" id="PAJUU01"><img src="../Icons/Paladin/Guard/ult1.jpg" onclick="ultPopup('PAJUU01')"></div>
+                <div class="treeItem" id="PAJUU02"><img src="../Icons/Paladin/Guard/ult2.jpg" onclick="ultPopup('PAJUU02')"></div>
+                <div class="treeItem" id="PAJUU03"><img src="../Icons/Paladin/Justice/ult3.jpg" onclick="ultPopup('PAJUU03')"></div>
+                <div class="treeItem" id="PAJUU04"><img src="../Icons/Paladin/Justice/ult4.jpg" onclick="ultPopup('PAJUU04')"></div>
+                <div class="treeItem" id="PAJUU05"><img src="../Icons/Paladin/Guard/ult5.jpg" onclick="ultPopup('PAJUU05')"></div>
+                <div class="treeItem" id="PAJUU06"><img src="../Icons/Paladin/Guard/ult6.jpg" onclick="ultPopup('PAJUU06')"></div>
+                <div class="treeItem" id="PAJUU07"><img src="../Icons/Paladin/Guard/ult7.jpg" onclick="ultPopup('PAJUU07')"></div>
+                <div class="treeItem" id="PAJUU08"><img src="../Icons/Paladin/Guard/ult8.jpg" onclick="ultPopup('PAJUU08')"></div>
+                </div>
+                </div>
+            <div class="gridPvP Skills">  <!--PvP-->
+                    <div class="sideBar bar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="content">
+                    <div class="treeItem" id="PAJUU09"><img src="../Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('PAJUU09')"></div>
+                    <div class="treeItem" id="PAJUU10"><img src="../Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('PAJUU10')"></div>
+                    <div class="treeItem" id="PAJUU11"><img src="../Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('PAJUU11')"></div>
+                    <div class="treeItem" id="PAJUU12"><img src="../Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('PAJUU12')"></div>
+                    <div class="treeItem" id="PAJUU13"><img src="../Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('PAJUU13')"></div>
+                    <div class="treeItem" id="PAJUU14"><img src="../Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('PAJUU14')"></div>
+                    <div class="treeItem" id="PAJUU15"><img src="../Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('PAJUU15')"></div>
+                    <div class="treeItem" id="PAJUU16"><img src="../Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('PAJUU16')"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
+        <div class="popup" id="skillPopup">
+            <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+        var params = new URLSearchParams(location.search);
+            if (params.has('skill') === true) {
+                setTalents(params.get('skill'));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'), 6, 60)].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
+            }
+        }
+    window.onpageshow = loadParams; 
+    window.onpopstate = () => setTimeout(loadParams, 0);
+    document.getElementById("classScroll").scrollLeft = 500;
+    document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
+    var xDown = null, yDown = null, xUp = null, yUp = null;
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
+    document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
+    document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
+    function touchstart(evt) { const firstTouch = (evt.touches || evt.originalEvent.touches)[0]; xDown = firstTouch.clientX; yDown = firstTouch.clientY; }
+    function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
+    function touchend(evt, left, active, right) { 
+        var xDiff = xUp - xDown, yDiff = yUp - yDown;
+        if (xUp === null) { 
+            return 
+        } else if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+            if (xDiff < 0) 
+            selectTree(right, active, left);
+            else
+            selectTree(left, active, right);
+        } 
+        xDown = null, yDown = null, xUp = null, yUp = null;
+    }
+
+</script>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://tarislandbuilds.eu/S1/RAHU.html" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+    <script src="./JSON/RAHU.js"></script>
+    <script src="./JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent & Inscribed Stone Trees Calculator</title>
+    <meta name="description" content="Discover, Create and Share powerful Character builds with our Builds Hub. Our Talents and Inscribed Stone Trees Calculator lets you customize builds, view detailed skill and ability descriptions, and share your setups with friends. Explore, experiment and elevate your game to the next level!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hunting Ranger Talent Build">
+    <meta property="og:description" content="Plan your build and share it with friends">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/RAHU.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="sideBar">
+                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Home" src="../Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')"></div>
+                <div class="classItem"><img alt="Warrior" src="../Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="../Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="../Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')" class="border"></div>
+                <div class="classItem"><img alt="Bard" src="../Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')"></div>
+                <div class="classItem"><img alt="Paladin" src="../Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="../Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="../Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="../Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="../Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+            <div class="spec">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="specSelect">
+                    <div></div>
+                    <div class="blank right"><p><b>Hunting</b><br><small>Ranged</small></p></div>
+                    <div class="skillItem"><img alt="Hunting" src="../Icons/Ranger/Hunting/hunting.png" class="bground"></div>
+                    <div class="skillItem"><img alt="Tamed Beast" src="../Icons/Ranger/TamedBeast/tamedBeast.png" onclick="selectClass('RATB', 'Ranger', 'Tamed Beast')"></div>
+                    <div class="blank left"><p><b>Tamed<br>&nbsp;Beast</b><br><small>&nbsp;Ranged</small></p></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="treeSelect">
+            <div class="spec"> <!-- select tree type-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Tree</b></span></div>
+                </div>
+                <div class="selectTree">
+                    <div class="blank"></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconTalents" class="bground" alt="Talent Tree" src="../Icons/talents.png" onclick="selectTree('Talents', 'Stone', 'Skills')"></span></div><div><span class="selectText"><b><small>Talents</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="../Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'Skills')"></span></div><div><span class="selectText"><b><small>Stone</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconSkills" class="blah" alt="God Weapon" src="../Icons/skills.png" onclick="selectTree('Skills', 'Stone', 'Talents')"></span></div><div><span class="selectText"><b><small>Skills</small></b></span></div></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+            </div>
+
+            <div id="Trees" class="mainLayoutGridTrees">
+            <div class="gridTalents Talents">   <!--Ranger Hunting-->
+            <div class="talentsTree">
+            <div class="sideBar barNudge">
+                <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+            </div>
+            <div class="talentsLayout">
+                <div class="treeItem"><img src="../Icons/32.png"><span id="talentNum">0</span></div>
+                <div class="treeItem"><img id="HUT01" class="gray" src="../Icons/Ranger/Hunting/huntH1.jpg" onclick="talentCheck('RAHUT01')" oncontextmenu="talentPopup('RAHUT01')"><span class="skillCalc"><span id="RAHUT01" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="HUT02" class="gray" src="../Icons/Ranger/Hunting/huntH2.jpg" onclick="talentCheck('RAHUT02')" oncontextmenu="talentPopup('RAHUT02')"><span class="skillCalc"><span id="RAHUT02" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="HUT03" class="gray" src="../Icons/Ranger/Hunting/huntH3.jpg" onclick="talentCheck('RAHUT03')" oncontextmenu="talentPopup('RAHUT03')"><span class="skillCalc"><span id="RAHUT03" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="HUT04" class="gray" src="../Icons/Ranger/Hunting/huntH4.jpg" onclick="talentCheck('RAHUT04')" oncontextmenu="talentPopup('RAHUT04')"><span class="skillCalc"><span id="RAHUT04" class="zero">0</span>/2</span></div>
+                <div class="treeItem"><img id="HUT05" class="gray" src="../Icons/Ranger/Hunting/huntH5.jpg" onclick="talentCheck('RAHUT05')" oncontextmenu="talentPopup('RAHUT05')"><span class="skillCalc"><span id="RAHUT05" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="HUT06" class="gray" src="../Icons/Ranger/Hunting/huntH6.jpg" onclick="talentCheck('RAHUT06')" oncontextmenu="talentPopup('RAHUT06')"><span class="skillCalc"><span id="RAHUT06" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="HUT07" class="gray" src="../Icons/Ranger/Hunting/huntH7.jpg" onclick="talentCheck('RAHUT07')" oncontextmenu="talentPopup('RAHUT07')"><span class="skillCalc"><span id="RAHUT07" class="zero">0</span>/2</span></div>
+                <div class="treeItem"><img id="HUT08" class="gray" src="../Icons/Ranger/Hunting/huntH8.jpg" onclick="talentCheck('RAHUT08')" oncontextmenu="talentPopup('RAHUT08')"><span class="skillCalc"><span id="RAHUT08" class="zero">0</span>/2</span></div>
+
+                <div class="treeItem"><img id="HUT09" class="gray" src="../Icons/Ranger/Hunting/huntH9.jpg" onclick="talentCheck('RAHUT09')" oncontextmenu="talentPopup('RAHUT09')"><span class="skillCalc"><span id="RAHUT09" class="zero">0</span>/1</span><span class="req"></span></div>
+                <div class="treeItem"><img id="HUT10" class="gray" src="../Icons/Ranger/Hunting/huntH10.jpg" onclick="talentCheck('RAHUT10')" oncontextmenu="talentPopup('RAHUT10')"><span class="skillCalc"><span id="RAHUT10" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem"><img id="HUT11" class="gray" src="../Icons/Ranger/Hunting/huntH11.jpg" onclick="talentCheck('RAHUT11')" oncontextmenu="talentPopup('RAHUT11')"><span class="skillCalc"><span id="RAHUT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                <div class="treeItem"><img id="HUT12" class="gray" src="../Icons/Ranger/Hunting/huntH12.jpg" onclick="talentCheck('RAHUT12')" oncontextmenu="talentPopup('RAHUT12')"><span class="skillCalc"><span id="RAHUT12" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="HUT13" class="gray" src="../Icons/Ranger/Hunting/huntH13.jpg" onclick="talentCheck('RAHUT13')" oncontextmenu="talentPopup('RAHUT13')"><span class="skillCalc"><span id="RAHUT13" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="HUT14" class="gray" src="../Icons/Ranger/Hunting/huntH14.jpg" onclick="talentCheck('RAHUT14')" oncontextmenu="talentPopup('RAHUT14')"><span class="skillCalc"><span id="RAHUT14" class="zero">0</span>/2</span><span class="req"></span></div>
+                <div class="treeItem"><img id="HUT15" class="gray" src="../Icons/Ranger/Hunting/huntH15.jpg" onclick="talentCheck('RAHUT15')" oncontextmenu="talentPopup('RAHUT15')"><span class="skillCalc"><span id="RAHUT15" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem"><img id="HUT16" class="gray" src="../Icons/Ranger/Hunting/huntH16.jpg" onclick="talentCheck('RAHUT16')" oncontextmenu="talentPopup('RAHUT16')"><span class="skillCalc"><span id="RAHUT16" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="HUT17" class="gray" src="../Icons/Ranger/Hunting/huntH17.jpg" onclick="talentCheck('RAHUT17')" oncontextmenu="talentPopup('RAHUT17')"><span class="skillCalc"><span id="RAHUT17" class="zero">0</span>/2</span></div>
+
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="HUT18" class="gray" src="../Icons/Ranger/Hunting/huntH18.jpg" onclick="talentCheck('RAHUT18')" oncontextmenu="talentPopup('RAHUT18')"><span class="skillCalc"><span id="RAHUT18" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="HUT19" class="gray" src="../Icons/Ranger/Hunting/huntH19.jpg" onclick="talentCheck('RAHUT19')" oncontextmenu="talentPopup('RAHUT19')"><span class="skillCalc"><span id="RAHUT19" class="zero">0</span>/2</span><span class="req"></span></div>
+
+                <div class="treeItem"><img id="HUT20" class="gray" src="../Icons/Ranger/Hunting/huntH20.jpg" onclick="talentCheck('RAHUT20')" oncontextmenu="talentPopup('RAHUT20')"><span class="skillCalc"><span id="RAHUT20" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="HUT21" class="gray" src="../Icons/Ranger/Hunting/huntH21.jpg" onclick="talentCheck('RAHUT21')" oncontextmenu="talentPopup('RAHUT21')"><span class="skillCalc"><span id="RAHUT21" class="zero">0</span>/2</span></div>
+            </div>
+            <div class="corePassives">
+                <div class="treeItem" id="RAHUP01"><img src="../Icons/Ranger/Hunting/huntH22.jpg" onclick="passivePopup('RAHUP01')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="RAHUP02"><img src="../Icons/Ranger/Hunting/huntH23.jpg" onclick="passivePopup('RAHUP02')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="RAHUP03"><img src="../Icons/Ranger/Hunting/huntH24.jpg" onclick="passivePopup('RAHUP03')"></div>
+                <div class="treeItem" id="RAHUP04"><img src="../Icons/Ranger/Hunting/huntH25.jpg" onclick="passivePopup('RAHUP04')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="RAHUP05"><img src="../Icons/Ranger/Hunting/huntH26.jpg" onclick="passivePopup('RAHUP05')"></div>
+            </div>
+            </div>
+            <div class="gridS1">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
+                </div>
+                <div>
+                <div class="s1talents1">
+                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="passivePopup('RAHUB01')"></div>
+                </div>
+                <div class="s1talents2">
+                    <div class="s1item"><img id="RAHUB02" class="gray" src="../Icons/Ranger/Hunting/S1sk1.png" onclick="s1Check('RAHUB02')" oncontextmenu="s1Popup('RAHUB02')"></div>
+                    <div class="s1item"><img id="RAHUB03" class="gray" src="../Icons/Ranger/Hunting/S1sk2.png" onclick="s1Check('RAHUB03')" oncontextmenu="s1Popup('RAHUB03')"></div>
+                    <div class="s1item"><img id="RAHUB04" class="gray" src="../Icons/Ranger/Hunting/S1sk3.png" onclick="s1Check('RAHUB04')" oncontextmenu="s1Popup('RAHUB04')"></div>
+                    
+                    <div class="s1item"><img id="RAHUB05" class="gray" src="../Icons/Ranger/Hunting/S1sk4.png" onclick="s1Check('RAHUB05')" oncontextmenu="s1Popup('RAHUB05')"></div>
+                    <div class="s1item"><img id="RAHUB06" class="gray" src="../Icons/Ranger/Hunting/S1sk5.png" onclick="s1Check('RAHUB06')" oncontextmenu="s1Popup('RAHUB06')"></div>
+                    <div class="s1item"><img id="RAHUB07" class="gray" src="../Icons/Ranger/Hunting/S1sk6.png" onclick="s1Check('RAHUB07')" oncontextmenu="s1Popup('RAHUB07')"></div>
+                    
+                    <div class="s1item"><img id="RAHUB08" class="gray" src="../Icons/Ranger/Hunting/S1sk7.png" onclick="s1Check('RAHUB08')" oncontextmenu="s1Popup('RAHUB08')"></div>
+                    <div class="s1item"><img id="RAHUB09" class="gray" src="../Icons/Ranger/Hunting/S1sk8.png" onclick="s1Check('RAHUB09')" oncontextmenu="s1Popup('RAHUB09')"></div>
+                    <div class="s1item"><img id="RAHUB10" class="gray" src="../Icons/Ranger/Hunting/S1sk9.png" onclick="s1Check('RAHUB10')" oncontextmenu="s1Popup('RAHUB10')"></div>
+                    
+                    <div class="s1item"><img id="RAHUB11" class="gray" src="../Icons/Ranger/Hunting/S1sk10.png" onclick="s1Check('RAHUB11')" oncontextmenu="s1Popup('RAHUB11')"></div>
+                    <div class="s1item"><img id="RAHUB12" class="gray" src="../Icons/Stone/S1sk11.png" onclick="s1Check('RAHUB12')" oncontextmenu="s1Popup('RAHUB12')"></div>
+                    <div class="s1item"><img id="RAHUB13" class="gray" src="../Icons/Ranger/Hunting/S1sk12.png" onclick="s1Check('RAHUB13')" oncontextmenu="s1Popup('RAHUB13')"></div>
+                </div>
+                </div>
+            </div>
+            <div class="gridActions">  <!--Actions-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
+                </div>
+                <div class="buildsGrid">   
+                    <div class="treeItem"></div>
+                    <div class="treeItem"><img id="onOffTalents" src="../Icons/on.png" onclick="togglePopups()"><span class="skillCalc right">Popups</span></div>
+                    <div class="treeItem"><img src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy1" class="skillCalc right">Copy</span></div>
+                    <div class="treeItem"><img src="../Icons/reset.png" onclick="reset('RAHU000000000000000000000', '00000000')"><span class="skillCalc right">Reset</span></div>
+                </div>
+            </div>
+            </div>
+            <div class="gridStone Stone">
+                <div class="stoneItem"><img id="HUI60" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RAHUI60')" oncontextmenu="stonePopup('RAHUI60')"><span class="stoneCalc"><span id="RAHUI60" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('RAHUC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI59" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RAHUI59')" oncontextmenu="stonePopup('RAHUI59')"><span class="stoneCalc"><span id="RAHUI59" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="HUI58" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI58')" oncontextmenu="stonePopup('RAHUI58')"><span class="stoneCalc"><span id="RAHUI58" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI57" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI57')" oncontextmenu="stonePopup('RAHUI57')"><span class="stoneCalc"><span id="RAHUI57" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI56" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI56')" oncontextmenu="stonePopup('RAHUI56')"><span class="stoneCalc"><span id="RAHUI56" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI55" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RAHUI55')" oncontextmenu="stonePopup('RAHUI55')"><span class="stoneCalc"><span id="RAHUI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI54')" oncontextmenu="stonePopup('RAHUI54')"><span class="stoneCalc"><span id="RAHUI54" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="HUI53" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI53')" oncontextmenu="stonePopup('RAHUI53')"><span class="stoneCalc"><span id="RAHUI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI52" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI52')" oncontextmenu="stonePopup('RAHUI52')"><span class="stoneCalc"><span id="RAHUI52" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI51" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI51')" oncontextmenu="stonePopup('RAHUI51')"><span class="stoneCalc"><span id="RAHUI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="HUI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI50')" oncontextmenu="stonePopup('RAHUI50')"><span class="stoneCalc"><span id="RAHUI50" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI49')" oncontextmenu="stonePopup('RAHUI49')"><span class="stoneCalc"><span id="RAHUI49" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI48" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RAHUI48')" oncontextmenu="stonePopup('RAHUI48')"><span class="stoneCalc"><span id="RAHUI48" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI47" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI47')" oncontextmenu="stonePopup('RAHUI47')"><span class="stoneCalc"><span id="RAHUI47" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI46')" oncontextmenu="stonePopup('RAHUI46')"><span class="stoneCalc"><span id="RAHUI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                
+                <div class="stoneItem"><img id="HUI45" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RAHUI45')" oncontextmenu="stonePopup('RAHUI45')"><span class="stoneCalc"><span id="RAHUI45" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI44" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI44')" oncontextmenu="stonePopup('RAHUI44')"><span class="stoneCalc"><span id="RAHUI44" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI43" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI43')" oncontextmenu="stonePopup('RAHUI43')"><span class="stoneCalc"><span id="RAHUI43" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI42" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RAHUI42')" oncontextmenu="stonePopup('RAHUI42')"><span class="stoneCalc"><span id="RAHUI42" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI41" loading="lazy" class="gray outRedCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('RAHUI41')" oncontextmenu="stonePopup('RAHUI41')"><span class="stoneCalc"><span id="RAHUI41" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI40" loading="lazy" class="gray outBlueCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('RAHUI40')" oncontextmenu="stonePopup('RAHUI40')"><span class="stoneCalc"><span id="RAHUI40" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                
+                <div class="stoneItem"><img id="HUI39" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI39')" oncontextmenu="stonePopup('RAHUI39')"><span class="stoneCalc"><span id="RAHUI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI38" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI38')" oncontextmenu="stonePopup('RAHUI38')"><span class="stoneCalc"><span id="RAHUI38" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI37" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI37')" oncontextmenu="stonePopup('RAHUI37')"><span class="stoneCalc"><span id="RAHUI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI36" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI36')" oncontextmenu="stonePopup('RAHUI36')"><span class="stoneCalc"><span id="RAHUI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                
+                <div class="stoneItem"><img id="HUI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RAHUI35')" oncontextmenu="stonePopup('RAHUI35')"><span class="stoneCalc"><span id="RAHUI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI34')" oncontextmenu="stonePopup('RAHUI34')"><span class="stoneCalc"><span id="RAHUI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI33" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RAHUI33')" oncontextmenu="stonePopup('RAHUI33')"><span class="stoneCalc"><span id="RAHUI33" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI32')" oncontextmenu="stonePopup('RAHUI32')"><span class="stoneCalc"><span id="RAHUI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI31" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RAHUI31')" oncontextmenu="stonePopup('RAHUI31')"><span class="stoneCalc"><span id="RAHUI31" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI30" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RAHUI30')" oncontextmenu="stonePopup('RAHUI30')"><span class="stoneCalc"><span id="RAHUI30" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('RAHUC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RAHUI29')" oncontextmenu="stonePopup('RAHUI29')"><span class="stoneCalc"><span id="RAHUI29" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="HUI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI28')" oncontextmenu="stonePopup('RAHUI28')"><span class="stoneCalc"><span id="RAHUI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI27')" oncontextmenu="stonePopup('RAHUI27')"><span class="stoneCalc"><span id="RAHUI27" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI26" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RAHUI26')" oncontextmenu="stonePopup('RAHUI26')"><span class="stoneCalc"><span id="RAHUI26" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI25')" oncontextmenu="stonePopup('RAHUI25')"><span class="stoneCalc"><span id="RAHUI25" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI24" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI24')" oncontextmenu="stonePopup('RAHUI24')"><span class="stoneCalc"><span id="RAHUI24" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI23" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI23')" oncontextmenu="stonePopup('RAHUI23')"><span class="stoneCalc"><span id="RAHUI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI22" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RAHUI22')" oncontextmenu="stonePopup('RAHUI22')"><span class="stoneCalc"><span id="RAHUI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI21" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RAHUI21')" oncontextmenu="stonePopup('RAHUI21')"><span class="stoneCalc"><span id="RAHUI21" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI20" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RAHUI20')" oncontextmenu="stonePopup('RAHUI20')"><span class="stoneCalc"><span id="RAHUI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="HUI19" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI19')" oncontextmenu="stonePopup('RAHUI19')"><span class="stoneCalc"><span id="RAHUI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI18" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI18')" oncontextmenu="stonePopup('RAHUI18')"><span class="stoneCalc"><span id="RAHUI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI17" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI17')" oncontextmenu="stonePopup('RAHUI17')"><span class="stoneCalc"><span id="RAHUI17" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI16" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI16')" oncontextmenu="stonePopup('RAHUI16')"><span class="stoneCalc"><span id="RAHUI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI15" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI15')" oncontextmenu="stonePopup('RAHUI15')"><span class="stoneCalc"><span id="RAHUI15" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI14" loading="lazy" class="gray outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('RAHUI14')" oncontextmenu="stonePopup('RAHUI14')"><span class="stoneCalc"><span id="RAHUI14" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI13" loading="lazy" class="gray outYellowCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('RAHUI13')" oncontextmenu="stonePopup('RAHUI13')"><span class="stoneCalc"><span id="RAHUI13" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="HUI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI12')" oncontextmenu="stonePopup('RAHUI12')"><span class="stoneCalc"><span id="RAHUI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RAHUI11')" oncontextmenu="stonePopup('RAHUI11')"><span class="stoneCalc"><span id="RAHUI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RAHUI10')" oncontextmenu="stonePopup('RAHUI10')"><span class="stoneCalc"><span id="RAHUI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI09')" oncontextmenu="stonePopup('RAHUI09')"><span class="stoneCalc"><span id="RAHUI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI08')" oncontextmenu="stonePopup('RAHUI08')"><span class="stoneCalc"><span id="RAHUI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI07')" oncontextmenu="stonePopup('RAHUI07')"><span class="stoneCalc"><span id="RAHUI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RAHUI06')" oncontextmenu="stonePopup('RAHUI06')"><span class="stoneCalc"><span id="RAHUI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RAHUI05')" oncontextmenu="stonePopup('RAHUI05')"><span class="stoneCalc"><span id="RAHUI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RAHUI04')" oncontextmenu="stonePopup('RAHUI04')"><span class="stoneCalc"><span id="RAHUI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI03')" oncontextmenu="stonePopup('RAHUI03')"><span class="stoneCalc"><span id="RAHUI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="HUI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RAHUI02')" oncontextmenu="stonePopup('RAHUI02')"><span class="stoneCalc"><span id="RAHUI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="HUI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RAHUI01')" oncontextmenu="stonePopup('RAHUI01')"><span class="stoneCalc"><span id="RAHUI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+        
+                <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('RAHUS08')"><span class="resetText">Skill 7</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="HUC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('RAHUC01')"><span class="stoneCalc"><span id="RAHUC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('1000000000000000000000000000000000000000000000000000000000000', 'RAHU')"><span class="resetText">Reset</span></div>
+            </div>
+            <div class="builds areaBuilds Talents"> <!-- builds-->
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="feedSmall">
+                    <div class="buildsShow Ranger Ranged all bgGreen Popular"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Ranger.png" alt="ranger">
+                        <div class="gridName"><b>Sniper Shot</b><br>Raid Ranged Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Ranger/Hunting/huntHsk2.png" onclick="buildsPopup('RAHUB1')" alt="sniper shot"></div>
+                        <div class="treeItem gridBuild builds" id="RAHUB1"><img src="../Icons/Ranger/Hunting/huntHsk3.png" onclick="raidBuilds('RAHUB1')" alt="ranger hunting build 1"><span class="star">&#9733;</span></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('RAHUB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div> 
+                      <div class="buildsShow Ranger Ranged all bgGreen normal"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Ranger.png" alt="ranger">
+                        <div class="gridName"><b>Magic Shot</b><br>Raid Ranged Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Ranger/Hunting/huntH9.jpg" onclick="buildsPopup('RAHUB2')" alt="magic shot"></div>
+                        <div class="treeItem gridBuild builds" id="RAHUB2"><img src="../Icons/Ranger/Hunting/huntH2.jpg" onclick="raidBuilds('RAHUB2')" alt="ranger hunting build 2"></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('RAHUB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div>
+                </div>
+            </div>
+            <div class="gridSkills Skills">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="content">
+                <div class="skillItem" id="RAHUS01"><img src="../Icons/Ranger/Hunting/huntHsk1.png" onclick="skillCostPopup('RAHUS01')"></div>
+                <div class="skillItem" id="RAHUS02"><img src="../Icons/Ranger/Hunting/huntHsk2.png" onclick="skillPopup('RAHUS02')"></div>
+                <div class="skillItem" id="RAHUS03"><img src="../Icons/Ranger/Hunting/huntH9.jpg" onclick="skillPopup('RAHUS03')"></div>
+                <div class="skillItem" id="RAHUS04"><img src="../Icons/Ranger/Hunting/huntHsk3.png" onclick="skillPopup('RAHUS04')"></div>
+                <div class="skillItem" id="RAHUS05"><img src="../Icons/Ranger/Hunting/huntHsk4.png" onclick="skillPopup('RAHUS05')"></div>
+                <div class="skillItem" id="RAHUS06"><img src="../Icons/Ranger/Hunting/huntHsk5.png" onclick="skillCostPopup('RAHUS06')"></div>
+                <div class="skillItem" id="RAHUS07"><img src="../Icons/Ranger/Hunting/huntHsk6.png" onclick="skillPopup('RAHUS07')"></div>
+                <div class="treeItem" id="RAHUA01"><img src="../Icons/Ranger/Hunting/huntH3.jpg" onclick="passivePopup('RAHUA01')"></div>
+                </div>
+                </div>
+            <div class="gridUlts Skills">
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="content">
+                <div class="treeItem" id="RAHUU01"><img src="../Icons/Ranger/Hunting/ult1.jpg" onclick="ultPopup('RAHUU01')"></div>
+                <div class="treeItem" id="RAHUU02"><img src="../Icons/Ranger/Hunting/ult2.jpg" onclick="ultPopup('RAHUU02')"></div>
+                <div class="treeItem" id="RAHUU03"><img src="../Icons/Ranger/Hunting/ult3.jpg" onclick="ultPopup('RAHUU03')"></div>
+                <div class="treeItem" id="RAHUU04"><img src="../Icons/Ranger/Hunting/ult4.jpg" onclick="ultPopup('RAHUU04')"></div>
+                <div class="treeItem" id="RAHUU05"><img src="../Icons/Ranger/Hunting/ult5.jpg" onclick="ultPopup('RAHUU05')"></div>
+                <div class="treeItem" id="RAHUU06"><img src="../Icons/Ranger/Hunting/ult6.jpg" onclick="ultPopup('RAHUU06')"></div>
+                <div class="treeItem" id="RAHUU07"><img src="../Icons/Ranger/Hunting/ult7.jpg" onclick="ultPopup('RAHUU07')"></div>
+                <div class="treeItem" id="RAHUU08"><img src="../Icons/Ranger/Hunting/ult8.jpg" onclick="ultPopup('RAHUU08')"></div>
+                </div>
+                </div>
+            <div class="gridPvP Skills">  <!--PvP-->
+                    <div class="sideBar bar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="content">
+                    <div class="treeItem" id="RAHUU09"><img src="../Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('RAHUU09')"></div>
+                    <div class="treeItem" id="RAHUU10"><img src="../Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('RAHUU10')"></div>
+                    <div class="treeItem" id="RAHUU11"><img src="../Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('RAHUU11')"></div>
+                    <div class="treeItem" id="RAHUU12"><img src="../Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('RAHUU12')"></div>
+                    <div class="treeItem" id="RAHUU13"><img src="../Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('RAHUU13')"></div>
+                    <div class="treeItem" id="RAHUU14"><img src="../Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('RAHUU14')"></div>
+                    <div class="treeItem" id="RAHUU15"><img src="../Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('RAHUU15')"></div>
+                    <div class="treeItem" id="RAHUU16"><img src="../Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('RAHUU16')"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
+        <div class="popup" id="skillPopup">
+            <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+        var params = new URLSearchParams(location.search);
+            if (params.has('skill') === true) {
+                setTalents(params.get('skill'));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'), 6, 60)].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
+            }
+        }
+    window.onpageshow = loadParams; 
+    window.onpopstate = () => setTimeout(loadParams, 0);
+    document.getElementById("classScroll").scrollLeft = 300;
+    document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
+    var xDown = null, yDown = null, xUp = null, yUp = null;
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
+    document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
+    document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
+    function touchstart(evt) { const firstTouch = (evt.touches || evt.originalEvent.touches)[0]; xDown = firstTouch.clientX; yDown = firstTouch.clientY; }
+    function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
+    function touchend(evt, left, active, right) { 
+        var xDiff = xUp - xDown, yDiff = yUp - yDown;
+        if (xUp === null) { 
+            return 
+        } else if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+            if (xDiff < 0) 
+            selectTree(right, active, left);
+            else
+            selectTree(left, active, right);
+        } 
+        xDown = null, yDown = null, xUp = null, yUp = null;
+    }
+
+</script>
+</html>

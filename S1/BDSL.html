@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://tarislandbuilds.eu/S1/BDSL.html" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+    <script src="./JSON/BDSL.js"></script>
+    <script src="./JSON/builds.js"></script>
+    <meta id='viewport' name="viewport" content="width=device-width"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <title>Tarisland Talent & Inscribed Stone Trees Calculator</title>
+    <meta name="description" content="Discover, Create and Share powerful Character builds with our Builds Hub. Our Talents and Inscribed Stone Trees Calculator lets you customize builds, view detailed skill and ability descriptions, and share your setups with friends. Explore, experiment and elevate your game to the next level!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Solo Bard DPS Talent Build">
+    <meta property="og:description" content="Plan your build and share it with friends">
+    <meta property='og:image' content='https://tarislandguide.github.io/embeds/BDSL.png'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="spec">   <!--Class Select-->
+            <div class="sideBar">
+                <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Class</b></span></div>
+            </div>
+            <div class="selectClass" id="classScroll">
+                <div class="classItem"><img alt="Home" src="../Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')"></div>
+                <div class="classItem"><img alt="Warrior" src="../Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
+                <div class="classItem"><img alt="Mage" src="../Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
+                <div class="classItem"><img alt="Ranger" src="../Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
+                <div class="classItem"><img alt="Bard" src="../Icons/Class/bard.png" draggable="false" ondragstart="return false;" onclick="selectClass('BDSL')" class="border"></div>
+                <div class="classItem"><img alt="Paladin" src="../Icons/Class/paladin.png" draggable="false" ondragstart="return false;" onclick="selectClass('PAGU')"></div>
+                <div class="classItem"><img alt="Priest" src="../Icons/Class/priest.png" draggable="false" ondragstart="return false;" onclick="selectClass('PRDG')"></div>
+                <div class="classItem"><img alt="Barbarian" src="../Icons/Class/barb.png" draggable="false" ondragstart="return false;" onclick="selectClass('BBFZ')"></div>
+                <div class="classItem"><img alt="Shadow" src="../Icons/Class/shadow.png" draggable="false" ondragstart="return false;" onclick="selectClass('SSCU')"></div>
+                <div class="classItem"><img alt="Necro" src="../Icons/Class/necro.png" draggable="false" ondragstart="return false;" onclick="selectClass('PNSH')"></div>
+            </div>
+        </div>
+
+            <div class="spec">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Spec</b></span></div>
+                </div>
+                <div class="specSelect">
+                    <div></div>
+                    <div class="blank right"><p><b>Solo</b><br><small>Ranged</small></p></div>
+                    <div class="skillItem"><img alt="Solo" src="../Icons/Bard/Solo/Solo.png" class="bground"></div>
+                    <div class="skillItem"><img alt="Harmony" src="../Icons/Bard/Harmony/harmony.png" onclick="selectClass('BDHA')"></div>
+                    <div class="blank left"><p><b>Harmony</b><br><small>Heal</small></p></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="treeSelect">
+            <div class="spec"> <!-- select tree type-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Tree</b></span></div>
+                </div>
+                <div class="selectTree">
+                    <div class="blank"></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconTalents" class="bground" alt="Talent Tree" src="../Icons/talents.png" onclick="selectTree('Talents', 'Stone', 'Skills')"></span></div><div><span class="selectText"><b><small>Talents</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconStone" class="blah" alt="Inscribed Stone" src="../Icons/stone.png" onclick="selectTree('Stone', 'Talents', 'Skills')"></span></div><div><span class="selectText"><b><small>Stone</small></b></span></div></div>
+                    <div class="treeIcon gridSelect"><div><span class="selectText"><img id ="iconSkills" class="blah" alt="God Weapon" src="../Icons/skills.png" onclick="selectTree('Skills', 'Stone', 'Talents')"></span></div><div><span class="selectText"><b><small>Skills</small></b></span></div></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+            </div>
+
+            <div id="Trees" class="mainLayoutGridTrees">
+                
+            <div class="gridTalents Talents">   <!--Bard Solo-->
+            <div class="talentsTree">
+            <div class="sideBar barNudge">
+                <div class="treeItem"><span class="dot"></span><p><b>8</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>12</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>16</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>20</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>24</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>28</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>32</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>36</b></p></div>
+                <div class="treeItem"><span class="dot"></span><p><b>40</b></p></div>
+            </div>
+            <div class="talentsLayout">
+                <div class="treeItem"><img src="../Icons/32.png"><span id="talentNum">0</span></div>
+                <div class="treeItem"><img id="SLT01" class="gray" src="../Icons/Bard/Solo/bardS1.jpg" onclick="talentCheck('BDSLT01')" oncontextmenu="talentPopup('BDSLT01')"><span class="skillCalc"><span id="BDSLT01" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="SLT02" class="gray" src="../Icons/Bard/Solo/bardS2.jpg" onclick="talentCheck('BDSLT02')" oncontextmenu="talentPopup('BDSLT02')"><span class="skillCalc"><span id="BDSLT02" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="SLT03" class="gray" src="../Icons/Bard/Solo/bardS3.jpg" onclick="talentCheck('BDSLT03')" oncontextmenu="talentPopup('BDSLT03')"><span class="skillCalc"><span id="BDSLT03" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="SLT04" class="gray" src="../Icons/Bard/Solo/bardS4.jpg" onclick="talentCheck('BDSLT04')" oncontextmenu="talentPopup('BDSLT04')"><span class="skillCalc"><span id="BDSLT04" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="SLT05" class="gray" src="../Icons/Bard/Solo/bardS5.jpg" onclick="talentCheck('BDSLT05')" oncontextmenu="talentPopup('BDSLT05')"><span class="skillCalc"><span id="BDSLT05" class="zero">0</span>/3</span><span class="long"></span></div>
+
+                <div class="treeItem"><img id="SLT06" class="gray" src="../Icons/Bard/Solo/bardS6.jpg" onclick="talentCheck('BDSLT06')" oncontextmenu="talentPopup('BDSLT06')"><span class="skillCalc"><span id="BDSLT06" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="SLT07" class="gray" src="../Icons/Bard/Solo/bardS7.jpg" onclick="talentCheck('BDSLT07')" oncontextmenu="talentPopup('BDSLT07')"><span class="skillCalc"><span id="BDSLT07" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem"><img id="SLT08" class="gray" src="../Icons/Bard/Solo/bardS8.jpg" onclick="talentCheck('BDSLT08')" oncontextmenu="talentPopup('BDSLT08')"><span class="skillCalc"><span id="BDSLT08" class="zero">0</span>/1</span><span class="req"></span></div>
+                <div class="treeItem"><img id="SLT09" class="gray" src="../Icons/Bard/Solo/bardS9.jpg" onclick="talentCheck('BDSLT09')" oncontextmenu="talentPopup('BDSLT09')"><span class="skillCalc"><span id="BDSLT09" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="SLT10" class="gray" src="../Icons/Bard/Solo/bardS10.jpg" onclick="talentCheck('BDSLT10')" oncontextmenu="talentPopup('BDSLT10')"><span class="skillCalc"><span id="BDSLT10" class="zero">0</span>/2</span><span class="req"></span></div>
+
+                <div class="treeItem"><img id="SLT11" class="gray" src="../Icons/Bard/Solo/bardS11.jpg" onclick="talentCheck('BDSLT11')" oncontextmenu="talentPopup('BDSLT11')"><span class="skillCalc"><span id="BDSLT11" class="zero">0</span>/3</span><span class="req"></span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="SLT12" class="gray" src="../Icons/Bard/Solo/bardS12.jpg" onclick="talentCheck('BDSLT12')" oncontextmenu="talentPopup('BDSLT12')"><span class="skillCalc"><span id="BDSLT12" class="zero">0</span>/3</span></div>
+
+                <div class="treeItem"><img id="SLT13" class="gray" src="../Icons/Bard/Solo/bardS13.jpg" onclick="talentCheck('BDSLT13')" oncontextmenu="talentPopup('BDSLT13')"><span class="skillCalc"><span id="BDSLT13" class="zero">0</span>/2</span><span class="req"></span></div>
+                <div class="treeItem"><img id="SLT14" class="gray" src="../Icons/Bard/Solo/bardS14.jpg" onclick="talentCheck('BDSLT14')" oncontextmenu="talentPopup('BDSLT14')"><span class="skillCalc"><span id="BDSLT14" class="zero">0</span>/2</span></div>
+                <div class="treeItem"><img id="SLT15" class="gray" src="../Icons/Bard/Solo/bardS15.png" onclick="talentCheck('BDSLT15')" oncontextmenu="talentPopup('BDSLT15')"><span class="skillCalc"><span id="BDSLT15" class="zero">0</span>/2</span></div>
+
+                <div class="treeItem"><img id="SLT16" class="gray" src="../Icons/Bard/Solo/bardS16.jpg" onclick="talentCheck('BDSLT16')" oncontextmenu="talentPopup('BDSLT16')"><span class="skillCalc"><span id="BDSLT16" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="SLT17" class="gray" src="../Icons/Bard/Solo/bardS17.jpg" onclick="talentCheck('BDSLT17')" oncontextmenu="talentPopup('BDSLT17')"><span class="skillCalc"><span id="BDSLT17" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="SLT18" class="gray" src="../Icons/Bard/Solo/bardS18.jpg" onclick="talentCheck('BDSLT18')" oncontextmenu="talentPopup('BDSLT18')"><span class="skillCalc"><span id="BDSLT18" class="zero">0</span>/3</span></div>
+                <div class="treeItem"><img id="SLT19" class="gray" src="../Icons/Bard/Solo/bardS19.jpg" onclick="talentCheck('BDSLT19')" oncontextmenu="talentPopup('BDSLT19')"><span class="skillCalc"><span id="BDSLT19" class="zero">0</span>/2</span></div>
+
+                <div class="treeItem"><img id="SLT20" class="gray" src="../Icons/Bard/Solo/bardS20.jpg" onclick="talentCheck('BDSLT20')" oncontextmenu="talentPopup('BDSLT20')"><span class="skillCalc"><span id="BDSLT20" class="zero">0</span>/3</span></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem"><img id="SLT21" class="gray" src="../Icons/Bard/Solo/bardS21.jpg" onclick="talentCheck('BDSLT21')" oncontextmenu="talentPopup('BDSLT21')"><span class="skillCalc"><span id="BDSLT21" class="zero">0</span>/2</span></div>
+            </div>
+            <div class="corePassives">
+                <div class="treeItem" id="BDSLP01"><img src="../Icons/Bard/Solo/bardS22.jpg" onclick="passivePopup('BDSLP01')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="BDSLP02"><img src="../Icons/Bard/Solo/bardS23.jpg" onclick="passivePopup('BDSLP02')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="BDSLP03"><img src="../Icons/Bard/Solo/bardS24.jpg" onclick="passivePopup('BDSLP03')"></div>
+                <div class="treeItem" id="BDSLP04"><img src="../Icons/Bard/Solo/bardS25.jpg" onclick="passivePopup('BDSLP04')"></div>
+                <div class="treeItem blank"></div>
+                <div class="treeItem" id="BDSLP05"><img src="../Icons/Bard/Solo/bardS26.jpg" onclick="passivePopup('BDSLP05')"></div>
+            </div>
+            </div>
+            <div class="gridS1">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
+                </div>
+                <div>
+                <div class="s1talents1">
+                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="passivePopup('BDSLB01')"></div>
+                </div>
+                <div class="s1talents2">
+                    <div class="s1item"><img id="BDSLB02" class="gray" src="../Icons/Bard/Solo/S1sk1.png" onclick="s1Check('BDSLB02')" oncontextmenu="s1Popup('BDSLB02')"></div>
+                    <div class="s1item"><img id="BDSLB03" class="gray" src="../Icons/Bard/Solo/S1sk2.png" onclick="s1Check('BDSLB03')" oncontextmenu="s1Popup('BDSLB03')"></div>
+                    <div class="s1item"><img id="BDSLB04" class="gray" src="../Icons/Bard/Solo/S1sk3.png" onclick="s1Check('BDSLB04')" oncontextmenu="s1Popup('BDSLB04')"></div>
+                    
+                    <div class="s1item"><img id="BDSLB05" class="gray" src="../Icons/Bard/Solo/S1sk4.png" onclick="s1Check('BDSLB05')" oncontextmenu="s1Popup('BDSLB05')"></div>
+                    <div class="s1item"><img id="BDSLB06" class="gray" src="../Icons/Bard/Solo/S1sk5.png" onclick="s1Check('BDSLB06')" oncontextmenu="s1Popup('BDSLB06')"></div>
+                    <div class="s1item"><img id="BDSLB07" class="gray" src="../Icons/Bard/Solo/S1sk6.png" onclick="s1Check('BDSLB07')" oncontextmenu="s1Popup('BDSLB07')"></div>
+                    
+                    <div class="s1item"><img id="BDSLB08" class="gray" src="../Icons/Bard/Solo/S1sk7.png" onclick="s1Check('BDSLB08')" oncontextmenu="s1Popup('BDSLB08')"></div>
+                    <div class="s1item"><img id="BDSLB09" class="gray" src="../Icons/Bard/Solo/S1sk8.png" onclick="s1Check('BDSLB09')" oncontextmenu="s1Popup('BDSLB09')"></div>
+                    <div class="s1item"><img id="BDSLB10" class="gray" src="../Icons/Bard/Solo/S1sk9.png" onclick="s1Check('BDSLB10')" oncontextmenu="s1Popup('BDSLB10')"></div>
+                    
+                    <div class="s1item"><img id="BDSLB11" class="gray" src="../Icons/Bard/Solo/S1sk10.png" onclick="s1Check('BDSLB11')" oncontextmenu="s1Popup('BDSLB11')"></div>
+                    <div class="s1item"><img id="BDSLB12" class="gray" src="../Icons/Stone/S1sk11.png" onclick="s1Check('BDSLB12')" oncontextmenu="s1Popup('BDSLB12')"></div>
+                    <div class="s1item"><img id="BDSLB13" class="gray" src="../Icons/Bard/Solo/S1sk12.png" onclick="s1Check('BDSLB13')" oncontextmenu="s1Popup('BDSLB13')"></div>
+                </div>
+                </div>
+            </div>
+            <div class="gridActions">  <!--Actions-->
+                <div class="sideBar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
+                </div>
+                <div class="buildsGrid">   
+                    <div class="treeItem"></div>
+                    <div class="treeItem"><img id="onOffTalents" src="../Icons/on.png" onclick="togglePopups()"><span class="skillCalc right">Popups</span></div>
+                    <div class="treeItem"><img src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy1" class="skillCalc right">Copy</span></div>
+                    <div class="treeItem"><img src="../Icons/reset.png" onclick="reset('BDSL000000000000000000000', '00000000')"><span class="skillCalc right">Reset</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="gridStone Stone">
+            <div class="stoneItem"><img id="SLI60" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDSLI60')" oncontextmenu="stonePopup('BDSLI60')"><span class="stoneCalc"><span id="BDSLI60" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('BDSLC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI59" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDSLI59')" oncontextmenu="stonePopup('BDSLI59')"><span class="stoneCalc"><span id="BDSLI59" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+    
+            <div class="stoneItem"><img id="SLI58" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI58')" oncontextmenu="stonePopup('BDSLI58')"><span class="stoneCalc"><span id="BDSLI58" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI57" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI57')" oncontextmenu="stonePopup('BDSLI57')"><span class="stoneCalc"><span id="BDSLI57" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI56" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI56')" oncontextmenu="stonePopup('BDSLI56')"><span class="stoneCalc"><span id="BDSLI56" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI55" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDSLI55')" oncontextmenu="stonePopup('BDSLI55')"><span class="stoneCalc"><span id="BDSLI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI54')" oncontextmenu="stonePopup('BDSLI54')"><span class="stoneCalc"><span id="BDSLI54" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+            <div class="stoneItem"><img id="SLI53" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI53')" oncontextmenu="stonePopup('BDSLI53')"><span class="stoneCalc"><span id="BDSLI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI52" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI52')" oncontextmenu="stonePopup('BDSLI52')"><span class="stoneCalc"><span id="BDSLI52" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI51" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI51')" oncontextmenu="stonePopup('BDSLI51')"><span class="stoneCalc"><span id="BDSLI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+
+            <div class="stoneItem"><img id="SLI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI50')" oncontextmenu="stonePopup('BDSLI50')"><span class="stoneCalc"><span id="BDSLI50" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI49')" oncontextmenu="stonePopup('BDSLI49')"><span class="stoneCalc"><span id="BDSLI49" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI48" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDSLI48')" oncontextmenu="stonePopup('BDSLI48')"><span class="stoneCalc"><span id="BDSLI48" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI47" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI47')" oncontextmenu="stonePopup('BDSLI47')"><span class="stoneCalc"><span id="BDSLI47" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI46')" oncontextmenu="stonePopup('BDSLI46')"><span class="stoneCalc"><span id="BDSLI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            
+            <div class="stoneItem"><img id="SLI45" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDSLI45')" oncontextmenu="stonePopup('BDSLI45')"><span class="stoneCalc"><span id="BDSLI45" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI44" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI44')" oncontextmenu="stonePopup('BDSLI44')"><span class="stoneCalc"><span id="BDSLI44" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI43" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI43')" oncontextmenu="stonePopup('BDSLI43')"><span class="stoneCalc"><span id="BDSLI43" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI42" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDSLI42')" oncontextmenu="stonePopup('BDSLI42')"><span class="stoneCalc"><span id="BDSLI42" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI41" loading="lazy" class="gray outRedCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('BDSLI41')" oncontextmenu="stonePopup('BDSLI41')"><span class="stoneCalc"><span id="BDSLI41" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI40" loading="lazy" class="gray outBlueCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('BDSLI40')" oncontextmenu="stonePopup('BDSLI40')"><span class="stoneCalc"><span id="BDSLI40" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            
+            <div class="stoneItem"><img id="SLI39" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI39')" oncontextmenu="stonePopup('BDSLI39')"><span class="stoneCalc"><span id="BDSLI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI38" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI38')" oncontextmenu="stonePopup('BDSLI38')"><span class="stoneCalc"><span id="BDSLI38" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI37" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI37')" oncontextmenu="stonePopup('BDSLI37')"><span class="stoneCalc"><span id="BDSLI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI36" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI36')" oncontextmenu="stonePopup('BDSLI36')"><span class="stoneCalc"><span id="BDSLI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            
+            <div class="stoneItem"><img id="SLI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDSLI35')" oncontextmenu="stonePopup('BDSLI35')"><span class="stoneCalc"><span id="BDSLI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI34')" oncontextmenu="stonePopup('BDSLI34')"><span class="stoneCalc"><span id="BDSLI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI33" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDSLI33')" oncontextmenu="stonePopup('BDSLI33')"><span class="stoneCalc"><span id="BDSLI33" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI32')" oncontextmenu="stonePopup('BDSLI32')"><span class="stoneCalc"><span id="BDSLI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI31" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDSLI31')" oncontextmenu="stonePopup('BDSLI31')"><span class="stoneCalc"><span id="BDSLI31" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI30" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDSLI30')" oncontextmenu="stonePopup('BDSLI30')"><span class="stoneCalc"><span id="BDSLI30" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('BDSLC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDSLI29')" oncontextmenu="stonePopup('BDSLI29')"><span class="stoneCalc"><span id="BDSLI29" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+
+            <div class="stoneItem"><img id="SLI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI28')" oncontextmenu="stonePopup('BDSLI28')"><span class="stoneCalc"><span id="BDSLI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI27')" oncontextmenu="stonePopup('BDSLI27')"><span class="stoneCalc"><span id="BDSLI27" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI26" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDSLI26')" oncontextmenu="stonePopup('BDSLI26')"><span class="stoneCalc"><span id="BDSLI26" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI25')" oncontextmenu="stonePopup('BDSLI25')"><span class="stoneCalc"><span id="BDSLI25" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI24" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI24')" oncontextmenu="stonePopup('BDSLI24')"><span class="stoneCalc"><span id="BDSLI24" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI23" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI23')" oncontextmenu="stonePopup('BDSLI23')"><span class="stoneCalc"><span id="BDSLI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI22" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDSLI22')" oncontextmenu="stonePopup('BDSLI22')"><span class="stoneCalc"><span id="BDSLI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI21" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDSLI21')" oncontextmenu="stonePopup('BDSLI21')"><span class="stoneCalc"><span id="BDSLI21" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI20" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDSLI20')" oncontextmenu="stonePopup('BDSLI20')"><span class="stoneCalc"><span id="BDSLI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+
+            <div class="stoneItem"><img id="SLI19" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI19')" oncontextmenu="stonePopup('BDSLI19')"><span class="stoneCalc"><span id="BDSLI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI18" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI18')" oncontextmenu="stonePopup('BDSLI18')"><span class="stoneCalc"><span id="BDSLI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI17" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI17')" oncontextmenu="stonePopup('BDSLI17')"><span class="stoneCalc"><span id="BDSLI17" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI16" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI16')" oncontextmenu="stonePopup('BDSLI16')"><span class="stoneCalc"><span id="BDSLI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI15" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI15')" oncontextmenu="stonePopup('BDSLI15')"><span class="stoneCalc"><span id="BDSLI15" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI14" loading="lazy" class="gray outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('BDSLI14')" oncontextmenu="stonePopup('BDSLI14')"><span class="stoneCalc"><span id="BDSLI14" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI13" loading="lazy" class="gray outYellowCircle" src="../Icons/Stone/dragon.png" onclick="stoneCheck('BDSLI13')" oncontextmenu="stonePopup('BDSLI13')"><span class="stoneCalc"><span id="BDSLI13" class="zero">0</span>/1</span><span class="linkBL"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+    
+            <div class="stoneItem"><img id="SLI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI12')" oncontextmenu="stonePopup('BDSLI12')"><span class="stoneCalc"><span id="BDSLI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDSLI11')" oncontextmenu="stonePopup('BDSLI11')"><span class="stoneCalc"><span id="BDSLI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDSLI10')" oncontextmenu="stonePopup('BDSLI10')"><span class="stoneCalc"><span id="BDSLI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI09')" oncontextmenu="stonePopup('BDSLI09')"><span class="stoneCalc"><span id="BDSLI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI08')" oncontextmenu="stonePopup('BDSLI08')"><span class="stoneCalc"><span id="BDSLI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI07')" oncontextmenu="stonePopup('BDSLI07')"><span class="stoneCalc"><span id="BDSLI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDSLI06')" oncontextmenu="stonePopup('BDSLI06')"><span class="stoneCalc"><span id="BDSLI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDSLI05')" oncontextmenu="stonePopup('BDSLI05')"><span class="stoneCalc"><span id="BDSLI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDSLI04')" oncontextmenu="stonePopup('BDSLI04')"><span class="stoneCalc"><span id="BDSLI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+    
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI03')" oncontextmenu="stonePopup('BDSLI03')"><span class="stoneCalc"><span id="BDSLI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+            <div class="stoneItem"><img id="SLI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDSLI02')" oncontextmenu="stonePopup('BDSLI02')"><span class="stoneCalc"><span id="BDSLI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            <div class="stoneItem"><img id="SLI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDSLI01')" oncontextmenu="stonePopup('BDSLI01')"><span class="stoneCalc"><span id="BDSLI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+    
+            <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+            <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('BDSLS13')"><span class="resetText">Skill 7</span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img id="SLC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('BDSLC01')"><span class="stoneCalc"><span id="BDSLC01" class="zero">1</span>/1</span></div>
+            <div class="stoneItem stoneBlank"></div>
+            <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+            <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('1000000000000000000000000000000000000000000000000000000000000', 'BDSL')"><span class="resetText">Reset</span></div>
+        </div>
+            <div class="builds areaBuilds Talents"> <!-- builds-->
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
+                </div>
+                <div class="feedSmall">
+                    <div class="buildsShow Bard Ranged all bgSeaGreen Popular"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Bard.png" alt="bard">
+                        <div class="gridName"><b>Elegant Melody</b><br>Raid Ranged Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Bard/Solo/bardSsk10.png" onclick="buildsPopup('BDSLB1')" alt="elegant melody"></div>
+                        <div class="treeItem gridBuild builds" id="BDSLB1"><img src="../Icons/Bard/Solo/bardS13.jpg" onclick="raidBuilds('BDSLB1')" alt="bard dps build 1"><span class="star">&#9733;</span></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('BDSLB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div> 
+                      <div class="buildsShow Bard Ranged all bgSeaGreen unpop"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Bard.png" alt="bard">
+                        <div class="gridName"><b>Powerful Melody</b><br>Raid Ranged Dps</div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Bard/Solo/bardSsk2.png" onclick="buildsPopup('BDSLB2')" alt="powerful melody"></div>
+                        <div class="treeItem gridBuild builds" id="BDSLB2"><img src="../Icons/Bard/Solo/bardS12.jpg" onclick="raidBuilds('BDSLB2')" alt="bard dps build 2"><span class="triangle">&#9660;</span></div>
+                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('BDSLB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                      </div> 
+                </div>
+            </div>
+            <div class="gridSkills extraRow Skills">
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rect"></span><span class="rotate"><b>Core Skills</b></span></div>
+                </div>
+                <div class="content">
+                <div class="skillItem" id="BDSLS01"><img src="../Icons/Bard/Solo/bardSsk1.png" onclick="skillPopup('BDSLS01')"></div>
+                <div class="skillItem" id="BDSLS02"><img src="../Icons/Bard/Solo/bardSsk2.png" onclick="skillPopup('BDSLS02')"></div>
+                <div class="skillItem" id="BDSLS03"><img src="../Icons/Bard/Solo/bardSsk10.png" onclick="skillPopup('BDSLS03')"></div>
+                <div class="skillItem" id="BDSLS04"><img src="../Icons/Bard/Solo/bardS24.jpg" onclick="skillPopup('BDSLS04')"></div>
+                <div class="skillItem" id="BDSLS05"><img src="../Icons/Bard/Solo/bardSsk4.png" onclick="skillPopup('BDSLS05')"></div>
+                <div class="skillItem" id="BDSLS06"><img src="../Icons/Bard/Solo/bardSsk5.png" onclick="skillPopup('BDSLS06')"></div>
+                <div class="skillItem" id="BDSLS07"><img src="../Icons/Bard/Solo/bardSsk6.png" onclick="skillPopup('BDSLS07')"></div>
+                <div class="treeItem" id="BDSLA01"><img src="../Icons/Bard/Solo/bardSsk11.png" onclick="passivePopup('BDSLA01')"></div>
+                </div>
+                <div class="sideBar bar chords">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Chords</b></span></div>
+                </div>
+                <div class="content chords"> <!--chords-->
+                    <div class="skillItem" id="BDSLS08"><img src="../Icons/Bard/Solo/bardSsk8.png" onclick="skillPopup('BDSLS08')"></div>
+                    <div class="skillItem" id="BDSLS09"><img src="../Icons/Bard/Solo/bardS5.jpg" onclick="skillPopup('BDSLS09')"></div>
+                    <div class="skillItem" id="BDSLS10"><img src="../Icons/Bard/Solo/bardS12.jpg" onclick="skillPopup('BDSLS10')"></div>
+                    <div class="skillItem" id="BDSLS11"><img src="../Icons/Bard/Solo/bardS16.jpg" onclick="skillPopup('BDSLS11')"></div>
+                    <div class="skillItem" id="BDSLS12"><img src="../Icons/Bard/Solo/bardS11.jpg" onclick="skillPopup('BDSLS12')"></div>
+                    </div>
+                </div>
+            <div class="gridUlts Skills">
+                <div class="sideBar bar">
+                    <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Ults</b></span></div>
+                </div>
+                <div class="content">
+                <div class="treeItem" id="BDSLU01"><img src="../Icons/Bard/Solo/ult1.jpg" onclick="ultPopup('BDSLU01')"></div>
+                <div class="treeItem" id="BDSLU02"><img src="../Icons/Bard/Solo/ult2.jpg" onclick="ultPopup('BDSLU02')"></div>
+                <div class="treeItem" id="BDSLU03"><img src="../Icons/Bard/Solo/ult3.jpg" onclick="ultPopup('BDSLU03')"></div>
+                <div class="treeItem" id="BDSLU04"><img src="../Icons/Bard/Solo/ult4.jpg" onclick="ultPopup('BDSLU04')"></div>
+                <div class="treeItem" id="BDSLU05"><img src="../Icons/Bard/Solo/ult5.jpg" onclick="ultPopup('BDSLU05')"></div>
+                <div class="treeItem" id="BDSLU06"><img src="../Icons/Bard/Solo/ult6.jpg" onclick="ultPopup('BDSLU06')"></div>
+                <div class="treeItem" id="BDSLU07"><img src="../Icons/Bard/Solo/ult7.jpg" onclick="ultPopup('BDSLU07')"></div>
+                <div class="treeItem" id="BDSLU08"><img src="../Icons/Bard/Solo/ult8.jpg" onclick="ultPopup('BDSLU08')"></div>
+                </div>
+                </div>
+            <div class="gridPvP Skills">  <!--PvP-->
+                    <div class="sideBar bar">
+                        <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>PvP</b></span></div>
+                    </div>
+                    <div class="content">
+                    <div class="treeItem" id="BDSLU09"><img src="../Icons/Barbarian/Thunder/barbT1.jpg" onclick="passivePopup('BDSLU09')"></div>
+                    <div class="treeItem" id="BDSLU10"><img src="../Icons/Barbarian/Thunder/barbT2.jpg" onclick="passivePopup('BDSLU10')"></div>
+                    <div class="treeItem" id="BDSLU11"><img src="../Icons/Barbarian/Thunder/barbT3.jpg" onclick="passivePopup('BDSLU11')"></div>
+                    <div class="treeItem" id="BDSLU12"><img src="../Icons/Barbarian/Thunder/barbT4.jpg" onclick="passivePopup('BDSLU12')"></div>
+                    <div class="treeItem" id="BDSLU13"><img src="../Icons/Barbarian/Thunder/barbT5.jpg" onclick="passivePopup('BDSLU13')"></div>
+                    <div class="treeItem" id="BDSLU14"><img src="../Icons/Barbarian/Thunder/barbT6.jpg" onclick="passivePopup('BDSLU14')"></div>
+                    <div class="treeItem" id="BDSLU15"><img src="../Icons/Barbarian/Thunder/barbT12.jpg" onclick="passivePopup('BDSLU15')"></div>
+                    <div class="treeItem" id="BDSLU16"><img src="../Icons/Barbarian/Thunder/barbT8.jpg" onclick="passivePopup('BDSLU16')"></div>
+                    </div>
+                </div>
+
+    </div>
+    <div id="skillOverlay">
+        <div class="overlay" onclick="closeOverlay('skillOverlay')"></div>
+        <div class="popup" id="skillPopup">
+            <p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href="https://discord.com/channels/1070905779370074153/1259420808116174864">discord</a> thread</p>
+        </div>
+    </div>
+    <div id="buildsOverlay">
+        <div class="overlay" onclick="closeBuildsOverlay('buildsOverlay')"></div>
+        <div class="popupGrid" id="buildsPopup">
+        </div>
+    </div>
+</body>
+<script>
+    const slider = document.querySelector('.selectClass');
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+    function loadParams() {
+        var params = new URLSearchParams(location.search);
+            if (params.has('skill') === true) {
+                setTalents(params.get('skill'));
+            } if (params.has('stone') === true) {
+                setStone([1, ...decode(params.get('stone'), 6, 60)].join(''), skillCode[0]);   
+            } else {setParams(skillCode.join(''), 'skill');
+            }
+        }
+    window.onpageshow = loadParams; 
+    window.onpopstate = () => setTimeout(loadParams, 0);
+    document.getElementById("classScroll").scrollLeft = 400;
+    document.addEventListener("contextmenu", (e) => {e.preventDefault()});    
+    var xDown = null, yDown = null, xUp = null, yUp = null;
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
+    document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
+    document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
+    function touchstart(evt) { const firstTouch = (evt.touches || evt.originalEvent.touches)[0]; xDown = firstTouch.clientX; yDown = firstTouch.clientY; }
+    function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
+    function touchend(evt, left, active, right) { 
+        var xDiff = xUp - xDown, yDiff = yUp - yDown;
+        if (xUp === null) { 
+            return 
+        } else if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+            if (xDiff < 0) 
+            selectTree(right, active, left);
+            else
+            selectTree(left, active, right);
+        } 
+        xDown = null, yDown = null, xUp = null, yUp = null;
+    }
+
+</script>
+</html>

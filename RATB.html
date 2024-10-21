@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tarislandbuilds.eu/S1/RATB.html" />
-    <link rel="stylesheet" href="../style.css">
-    <script src="../javascript.js"></script>
-    <script src="../JSON/RATB.js"></script>
-    <script src="../JSON/builds.js"></script>
-    <script>
-        function loadParams() {
-          var params = new URLSearchParams(location.search);
-          var code = params.get('skill');
-          var stone = params.get('stone');
-          var spec = code.replace(/[0-9]/g, '');
-                if (params.has('skill') === true && params.has('stone') === true) {
-                  window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
-                } else if (params.has('skill') === true) {
-                  window.location = `./S0/${spec}.html?skill=${code}`
-                }
-            }
-        loadParams();
-          </script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+    <script src="./JSON/RATB.js"></script>
+    <script src="./JSON/builds.js"></script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -31,7 +16,7 @@
     <meta property="og:description" content="Plan your build and share it with friends">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/RATB.png'>
     <meta name="twitter:card" content="summary_large_image">
-    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
   </head>
 <body>
     <div class="wrapper">
@@ -146,6 +131,37 @@
                     <div class="treeItem" id="RATBP05"><img src="../Icons/Ranger/TamedBeast/huntTB26.jpg" onclick="passivePopup('RATBP05')"></div>
                 </div>
                 </div>
+                <div class="gridS1">
+                    <div class="sideBar">
+                        <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
+                        <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
+                    </div>
+                    <div>
+                    <div class="s1talents1">
+                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="skillPopup('RATBB01')"></div>
+                </div>
+                <div class="s1talents2">
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk1.png" onclick="skillPopup('RATBB02')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk2.png" onclick="skillPopup('RATBB03')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk3.png" onclick="skillPopup('RATBB04')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk4.png" onclick="skillPopup('RATBB05')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk5.png" onclick="skillPopup('RATBB06')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk6.png" onclick="skillPopup('RATBB07')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk7.png" onclick="skillPopup('RATBB08')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk8.png" onclick="skillPopup('RATBB09')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk9.png" onclick="skillPopup('RATBB10')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk10.png" onclick="skillPopup('RATBB11')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk11.png" onclick="skillPopup('RATBB12')"></div>
+                    <div class="s1item"><img src="../Icons/Ranger/TamedBeast/S1sk12.png" onclick="skillPopup('RATBB13')"></div>
+                </div>
+                    </div>
+                </div>
                 <div class="gridActions">  <!--Actions-->
                     <div class="sideBar">
                         <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
@@ -158,127 +174,151 @@
                     </div>
                 </div>
                 </div>
-            <div class="gridStone Stone">
-                <div class="stoneItem"><img id="TBI58" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI58')" oncontextmenu="stonePopup('RATBI58')"><span class="stoneCalc"><span id="RATBI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('RATBC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI57" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI57')" oncontextmenu="stonePopup('RATBI57')"><span class="stoneCalc"><span id="RATBI57" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem"><img id="TBI56" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI56')" oncontextmenu="stonePopup('RATBI56')"><span class="stoneCalc"><span id="RATBI56" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI55" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI55')" oncontextmenu="stonePopup('RATBI55')"><span class="stoneCalc"><span id="RATBI55" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI54')" oncontextmenu="stonePopup('RATBI54')"><span class="stoneCalc"><span id="RATBI54" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI53" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI53')" oncontextmenu="stonePopup('RATBI53')"><span class="stoneCalc"><span id="RATBI53" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI52')" oncontextmenu="stonePopup('RATBI52')"><span class="stoneCalc"><span id="RATBI52" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI51" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI51')" oncontextmenu="stonePopup('RATBI51')"><span class="stoneCalc"><span id="RATBI51" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI50" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI50')" oncontextmenu="stonePopup('RATBI50')"><span class="stoneCalc"><span id="RATBI50" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem"><img id="TBI49" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI49')" oncontextmenu="stonePopup('RATBI49')"><span class="stoneCalc"><span id="RATBI49" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI48" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI48')" oncontextmenu="stonePopup('RATBI48')"><span class="stoneCalc"><span id="RATBI48" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI47')" oncontextmenu="stonePopup('RATBI47')"><span class="stoneCalc"><span id="RATBI47" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI46')" oncontextmenu="stonePopup('RATBI46')"><span class="stoneCalc"><span id="RATBI46" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI45" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI45')" oncontextmenu="stonePopup('RATBI45')"><span class="stoneCalc"><span id="RATBI45" class="zero">0</span>/3</span><span class="linkB"></span></div>
-        
-                <div class="stoneItem"><img id="TBI44" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI44')" oncontextmenu="stonePopup('RATBI44')"><span class="stoneCalc"><span id="RATBI44" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI43" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI43')" oncontextmenu="stonePopup('RATBI43')"><span class="stoneCalc"><span id="RATBI43" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI42" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI42')" oncontextmenu="stonePopup('RATBI42')"><span class="stoneCalc"><span id="RATBI42" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI41" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI41')" oncontextmenu="stonePopup('RATBI41')"><span class="stoneCalc"><span id="RATBI41" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI40" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI40')" oncontextmenu="stonePopup('RATBI40')"><span class="stoneCalc"><span id="RATBI40" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem"><img id="TBI39" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI39')" oncontextmenu="stonePopup('RATBI39')"><span class="stoneCalc"><span id="RATBI39" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI38" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI38')" oncontextmenu="stonePopup('RATBI38')"><span class="stoneCalc"><span id="RATBI38" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI37" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI37')" oncontextmenu="stonePopup('RATBI37')"><span class="stoneCalc"><span id="RATBI37" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI36" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI36')" oncontextmenu="stonePopup('RATBI36')"><span class="stoneCalc"><span id="RATBI36" class="zero">0</span>/3</span><span class="linkB"></span></div>
-        
-                <div class="stoneItem"><img id="TBI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI35')" oncontextmenu="stonePopup('RATBI35')"><span class="stoneCalc"><span id="RATBI35" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI34')" oncontextmenu="stonePopup('RATBI34')"><span class="stoneCalc"><span id="RATBI34" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI33" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI33')" oncontextmenu="stonePopup('RATBI33')"><span class="stoneCalc"><span id="RATBI33" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI32" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI32')" oncontextmenu="stonePopup('RATBI32')"><span class="stoneCalc"><span id="RATBI32" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI31" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI31')" oncontextmenu="stonePopup('RATBI31')"><span class="stoneCalc"><span id="RATBI31" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI30" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RATBI30')" oncontextmenu="stonePopup('RATBI30')"><span class="stoneCalc"><span id="RATBI30" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI29')" oncontextmenu="stonePopup('RATBI29')"><span class="stoneCalc"><span id="RATBI29" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="TBI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI28')" oncontextmenu="stonePopup('RATBI28')"><span class="stoneCalc"><span id="RATBI28" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI27')" oncontextmenu="stonePopup('RATBI27')"><span class="stoneCalc"><span id="RATBI27" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('RATBC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI26" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI26')" oncontextmenu="stonePopup('RATBI26')"><span class="stoneCalc"><span id="RATBI26" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI25')" oncontextmenu="stonePopup('RATBI25')"><span class="stoneCalc"><span id="RATBI25" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI24" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI24')" oncontextmenu="stonePopup('RATBI24')"><span class="stoneCalc"><span id="RATBI24" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI23" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI23')" oncontextmenu="stonePopup('RATBI23')"><span class="stoneCalc"><span id="RATBI23" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI22" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI22')" oncontextmenu="stonePopup('RATBI22')"><span class="stoneCalc"><span id="RATBI22" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI21" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI21')" oncontextmenu="stonePopup('RATBI21')"><span class="stoneCalc"><span id="RATBI21" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI20" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI20')" oncontextmenu="stonePopup('RATBI20')"><span class="stoneCalc"><span id="RATBI20" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="TBI19" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI19')" oncontextmenu="stonePopup('RATBI19')"><span class="stoneCalc"><span id="RATBI19" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI18" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI18')" oncontextmenu="stonePopup('RATBI18')"><span class="stoneCalc"><span id="RATBI18" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI17" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RATBI17')" oncontextmenu="stonePopup('RATBI17')"><span class="stoneCalc"><span id="RATBI17" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI16" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RATBI16')" oncontextmenu="stonePopup('RATBI16')"><span class="stoneCalc"><span id="RATBI16" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI15" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI15')" oncontextmenu="stonePopup('RATBI15')"><span class="stoneCalc"><span id="RATBI15" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI14" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI14')" oncontextmenu="stonePopup('RATBI14')"><span class="stoneCalc"><span id="RATBI14" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI13" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI13')" oncontextmenu="stonePopup('RATBI13')"><span class="stoneCalc"><span id="RATBI13" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="TBI12" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI12')" oncontextmenu="stonePopup('RATBI12')"><span class="stoneCalc"><span id="RATBI12" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI11" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI11')" oncontextmenu="stonePopup('RATBI11')"><span class="stoneCalc"><span id="RATBI11" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('RATBC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI10" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI10')" oncontextmenu="stonePopup('RATBI10')"><span class="stoneCalc"><span id="RATBI10" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI09" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI09')" oncontextmenu="stonePopup('RATBI09')"><span class="stoneCalc"><span id="RATBI09" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI08" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI08')" oncontextmenu="stonePopup('RATBI08')"><span class="stoneCalc"><span id="RATBI08" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI07')" oncontextmenu="stonePopup('RATBI07')"><span class="stoneCalc"><span id="RATBI07" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI06" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI06')" oncontextmenu="stonePopup('RATBI06')"><span class="stoneCalc"><span id="RATBI06" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI05')" oncontextmenu="stonePopup('RATBI05')"><span class="stoneCalc"><span id="RATBI05" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI04" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI04')" oncontextmenu="stonePopup('RATBI04')"><span class="stoneCalc"><span id="RATBI04" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI03')" oncontextmenu="stonePopup('RATBI03')"><span class="stoneCalc"><span id="RATBI03" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="TBI02" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RATBI02')" oncontextmenu="stonePopup('RATBI02')"><span class="stoneCalc"><span id="RATBI02" class="zero">0</span>/3</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="TBI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI01')" oncontextmenu="stonePopup('RATBI01')"><span class="stoneCalc"><span id="RATBI01" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
-        
-                <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('RATBS08')"><span class="resetText">Skill 7</span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="TBC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('RATBC01')"><span class="stoneCalc"><span id="RATBC01" class="zero">1</span>/1</span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'RATB')"><span class="resetText">Reset</span></div>
-            </div>
+                <div class="gridStone Stone">
+                    <div class="stoneItem"><img id="TBI56" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI56')" oncontextmenu="stonePopup('RATBI56')"><span class="stoneCalc"><span id="RATBI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('RATBC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI55" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI55')" oncontextmenu="stonePopup('RATBI55')"><span class="stoneCalc"><span id="RATBI55" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="TBI54" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI54')" oncontextmenu="stonePopup('RATBI54')"><span class="stoneCalc"><span id="RATBI54" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI53" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI53')" oncontextmenu="stonePopup('RATBI53')"><span class="stoneCalc"><span id="RATBI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI52')" oncontextmenu="stonePopup('RATBI52')"><span class="stoneCalc"><span id="RATBI52" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI51" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI51')" oncontextmenu="stonePopup('RATBI51')"><span class="stoneCalc"><span id="RATBI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI50')" oncontextmenu="stonePopup('RATBI50')"><span class="stoneCalc"><span id="RATBI50" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="TBI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI49')" oncontextmenu="stonePopup('RATBI49')"><span class="stoneCalc"><span id="RATBI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI48" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI48')" oncontextmenu="stonePopup('RATBI48')"><span class="stoneCalc"><span id="RATBI48" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI47')" oncontextmenu="stonePopup('RATBI47')"><span class="stoneCalc"><span id="RATBI47" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="TBI46" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI46')" oncontextmenu="stonePopup('RATBI46')"><span class="stoneCalc"><span id="RATBI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI45" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI45')" oncontextmenu="stonePopup('RATBI45')"><span class="stoneCalc"><span id="RATBI45" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI44" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI44')" oncontextmenu="stonePopup('RATBI44')"><span class="stoneCalc"><span id="RATBI44" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI43" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI43')" oncontextmenu="stonePopup('RATBI43')"><span class="stoneCalc"><span id="RATBI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI42" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI42')" oncontextmenu="stonePopup('RATBI42')"><span class="stoneCalc"><span id="RATBI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    
+                    <div class="stoneItem"><img id="TBI41" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI41')" oncontextmenu="stonePopup('RATBI41')"><span class="stoneCalc"><span id="RATBI41" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI40" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI40')" oncontextmenu="stonePopup('RATBI40')"><span class="stoneCalc"><span id="RATBI40" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI39" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI39')" oncontextmenu="stonePopup('RATBI39')"><span class="stoneCalc"><span id="RATBI39" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI38" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI38')" oncontextmenu="stonePopup('RATBI38')"><span class="stoneCalc"><span id="RATBI38" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outRedCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('RATBD04')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outBlueCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('RATBD03')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    
+                    <div class="stoneItem"><img id="TBI37" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI37')" oncontextmenu="stonePopup('RATBI37')"><span class="stoneCalc"><span id="RATBI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI36" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI36')" oncontextmenu="stonePopup('RATBI36')"><span class="stoneCalc"><span id="RATBI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI35" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI35')" oncontextmenu="stonePopup('RATBI35')"><span class="stoneCalc"><span id="RATBI35" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI34')" oncontextmenu="stonePopup('RATBI34')"><span class="stoneCalc"><span id="RATBI34" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    
+                    <div class="stoneItem"><img id="TBI33" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI33')" oncontextmenu="stonePopup('RATBI33')"><span class="stoneCalc"><span id="RATBI33" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI32')" oncontextmenu="stonePopup('RATBI32')"><span class="stoneCalc"><span id="RATBI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI31" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RATBI31')" oncontextmenu="stonePopup('RATBI31')"><span class="stoneCalc"><span id="RATBI31" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI30" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI30')" oncontextmenu="stonePopup('RATBI30')"><span class="stoneCalc"><span id="RATBI30" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI29" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI29')" oncontextmenu="stonePopup('RATBI29')"><span class="stoneCalc"><span id="RATBI29" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI28" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI28')" oncontextmenu="stonePopup('RATBI28')"><span class="stoneCalc"><span id="RATBI28" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('RATBC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI27" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('RATBI27')" oncontextmenu="stonePopup('RATBI27')"><span class="stoneCalc"><span id="RATBI27" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="TBI26" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI26')" oncontextmenu="stonePopup('RATBI26')"><span class="stoneCalc"><span id="RATBI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI25" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI25')" oncontextmenu="stonePopup('RATBI25')"><span class="stoneCalc"><span id="RATBI25" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI24" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI24')" oncontextmenu="stonePopup('RATBI24')"><span class="stoneCalc"><span id="RATBI24" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI23" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI23')" oncontextmenu="stonePopup('RATBI23')"><span class="stoneCalc"><span id="RATBI23" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI22" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI22')" oncontextmenu="stonePopup('RATBI22')"><span class="stoneCalc"><span id="RATBI22" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI21" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI21')" oncontextmenu="stonePopup('RATBI21')"><span class="stoneCalc"><span id="RATBI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI20" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI20')" oncontextmenu="stonePopup('RATBI20')"><span class="stoneCalc"><span id="RATBI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI19" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RATBI19')" oncontextmenu="stonePopup('RATBI19')"><span class="stoneCalc"><span id="RATBI19" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI18" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI18')" oncontextmenu="stonePopup('RATBI18')"><span class="stoneCalc"><span id="RATBI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+    
+                    <div class="stoneItem"><img id="TBI17" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI17')" oncontextmenu="stonePopup('RATBI17')"><span class="stoneCalc"><span id="RATBI17" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI16" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI16')" oncontextmenu="stonePopup('RATBI16')"><span class="stoneCalc"><span id="RATBI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI15" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI15')" oncontextmenu="stonePopup('RATBI15')"><span class="stoneCalc"><span id="RATBI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI14" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI14')" oncontextmenu="stonePopup('RATBI14')"><span class="stoneCalc"><span id="RATBI14" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI13" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI13')" oncontextmenu="stonePopup('RATBI13')"><span class="stoneCalc"><span id="RATBI13" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('RATBD02')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" class="outYellowCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('RATBD01')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem"><img id="TBI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI12')" oncontextmenu="stonePopup('RATBI12')"><span class="stoneCalc"><span id="RATBI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('RATBI11')" oncontextmenu="stonePopup('RATBI11')"><span class="stoneCalc"><span id="RATBI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('RATBI10')" oncontextmenu="stonePopup('RATBI10')"><span class="stoneCalc"><span id="RATBI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI09')" oncontextmenu="stonePopup('RATBI09')"><span class="stoneCalc"><span id="RATBI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI08')" oncontextmenu="stonePopup('RATBI08')"><span class="stoneCalc"><span id="RATBI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI07')" oncontextmenu="stonePopup('RATBI07')"><span class="stoneCalc"><span id="RATBI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('RATBI06')" oncontextmenu="stonePopup('RATBI06')"><span class="stoneCalc"><span id="RATBI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('RATBI05')" oncontextmenu="stonePopup('RATBI05')"><span class="stoneCalc"><span id="RATBI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('RATBI04')" oncontextmenu="stonePopup('RATBI04')"><span class="stoneCalc"><span id="RATBI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="TBI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI03')" oncontextmenu="stonePopup('RATBI03')"><span class="stoneCalc"><span id="RATBI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="TBI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('RATBI02')" oncontextmenu="stonePopup('RATBI02')"><span class="stoneCalc"><span id="RATBI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="TBI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('RATBI01')" oncontextmenu="stonePopup('RATBI01')"><span class="stoneCalc"><span id="RATBI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+            
+                    <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('RATBS08')"><span class="resetText">Skill 7</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="FZC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('RATBC01')"><span class="stoneCalc"><span id="RATBC01" class="zero">1</span>/1</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('100000000000000000000000000000000000000000000000000000000', 'RATB')"><span class="resetText">Reset</span></div>
+                </div>
             <div class="builds areaBuilds Talents"> <!-- builds-->
                 <div class="sideBar bar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
@@ -377,8 +417,8 @@
     document.getElementById("classScroll").scrollLeft = 300;
     document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
     var xDown = null, yDown = null, xUp = null, yUp = null;
-    document.addEventListener('touchstart', touchstart, false);        
-    document.addEventListener('touchmove', touchmove, false);
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
     document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
     document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
     document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
@@ -386,7 +426,7 @@
     function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
     function touchend(evt, left, active, right) { 
         var xDiff = xUp - xDown, yDiff = yUp - yDown;
-        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 1000)) { 
             if (xDiff < 0) 
             selectTree(right, active, left);
             else

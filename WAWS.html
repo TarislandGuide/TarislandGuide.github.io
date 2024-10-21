@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tarislandbuilds.eu/S1/WAWS.html" />
-    <link rel="stylesheet" href="../style.css">
-    <script src="../javascript.js"></script>
-    <script src="../JSON/WAWS.js"></script>
-    <script src="../JSON/builds.js"></script>
-    <script>
-        function loadParams() {
-          var params = new URLSearchParams(location.search);
-          var code = params.get('skill');
-          var stone = params.get('stone');
-          var spec = code.replace(/[0-9]/g, '');
-                if (params.has('skill') === true && params.has('stone') === true) {
-                  window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
-                } else if (params.has('skill') === true) {
-                  window.location = `./S0/${spec}.html?skill=${code}`
-                }
-            }
-        loadParams();
-          </script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js"></script>
+    <script src="./JSON/WAWS.js"></script>
+    <script src="./JSON/builds.js"></script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -31,7 +16,7 @@
     <meta property="og:description" content="Plan your build and share it with friends">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/WAWS.png'>
     <meta name="twitter:card" content="summary_large_image">
-    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
   </head>
 <body>
     <div class="wrapper">
@@ -145,6 +130,37 @@
                 <div class="treeItem" id="WAWSP05"><img src="../Icons/Warrior/WarShield/warrWS26.jpg" onclick="passivePopup('WAWSP05')"></div>
             </div>
             </div>
+            <div class="gridS1">
+                <div class="sideBar">
+                    <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
+                    <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
+                </div>
+                <div>
+                <div class="s1talents1">
+                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="skillPopup('WAWSB01')"></div>
+                </div>
+                <div class="s1talents2">
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk1.png" onclick="skillPopup('WAWSB02')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk2.png" onclick="skillPopup('WAWSB03')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk3.png" onclick="skillPopup('WAWSB04')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk4.png" onclick="skillPopup('WAWSB05')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk5.png" onclick="skillPopup('WAWSB06')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk6.png" onclick="skillPopup('WAWSB07')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk7.png" onclick="skillPopup('WAWSB08')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk8.png" onclick="skillPopup('WAWSB09')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk9.png" onclick="skillPopup('WAWSB10')"></div>
+                    
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk10.png" onclick="skillPopup('WAWSB11')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk11.png" onclick="skillPopup('WAWSB12')"></div>
+                    <div class="s1item"><img src="../Icons/Warrior/WarShield/S1sk12.png" onclick="skillPopup('WAWSB13')"></div>
+                </div>
+                </div>
+            </div>
             <div class="gridActions">  <!--Actions-->
                 <div class="sideBar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
@@ -157,127 +173,151 @@
             </div>
             </div>
             </div>
-        <div class="gridStone Stone">
-            <div class="stoneItem"><img id="WSI58" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI58')" oncontextmenu="stonePopup('WAWSI58')"><span class="stoneCalc"><span id="WAWSI58" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('WAWSC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI57" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI57')" oncontextmenu="stonePopup('WAWSI57')"><span class="stoneCalc"><span id="WAWSI57" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-    
-            <div class="stoneItem"><img id="WSI56" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI56')" oncontextmenu="stonePopup('WAWSI56')"><span class="stoneCalc"><span id="WAWSI56" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI55" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI55')" oncontextmenu="stonePopup('WAWSI55')"><span class="stoneCalc"><span id="WAWSI55" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI54')" oncontextmenu="stonePopup('WAWSI54')"><span class="stoneCalc"><span id="WAWSI54" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI53" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI53')" oncontextmenu="stonePopup('WAWSI53')"><span class="stoneCalc"><span id="WAWSI53" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI52')" oncontextmenu="stonePopup('WAWSI52')"><span class="stoneCalc"><span id="WAWSI52" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI51" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI51')" oncontextmenu="stonePopup('WAWSI51')"><span class="stoneCalc"><span id="WAWSI51" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI50" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI50')" oncontextmenu="stonePopup('WAWSI50')"><span class="stoneCalc"><span id="WAWSI50" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-    
-            <div class="stoneItem"><img id="WSI49" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI49')" oncontextmenu="stonePopup('WAWSI49')"><span class="stoneCalc"><span id="WAWSI49" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI48" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI48')" oncontextmenu="stonePopup('WAWSI48')"><span class="stoneCalc"><span id="WAWSI48" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI47')" oncontextmenu="stonePopup('WAWSI47')"><span class="stoneCalc"><span id="WAWSI47" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI46')" oncontextmenu="stonePopup('WAWSI46')"><span class="stoneCalc"><span id="WAWSI46" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI45" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI45')" oncontextmenu="stonePopup('WAWSI45')"><span class="stoneCalc"><span id="WAWSI45" class="zero">0</span>/3</span><span class="linkB"></span></div>
-    
-            <div class="stoneItem"><img id="WSI44" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI44')" oncontextmenu="stonePopup('WAWSI44')"><span class="stoneCalc"><span id="WAWSI44" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI43" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI43')" oncontextmenu="stonePopup('WAWSI43')"><span class="stoneCalc"><span id="WAWSI43" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI42" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI42')" oncontextmenu="stonePopup('WAWSI42')"><span class="stoneCalc"><span id="WAWSI42" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI41" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI41')" oncontextmenu="stonePopup('WAWSI41')"><span class="stoneCalc"><span id="WAWSI41" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI40" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI40')" oncontextmenu="stonePopup('WAWSI40')"><span class="stoneCalc"><span id="WAWSI40" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span></div>
-    
-            <div class="stoneItem"><img id="WSI39" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI39')" oncontextmenu="stonePopup('WAWSI39')"><span class="stoneCalc"><span id="WAWSI39" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI38" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI38')" oncontextmenu="stonePopup('WAWSI38')"><span class="stoneCalc"><span id="WAWSI38" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI37" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI37')" oncontextmenu="stonePopup('WAWSI37')"><span class="stoneCalc"><span id="WAWSI37" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI36" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI36')" oncontextmenu="stonePopup('WAWSI36')"><span class="stoneCalc"><span id="WAWSI36" class="zero">0</span>/3</span><span class="linkB"></span></div>
-    
-            <div class="stoneItem"><img id="WSI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI35')" oncontextmenu="stonePopup('WAWSI35')"><span class="stoneCalc"><span id="WAWSI35" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI34')" oncontextmenu="stonePopup('WAWSI34')"><span class="stoneCalc"><span id="WAWSI34" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI33" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI33')" oncontextmenu="stonePopup('WAWSI33')"><span class="stoneCalc"><span id="WAWSI33" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI32" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI32')" oncontextmenu="stonePopup('WAWSI32')"><span class="stoneCalc"><span id="WAWSI32" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-    
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI31" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI31')" oncontextmenu="stonePopup('WAWSI31')"><span class="stoneCalc"><span id="WAWSI31" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI30" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('WAWSI30')" oncontextmenu="stonePopup('WAWSI30')"><span class="stoneCalc"><span id="WAWSI30" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI29')" oncontextmenu="stonePopup('WAWSI29')"><span class="stoneCalc"><span id="WAWSI29" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-    
-            <div class="stoneItem"><img id="WSI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI28')" oncontextmenu="stonePopup('WAWSI28')"><span class="stoneCalc"><span id="WAWSI28" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI27')" oncontextmenu="stonePopup('WAWSI27')"><span class="stoneCalc"><span id="WAWSI27" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-            <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('WAWSC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI26" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI26')" oncontextmenu="stonePopup('WAWSI26')"><span class="stoneCalc"><span id="WAWSI26" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI25')" oncontextmenu="stonePopup('WAWSI25')"><span class="stoneCalc"><span id="WAWSI25" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-    
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI24" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI24')" oncontextmenu="stonePopup('WAWSI24')"><span class="stoneCalc"><span id="WAWSI24" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI23" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI23')" oncontextmenu="stonePopup('WAWSI23')"><span class="stoneCalc"><span id="WAWSI23" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI22" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI22')" oncontextmenu="stonePopup('WAWSI22')"><span class="stoneCalc"><span id="WAWSI22" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI21" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI21')" oncontextmenu="stonePopup('WAWSI21')"><span class="stoneCalc"><span id="WAWSI21" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI20" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI20')" oncontextmenu="stonePopup('WAWSI20')"><span class="stoneCalc"><span id="WAWSI20" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-    
-            <div class="stoneItem"><img id="WSI19" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI19')" oncontextmenu="stonePopup('WAWSI19')"><span class="stoneCalc"><span id="WAWSI19" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI18" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI18')" oncontextmenu="stonePopup('WAWSI18')"><span class="stoneCalc"><span id="WAWSI18" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI17" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('WAWSI17')" oncontextmenu="stonePopup('WAWSI17')"><span class="stoneCalc"><span id="WAWSI17" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI16" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('WAWSI16')" oncontextmenu="stonePopup('WAWSI16')"><span class="stoneCalc"><span id="WAWSI16" class="zero">0</span>/3</span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI15" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI15')" oncontextmenu="stonePopup('WAWSI15')"><span class="stoneCalc"><span id="WAWSI15" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI14" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI14')" oncontextmenu="stonePopup('WAWSI14')"><span class="stoneCalc"><span id="WAWSI14" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-    
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI13" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI13')" oncontextmenu="stonePopup('WAWSI13')"><span class="stoneCalc"><span id="WAWSI13" class="zero">0</span>/3</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-    
-            <div class="stoneItem"><img id="WSI12" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI12')" oncontextmenu="stonePopup('WAWSI12')"><span class="stoneCalc"><span id="WAWSI12" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI11" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI11')" oncontextmenu="stonePopup('WAWSI11')"><span class="stoneCalc"><span id="WAWSI11" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-            <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('WAWSC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI10" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI10')" oncontextmenu="stonePopup('WAWSI10')"><span class="stoneCalc"><span id="WAWSI10" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI09" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI09')" oncontextmenu="stonePopup('WAWSI09')"><span class="stoneCalc"><span id="WAWSI09" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-            
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI08" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI08')" oncontextmenu="stonePopup('WAWSI08')"><span class="stoneCalc"><span id="WAWSI08" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI07')" oncontextmenu="stonePopup('WAWSI07')"><span class="stoneCalc"><span id="WAWSI07" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI06" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI06')" oncontextmenu="stonePopup('WAWSI06')"><span class="stoneCalc"><span id="WAWSI06" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI05')" oncontextmenu="stonePopup('WAWSI05')"><span class="stoneCalc"><span id="WAWSI05" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI04" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI04')" oncontextmenu="stonePopup('WAWSI04')"><span class="stoneCalc"><span id="WAWSI04" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-    
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI03')" oncontextmenu="stonePopup('WAWSI03')"><span class="stoneCalc"><span id="WAWSI03" class="zero">0</span>/3</span><span class="linkBR"></span></div>
-            <div class="stoneItem"><img id="WSI02" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('WAWSI02')" oncontextmenu="stonePopup('WAWSI02')"><span class="stoneCalc"><span id="WAWSI02" class="zero">0</span>/3</span><span class="linkB"></span></div>
-            <div class="stoneItem"><img id="WSI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI01')" oncontextmenu="stonePopup('WAWSI01')"><span class="stoneCalc"><span id="WAWSI01" class="zero">0</span>/3</span><span class="linkBL"></span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
-    
-            <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
-            <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('WAWSS08')"><span class="resetText">Skill 7</span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img id="WSC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('WAWSC01')"><span class="stoneCalc"><span id="WAWSC01" class="zero">1</span>/1</span></div>
-            <div class="stoneItem stoneBlank"></div>
-            <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
-            <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'WAWS')"><span class="resetText">Reset</span></div>
-        </div>
+            <div class="gridStone Stone">
+                <div class="stoneItem"><img id="WSI56" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI56')" oncontextmenu="stonePopup('WAWSI56')"><span class="stoneCalc"><span id="WAWSI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('WAWSC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI55" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI55')" oncontextmenu="stonePopup('WAWSI55')"><span class="stoneCalc"><span id="WAWSI55" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="WSI54" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI54')" oncontextmenu="stonePopup('WAWSI54')"><span class="stoneCalc"><span id="WAWSI54" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI53" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI53')" oncontextmenu="stonePopup('WAWSI53')"><span class="stoneCalc"><span id="WAWSI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI52')" oncontextmenu="stonePopup('WAWSI52')"><span class="stoneCalc"><span id="WAWSI52" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI51" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI51')" oncontextmenu="stonePopup('WAWSI51')"><span class="stoneCalc"><span id="WAWSI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI50')" oncontextmenu="stonePopup('WAWSI50')"><span class="stoneCalc"><span id="WAWSI50" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="WSI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI49')" oncontextmenu="stonePopup('WAWSI49')"><span class="stoneCalc"><span id="WAWSI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI48" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI48')" oncontextmenu="stonePopup('WAWSI48')"><span class="stoneCalc"><span id="WAWSI48" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI47')" oncontextmenu="stonePopup('WAWSI47')"><span class="stoneCalc"><span id="WAWSI47" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="WSI46" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI46')" oncontextmenu="stonePopup('WAWSI46')"><span class="stoneCalc"><span id="WAWSI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI45" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI45')" oncontextmenu="stonePopup('WAWSI45')"><span class="stoneCalc"><span id="WAWSI45" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI44" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI44')" oncontextmenu="stonePopup('WAWSI44')"><span class="stoneCalc"><span id="WAWSI44" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI43" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI43')" oncontextmenu="stonePopup('WAWSI43')"><span class="stoneCalc"><span id="WAWSI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI42" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI42')" oncontextmenu="stonePopup('WAWSI42')"><span class="stoneCalc"><span id="WAWSI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                
+                <div class="stoneItem"><img id="WSI41" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI41')" oncontextmenu="stonePopup('WAWSI41')"><span class="stoneCalc"><span id="WAWSI41" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI40" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI40')" oncontextmenu="stonePopup('WAWSI40')"><span class="stoneCalc"><span id="WAWSI40" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI39" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI39')" oncontextmenu="stonePopup('WAWSI39')"><span class="stoneCalc"><span id="WAWSI39" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI38" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI38')" oncontextmenu="stonePopup('WAWSI38')"><span class="stoneCalc"><span id="WAWSI38" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" class="outRedCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('WAWSD04')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" class="outBlueCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('WAWSD03')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                
+                <div class="stoneItem"><img id="WSI37" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI37')" oncontextmenu="stonePopup('WAWSI37')"><span class="stoneCalc"><span id="WAWSI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI36" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI36')" oncontextmenu="stonePopup('WAWSI36')"><span class="stoneCalc"><span id="WAWSI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI35" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI35')" oncontextmenu="stonePopup('WAWSI35')"><span class="stoneCalc"><span id="WAWSI35" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI34')" oncontextmenu="stonePopup('WAWSI34')"><span class="stoneCalc"><span id="WAWSI34" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                
+                <div class="stoneItem"><img id="WSI33" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI33')" oncontextmenu="stonePopup('WAWSI33')"><span class="stoneCalc"><span id="WAWSI33" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI32')" oncontextmenu="stonePopup('WAWSI32')"><span class="stoneCalc"><span id="WAWSI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI31" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('WAWSI31')" oncontextmenu="stonePopup('WAWSI31')"><span class="stoneCalc"><span id="WAWSI31" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI30" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI30')" oncontextmenu="stonePopup('WAWSI30')"><span class="stoneCalc"><span id="WAWSI30" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI29" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI29')" oncontextmenu="stonePopup('WAWSI29')"><span class="stoneCalc"><span id="WAWSI29" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI28" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI28')" oncontextmenu="stonePopup('WAWSI28')"><span class="stoneCalc"><span id="WAWSI28" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('WAWSC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI27" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('WAWSI27')" oncontextmenu="stonePopup('WAWSI27')"><span class="stoneCalc"><span id="WAWSI27" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="WSI26" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI26')" oncontextmenu="stonePopup('WAWSI26')"><span class="stoneCalc"><span id="WAWSI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI25" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI25')" oncontextmenu="stonePopup('WAWSI25')"><span class="stoneCalc"><span id="WAWSI25" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI24" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI24')" oncontextmenu="stonePopup('WAWSI24')"><span class="stoneCalc"><span id="WAWSI24" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI23" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI23')" oncontextmenu="stonePopup('WAWSI23')"><span class="stoneCalc"><span id="WAWSI23" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI22" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI22')" oncontextmenu="stonePopup('WAWSI22')"><span class="stoneCalc"><span id="WAWSI22" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI21" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI21')" oncontextmenu="stonePopup('WAWSI21')"><span class="stoneCalc"><span id="WAWSI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI20" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI20')" oncontextmenu="stonePopup('WAWSI20')"><span class="stoneCalc"><span id="WAWSI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI19" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('WAWSI19')" oncontextmenu="stonePopup('WAWSI19')"><span class="stoneCalc"><span id="WAWSI19" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI18" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI18')" oncontextmenu="stonePopup('WAWSI18')"><span class="stoneCalc"><span id="WAWSI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+
+                <div class="stoneItem"><img id="WSI17" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI17')" oncontextmenu="stonePopup('WAWSI17')"><span class="stoneCalc"><span id="WAWSI17" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI16" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI16')" oncontextmenu="stonePopup('WAWSI16')"><span class="stoneCalc"><span id="WAWSI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI15" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI15')" oncontextmenu="stonePopup('WAWSI15')"><span class="stoneCalc"><span id="WAWSI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI14" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI14')" oncontextmenu="stonePopup('WAWSI14')"><span class="stoneCalc"><span id="WAWSI14" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI13" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI13')" oncontextmenu="stonePopup('WAWSI13')"><span class="stoneCalc"><span id="WAWSI13" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" class="outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('WAWSD02')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" class="outYellowCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('WAWSD01')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="WSI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI12')" oncontextmenu="stonePopup('WAWSI12')"><span class="stoneCalc"><span id="WAWSI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('WAWSI11')" oncontextmenu="stonePopup('WAWSI11')"><span class="stoneCalc"><span id="WAWSI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('WAWSI10')" oncontextmenu="stonePopup('WAWSI10')"><span class="stoneCalc"><span id="WAWSI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI09')" oncontextmenu="stonePopup('WAWSI09')"><span class="stoneCalc"><span id="WAWSI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI08')" oncontextmenu="stonePopup('WAWSI08')"><span class="stoneCalc"><span id="WAWSI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI07')" oncontextmenu="stonePopup('WAWSI07')"><span class="stoneCalc"><span id="WAWSI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('WAWSI06')" oncontextmenu="stonePopup('WAWSI06')"><span class="stoneCalc"><span id="WAWSI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('WAWSI05')" oncontextmenu="stonePopup('WAWSI05')"><span class="stoneCalc"><span id="WAWSI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('WAWSI04')" oncontextmenu="stonePopup('WAWSI04')"><span class="stoneCalc"><span id="WAWSI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="WSI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI03')" oncontextmenu="stonePopup('WAWSI03')"><span class="stoneCalc"><span id="WAWSI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="WSI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('WAWSI02')" oncontextmenu="stonePopup('WAWSI02')"><span class="stoneCalc"><span id="WAWSI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="WSI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('WAWSI01')" oncontextmenu="stonePopup('WAWSI01')"><span class="stoneCalc"><span id="WAWSI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+        
+                <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('WAWSS08')"><span class="resetText">Skill 7</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FZC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('WAWSC01')"><span class="stoneCalc"><span id="WAWSC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('100000000000000000000000000000000000000000000000000000000', 'WAWS')"><span class="resetText">Reset</span></div>
+            </div>
         <div class="builds areaBuilds Talents"> <!-- builds-->
             <div class="sideBar bar">
                 <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
@@ -375,8 +415,8 @@
     window.onpopstate = () => setTimeout(loadParams, 0);
     document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
     var xDown = null, yDown = null, xUp = null, yUp = null;
-    document.addEventListener('touchstart', touchstart, false);        
-    document.addEventListener('touchmove', touchmove, false);
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
+    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
     document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
     document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
     document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
@@ -384,7 +424,7 @@
     function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
     function touchend(evt, left, active, right) { 
         var xDiff = xUp - xDown, yDiff = yUp - yDown;
-        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 1000)) { 
             if (xDiff < 0) 
             selectTree(right, active, left);
             else

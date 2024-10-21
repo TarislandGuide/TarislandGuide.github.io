@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <link rel="canonical" href="https://tarislandbuilds.eu/" />
-  <link rel="stylesheet" href="style.css">
-  <script src="javascript.js"></script>
-  <script src="JSON/builds.js"></script>
+  <link rel="stylesheet" href="S1/style.css">
+  <script src="S1/javascript.js"></script>
+  <script src="S1/JSON/builds.js"></script>
     <script>
     function loadParams() {
       var params = new URLSearchParams(location.search);
       var code = params.get('skill');
       var stone = params.get('stone');
-      var spec = code.replace(/[0-9]/g, '');
             if (params.has('skill') === true && params.has('stone') === true) {
-              window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
+              var spec = code.replace(/[0-9]/g, '');
+              window.location = `./S1/${spec}.html?skill=${code}&stone=${stone}`
             } else if (params.has('skill') === true) {
-              window.location = `./S0/${spec}.html?skill=${code}`
+              var spec = code.replace(/[0-9]/g, '');
+              window.location = `./S1/${spec}.html?skill=${code}`
             }
         }
     loadParams();
@@ -38,7 +39,7 @@
               <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Class</b></span></div>
           </div>
           <div class="selectClass" id="classScroll">
-              <div class="classItem"><img alt="Home" src="./Icons/Class/home.png" draggable="false" ondragstart="return false;" onclick="selectClass('home')" class="border"></div>
+              <div class="classItem"><img alt="Home" src="./Icons/Class/home.png" draggable="false" ondragstart="return false;" class="border"></div>
               <div class="classItem"><img alt="Warrior" src="./Icons/Class/warrior.png" draggable="false" ondragstart="return false;" onclick="selectClass('WAWS')"></div>
               <div class="classItem"><img alt="Mage" src="./Icons/Class/mage.png" draggable="false" ondragstart="return false;" onclick="selectClass('MAFR')"></div>
               <div class="classItem"><img alt="Ranger" src="./Icons/Class/ranger.png" draggable="false" ondragstart="return false;" onclick="selectClass('RAHU')"></div>
@@ -328,5 +329,5 @@
     slider.addEventListener('mouseup', stopDragging, false);
     slider.addEventListener('mouseleave', stopDragging, false);
     </script>
-    <script src="filters.js"></script>
+    <script src="S1/filters.js"></script>
   </html>
