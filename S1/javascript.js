@@ -308,13 +308,11 @@ function buildsChat(value) {
     document.getElementById("buildsText").innerHTML = "chat box hopefully added here soonish? maybe?";
 }
 
-function selectClass(active) {
-    console.log(document.URL)
-    console.log(window.location.href)
+function selectClass(active) {   
     if(dragging) {
         dragging = false;
         return;
-    } else if (document.URL === 'tarislandbuilds.eu') {
+    } else if (document.URL === 'https://tarislandbuilds.eu/') {
     var code = active + '000000000000000000000'
     location.assign("./S1/" + active + ".html?skill=" + code);
     } else if (document.URL.includes("index.html")) {
