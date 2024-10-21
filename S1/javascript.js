@@ -309,6 +309,8 @@ function buildsChat(value) {
 }
 
 function selectClass(active) {
+    console.log(document.URL)
+    console.log(window.location.href)
     if(dragging) {
         dragging = false;
         return;
