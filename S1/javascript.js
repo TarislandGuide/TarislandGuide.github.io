@@ -312,6 +312,9 @@ function selectClass(active) {
     if(dragging) {
         dragging = false;
         return;
+    } else if (document.URL === 'tarislandbuilds.eu') {
+    var code = active + '000000000000000000000'
+    location.assign("./S1/" + active + ".html?skill=" + code);
     } else if (document.URL.includes("index.html")) {
     var code = active + '000000000000000000000'
     location.assign("./S1/" + active + ".html?skill=" + code);
