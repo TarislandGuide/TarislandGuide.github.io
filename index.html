@@ -6,6 +6,8 @@
   <script src="S1/javascript.js"></script>
   <script src="S1/JSON/builds.js"></script>
     <script>
+       console.log(document.URL)
+       console.log(window.location.href)
     function loadParams() {
       var params = new URLSearchParams(location.search);
       var code = params.get('skill');
