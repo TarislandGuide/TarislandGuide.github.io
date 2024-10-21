@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tarislandbuilds.eu/S1/BDHA.html" />
-    <link rel="stylesheet" href="./style.css">
-    <script src="./javascript.js"></script>
-    <script src="./JSON/BDHA.js"></script>
-    <script src="./JSON/builds.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+    <script src="../JSON/BDHA.js"></script>
+    <script src="../JSON/builds.js"></script>
+    <script>
+        function loadParams() {
+          var params = new URLSearchParams(location.search);
+          var code = params.get('skill');
+          var stone = params.get('stone');
+          var spec = code.replace(/[0-9]/g, '');
+                if (params.has('skill') === true && params.has('stone') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
+                } else if (params.has('skill') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}`
+                }
+            }
+        loadParams();
+          </script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -16,7 +31,7 @@
     <meta property="og:description" content="Plan your build and share it with friends">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/BDHA.png'>
     <meta name="twitter:card" content="summary_large_image">
-    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
   </head>
 <body>
     <div class="wrapper">
@@ -131,37 +146,6 @@
                         <div class="treeItem" id="BDHAP05"><img src="../Icons/Bard/Harmony/bardH25.jpg" onclick="passivePopup('BDHAP05')"></div>
                     </div>
                     </div>
-                    <div class="gridS1">
-                        <div class="sideBar">
-                            <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
-                            <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
-                            <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
-                            <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
-                            <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
-                        </div>
-                        <div>
-                        <div class="s1talents1">
-                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="skillPopup('BDHAB01')"></div>
-                </div>
-                <div class="s1talents2">
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk1.png" onclick="skillPopup('BDHAB02')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk2.png" onclick="skillPopup('BDHAB03')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk3.png" onclick="skillPopup('BDHAB04')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk4.png" onclick="skillPopup('BDHAB05')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk5.png" onclick="skillPopup('BDHAB06')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk6.png" onclick="skillPopup('BDHAB07')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk7.png" onclick="skillPopup('BDHAB08')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk8.png" onclick="skillPopup('BDHAB09')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk9.png" onclick="skillPopup('BDHAB10')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk10.png" onclick="skillPopup('BDHAB11')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk11.png" onclick="skillPopup('BDHAB12')"></div>
-                    <div class="s1item"><img src="../Icons/Bard/Harmony/S1sk12.png" onclick="skillPopup('BDHAB13')"></div>
-                </div>
-                        </div>
-                    </div>
                     <div class="gridActions">  <!--Actions-->
                         <div class="sideBar">
                             <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
@@ -175,138 +159,114 @@
                     </div>
                 </div>
                 <div class="gridStone Stone">
-                    <div class="stoneItem"><img id="HAI56" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI56')" oncontextmenu="stonePopup('BDHAI56')"><span class="stoneCalc"><span id="BDHAI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                    <div class="stoneItem"><img id="HAI58" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI58')" oncontextmenu="stonePopup('BDHAI58')"><span class="stoneCalc"><span id="BDHAI58" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
                     <div class="stoneItem stoneBlank"></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('BDHAC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('BDHAC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI55" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI55')" oncontextmenu="stonePopup('BDHAI55')"><span class="stoneCalc"><span id="BDHAI55" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="HAI57" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI57')" oncontextmenu="stonePopup('BDHAI57')"><span class="stoneCalc"><span id="BDHAI57" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
             
-                    <div class="stoneItem"><img id="HAI54" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI54')" oncontextmenu="stonePopup('BDHAI54')"><span class="stoneCalc"><span id="BDHAI54" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                    <div class="stoneItem"><img id="HAI53" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI53')" oncontextmenu="stonePopup('BDHAI53')"><span class="stoneCalc"><span id="BDHAI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI52')" oncontextmenu="stonePopup('BDHAI52')"><span class="stoneCalc"><span id="BDHAI52" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem"><img id="HAI51" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI51')" oncontextmenu="stonePopup('BDHAI51')"><span class="stoneCalc"><span id="BDHAI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI50')" oncontextmenu="stonePopup('BDHAI50')"><span class="stoneCalc"><span id="BDHAI50" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                    <div class="stoneItem"><img id="HAI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI49')" oncontextmenu="stonePopup('BDHAI49')"><span class="stoneCalc"><span id="BDHAI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI48" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI48')" oncontextmenu="stonePopup('BDHAI48')"><span class="stoneCalc"><span id="BDHAI48" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                    
+                    <div class="stoneItem"><img id="HAI56" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI56')" oncontextmenu="stonePopup('BDHAI56')"><span class="stoneCalc"><span id="BDHAI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI55" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI55')" oncontextmenu="stonePopup('BDHAI55')"><span class="stoneCalc"><span id="BDHAI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI54')" oncontextmenu="stonePopup('BDHAI54')"><span class="stoneCalc"><span id="BDHAI54" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI53" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI53')" oncontextmenu="stonePopup('BDHAI53')"><span class="stoneCalc"><span id="BDHAI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI52')" oncontextmenu="stonePopup('BDHAI52')"><span class="stoneCalc"><span id="BDHAI52" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI51" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI51')" oncontextmenu="stonePopup('BDHAI51')"><span class="stoneCalc"><span id="BDHAI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI50" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI50')" oncontextmenu="stonePopup('BDHAI50')"><span class="stoneCalc"><span id="BDHAI50" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="HAI49" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI49')" oncontextmenu="stonePopup('BDHAI49')"><span class="stoneCalc"><span id="BDHAI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI48" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI48')" oncontextmenu="stonePopup('BDHAI48')"><span class="stoneCalc"><span id="BDHAI48" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI47')" oncontextmenu="stonePopup('BDHAI47')"><span class="stoneCalc"><span id="BDHAI47" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI46')" oncontextmenu="stonePopup('BDHAI46')"><span class="stoneCalc"><span id="BDHAI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI45" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI45')" oncontextmenu="stonePopup('BDHAI45')"><span class="stoneCalc"><span id="BDHAI45" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            
+                    <div class="stoneItem"><img id="HAI44" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI44')" oncontextmenu="stonePopup('BDHAI44')"><span class="stoneCalc"><span id="BDHAI44" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="HAI43" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI43')" oncontextmenu="stonePopup('BDHAI43')"><span class="stoneCalc"><span id="BDHAI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI42" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI42')" oncontextmenu="stonePopup('BDHAI42')"><span class="stoneCalc"><span id="BDHAI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI41" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI41')" oncontextmenu="stonePopup('BDHAI41')"><span class="stoneCalc"><span id="BDHAI41" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI47')" oncontextmenu="stonePopup('BDHAI47')"><span class="stoneCalc"><span id="BDHAI47" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI40" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI40')" oncontextmenu="stonePopup('BDHAI40')"><span class="stoneCalc"><span id="BDHAI40" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="HAI39" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI39')" oncontextmenu="stonePopup('BDHAI39')"><span class="stoneCalc"><span id="BDHAI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI38" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI38')" oncontextmenu="stonePopup('BDHAI38')"><span class="stoneCalc"><span id="BDHAI38" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-    
-                    <div class="stoneItem"><img id="HAI46" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI46')" oncontextmenu="stonePopup('BDHAI46')"><span class="stoneCalc"><span id="BDHAI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI45" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI45')" oncontextmenu="stonePopup('BDHAI45')"><span class="stoneCalc"><span id="BDHAI45" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="HAI37" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI37')" oncontextmenu="stonePopup('BDHAI37')"><span class="stoneCalc"><span id="BDHAI37" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI36" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI36')" oncontextmenu="stonePopup('BDHAI36')"><span class="stoneCalc"><span id="BDHAI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            
+                    <div class="stoneItem"><img id="HAI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI35')" oncontextmenu="stonePopup('BDHAI35')"><span class="stoneCalc"><span id="BDHAI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI44" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI44')" oncontextmenu="stonePopup('BDHAI44')"><span class="stoneCalc"><span id="BDHAI44" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI34')" oncontextmenu="stonePopup('BDHAI34')"><span class="stoneCalc"><span id="BDHAI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI43" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI43')" oncontextmenu="stonePopup('BDHAI43')"><span class="stoneCalc"><span id="BDHAI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem"><img id="HAI42" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI42')" oncontextmenu="stonePopup('BDHAI42')"><span class="stoneCalc"><span id="BDHAI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    
-                    <div class="stoneItem"><img id="HAI41" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI41')" oncontextmenu="stonePopup('BDHAI41')"><span class="stoneCalc"><span id="BDHAI41" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI33" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI33')" oncontextmenu="stonePopup('BDHAI33')"><span class="stoneCalc"><span id="BDHAI33" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI40" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI40')" oncontextmenu="stonePopup('BDHAI40')"><span class="stoneCalc"><span id="BDHAI40" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="HAI32" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI32')" oncontextmenu="stonePopup('BDHAI32')"><span class="stoneCalc"><span id="BDHAI32" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI39" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI39')" oncontextmenu="stonePopup('BDHAI39')"><span class="stoneCalc"><span id="BDHAI39" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="HAI31" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI31')" oncontextmenu="stonePopup('BDHAI31')"><span class="stoneCalc"><span id="BDHAI31" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI38" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI38')" oncontextmenu="stonePopup('BDHAI38')"><span class="stoneCalc"><span id="BDHAI38" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                    
+                    <div class="stoneItem"><img id="HAI30" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDHAI30')" oncontextmenu="stonePopup('BDHAI30')"><span class="stoneCalc"><span id="BDHAI30" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" class="outRedCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('BDHAD04')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI29')" oncontextmenu="stonePopup('BDHAI29')"><span class="stoneCalc"><span id="BDHAI29" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+            
+                    <div class="stoneItem"><img id="HAI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI28')" oncontextmenu="stonePopup('BDHAI28')"><span class="stoneCalc"><span id="BDHAI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" class="outBlueCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('BDHAD03')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI27')" oncontextmenu="stonePopup('BDHAI27')"><span class="stoneCalc"><span id="BDHAI27" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('BDHAC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI26" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI26')" oncontextmenu="stonePopup('BDHAI26')"><span class="stoneCalc"><span id="BDHAI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    
-                    <div class="stoneItem"><img id="HAI37" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI37')" oncontextmenu="stonePopup('BDHAI37')"><span class="stoneCalc"><span id="BDHAI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI25')" oncontextmenu="stonePopup('BDHAI25')"><span class="stoneCalc"><span id="BDHAI25" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI36" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI36')" oncontextmenu="stonePopup('BDHAI36')"><span class="stoneCalc"><span id="BDHAI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI24" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI24')" oncontextmenu="stonePopup('BDHAI24')"><span class="stoneCalc"><span id="BDHAI24" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI23" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI23')" oncontextmenu="stonePopup('BDHAI23')"><span class="stoneCalc"><span id="BDHAI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI22" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI22')" oncontextmenu="stonePopup('BDHAI22')"><span class="stoneCalc"><span id="BDHAI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI21" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI21')" oncontextmenu="stonePopup('BDHAI21')"><span class="stoneCalc"><span id="BDHAI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI20" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI20')" oncontextmenu="stonePopup('BDHAI20')"><span class="stoneCalc"><span id="BDHAI20" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI35" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI35')" oncontextmenu="stonePopup('BDHAI35')"><span class="stoneCalc"><span id="BDHAI35" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            
+                    <div class="stoneItem"><img id="HAI19" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI19')" oncontextmenu="stonePopup('BDHAI19')"><span class="stoneCalc"><span id="BDHAI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI18" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI18')" oncontextmenu="stonePopup('BDHAI18')"><span class="stoneCalc"><span id="BDHAI18" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI17" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDHAI17')" oncontextmenu="stonePopup('BDHAI17')"><span class="stoneCalc"><span id="BDHAI17" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI34')" oncontextmenu="stonePopup('BDHAI34')"><span class="stoneCalc"><span id="BDHAI34" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    
-                    <div class="stoneItem"><img id="HAI33" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI33')" oncontextmenu="stonePopup('BDHAI33')"><span class="stoneCalc"><span id="BDHAI33" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI16" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDHAI16')" oncontextmenu="stonePopup('BDHAI16')"><span class="stoneCalc"><span id="BDHAI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI15" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI15')" oncontextmenu="stonePopup('BDHAI15')"><span class="stoneCalc"><span id="BDHAI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI14" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI14')" oncontextmenu="stonePopup('BDHAI14')"><span class="stoneCalc"><span id="BDHAI14" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI32')" oncontextmenu="stonePopup('BDHAI32')"><span class="stoneCalc"><span id="BDHAI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem"><img id="HAI31" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDHAI31')" oncontextmenu="stonePopup('BDHAI31')"><span class="stoneCalc"><span id="BDHAI31" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI30" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI30')" oncontextmenu="stonePopup('BDHAI30')"><span class="stoneCalc"><span id="BDHAI30" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI29" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI29')" oncontextmenu="stonePopup('BDHAI29')"><span class="stoneCalc"><span id="BDHAI29" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                    
+                    <div class="stoneItem"><img id="HAI13" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI13')" oncontextmenu="stonePopup('BDHAI13')"><span class="stoneCalc"><span id="BDHAI13" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI28" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI28')" oncontextmenu="stonePopup('BDHAI28')"><span class="stoneCalc"><span id="BDHAI28" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem"><img id="HAI12" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI12')" oncontextmenu="stonePopup('BDHAI12')"><span class="stoneCalc"><span id="BDHAI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="HAI11" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI11')" oncontextmenu="stonePopup('BDHAI11')"><span class="stoneCalc"><span id="BDHAI11" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                     <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('BDHAC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI10" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI10')" oncontextmenu="stonePopup('BDHAI10')"><span class="stoneCalc"><span id="BDHAI10" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI27" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('BDHAI27')" oncontextmenu="stonePopup('BDHAI27')"><span class="stoneCalc"><span id="BDHAI27" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-    
-                    <div class="stoneItem"><img id="HAI26" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI26')" oncontextmenu="stonePopup('BDHAI26')"><span class="stoneCalc"><span id="BDHAI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI25" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI25')" oncontextmenu="stonePopup('BDHAI25')"><span class="stoneCalc"><span id="BDHAI25" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem"><img id="HAI24" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI24')" oncontextmenu="stonePopup('BDHAI24')"><span class="stoneCalc"><span id="BDHAI24" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI23" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI23')" oncontextmenu="stonePopup('BDHAI23')"><span class="stoneCalc"><span id="BDHAI23" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI22" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI22')" oncontextmenu="stonePopup('BDHAI22')"><span class="stoneCalc"><span id="BDHAI22" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="HAI09" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI09')" oncontextmenu="stonePopup('BDHAI09')"><span class="stoneCalc"><span id="BDHAI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                     
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI21" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI21')" oncontextmenu="stonePopup('BDHAI21')"><span class="stoneCalc"><span id="BDHAI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-    
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI20" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI20')" oncontextmenu="stonePopup('BDHAI20')"><span class="stoneCalc"><span id="BDHAI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI19" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDHAI19')" oncontextmenu="stonePopup('BDHAI19')"><span class="stoneCalc"><span id="BDHAI19" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI18" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI18')" oncontextmenu="stonePopup('BDHAI18')"><span class="stoneCalc"><span id="BDHAI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-    
-                    <div class="stoneItem"><img id="HAI17" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI17')" oncontextmenu="stonePopup('BDHAI17')"><span class="stoneCalc"><span id="BDHAI17" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI16" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI16')" oncontextmenu="stonePopup('BDHAI16')"><span class="stoneCalc"><span id="BDHAI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem"><img id="HAI15" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI15')" oncontextmenu="stonePopup('BDHAI15')"><span class="stoneCalc"><span id="BDHAI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI14" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI14')" oncontextmenu="stonePopup('BDHAI14')"><span class="stoneCalc"><span id="BDHAI14" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI13" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI13')" oncontextmenu="stonePopup('BDHAI13')"><span class="stoneCalc"><span id="BDHAI13" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-    
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" class="outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('BDHAD02')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img loading="lazy" class="outYellowCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('BDHAD01')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-            
-                    <div class="stoneItem"><img id="HAI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI12')" oncontextmenu="stonePopup('BDHAI12')"><span class="stoneCalc"><span id="BDHAI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI11')" oncontextmenu="stonePopup('BDHAI11')"><span class="stoneCalc"><span id="BDHAI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI10')" oncontextmenu="stonePopup('BDHAI10')"><span class="stoneCalc"><span id="BDHAI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI09')" oncontextmenu="stonePopup('BDHAI09')"><span class="stoneCalc"><span id="BDHAI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                    
-                    <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="HAI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI08')" oncontextmenu="stonePopup('BDHAI08')"><span class="stoneCalc"><span id="BDHAI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="HAI08" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('BDHAI08')" oncontextmenu="stonePopup('BDHAI08')"><span class="stoneCalc"><span id="BDHAI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                     <div class="stoneItem"><img id="HAI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI07')" oncontextmenu="stonePopup('BDHAI07')"><span class="stoneCalc"><span id="BDHAI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDHAI06')" oncontextmenu="stonePopup('BDHAI06')"><span class="stoneCalc"><span id="BDHAI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI06" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI06')" oncontextmenu="stonePopup('BDHAI06')"><span class="stoneCalc"><span id="BDHAI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
                     <div class="stoneItem"><img id="HAI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('BDHAI05')" oncontextmenu="stonePopup('BDHAI05')"><span class="stoneCalc"><span id="BDHAI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                    <div class="stoneItem"><img id="HAI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('BDHAI04')" oncontextmenu="stonePopup('BDHAI04')"><span class="stoneCalc"><span id="BDHAI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img id="HAI04" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('BDHAI04')" oncontextmenu="stonePopup('BDHAI04')"><span class="stoneCalc"><span id="BDHAI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                     <div class="stoneItem stoneBlank"></div>
             
                     <div class="stoneItem stoneBlank"></div>
                     <div class="stoneItem stoneBlank"></div>
                     <div class="stoneItem"><img id="HAI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI03')" oncontextmenu="stonePopup('BDHAI03')"><span class="stoneCalc"><span id="BDHAI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                    <div class="stoneItem"><img id="HAI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('BDHAI02')" oncontextmenu="stonePopup('BDHAI02')"><span class="stoneCalc"><span id="BDHAI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="HAI02" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('BDHAI02')" oncontextmenu="stonePopup('BDHAI02')"><span class="stoneCalc"><span id="BDHAI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
                     <div class="stoneItem"><img id="HAI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('BDHAI01')" oncontextmenu="stonePopup('BDHAI01')"><span class="stoneCalc"><span id="BDHAI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                     <div class="stoneItem stoneBlank"></div>
                     <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
@@ -314,10 +274,10 @@
                     <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
                     <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('BDHAS08')"><span class="resetText">Skill 7</span></div>
                     <div class="stoneItem stoneBlank"></div>
-                    <div class="stoneItem"><img id="FZC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('BDHAC01')"><span class="stoneCalc"><span id="BDHAC01" class="zero">1</span>/1</span></div>
+                    <div class="stoneItem"><img id="HAC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('BDHAC01')"><span class="stoneCalc"><span id="BDHAC01" class="zero">1</span>/1</span></div>
                     <div class="stoneItem stoneBlank"></div>
                     <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
-                    <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('100000000000000000000000000000000000000000000000000000000', 'BDHA')"><span class="resetText">Reset</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'BDHA')"><span class="resetText">Reset</span></div>
                 </div>
                 <div class="gridSkills Skills">
                     <div class="sideBar">
@@ -416,8 +376,8 @@
     document.getElementById("classScroll").scrollLeft = 400;
     document.addEventListener("contextmenu", (e) => {e.preventDefault()});
     var xDown = null, yDown = null, xUp = null, yUp = null;
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.addEventListener('touchstart', touchstart, false);        
+    document.addEventListener('touchmove', touchmove, false);
     document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
     document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
     document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
@@ -425,7 +385,7 @@
     function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
     function touchend(evt, left, active, right) { 
         var xDiff = xUp - xDown, yDiff = yUp - yDown;
-        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 1000)) { 
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
             if (xDiff < 0) 
             selectTree(right, active, left);
             else

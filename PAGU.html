@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tarislandbuilds.eu/S1/PAGU.html" />
-    <link rel="stylesheet" href="./style.css">
-    <script src="./javascript.js"></script>
-    <script src="./JSON/PAGU.js"></script>
-    <script src="./JSON/builds.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+    <script src="../../JSON/PAGU.js"></script>
+    <script src="../../JSON/builds.js"></script>
+    <script>
+        function loadParams() {
+          var params = new URLSearchParams(location.search);
+          var code = params.get('skill');
+          var stone = params.get('stone');
+          var spec = code.replace(/[0-9]/g, '');
+                if (params.has('skill') === true && params.has('stone') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
+                } else if (params.has('skill') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}`
+                }
+            }
+        loadParams();
+          </script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -16,7 +31,7 @@
     <meta property="og:description" content="Plan your build and share it with friends">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/PAGU.png'>
     <meta name="twitter:card" content="summary_large_image">
-    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
   </head>
 <body>
     <div class="wrapper">
@@ -130,37 +145,6 @@
                 <div class="treeItem" id="PAGUP05"><img src="../Icons/Paladin/Guard/palaG23.png" onclick="passivePopup('PAGUP05')"></div>
             </div>
             </div>
-            <div class="gridS1">
-                <div class="sideBar">
-                    <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
-                </div>
-                <div>
-                <div class="s1talents1">
-                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="passivePopup('PAGUB01')"></div>
-                </div>
-                <div class="s1talents2">
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk1.png" onclick="passivePopup('PAGUB02')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk2.png" onclick="passivePopup('PAGUB03')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk3.png" onclick="passivePopup('PAGUB04')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk4.png" onclick="passivePopup('PAGUB05')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk5.png" onclick="passivePopup('PAGUB06')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk6.png" onclick="passivePopup('PAGUB07')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk7.png" onclick="passivePopup('PAGUB08')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk8.png" onclick="passivePopup('PAGUB09')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk9.png" onclick="passivePopup('PAGUB10')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk10.png" onclick="passivePopup('PAGUB11')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk11.png" onclick="passivePopup('PAGUB12')"></div>
-                    <div class="s1item"><img src="../Icons/Paladin/Guard/S1sk12.png" onclick="passivePopup('PAGUB13')"></div>
-                </div>
-                </div>
-            </div>
             <div class="gridActions">  <!--Actions-->
                 <div class="sideBar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
@@ -173,151 +157,127 @@
                 </div>
             </div>
             </div>
-            <div class="gridStone Stone">
-                <div class="stoneItem"><img id="GUI56" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI56')" oncontextmenu="stonePopup('PAGUI56')"><span class="stoneCalc"><span id="PAGUI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PAGUC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI55" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI55')" oncontextmenu="stonePopup('PAGUI55')"><span class="stoneCalc"><span id="PAGUI55" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
-        
-                <div class="stoneItem"><img id="GUI54" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI54')" oncontextmenu="stonePopup('PAGUI54')"><span class="stoneCalc"><span id="PAGUI54" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI53" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI53')" oncontextmenu="stonePopup('PAGUI53')"><span class="stoneCalc"><span id="PAGUI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI52')" oncontextmenu="stonePopup('PAGUI52')"><span class="stoneCalc"><span id="PAGUI52" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI51" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI51')" oncontextmenu="stonePopup('PAGUI51')"><span class="stoneCalc"><span id="PAGUI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI50')" oncontextmenu="stonePopup('PAGUI50')"><span class="stoneCalc"><span id="PAGUI50" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem"><img id="GUI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI49')" oncontextmenu="stonePopup('PAGUI49')"><span class="stoneCalc"><span id="PAGUI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI48" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI48')" oncontextmenu="stonePopup('PAGUI48')"><span class="stoneCalc"><span id="PAGUI48" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI47')" oncontextmenu="stonePopup('PAGUI47')"><span class="stoneCalc"><span id="PAGUI47" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="GUI46" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI46')" oncontextmenu="stonePopup('PAGUI46')"><span class="stoneCalc"><span id="PAGUI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI45" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI45')" oncontextmenu="stonePopup('PAGUI45')"><span class="stoneCalc"><span id="PAGUI45" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI44" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI44')" oncontextmenu="stonePopup('PAGUI44')"><span class="stoneCalc"><span id="PAGUI44" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI43" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI43')" oncontextmenu="stonePopup('PAGUI43')"><span class="stoneCalc"><span id="PAGUI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI42" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI42')" oncontextmenu="stonePopup('PAGUI42')"><span class="stoneCalc"><span id="PAGUI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                
-                <div class="stoneItem"><img id="GUI41" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI41')" oncontextmenu="stonePopup('PAGUI41')"><span class="stoneCalc"><span id="PAGUI41" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI40" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI40')" oncontextmenu="stonePopup('PAGUI40')"><span class="stoneCalc"><span id="PAGUI40" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI39" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI39')" oncontextmenu="stonePopup('PAGUI39')"><span class="stoneCalc"><span id="PAGUI39" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI38" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI38')" oncontextmenu="stonePopup('PAGUI38')"><span class="stoneCalc"><span id="PAGUI38" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outRedCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PAGUD04')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outBlueCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PAGUD03')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                
-                <div class="stoneItem"><img id="GUI37" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI37')" oncontextmenu="stonePopup('PAGUI37')"><span class="stoneCalc"><span id="PAGUI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI36" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI36')" oncontextmenu="stonePopup('PAGUI36')"><span class="stoneCalc"><span id="PAGUI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI35" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI35')" oncontextmenu="stonePopup('PAGUI35')"><span class="stoneCalc"><span id="PAGUI35" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI34')" oncontextmenu="stonePopup('PAGUI34')"><span class="stoneCalc"><span id="PAGUI34" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                
-                <div class="stoneItem"><img id="GUI33" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI33')" oncontextmenu="stonePopup('PAGUI33')"><span class="stoneCalc"><span id="PAGUI33" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI32')" oncontextmenu="stonePopup('PAGUI32')"><span class="stoneCalc"><span id="PAGUI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI31" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAGUI31')" oncontextmenu="stonePopup('PAGUI31')"><span class="stoneCalc"><span id="PAGUI31" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI30" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI30')" oncontextmenu="stonePopup('PAGUI30')"><span class="stoneCalc"><span id="PAGUI30" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI29" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI29')" oncontextmenu="stonePopup('PAGUI29')"><span class="stoneCalc"><span id="PAGUI29" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI28" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI28')" oncontextmenu="stonePopup('PAGUI28')"><span class="stoneCalc"><span id="PAGUI28" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PAGUC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI27" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI27')" oncontextmenu="stonePopup('PAGUI27')"><span class="stoneCalc"><span id="PAGUI27" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="GUI26" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI26')" oncontextmenu="stonePopup('PAGUI26')"><span class="stoneCalc"><span id="PAGUI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI25" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI25')" oncontextmenu="stonePopup('PAGUI25')"><span class="stoneCalc"><span id="PAGUI25" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI24" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI24')" oncontextmenu="stonePopup('PAGUI24')"><span class="stoneCalc"><span id="PAGUI24" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI23" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI23')" oncontextmenu="stonePopup('PAGUI23')"><span class="stoneCalc"><span id="PAGUI23" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI22" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI22')" oncontextmenu="stonePopup('PAGUI22')"><span class="stoneCalc"><span id="PAGUI22" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI21" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI21')" oncontextmenu="stonePopup('PAGUI21')"><span class="stoneCalc"><span id="PAGUI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI20" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI20')" oncontextmenu="stonePopup('PAGUI20')"><span class="stoneCalc"><span id="PAGUI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI19" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAGUI19')" oncontextmenu="stonePopup('PAGUI19')"><span class="stoneCalc"><span id="PAGUI19" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI18" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI18')" oncontextmenu="stonePopup('PAGUI18')"><span class="stoneCalc"><span id="PAGUI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="GUI17" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI17')" oncontextmenu="stonePopup('PAGUI17')"><span class="stoneCalc"><span id="PAGUI17" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI16" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI16')" oncontextmenu="stonePopup('PAGUI16')"><span class="stoneCalc"><span id="PAGUI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI15" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI15')" oncontextmenu="stonePopup('PAGUI15')"><span class="stoneCalc"><span id="PAGUI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI14" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI14')" oncontextmenu="stonePopup('PAGUI14')"><span class="stoneCalc"><span id="PAGUI14" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI13" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI13')" oncontextmenu="stonePopup('PAGUI13')"><span class="stoneCalc"><span id="PAGUI13" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PAGUD02')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outYellowCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PAGUD01')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="GUI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI12')" oncontextmenu="stonePopup('PAGUI12')"><span class="stoneCalc"><span id="PAGUI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI11')" oncontextmenu="stonePopup('PAGUI11')"><span class="stoneCalc"><span id="PAGUI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI10')" oncontextmenu="stonePopup('PAGUI10')"><span class="stoneCalc"><span id="PAGUI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI09')" oncontextmenu="stonePopup('PAGUI09')"><span class="stoneCalc"><span id="PAGUI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI08')" oncontextmenu="stonePopup('PAGUI08')"><span class="stoneCalc"><span id="PAGUI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI07')" oncontextmenu="stonePopup('PAGUI07')"><span class="stoneCalc"><span id="PAGUI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAGUI06')" oncontextmenu="stonePopup('PAGUI06')"><span class="stoneCalc"><span id="PAGUI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI05')" oncontextmenu="stonePopup('PAGUI05')"><span class="stoneCalc"><span id="PAGUI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI04')" oncontextmenu="stonePopup('PAGUI04')"><span class="stoneCalc"><span id="PAGUI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="GUI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI03')" oncontextmenu="stonePopup('PAGUI03')"><span class="stoneCalc"><span id="PAGUI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="GUI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI02')" oncontextmenu="stonePopup('PAGUI02')"><span class="stoneCalc"><span id="PAGUI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="GUI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI01')" oncontextmenu="stonePopup('PAGUI01')"><span class="stoneCalc"><span id="PAGUI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
-        
-                <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('PAGUS08')"><span class="resetText">Skill 7</span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FZC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('PAGUC01')"><span class="stoneCalc"><span id="PAGUC01" class="zero">1</span>/1</span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('100000000000000000000000000000000000000000000000000000000', 'PAGU')"><span class="resetText">Reset</span></div>
-            </div>
+                <div class="gridStone Stone">
+                    <div class="stoneItem"><img id="GUI58" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI58')" oncontextmenu="stonePopup('PAGUI58')"><span class="stoneCalc"><span id="PAGUI58" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PAGUC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI57" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI57')" oncontextmenu="stonePopup('PAGUI57')"><span class="stoneCalc"><span id="PAGUI57" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="GUI56" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI56')" oncontextmenu="stonePopup('PAGUI56')"><span class="stoneCalc"><span id="PAGUI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI55" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI55')" oncontextmenu="stonePopup('PAGUI55')"><span class="stoneCalc"><span id="PAGUI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI54')" oncontextmenu="stonePopup('PAGUI54')"><span class="stoneCalc"><span id="PAGUI54" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI53" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI53')" oncontextmenu="stonePopup('PAGUI53')"><span class="stoneCalc"><span id="PAGUI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI52')" oncontextmenu="stonePopup('PAGUI52')"><span class="stoneCalc"><span id="PAGUI52" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI51" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI51')" oncontextmenu="stonePopup('PAGUI51')"><span class="stoneCalc"><span id="PAGUI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI50" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI50')" oncontextmenu="stonePopup('PAGUI50')"><span class="stoneCalc"><span id="PAGUI50" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="GUI49" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI49')" oncontextmenu="stonePopup('PAGUI49')"><span class="stoneCalc"><span id="PAGUI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI48" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI48')" oncontextmenu="stonePopup('PAGUI48')"><span class="stoneCalc"><span id="PAGUI48" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI47')" oncontextmenu="stonePopup('PAGUI47')"><span class="stoneCalc"><span id="PAGUI47" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI46')" oncontextmenu="stonePopup('PAGUI46')"><span class="stoneCalc"><span id="PAGUI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI45" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI45')" oncontextmenu="stonePopup('PAGUI45')"><span class="stoneCalc"><span id="PAGUI45" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            
+                    <div class="stoneItem"><img id="GUI44" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI44')" oncontextmenu="stonePopup('PAGUI44')"><span class="stoneCalc"><span id="PAGUI44" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI43" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI43')" oncontextmenu="stonePopup('PAGUI43')"><span class="stoneCalc"><span id="PAGUI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI42" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI42')" oncontextmenu="stonePopup('PAGUI42')"><span class="stoneCalc"><span id="PAGUI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI41" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI41')" oncontextmenu="stonePopup('PAGUI41')"><span class="stoneCalc"><span id="PAGUI41" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI40" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI40')" oncontextmenu="stonePopup('PAGUI40')"><span class="stoneCalc"><span id="PAGUI40" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem"><img id="GUI39" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI39')" oncontextmenu="stonePopup('PAGUI39')"><span class="stoneCalc"><span id="PAGUI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI38" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI38')" oncontextmenu="stonePopup('PAGUI38')"><span class="stoneCalc"><span id="PAGUI38" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI37" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI37')" oncontextmenu="stonePopup('PAGUI37')"><span class="stoneCalc"><span id="PAGUI37" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI36" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI36')" oncontextmenu="stonePopup('PAGUI36')"><span class="stoneCalc"><span id="PAGUI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+            
+                    <div class="stoneItem"><img id="GUI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI35')" oncontextmenu="stonePopup('PAGUI35')"><span class="stoneCalc"><span id="PAGUI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI34')" oncontextmenu="stonePopup('PAGUI34')"><span class="stoneCalc"><span id="PAGUI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI33" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI33')" oncontextmenu="stonePopup('PAGUI33')"><span class="stoneCalc"><span id="PAGUI33" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI32" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI32')" oncontextmenu="stonePopup('PAGUI32')"><span class="stoneCalc"><span id="PAGUI32" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI31" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI31')" oncontextmenu="stonePopup('PAGUI31')"><span class="stoneCalc"><span id="PAGUI31" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI30" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAGUI30')" oncontextmenu="stonePopup('PAGUI30')"><span class="stoneCalc"><span id="PAGUI30" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PAGUI29')" oncontextmenu="stonePopup('PAGUI29')"><span class="stoneCalc"><span id="PAGUI29" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem"><img id="GUI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI28')" oncontextmenu="stonePopup('PAGUI28')"><span class="stoneCalc"><span id="PAGUI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI27')" oncontextmenu="stonePopup('PAGUI27')"><span class="stoneCalc"><span id="PAGUI27" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PAGUC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI26" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI26')" oncontextmenu="stonePopup('PAGUI26')"><span class="stoneCalc"><span id="PAGUI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI25')" oncontextmenu="stonePopup('PAGUI25')"><span class="stoneCalc"><span id="PAGUI25" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI24" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI24')" oncontextmenu="stonePopup('PAGUI24')"><span class="stoneCalc"><span id="PAGUI24" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI23" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI23')" oncontextmenu="stonePopup('PAGUI23')"><span class="stoneCalc"><span id="PAGUI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI22" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI22')" oncontextmenu="stonePopup('PAGUI22')"><span class="stoneCalc"><span id="PAGUI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI21" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI21')" oncontextmenu="stonePopup('PAGUI21')"><span class="stoneCalc"><span id="PAGUI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI20" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI20')" oncontextmenu="stonePopup('PAGUI20')"><span class="stoneCalc"><span id="PAGUI20" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem"><img id="GUI19" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI19')" oncontextmenu="stonePopup('PAGUI19')"><span class="stoneCalc"><span id="PAGUI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI18" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI18')" oncontextmenu="stonePopup('PAGUI18')"><span class="stoneCalc"><span id="PAGUI18" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI17" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAGUI17')" oncontextmenu="stonePopup('PAGUI17')"><span class="stoneCalc"><span id="PAGUI17" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI16" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAGUI16')" oncontextmenu="stonePopup('PAGUI16')"><span class="stoneCalc"><span id="PAGUI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI15" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI15')" oncontextmenu="stonePopup('PAGUI15')"><span class="stoneCalc"><span id="PAGUI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI14" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI14')" oncontextmenu="stonePopup('PAGUI14')"><span class="stoneCalc"><span id="PAGUI14" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+            
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI13" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI13')" oncontextmenu="stonePopup('PAGUI13')"><span class="stoneCalc"><span id="PAGUI13" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem"><img id="GUI12" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI12')" oncontextmenu="stonePopup('PAGUI12')"><span class="stoneCalc"><span id="PAGUI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI11" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI11')" oncontextmenu="stonePopup('PAGUI11')"><span class="stoneCalc"><span id="PAGUI11" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PAGUC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI10" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI10')" oncontextmenu="stonePopup('PAGUI10')"><span class="stoneCalc"><span id="PAGUI10" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI09" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI09')" oncontextmenu="stonePopup('PAGUI09')"><span class="stoneCalc"><span id="PAGUI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI08" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PAGUI08')" oncontextmenu="stonePopup('PAGUI08')"><span class="stoneCalc"><span id="PAGUI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PAGUI07')" oncontextmenu="stonePopup('PAGUI07')"><span class="stoneCalc"><span id="PAGUI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI06" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PAGUI06')" oncontextmenu="stonePopup('PAGUI06')"><span class="stoneCalc"><span id="PAGUI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PAGUI05')" oncontextmenu="stonePopup('PAGUI05')"><span class="stoneCalc"><span id="PAGUI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI04" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PAGUI04')" oncontextmenu="stonePopup('PAGUI04')"><span class="stoneCalc"><span id="PAGUI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+            
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI03')" oncontextmenu="stonePopup('PAGUI03')"><span class="stoneCalc"><span id="PAGUI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                    <div class="stoneItem"><img id="GUI02" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PAGUI02')" oncontextmenu="stonePopup('PAGUI02')"><span class="stoneCalc"><span id="PAGUI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                    <div class="stoneItem"><img id="GUI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PAGUI01')" oncontextmenu="stonePopup('PAGUI01')"><span class="stoneCalc"><span id="PAGUI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
+            
+                    <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('PAGUS08')"><span class="resetText">Skill 7</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img id="GUC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('PAGUC01')"><span class="stoneCalc"><span id="PAGUC01" class="zero">1</span>/1</span></div>
+                    <div class="stoneItem stoneBlank"></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
+                    <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'PAGU')"><span class="resetText">Reset</span></div>
+                </div>
                 <div class="builds areaBuilds Talents"> <!-- builds-->
                     <div class="sideBar">
                         <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
@@ -416,8 +376,8 @@
     document.getElementById("classScroll").scrollLeft = 500;
     document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
     var xDown = null, yDown = null, xUp = null, yUp = null;
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.addEventListener('touchstart', touchstart, false);        
+    document.addEventListener('touchmove', touchmove, false);
     document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
     document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
     document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
@@ -425,8 +385,7 @@
     function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
     function touchend(evt, left, active, right) { 
         var xDiff = xUp - xDown, yDiff = yUp - yDown;
-        console.log(Math.abs(xDiff))
-        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 1000)) { 
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
             if (xDiff < 0) 
             selectTree(right, active, left);
             else

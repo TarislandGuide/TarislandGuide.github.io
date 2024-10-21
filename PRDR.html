@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tarislandbuilds.eu/S1/PRDR.html" />
-    <link rel="stylesheet" href="./style.css">
-    <script src="./javascript.js"></script>
-    <script src="./JSON/PRDR.js"></script>
-    <script src="./JSON/builds.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+    <script src="../JSON/PRDR.js"></script>
+    <script src="../JSON/builds.js"></script>
+    <script>
+        function loadParams() {
+          var params = new URLSearchParams(location.search);
+          var code = params.get('skill');
+          var stone = params.get('stone');
+          var spec = code.replace(/[0-9]/g, '');
+                if (params.has('skill') === true && params.has('stone') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
+                } else if (params.has('skill') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}`
+                }
+            }
+        loadParams();
+          </script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -16,7 +31,7 @@
     <meta property="og:description" content="Plan your build and share it with friends">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/PRDG.png'>
     <meta name="twitter:card" content="summary_large_image">
-    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
   </head>
 <body>
 <div class="wrapper">
@@ -130,37 +145,6 @@
                     <div class="treeItem" id="PRDRP05"><img src="../Icons/Priest/Retribution/priestR25.jpg" onclick="passivePopup('PRDRP05')"></div>
                 </div>
             </div>
-            <div class="gridS1">
-                <div class="sideBar">
-                    <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
-                </div>
-                <div>
-                <div class="s1talents1">
-                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="skillPopup('PRDRB01')"></div>
-                </div>
-                <div class="s1talents2">
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk1.png" onclick="skillPopup('PRDRB02')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk2.png" onclick="skillPopup('PRDRB03')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk3.png" onclick="skillPopup('PRDRB04')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk4.png" onclick="skillPopup('PRDRB05')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk5.png" onclick="skillPopup('PRDRB06')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk6.png" onclick="skillPopup('PRDRB07')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk7.png" onclick="skillPopup('PRDRB08')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk8.png" onclick="skillPopup('PRDRB09')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk9.png" onclick="skillPopup('PRDRB10')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk10.png" onclick="skillPopup('PRDRB11')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk11.png" onclick="skillPopup('PRDRB12')"></div>
-                    <div class="s1item"><img src="../Icons/Priest/Retribution/S1sk12.png" onclick="skillPopup('PRDRB13')"></div>
-                </div>
-                </div>
-            </div>
             <div class="gridActions">  <!--Actions-->
                 <div class="sideBar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
@@ -174,149 +158,125 @@
             </div>
             </div>
             <div class="gridStone Stone">
-                <div class="stoneItem"><img id="DRI56" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI56')" oncontextmenu="stonePopup('PRDRI56')"><span class="stoneCalc"><span id="PRDRI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem"><img id="DRI58" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI58')" oncontextmenu="stonePopup('PRDRI58')"><span class="stoneCalc"><span id="PRDRI58" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PRDRC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PRDRC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI55" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI55')" oncontextmenu="stonePopup('PRDRI55')"><span class="stoneCalc"><span id="PRDRI55" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="DRI57" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI57')" oncontextmenu="stonePopup('PRDRI57')"><span class="stoneCalc"><span id="PRDRI57" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
         
-                <div class="stoneItem"><img id="DRI54" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI54')" oncontextmenu="stonePopup('PRDRI54')"><span class="stoneCalc"><span id="PRDRI54" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DRI53" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI53')" oncontextmenu="stonePopup('PRDRI53')"><span class="stoneCalc"><span id="PRDRI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI52')" oncontextmenu="stonePopup('PRDRI52')"><span class="stoneCalc"><span id="PRDRI52" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DRI51" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI51')" oncontextmenu="stonePopup('PRDRI51')"><span class="stoneCalc"><span id="PRDRI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI50')" oncontextmenu="stonePopup('PRDRI50')"><span class="stoneCalc"><span id="PRDRI50" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem"><img id="DRI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI49')" oncontextmenu="stonePopup('PRDRI49')"><span class="stoneCalc"><span id="PRDRI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI48" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI48')" oncontextmenu="stonePopup('PRDRI48')"><span class="stoneCalc"><span id="PRDRI48" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
+                <div class="stoneItem"><img id="DRI56" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI56')" oncontextmenu="stonePopup('PRDRI56')"><span class="stoneCalc"><span id="PRDRI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI55" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI55')" oncontextmenu="stonePopup('PRDRI55')"><span class="stoneCalc"><span id="PRDRI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI54')" oncontextmenu="stonePopup('PRDRI54')"><span class="stoneCalc"><span id="PRDRI54" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI53" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI53')" oncontextmenu="stonePopup('PRDRI53')"><span class="stoneCalc"><span id="PRDRI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI52')" oncontextmenu="stonePopup('PRDRI52')"><span class="stoneCalc"><span id="PRDRI52" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI51" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI51')" oncontextmenu="stonePopup('PRDRI51')"><span class="stoneCalc"><span id="PRDRI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI50" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI50')" oncontextmenu="stonePopup('PRDRI50')"><span class="stoneCalc"><span id="PRDRI50" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="DRI49" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI49')" oncontextmenu="stonePopup('PRDRI49')"><span class="stoneCalc"><span id="PRDRI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI48" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI48')" oncontextmenu="stonePopup('PRDRI48')"><span class="stoneCalc"><span id="PRDRI48" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI47')" oncontextmenu="stonePopup('PRDRI47')"><span class="stoneCalc"><span id="PRDRI47" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI46')" oncontextmenu="stonePopup('PRDRI46')"><span class="stoneCalc"><span id="PRDRI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI45" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI45')" oncontextmenu="stonePopup('PRDRI45')"><span class="stoneCalc"><span id="PRDRI45" class="zero">0</span>/5</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id="DRI44" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI44')" oncontextmenu="stonePopup('PRDRI44')"><span class="stoneCalc"><span id="PRDRI44" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="DRI43" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI43')" oncontextmenu="stonePopup('PRDRI43')"><span class="stoneCalc"><span id="PRDRI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI42" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI42')" oncontextmenu="stonePopup('PRDRI42')"><span class="stoneCalc"><span id="PRDRI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI41" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI41')" oncontextmenu="stonePopup('PRDRI41')"><span class="stoneCalc"><span id="PRDRI41" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI47')" oncontextmenu="stonePopup('PRDRI47')"><span class="stoneCalc"><span id="PRDRI47" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI40" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI40')" oncontextmenu="stonePopup('PRDRI40')"><span class="stoneCalc"><span id="PRDRI40" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="DRI39" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI39')" oncontextmenu="stonePopup('PRDRI39')"><span class="stoneCalc"><span id="PRDRI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI38" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI38')" oncontextmenu="stonePopup('PRDRI38')"><span class="stoneCalc"><span id="PRDRI38" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="DRI46" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI46')" oncontextmenu="stonePopup('PRDRI46')"><span class="stoneCalc"><span id="PRDRI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI45" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI45')" oncontextmenu="stonePopup('PRDRI45')"><span class="stoneCalc"><span id="PRDRI45" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="DRI37" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI37')" oncontextmenu="stonePopup('PRDRI37')"><span class="stoneCalc"><span id="PRDRI37" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI36" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI36')" oncontextmenu="stonePopup('PRDRI36')"><span class="stoneCalc"><span id="PRDRI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id="DRI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI35')" oncontextmenu="stonePopup('PRDRI35')"><span class="stoneCalc"><span id="PRDRI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI44" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI44')" oncontextmenu="stonePopup('PRDRI44')"><span class="stoneCalc"><span id="PRDRI44" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI34')" oncontextmenu="stonePopup('PRDRI34')"><span class="stoneCalc"><span id="PRDRI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI43" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI43')" oncontextmenu="stonePopup('PRDRI43')"><span class="stoneCalc"><span id="PRDRI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DRI42" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI42')" oncontextmenu="stonePopup('PRDRI42')"><span class="stoneCalc"><span id="PRDRI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                
-                <div class="stoneItem"><img id="DRI41" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI41')" oncontextmenu="stonePopup('PRDRI41')"><span class="stoneCalc"><span id="PRDRI41" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI33" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI33')" oncontextmenu="stonePopup('PRDRI33')"><span class="stoneCalc"><span id="PRDRI33" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI40" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI40')" oncontextmenu="stonePopup('PRDRI40')"><span class="stoneCalc"><span id="PRDRI40" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="DRI32" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI32')" oncontextmenu="stonePopup('PRDRI32')"><span class="stoneCalc"><span id="PRDRI32" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+        
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI39" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI39')" oncontextmenu="stonePopup('PRDRI39')"><span class="stoneCalc"><span id="PRDRI39" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="DRI31" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI31')" oncontextmenu="stonePopup('PRDRI31')"><span class="stoneCalc"><span id="PRDRI31" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI38" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI38')" oncontextmenu="stonePopup('PRDRI38')"><span class="stoneCalc"><span id="PRDRI38" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
+                <div class="stoneItem"><img id="DRI30" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PRDRI30')" oncontextmenu="stonePopup('PRDRI30')"><span class="stoneCalc"><span id="PRDRI30" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outRedCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PRDRD04')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI29')" oncontextmenu="stonePopup('PRDRI29')"><span class="stoneCalc"><span id="PRDRI29" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
+        
+                <div class="stoneItem"><img id="DRI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI28')" oncontextmenu="stonePopup('PRDRI28')"><span class="stoneCalc"><span id="PRDRI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outBlueCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PRDRD03')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI27')" oncontextmenu="stonePopup('PRDRI27')"><span class="stoneCalc"><span id="PRDRI27" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PRDRC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI26" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI26')" oncontextmenu="stonePopup('PRDRI26')"><span class="stoneCalc"><span id="PRDRI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                
-                <div class="stoneItem"><img id="DRI37" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI37')" oncontextmenu="stonePopup('PRDRI37')"><span class="stoneCalc"><span id="PRDRI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI25')" oncontextmenu="stonePopup('PRDRI25')"><span class="stoneCalc"><span id="PRDRI25" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+        
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI36" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI36')" oncontextmenu="stonePopup('PRDRI36')"><span class="stoneCalc"><span id="PRDRI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI24" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI24')" oncontextmenu="stonePopup('PRDRI24')"><span class="stoneCalc"><span id="PRDRI24" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI23" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI23')" oncontextmenu="stonePopup('PRDRI23')"><span class="stoneCalc"><span id="PRDRI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI22" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI22')" oncontextmenu="stonePopup('PRDRI22')"><span class="stoneCalc"><span id="PRDRI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI21" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI21')" oncontextmenu="stonePopup('PRDRI21')"><span class="stoneCalc"><span id="PRDRI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI20" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI20')" oncontextmenu="stonePopup('PRDRI20')"><span class="stoneCalc"><span id="PRDRI20" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI35" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI35')" oncontextmenu="stonePopup('PRDRI35')"><span class="stoneCalc"><span id="PRDRI35" class="zero">0</span>/5</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id="DRI19" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI19')" oncontextmenu="stonePopup('PRDRI19')"><span class="stoneCalc"><span id="PRDRI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI18" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI18')" oncontextmenu="stonePopup('PRDRI18')"><span class="stoneCalc"><span id="PRDRI18" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI17" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PRDRI17')" oncontextmenu="stonePopup('PRDRI17')"><span class="stoneCalc"><span id="PRDRI17" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI34')" oncontextmenu="stonePopup('PRDRI34')"><span class="stoneCalc"><span id="PRDRI34" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                
-                <div class="stoneItem"><img id="DRI33" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI33')" oncontextmenu="stonePopup('PRDRI33')"><span class="stoneCalc"><span id="PRDRI33" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI16" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PRDRI16')" oncontextmenu="stonePopup('PRDRI16')"><span class="stoneCalc"><span id="PRDRI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI15" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI15')" oncontextmenu="stonePopup('PRDRI15')"><span class="stoneCalc"><span id="PRDRI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI14" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI14')" oncontextmenu="stonePopup('PRDRI14')"><span class="stoneCalc"><span id="PRDRI14" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+        
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI32')" oncontextmenu="stonePopup('PRDRI32')"><span class="stoneCalc"><span id="PRDRI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DRI31" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PRDRI31')" oncontextmenu="stonePopup('PRDRI31')"><span class="stoneCalc"><span id="PRDRI31" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI30" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI30')" oncontextmenu="stonePopup('PRDRI30')"><span class="stoneCalc"><span id="PRDRI30" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI29" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI29')" oncontextmenu="stonePopup('PRDRI29')"><span class="stoneCalc"><span id="PRDRI29" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
+                <div class="stoneItem"><img id="DRI13" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI13')" oncontextmenu="stonePopup('PRDRI13')"><span class="stoneCalc"><span id="PRDRI13" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI28" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI28')" oncontextmenu="stonePopup('PRDRI28')"><span class="stoneCalc"><span id="PRDRI28" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="DRI12" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI12')" oncontextmenu="stonePopup('PRDRI12')"><span class="stoneCalc"><span id="PRDRI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="DRI11" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI11')" oncontextmenu="stonePopup('PRDRI11')"><span class="stoneCalc"><span id="PRDRI11" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                 <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('PRDRC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI10" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI10')" oncontextmenu="stonePopup('PRDRI10')"><span class="stoneCalc"><span id="PRDRI10" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI27" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('PRDRI27')" oncontextmenu="stonePopup('PRDRI27')"><span class="stoneCalc"><span id="PRDRI27" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="DRI26" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI26')" oncontextmenu="stonePopup('PRDRI26')"><span class="stoneCalc"><span id="PRDRI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI25" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI25')" oncontextmenu="stonePopup('PRDRI25')"><span class="stoneCalc"><span id="PRDRI25" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DRI24" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI24')" oncontextmenu="stonePopup('PRDRI24')"><span class="stoneCalc"><span id="PRDRI24" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI23" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI23')" oncontextmenu="stonePopup('PRDRI23')"><span class="stoneCalc"><span id="PRDRI23" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI22" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI22')" oncontextmenu="stonePopup('PRDRI22')"><span class="stoneCalc"><span id="PRDRI22" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="DRI09" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI09')" oncontextmenu="stonePopup('PRDRI09')"><span class="stoneCalc"><span id="PRDRI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                 
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI21" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI21')" oncontextmenu="stonePopup('PRDRI21')"><span class="stoneCalc"><span id="PRDRI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI20" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI20')" oncontextmenu="stonePopup('PRDRI20')"><span class="stoneCalc"><span id="PRDRI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI19" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PRDRI19')" oncontextmenu="stonePopup('PRDRI19')"><span class="stoneCalc"><span id="PRDRI19" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI18" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI18')" oncontextmenu="stonePopup('PRDRI18')"><span class="stoneCalc"><span id="PRDRI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="DRI17" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI17')" oncontextmenu="stonePopup('PRDRI17')"><span class="stoneCalc"><span id="PRDRI17" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI16" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI16')" oncontextmenu="stonePopup('PRDRI16')"><span class="stoneCalc"><span id="PRDRI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DRI15" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI15')" oncontextmenu="stonePopup('PRDRI15')"><span class="stoneCalc"><span id="PRDRI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI14" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI14')" oncontextmenu="stonePopup('PRDRI14')"><span class="stoneCalc"><span id="PRDRI14" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI13" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI13')" oncontextmenu="stonePopup('PRDRI13')"><span class="stoneCalc"><span id="PRDRI13" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PRDRD02')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outYellowCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('PRDRD01')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-        
-                <div class="stoneItem"><img id="DRI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI12')" oncontextmenu="stonePopup('PRDRI12')"><span class="stoneCalc"><span id="PRDRI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI11')" oncontextmenu="stonePopup('PRDRI11')"><span class="stoneCalc"><span id="PRDRI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI10')" oncontextmenu="stonePopup('PRDRI10')"><span class="stoneCalc"><span id="PRDRI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI09')" oncontextmenu="stonePopup('PRDRI09')"><span class="stoneCalc"><span id="PRDRI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="DRI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI08')" oncontextmenu="stonePopup('PRDRI08')"><span class="stoneCalc"><span id="PRDRI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="DRI08" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('PRDRI08')" oncontextmenu="stonePopup('PRDRI08')"><span class="stoneCalc"><span id="PRDRI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem"><img id="DRI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI07')" oncontextmenu="stonePopup('PRDRI07')"><span class="stoneCalc"><span id="PRDRI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PRDRI06')" oncontextmenu="stonePopup('PRDRI06')"><span class="stoneCalc"><span id="PRDRI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI06" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI06')" oncontextmenu="stonePopup('PRDRI06')"><span class="stoneCalc"><span id="PRDRI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
                 <div class="stoneItem"><img id="DRI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('PRDRI05')" oncontextmenu="stonePopup('PRDRI05')"><span class="stoneCalc"><span id="PRDRI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="DRI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('PRDRI04')" oncontextmenu="stonePopup('PRDRI04')"><span class="stoneCalc"><span id="PRDRI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="DRI04" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('PRDRI04')" oncontextmenu="stonePopup('PRDRI04')"><span class="stoneCalc"><span id="PRDRI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                 <div class="stoneItem stoneBlank"></div>
         
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem"><img id="DRI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI03')" oncontextmenu="stonePopup('PRDRI03')"><span class="stoneCalc"><span id="PRDRI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="DRI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('PRDRI02')" oncontextmenu="stonePopup('PRDRI02')"><span class="stoneCalc"><span id="PRDRI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="DRI02" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('PRDRI02')" oncontextmenu="stonePopup('PRDRI02')"><span class="stoneCalc"><span id="PRDRI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
                 <div class="stoneItem"><img id="DRI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('PRDRI01')" oncontextmenu="stonePopup('PRDRI01')"><span class="stoneCalc"><span id="PRDRI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
         
                 <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('PRDRS08')"><span class="resetText">Skill 7</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('PRDRS09')"><span class="resetText">Skill 7</span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FZC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('PRDRC01')"><span class="stoneCalc"><span id="PRDRC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem"><img id="DRC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('PRDRC01')"><span class="stoneCalc"><span id="PRDRC01" class="zero">1</span>/1</span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('100000000000000000000000000000000000000000000000000000000', 'PRDR')"><span class="resetText">Reset</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'PRDR')"><span class="resetText">Reset</span></div>
             </div>
             <div class="builds areaBuilds Talents"> <!-- builds-->
                 <div class="sideBar">
@@ -417,8 +377,8 @@
     document.getElementById("classScroll").scrollLeft = 700;
     document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
     var xDown = null, yDown = null, xUp = null, yUp = null;
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.addEventListener('touchstart', touchstart, false);        
+    document.addEventListener('touchmove', touchmove, false);
     document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
     document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
     document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
@@ -426,7 +386,7 @@
     function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
     function touchend(evt, left, active, right) { 
         var xDiff = xUp - xDown, yDiff = yUp - yDown;
-        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 1000)) { 
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
             if (xDiff < 0) 
             selectTree(right, active, left);
             else

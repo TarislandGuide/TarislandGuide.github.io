@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="robots" content="noindex">
     <link rel="canonical" href="https://tarislandbuilds.eu/S1/MAFR.html" />
-    <link rel="stylesheet" href="./style.css">
-    <script src="./javascript.js"></script>
-    <script src="./JSON/MAFR.js"></script>
-    <script src="./JSON/builds.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+    <script src="../JSON/MAFR.js"></script>
+    <script src="../JSON/builds.js"></script>
+    <script>
+        function loadParams() {
+          var params = new URLSearchParams(location.search);
+          var code = params.get('skill');
+          var stone = params.get('stone');
+          var spec = code.replace(/[0-9]/g, '');
+                if (params.has('skill') === true && params.has('stone') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}&stone=${stone}`
+                } else if (params.has('skill') === true) {
+                  window.location = `./S0/${spec}.html?skill=${code}`
+                }
+            }
+        loadParams();
+          </script>
     <meta id='viewport' name="viewport" content="width=device-width"/>
     <meta charset="utf-8">
     <meta name="robots" content="index,follow">
@@ -16,7 +31,7 @@
     <meta property="og:description" content="Plan your build and share it with friends">
     <meta property='og:image' content='https://tarislandguide.github.io/embeds/MAFR.png'>
     <meta name="twitter:card" content="summary_large_image">
-    <link href="../Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./Icons/favicon.png" rel="shortcut icon" type="image/x-icon">
   </head>
 <body>
     <div class="wrapper">
@@ -130,37 +145,6 @@
                 <div class="treeItem" id="MAFRP05"><img src="../Icons/Mage/Frost/mageFr25.jpg" onclick="passivePopup('MAFRP05')"></div>
             </div>
             </div>
-            <div class="gridS1">
-                <div class="sideBar">
-                    <div class="treeItem"><span class="dot"></span><p><b>41</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>42</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>44</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>46</b></p></div>
-                    <div class="treeItem"><span class="dot"></span><p><b>48</b></p></div>
-                </div>
-                <div>
-                <div class="s1talents1">
-                    <div class="s1item"><img src="../Icons/Stone/Skill7.png" onclick="skillPopup('MAFRB01')"></div>
-                </div>
-                <div class="s1talents2">
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk1.png" onclick="skillPopup('MAFRB02')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk2.png" onclick="skillPopup('MAFRB03')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk3.png" onclick="skillPopup('MAFRB04')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk4.png" onclick="skillPopup('MAFRB05')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk5.png" onclick="skillPopup('MAFRB06')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk6.png" onclick="skillPopup('MAFRB07')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk7.png" onclick="skillPopup('MAFRB08')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk8.png" onclick="skillPopup('MAFRB09')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk9.png" onclick="skillPopup('MAFRB10')"></div>
-                    
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk10.png" onclick="skillPopup('MAFRB11')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk11.png" onclick="skillPopup('MAFRB12')"></div>
-                    <div class="s1item"><img src="../Icons/Mage/Frost/S1sk12.png" onclick="skillPopup('MAFRB13')"></div>
-                </div>
-                </div>
-            </div>
             <div class="gridActions">  <!--Actions-->
                 <div class="sideBar">
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Actions</b></span></div>
@@ -174,138 +158,114 @@
             </div>
             </div>
             <div class="gridStone Stone">
-                <div class="stoneItem"><img id="FRI56" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI56')" oncontextmenu="stonePopup('MAFRI56')"><span class="stoneCalc"><span id="MAFRI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
+                <div class="stoneItem"><img id="FRI58" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI58')" oncontextmenu="stonePopup('MAFRI58')"><span class="stoneCalc"><span id="MAFRI58" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span><span class="oct-border"></span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('MAFRC03')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('MAFRC04')"><span class="linkBL"></span><span class="linkB"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI55" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI55')" oncontextmenu="stonePopup('MAFRI55')"><span class="stoneCalc"><span id="MAFRI55" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="FRI57" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI57')" oncontextmenu="stonePopup('MAFRI57')"><span class="stoneCalc"><span id="MAFRI57" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
         
-                <div class="stoneItem"><img id="FRI54" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI54')" oncontextmenu="stonePopup('MAFRI54')"><span class="stoneCalc"><span id="MAFRI54" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="FRI53" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI53')" oncontextmenu="stonePopup('MAFRI53')"><span class="stoneCalc"><span id="MAFRI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI52')" oncontextmenu="stonePopup('MAFRI52')"><span class="stoneCalc"><span id="MAFRI52" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="FRI51" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI51')" oncontextmenu="stonePopup('MAFRI51')"><span class="stoneCalc"><span id="MAFRI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI50" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI50')" oncontextmenu="stonePopup('MAFRI50')"><span class="stoneCalc"><span id="MAFRI50" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem"><img id="FRI49" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI49')" oncontextmenu="stonePopup('MAFRI49')"><span class="stoneCalc"><span id="MAFRI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI48" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI48')" oncontextmenu="stonePopup('MAFRI48')"><span class="stoneCalc"><span id="MAFRI48" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
+                <div class="stoneItem"><img id="FRI56" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI56')" oncontextmenu="stonePopup('MAFRI56')"><span class="stoneCalc"><span id="MAFRI56" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI55" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI55')" oncontextmenu="stonePopup('MAFRI55')"><span class="stoneCalc"><span id="MAFRI55" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI54" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI54')" oncontextmenu="stonePopup('MAFRI54')"><span class="stoneCalc"><span id="MAFRI54" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI53" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI53')" oncontextmenu="stonePopup('MAFRI53')"><span class="stoneCalc"><span id="MAFRI53" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI52" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI52')" oncontextmenu="stonePopup('MAFRI52')"><span class="stoneCalc"><span id="MAFRI52" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI51" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI51')" oncontextmenu="stonePopup('MAFRI51')"><span class="stoneCalc"><span id="MAFRI51" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI50" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI50')" oncontextmenu="stonePopup('MAFRI50')"><span class="stoneCalc"><span id="MAFRI50" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="FRI49" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI49')" oncontextmenu="stonePopup('MAFRI49')"><span class="stoneCalc"><span id="MAFRI49" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI48" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI48')" oncontextmenu="stonePopup('MAFRI48')"><span class="stoneCalc"><span id="MAFRI48" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI47')" oncontextmenu="stonePopup('MAFRI47')"><span class="stoneCalc"><span id="MAFRI47" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI46" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI46')" oncontextmenu="stonePopup('MAFRI46')"><span class="stoneCalc"><span id="MAFRI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI45" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI45')" oncontextmenu="stonePopup('MAFRI45')"><span class="stoneCalc"><span id="MAFRI45" class="zero">0</span>/5</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id="FRI44" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI44')" oncontextmenu="stonePopup('MAFRI44')"><span class="stoneCalc"><span id="MAFRI44" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="FRI43" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI43')" oncontextmenu="stonePopup('MAFRI43')"><span class="stoneCalc"><span id="MAFRI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI42" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI42')" oncontextmenu="stonePopup('MAFRI42')"><span class="stoneCalc"><span id="MAFRI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI41" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI41')" oncontextmenu="stonePopup('MAFRI41')"><span class="stoneCalc"><span id="MAFRI41" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI47" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI47')" oncontextmenu="stonePopup('MAFRI47')"><span class="stoneCalc"><span id="MAFRI47" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI40" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI40')" oncontextmenu="stonePopup('MAFRI40')"><span class="stoneCalc"><span id="MAFRI40" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem"><img id="FRI39" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI39')" oncontextmenu="stonePopup('MAFRI39')"><span class="stoneCalc"><span id="MAFRI39" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI38" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI38')" oncontextmenu="stonePopup('MAFRI38')"><span class="stoneCalc"><span id="MAFRI38" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="FRI46" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI46')" oncontextmenu="stonePopup('MAFRI46')"><span class="stoneCalc"><span id="MAFRI46" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI45" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI45')" oncontextmenu="stonePopup('MAFRI45')"><span class="stoneCalc"><span id="MAFRI45" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="FRI37" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI37')" oncontextmenu="stonePopup('MAFRI37')"><span class="stoneCalc"><span id="MAFRI37" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI36" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI36')" oncontextmenu="stonePopup('MAFRI36')"><span class="stoneCalc"><span id="MAFRI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
+        
+                <div class="stoneItem"><img id="FRI35" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI35')" oncontextmenu="stonePopup('MAFRI35')"><span class="stoneCalc"><span id="MAFRI35" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI44" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI44')" oncontextmenu="stonePopup('MAFRI44')"><span class="stoneCalc"><span id="MAFRI44" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI34')" oncontextmenu="stonePopup('MAFRI34')"><span class="stoneCalc"><span id="MAFRI34" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI43" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI43')" oncontextmenu="stonePopup('MAFRI43')"><span class="stoneCalc"><span id="MAFRI43" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="FRI42" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI42')" oncontextmenu="stonePopup('MAFRI42')"><span class="stoneCalc"><span id="MAFRI42" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                
-                <div class="stoneItem"><img id="FRI41" class="gray outRed" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI41')" oncontextmenu="stonePopup('MAFRI41')"><span class="stoneCalc"><span id="MAFRI41" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI33" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI33')" oncontextmenu="stonePopup('MAFRI33')"><span class="stoneCalc"><span id="MAFRI33" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI40" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI40')" oncontextmenu="stonePopup('MAFRI40')"><span class="stoneCalc"><span id="MAFRI40" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="FRI32" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI32')" oncontextmenu="stonePopup('MAFRI32')"><span class="stoneCalc"><span id="MAFRI32" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+        
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI39" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI39')" oncontextmenu="stonePopup('MAFRI39')"><span class="stoneCalc"><span id="MAFRI39" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="FRI31" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI31')" oncontextmenu="stonePopup('MAFRI31')"><span class="stoneCalc"><span id="MAFRI31" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI38" class="gray outBlue" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI38')" oncontextmenu="stonePopup('MAFRI38')"><span class="stoneCalc"><span id="MAFRI38" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
+                <div class="stoneItem"><img id="FRI30" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('MAFRI30')" oncontextmenu="stonePopup('MAFRI30')"><span class="stoneCalc"><span id="MAFRI30" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outRedCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('MAFRD04')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outBlueCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('MAFRD03')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                
-                <div class="stoneItem"><img id="FRI37" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI37')" oncontextmenu="stonePopup('MAFRI37')"><span class="stoneCalc"><span id="MAFRI37" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI36" class="gray outRedCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI36')" oncontextmenu="stonePopup('MAFRI36')"><span class="stoneCalc"><span id="MAFRI36" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI35" class="gray outBlueCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI35')" oncontextmenu="stonePopup('MAFRI35')"><span class="stoneCalc"><span id="MAFRI35" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI34" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI34')" oncontextmenu="stonePopup('MAFRI34')"><span class="stoneCalc"><span id="MAFRI34" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                
-                <div class="stoneItem"><img id="FRI33" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI33')" oncontextmenu="stonePopup('MAFRI33')"><span class="stoneCalc"><span id="MAFRI33" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI32" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI32')" oncontextmenu="stonePopup('MAFRI32')"><span class="stoneCalc"><span id="MAFRI32" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="FRI31" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('MAFRI31')" oncontextmenu="stonePopup('MAFRI31')"><span class="stoneCalc"><span id="MAFRI31" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI30" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI30')" oncontextmenu="stonePopup('MAFRI30')"><span class="stoneCalc"><span id="MAFRI30" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI29" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI29')" oncontextmenu="stonePopup('MAFRI29')"><span class="stoneCalc"><span id="MAFRI29" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI28" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI28')" oncontextmenu="stonePopup('MAFRI28')"><span class="stoneCalc"><span id="MAFRI28" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('MAFRC02')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI27" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI27')" oncontextmenu="stonePopup('MAFRI27')"><span class="stoneCalc"><span id="MAFRI27" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="FRI26" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI26')" oncontextmenu="stonePopup('MAFRI26')"><span class="stoneCalc"><span id="MAFRI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI25" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI25')" oncontextmenu="stonePopup('MAFRI25')"><span class="stoneCalc"><span id="MAFRI25" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="FRI24" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI24')" oncontextmenu="stonePopup('MAFRI24')"><span class="stoneCalc"><span id="MAFRI24" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI23" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI23')" oncontextmenu="stonePopup('MAFRI23')"><span class="stoneCalc"><span id="MAFRI23" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkBL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI22" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI22')" oncontextmenu="stonePopup('MAFRI22')"><span class="stoneCalc"><span id="MAFRI22" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-                
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI21" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI21')" oncontextmenu="stonePopup('MAFRI21')"><span class="stoneCalc"><span id="MAFRI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI20" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI20')" oncontextmenu="stonePopup('MAFRI20')"><span class="stoneCalc"><span id="MAFRI20" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI19" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('MAFRI19')" oncontextmenu="stonePopup('MAFRI19')"><span class="stoneCalc"><span id="MAFRI19" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span><span class="linkB"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI18" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI18')" oncontextmenu="stonePopup('MAFRI18')"><span class="stoneCalc"><span id="MAFRI18" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-
-                <div class="stoneItem"><img id="FRI17" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI17')" oncontextmenu="stonePopup('MAFRI17')"><span class="stoneCalc"><span id="MAFRI17" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI16" class="gray outWhiteCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI16')" oncontextmenu="stonePopup('MAFRI16')"><span class="stoneCalc"><span id="MAFRI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="FRI15" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI15')" oncontextmenu="stonePopup('MAFRI15')"><span class="stoneCalc"><span id="MAFRI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI14" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI14')" oncontextmenu="stonePopup('MAFRI14')"><span class="stoneCalc"><span id="MAFRI14" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI13" class="gray outYellowCircle" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI13')" oncontextmenu="stonePopup('MAFRI13')"><span class="stoneCalc"><span id="MAFRI13" class="zero">0</span>/5</span><span class="linkBL"></span></div>
-
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outWhiteCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('MAFRD02')"><span class="linkBL"></span><span class="linkBR"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span><span class="linkBXL"></span></div>
-                <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img loading="lazy" class="outYellowCircle" src="../Icons/Stone/dragon.png" onclick="passivePopup('MAFRD01')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI29" class="octagon gray" loading="lazy" src="../Icons/Stone/spec.png" onclick="stoneCheck('MAFRI29')" oncontextmenu="stonePopup('MAFRI29')"><span class="stoneCalc"><span id="MAFRI29" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
         
-                <div class="stoneItem"><img id="FRI12" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI12')" oncontextmenu="stonePopup('MAFRI12')"><span class="stoneCalc"><span id="MAFRI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI28" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI28')" oncontextmenu="stonePopup('MAFRI28')"><span class="stoneCalc"><span id="MAFRI28" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI11" class="gray outWhite" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI11')" oncontextmenu="stonePopup('MAFRI11')"><span class="stoneCalc"><span id="MAFRI11" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI27" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI27')" oncontextmenu="stonePopup('MAFRI27')"><span class="stoneCalc"><span id="MAFRI27" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('MAFRC03')"><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI26" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI26')" oncontextmenu="stonePopup('MAFRI26')"><span class="stoneCalc"><span id="MAFRI26" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI10" class="gray outYellow" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI10')" oncontextmenu="stonePopup('MAFRI10')"><span class="stoneCalc"><span id="MAFRI10" class="zero">0</span>/5</span><span class="linkBR"></span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI25" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI25')" oncontextmenu="stonePopup('MAFRI25')"><span class="stoneCalc"><span id="MAFRI25" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+        
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI09" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI09')" oncontextmenu="stonePopup('MAFRI09')"><span class="stoneCalc"><span id="MAFRI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="FRI24" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI24')" oncontextmenu="stonePopup('MAFRI24')"><span class="stoneCalc"><span id="MAFRI24" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI23" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI23')" oncontextmenu="stonePopup('MAFRI23')"><span class="stoneCalc"><span id="MAFRI23" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI22" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI22')" oncontextmenu="stonePopup('MAFRI22')"><span class="stoneCalc"><span id="MAFRI22" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI21" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI21')" oncontextmenu="stonePopup('MAFRI21')"><span class="stoneCalc"><span id="MAFRI21" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI20" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI20')" oncontextmenu="stonePopup('MAFRI20')"><span class="stoneCalc"><span id="MAFRI20" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="FRI19" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI19')" oncontextmenu="stonePopup('MAFRI19')"><span class="stoneCalc"><span id="MAFRI19" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI18" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI18')" oncontextmenu="stonePopup('MAFRI18')"><span class="stoneCalc"><span id="MAFRI18" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI17" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('MAFRI17')" oncontextmenu="stonePopup('MAFRI17')"><span class="stoneCalc"><span id="MAFRI17" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI16" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('MAFRI16')" oncontextmenu="stonePopup('MAFRI16')"><span class="stoneCalc"><span id="MAFRI16" class="zero">0</span>/5</span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI15" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI15')" oncontextmenu="stonePopup('MAFRI15')"><span class="stoneCalc"><span id="MAFRI15" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI14" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI14')" oncontextmenu="stonePopup('MAFRI14')"><span class="stoneCalc"><span id="MAFRI14" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+        
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI13" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI13')" oncontextmenu="stonePopup('MAFRI13')"><span class="stoneCalc"><span id="MAFRI13" class="zero">0</span>/5</span><span class="linkB"></span><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img loading="lazy" src="../Icons/Stone/start.png"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+        
+                <div class="stoneItem"><img id="FRI12" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI12')" oncontextmenu="stonePopup('MAFRI12')"><span class="stoneCalc"><span id="MAFRI12" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI11" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI11')" oncontextmenu="stonePopup('MAFRI11')"><span class="stoneCalc"><span id="MAFRI11" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img class="diamond" loading="lazy" src="../Icons/Stone/echo.png" onclick="passivePopup('MAFRC02')"><span class="linkBL"></span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI10" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI10')" oncontextmenu="stonePopup('MAFRI10')"><span class="stoneCalc"><span id="MAFRI10" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem stoneBlank"></div>
+                <div class="stoneItem"><img id="FRI09" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI09')" oncontextmenu="stonePopup('MAFRI09')"><span class="stoneCalc"><span id="MAFRI09" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                 
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FRI08" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI08')" oncontextmenu="stonePopup('MAFRI08')"><span class="stoneCalc"><span id="MAFRI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
+                <div class="stoneItem"><img id="FRI08" class="gray" loading="lazy" src="../Icons/Stone/cooldown.png" onclick="stoneCheck('MAFRI08')" oncontextmenu="stonePopup('MAFRI08')"><span class="stoneCalc"><span id="MAFRI08" class="zero">0</span>/5</span><span class="linkBR"></span></div>
                 <div class="stoneItem"><img id="FRI07" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI07')" oncontextmenu="stonePopup('MAFRI07')"><span class="stoneCalc"><span id="MAFRI07" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI06" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('MAFRI06')" oncontextmenu="stonePopup('MAFRI06')"><span class="stoneCalc"><span id="MAFRI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI06" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI06')" oncontextmenu="stonePopup('MAFRI06')"><span class="stoneCalc"><span id="MAFRI06" class="zero">0</span>/5</span><span class="linkB"></span></div>
                 <div class="stoneItem"><img id="FRI05" class="gray" loading="lazy" src="../Icons/Stone/stamina.png" onclick="stoneCheck('MAFRI05')" oncontextmenu="stonePopup('MAFRI05')"><span class="stoneCalc"><span id="MAFRI05" class="zero">0</span>/5</span><span class="linkB"></span></div>
-                <div class="stoneItem"><img id="FRI04" class="gray" loading="lazy" src="../Icons/Stone/stat.png" onclick="stoneCheck('MAFRI04')" oncontextmenu="stonePopup('MAFRI04')"><span class="stoneCalc"><span id="MAFRI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
+                <div class="stoneItem"><img id="FRI04" class="gray" loading="lazy" src="../Icons/Stone/omni.png" onclick="stoneCheck('MAFRI04')" oncontextmenu="stonePopup('MAFRI04')"><span class="stoneCalc"><span id="MAFRI04" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                 <div class="stoneItem stoneBlank"></div>
         
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem"><img id="FRI03" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI03')" oncontextmenu="stonePopup('MAFRI03')"><span class="stoneCalc"><span id="MAFRI03" class="zero">0</span>/5</span><span class="linkBR"></span></div>
-                <div class="stoneItem"><img id="FRI02" class="gray" loading="lazy" src="../Icons/Stone/res.png" onclick="stoneCheck('MAFRI02')" oncontextmenu="stonePopup('MAFRI02')"><span class="stoneCalc"><span id="MAFRI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
+                <div class="stoneItem"><img id="FRI02" class="gray" loading="lazy" src="../Icons/Stone/crit.png" onclick="stoneCheck('MAFRI02')" oncontextmenu="stonePopup('MAFRI02')"><span class="stoneCalc"><span id="MAFRI02" class="zero">0</span>/5</span><span class="linkB"></span></div>
                 <div class="stoneItem"><img id="FRI01" class="gray" loading="lazy" src="../Icons/Stone/focus.png" onclick="stoneCheck('MAFRI01')" oncontextmenu="stonePopup('MAFRI01')"><span class="stoneCalc"><span id="MAFRI01" class="zero">0</span>/5</span><span class="linkBL"></span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem stoneBlank"><img class="square" id="onOffStone" src="../Icons/on.png" onclick="togglePopups()"><span class="resetText">Popups</span></div>
@@ -313,10 +273,10 @@
                 <div class="stoneItem"><img class="square" src="../Icons/100.png"><span id="stoneNum">1</span></div>
                 <div class="stoneItem"><img class="square" src="../Icons/Stone/Skill7.png" onclick="skillPopup('MAFRS08')"><span class="resetText">Skill 7</span></div>
                 <div class="stoneItem stoneBlank"></div>
-                <div class="stoneItem"><img id="FZC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('MAFRC01')"><span class="stoneCalc"><span id="MAFRC01" class="zero">1</span>/1</span></div>
+                <div class="stoneItem"><img id="FRC01" class="circle" loading="lazy" src="../Icons/Stone/start.png" onclick="passivePopup('MAFRC01')"><span class="stoneCalc"><span id="MAFRC01" class="zero">1</span>/1</span></div>
                 <div class="stoneItem stoneBlank"></div>
                 <div class="stoneItem"><img class="square" src="../Icons/copy.png" onclick="copy(window.location)"><span id="copy2" class="resetText">Copy</span></div>
-                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('100000000000000000000000000000000000000000000000000000000', 'MAFR')"><span class="resetText">Reset</span></div>
+                <div class="stoneItem"><img class="square" src="../Icons/reset.png" onclick="resetStone('10000000000000000000000000000000000000000000000000000000000', 'MAFR')"><span class="resetText">Reset</span></div>
             </div>
             <div class="builds areaBuilds Talents"> <!-- builds-->
                 <div class="sideBar bar">
@@ -416,8 +376,8 @@
     document.getElementById("classScroll").scrollLeft = 200;
     document.addEventListener("contextmenu", (e) => {e.preventDefault()});        
     var xDown = null, yDown = null, xUp = null, yUp = null;
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchstart', touchstart));        
-    document.querySelectorAll('.Talents, .Stone, .Skills, #Trees').forEach(elem => elem.addEventListener('touchmove', touchmove));
+    document.addEventListener('touchstart', touchstart, false);        
+    document.addEventListener('touchmove', touchmove, false);
     document.querySelectorAll('.Talents').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Skills', 'Talents', 'Stone');} ));
     document.querySelectorAll('.Stone').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Talents', 'Stone', 'Skills');} ));
     document.querySelectorAll('.Skills').forEach(elem => elem.addEventListener('touchend',  function (e) {touchend( e, 'Stone', 'Skills', 'Talents');} ));
@@ -425,7 +385,7 @@
     function touchmove(evt) { if (!xDown || !yDown ) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
     function touchend(evt, left, active, right) { 
         var xDiff = xUp - xDown, yDiff = yUp - yDown;
-        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 1000)) { 
+        if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 100)) { 
             if (xDiff < 0) 
             selectTree(right, active, left);
             else
