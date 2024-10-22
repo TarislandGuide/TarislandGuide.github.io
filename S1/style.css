@@ -560,6 +560,7 @@ body {
     border-radius: 0 1rem 1rem 1rem;
     width: 25rem;
     min-height: 20rem;
+    margin-left: 2px;
     background-color: var(--brown); 
     color:var(--beige);
     padding: 1.5rem;
@@ -1030,7 +1031,7 @@ body {
     .popup, .popupMain {
         width: 19rem;
         padding: 1rem;
-        margin-left: 1rem;
+        margin-left: 1.1rem;
     }
     .popupMain {
         gap: 0.2rem;
@@ -1328,7 +1329,7 @@ body {
     .popup, .popupMain {
         width: 19rem;
         padding: 1rem;
-        margin-left: 1rem;
+        margin-left: 1.1rem;
     }
     #plus, #minus {
         max-width: 2.7rem;
