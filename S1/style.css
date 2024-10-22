@@ -1027,9 +1027,15 @@ body {
     .stoneCalc {
         right: 0.7rem;
     }
-    .popup {
+    .popup, .popupMain {
         width: 19rem;
         padding: 1rem;
+        margin-left: 1rem;
+    }
+    .popupMain {
+        gap: 0.2rem;
+    }
+    .tab1 {
         margin-left: 1rem;
     }
     .stoneItem img {
@@ -1131,7 +1137,7 @@ body {
     .stoneCalc {
         right: 0.8rem;
     }
-    .popup {
+    .popup, .popupMain {
         width: 20rem;
     }
     .treeItem img, .popImg, .popImgBuild {
@@ -1319,7 +1325,7 @@ body {
     .req {
         bottom: -2.85rem;
     }
-    .popup {
+    .popup, .popupMain {
         width: 19rem;
         padding: 1rem;
         margin-left: 1rem;
