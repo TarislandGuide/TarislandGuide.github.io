@@ -198,8 +198,12 @@ function buildsPopup(value) {
     }
     let skill = builds.find(search);
     const info = skill.variable.split(",");
+    if (document.URL.includes("index.html")) {
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "</h2><br>Cast Range: <span class = 'orange'>" 
     + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
+    } else { document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='."+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "</h2><br>Cast Range: <span class = 'orange'>" 
+    + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
+    }
 }
 
 function skillCostPopup(value) {
@@ -261,13 +265,13 @@ function buildsCreatePopup(value) {
     document.getElementById("buildsPopup").appendChild(tab3);
     document.getElementById("buildsPopup").appendChild(popupMain);
     if (document.URL.includes("index.html")) {
-    document.getElementById("summary").innerHTML = "<img class='treeItem' src='./Icons/summary.png'>";
-    document.getElementById("macro").innerHTML = "<img class='treeItem' src='./Icons/macro.png'>";
-    document.getElementById("chat").innerHTML = "<img class='treeItem' src='./Icons/chat.png'>";
+    document.getElementById("summary").innerHTML = "<img class='tabItem' src='./Icons/summary.png'>";
+    document.getElementById("macro").innerHTML = "<img class='tabItem' src='./Icons/macro.png'>";
+    document.getElementById("chat").innerHTML = "<img class='tabItem' src='./Icons/chat.png'>";
     } else {
-    document.getElementById("summary").innerHTML = "<img class='treeItem' src='../Icons/summary.png'>";
-    document.getElementById("macro").innerHTML = "<img class='treeItem' src='../Icons/macro.png'>";
-    document.getElementById("chat").innerHTML = "<img class='treeItem' src='../Icons/chat.png'>";
+    document.getElementById("summary").innerHTML = "<img class='tabItem' src='../Icons/summary.png'>";
+    document.getElementById("macro").innerHTML = "<img class='tabItem' src='../Icons/macro.png'>";
+    document.getElementById("chat").innerHTML = "<img class='tabItem' src='../Icons/chat.png'>";
     }
     document.getElementById("buildsText").innerHTML = "<p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href='https://discord.com/channels/1070905779370074153/1259420808116174864'>discord</a> thread</p>"; 
     buildsInfo(value);
