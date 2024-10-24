@@ -323,17 +323,17 @@
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
                 </div>
                 <div class="feedSmall">
-                    <div class="buildsShow Paladin Melee all bgYellow Popular"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="paladin">
+                    <div class="buildsShow Paladin Melee all bgYellow Popular" onclick="raidBuilds('PAJUB1')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="">
                         <div class="gridName"><b>Judgement Strike</b><br>Raid Melee Dps</div>
-                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Justice/palaJsk3.png" onclick="buildsPopup('PAJUB1')" alt="judgement strike"></div>
-                        <div class="treeItem gridBuild builds" id="PAJUB1"><img src="../Icons/Paladin/Justice/palaJsk9.png" onclick="raidBuilds('PAJUB1')" alt="paladin dps build 1"><span class="star">&#9733;</span></div>
-                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('PAJUB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Justice/palaJsk3.png" onclick="buildsPopup('PAJUB1', event)" alt="judgement strike"></div>
+                        <div class="treeItem gridBuild builds" id="PAJUB1"><img src="../Icons/Paladin/Justice/palaJsk9.png" onclick="buildsCreatePopup('PAJUB1', event)" alt="paladin dps build 1"><span class="star">&#9733;</span><span class="skillCalc">Info</span></div>
+                        <div class="role"><img src="../Icons/mdps.png" alt=""><small><b>&nbsp;&nbsp;Melee DPS</b></small></div>
                       </div> 
-                      <div class="buildsShow Paladin Melee all bgYellow normal"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="paladin">
+                      <div class="buildsShow Paladin Melee all bgYellow normal" onclick="raidBuilds('PAJUB2')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="">
                         <div class="gridName"><b>Judgement Sword</b><br>Raid Melee Dps</div>
-                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Justice/palaJ9.jpg" onclick="buildsPopup('PAJUB2')" alt="judgement sword"></div>
-                        <div class="treeItem gridBuild builds" id="PAJUB2"><img src="../Icons/Paladin/Justice/palaJ12.jpg" onclick="raidBuilds('PAJUB2')" alt="paladin dps build 2"></div>
-                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('PAJUB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Justice/palaJ9.jpg" onclick="buildsPopup('PAJUB2', event)" alt="judgement sword"></div>
+                        <div class="treeItem gridBuild builds" id="PAJUB2"><img src="../Icons/Paladin/Justice/palaJ12.jpg" onclick="buildsCreatePopup('PAJUB2', event)" alt="paladin dps build 2"><span class="skillCalc">Info</span></div>
+                        <div class="role"><img src="../Icons/mdps.png" alt=""><small><b>&nbsp;&nbsp;Melee DPS</b></small></div>
                         </div> 
                 </div>
             </div>

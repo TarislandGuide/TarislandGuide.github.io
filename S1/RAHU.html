@@ -323,17 +323,17 @@
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
                 </div>
                 <div class="feedSmall">
-                    <div class="buildsShow Ranger Ranged all bgGreen Popular"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Ranger.png" alt="ranger">
+                    <div class="buildsShow Ranger Ranged all bgGreen Popular" onclick="raidBuilds('RAHUB1')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Ranger.png" alt="">
                         <div class="gridName"><b>Sniper Shot</b><br>Raid Ranged Dps</div>
-                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Ranger/Hunting/huntHsk2.png" onclick="buildsPopup('RAHUB1')" alt="sniper shot"></div>
-                        <div class="treeItem gridBuild builds" id="RAHUB1"><img src="../Icons/Ranger/Hunting/huntHsk3.png" onclick="raidBuilds('RAHUB1')" alt="ranger hunting build 1"><span class="star">&#9733;</span></div>
-                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('RAHUB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Ranger/Hunting/huntHsk2.png" onclick="buildsPopup('RAHUB1', event)" alt="sniper shot"></div>
+                        <div class="treeItem gridBuild builds" id="RAHUB1"><img src="../Icons/Ranger/Hunting/huntHsk3.png" onclick="buildsCreatePopup('RAHUB1', event)" alt="ranger hunting build 1"><span class="star">&#9733;</span><span class="skillCalc">Info</span></div>
+                        <div class="role"><img src="../Icons/rdps.png" alt=""><small><b>&nbsp;&nbsp;Ranged DPS</b></small></div>
                       </div> 
-                      <div class="buildsShow Ranger Ranged all bgGreen normal"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Ranger.png" alt="ranger">
+                      <div class="buildsShow Ranger Ranged all bgGreen normal" onclick="raidBuilds('RAHUB2')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Ranger.png" alt="">
                         <div class="gridName"><b>Magic Shot</b><br>Raid Ranged Dps</div>
-                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Ranger/Hunting/huntH9.jpg" onclick="buildsPopup('RAHUB2')" alt="magic shot"></div>
-                        <div class="treeItem gridBuild builds" id="RAHUB2"><img src="../Icons/Ranger/Hunting/huntH2.jpg" onclick="raidBuilds('RAHUB2')" alt="ranger hunting build 2"></div>
-                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('RAHUB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Ranger/Hunting/huntH9.jpg" onclick="buildsPopup('RAHUB2', event)" alt="magic shot"></div>
+                        <div class="treeItem gridBuild builds" id="RAHUB2"><img src="../Icons/Ranger/Hunting/huntH2.jpg" onclick="buildsCreatePopup('RAHUB2', event)" alt="ranger hunting build 2"><span class="skillCalc">Info</span></div>
+                        <div class="role"><img src="../Icons/rdps.png" alt=""><small><b>&nbsp;&nbsp;Ranged DPS</b></small></div>
                       </div>
                 </div>
             </div>

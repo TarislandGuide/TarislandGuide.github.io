@@ -324,17 +324,17 @@
                     <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
                 </div>
                 <div class="feedSmall">
-                    <div class="buildsShow Warrior Melee all bgRed Popular"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Warrior.png" alt="warrior">
+                    <div class="buildsShow Warrior Melee all bgRed Popular" onclick="raidBuilds('WAWRB1')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Warrior.png" alt="">
                         <div class="gridName"><b>Final Strike</b><br>Raid Melee Dps</div>
-                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Warrior/Wrathful/warrWrsk2.png" onclick="buildsPopup('WAWRB1')" alt="final strike"></div>
-                        <div class="treeItem gridBuild builds" id="WAWRB1"><img src="../Icons/Warrior/Wrathful/warrWr18.jpg" onclick="raidBuilds('WAWRB1')" alt="warrior dps build 1"><span class="star">&#9733;</span></div>
-                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('WAWRB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Warrior/Wrathful/warrWrsk2.png" onclick="buildsPopup('WAWRB1', event)" alt="final strike"></div>
+                        <div class="treeItem gridBuild builds" id="WAWRB1"><img src="../Icons/Warrior/Wrathful/warrWr18.jpg" onclick="buildsCreatePopup('WAWRB1', event)" alt="warrior dps build 1"><span class="star">&#9733;</span><span class="skillCalc">Info</span></div>
+                        <div class="role"><img src="../Icons/mdps.png" alt=""><small><b>&nbsp;&nbsp;Melee DPS</b></small></div>
                       </div> 
-                      <div class="buildsShow Warrior Melee all bgRed unpop"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Warrior.png" alt="warrior">
+                      <div class="buildsShow Warrior Melee all bgRed unpop" onclick="raidBuilds('WAWRB2')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Warrior.png" alt="">
                         <div class="gridName"><b>Furious Stab</b><br>Raid Melee Dps</div>
-                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Warrior/Wrathful/warrWr8.jpg" onclick="buildsPopup('WAWRB2')" alt="furious stab"></div>
-                        <div class="treeItem gridBuild builds" id="WAWRB2"><img src="../Icons/Warrior/Wrathful/warrWr3.jpg" onclick="raidBuilds('WAWRB2')" alt="warrior dps build 2"><span class="triangle">&#9660;</span></div>
-                        <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('WAWRB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                        <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Warrior/Wrathful/warrWr8.jpg" onclick="buildsPopup('WAWRB2', event)" alt="furious stab"></div>
+                        <div class="treeItem gridBuild builds" id="WAWRB2"><img src="../Icons/Warrior/Wrathful/warrWr3.jpg" onclick="buildsCreatePopup('WAWRB2', event)" alt="warrior dps build 2"><span class="triangle">&#9660;</span><span class="skillCalc">Info</span></div>
+                        <div class="role"><img src="../Icons/mdps.png" alt=""><small><b>&nbsp;&nbsp;Melee DPS</b></small></div>
                       </div>
                 </div>
             </div>

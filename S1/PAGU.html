@@ -323,17 +323,17 @@
                         <div class="treeItem"><span class="rectSmall"></span><span class="rotate"><b>Builds</b></span></div>
                     </div>
                     <div class="feedSmall">
-                        <div class="buildsShow Paladin Tank all bgYellow normal"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="paladin">
+                        <div class="buildsShow Paladin Tank all bgYellow normal" onclick="raidBuilds('PAGUB1')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="">
                             <div class="gridName"><b>Holy Sword</b><br>Raid Tank</div>
-                            <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Guard/palaGsk2.png" onclick="buildsPopup('PAGUB1')" alt="holy sword"></div>
-                            <div class="treeItem gridBuild builds" id="PAGUB1"><img src="../Icons/Paladin/Guard/palaGsk7.png" onclick="raidBuilds('PAGUB1')" alt="paladin tank build 1"></div>
-                            <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('PAGUB1')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                            <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Guard/palaGsk2.png" onclick="buildsPopup('PAGUB1', event)" alt="holy sword"></div>
+                            <div class="treeItem gridBuild builds" id="PAGUB1"><img src="../Icons/Paladin/Guard/palaGsk7.png" onclick="buildsCreatePopup('PAGUB1', event)" alt="paladin tank build 1"><span class="skillCalc">Info</span></div>
+                            <div class="role"><img src="../Icons/tank.png" alt=""><small><b>&nbsp;&nbsp;Tank</b></small></div>
                           </div>
-                          <div class="buildsShow Paladin Tank all bgYellow Popular"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="paladin">
+                          <div class="buildsShow Paladin Tank all bgYellow Popular" onclick="raidBuilds('PAGUB2')"><img class="roleIcon" draggable="false" src="../Icons/RoleIcons/Paladin.png" alt="">
                             <div class="gridName"><b>Holy Shield Bash</b><br>Raid Tank</div>
-                            <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Guard/palaG8.jpg" onclick="buildsPopup('PAGUB2')" alt="holy shield bash"></div>
-                            <div class="treeItem gridBuild builds" id="PAGUB2"><img src="../Icons/Warrior/WarShield/warrWS20.jpg" onclick="raidBuilds('PAGUB2')" alt="paladin tank build 2"><span class="star">&#9733;</span></div>
-                            <div class="role unpop"><img src="../Icons/info.png" onclick="buildsCreatePopup('PAGUB2')" alt="info"><small><b>&nbsp;&nbsp;Info</b></small></div>
+                            <div class="treeItem gridSkill builds"><img class="circle" src="../Icons/Paladin/Guard/palaG8.jpg" onclick="buildsPopup('PAGUB2', event)" alt="holy shield bash"></div>
+                            <div class="treeItem gridBuild builds" id="PAGUB2"><img src="../Icons/Warrior/WarShield/warrWS20.jpg" onclick="buildsCreatePopup('PAGUB2', event)" alt="paladin tank build 2"><span class="star">&#9733;</span><span class="skillCalc">Info</span></div>
+                            <div class="role"><img src="../Icons/tank.png" alt=""><small><b>&nbsp;&nbsp;Tank</b></small></div>
                           </div>
                     </div>
                 </div>
