@@ -13,7 +13,7 @@ function closeBuildsOverlay(value) {
     document.getElementById(value).style.display = "none";
     document.getElementById("summary").remove();
     document.getElementById("macro").remove();
-    document.getElementById("chat").remove();
+    document.getElementById("gear").remove();
     document.getElementById("buildsText").remove();
 }
     
@@ -47,11 +47,11 @@ function testStone(value) {
 function togglePopups() {
     if (usePopups === true) {
         usePopups = false
-        document.getElementById('onOffTalents').src="../Icons/off.png"
-        document.getElementById('onOffStone').src="../Icons/off.png"
+        document.getElementById('onOffTalents').src="/Icons/off.png"
+        document.getElementById('onOffStone').src="/Icons/off.png"
     } else { usePopups = true
-    document.getElementById('onOffTalents').src="../Icons/on.png"
-    document.getElementById('onOffStone').src="../Icons/on.png"
+    document.getElementById('onOffTalents').src="/Icons/on.png"
+    document.getElementById('onOffStone').src="/Icons/on.png"
 }}
         
 // base of data = max num + 1
@@ -115,8 +115,8 @@ function talentPopup(value) {
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
     const info = skill.variable.split(",");
-    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + skillCode[pos] + "/" + skill.max + " </span><img id='minus' src='../Icons/minus.png' onclick='minusSkill(\"" 
-    + skill.id + "\")'>  </span><img id='plus' src='../Icons/plus.png' onclick='plusSkill(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + skillCode[pos] + "/" + skill.max + " </span><img id='minus' src='/Icons/minus.png' onclick='minusSkill(\"" 
+    + skill.id + "\")'>  </span><img id='plus' src='/Icons/plus.png' onclick='plusSkill(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
     if (test(value) === true) {
         document.getElementById('plus').className = "colour";
     }
@@ -135,8 +135,8 @@ function stonePopup(value, shape) {
     pos = value.replace(/^[A-Z0]+/, '');
     let skill = talents.find(search);
     const info = skill.variable.split(",");
-    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + stoneCode[pos] + "/" + skill.max + " </span><img id='minus' src='../Icons/minus.png' onclick='minusStone(\"" 
-    + skill.id + '\",\" ' + shape + "\")'>  </span><img id='plus' src='../Icons/plus.png' onclick='plusStone(\"" + skill.id + '\",\" ' + shape + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + stoneCode[pos] + "/" + skill.max + " </span><img id='minus' src='/Icons/minus.png' onclick='minusStone(\"" 
+    + skill.id + '\",\" ' + shape + "\")'>  </span><img id='plus' src='/Icons/plus.png' onclick='plusStone(\"" + skill.id + '\",\" ' + shape + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
     if (testStone(value) === true) {
         document.getElementById('plus').className = "colour";
     }
@@ -159,8 +159,8 @@ function s1Popup(value) {
         if (s1Code[skill.lvl] === pos) {return 1}
         else return 0
     }
-    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + isActive() + "/" + 1 + " </span><img id='minus' src='../Icons/minus.png' onclick='minusS1(\"" 
-    + skill.id + "\")'>  </span><img id='plus' src='../Icons/plus.png' onclick='plusS1(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
+    document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><span class='popSkillCalc'> " + isActive() + "/" + 1 + " </span><img id='minus' src='/Icons/minus.png' onclick='minusS1(\"" 
+    + skill.id + "\")'>  </span><img id='plus' src='/Icons/plus.png' onclick='plusS1(\"" + skill.id + "\")'><h2> " + skill.name + "</h2><br>" + eval('`'+ skill.description +'`');
     if (isActive() === 1) {
         document.getElementById('plus').className = "bright";
     } else {document.getElementById('plus').className = "colour";        
@@ -201,12 +201,8 @@ function buildsPopup(value, e) {
     }
     let skill = builds.find(search);
     const info = skill.variable.split(",");
-    if (document.URL.includes("index.html")) {
     document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='"+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "</h2><br>Cast Range: <span class = 'orange'>" 
     + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
-    } else { document.getElementById("skillPopup").innerHTML = "<img class='popImg' src='."+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "</h2><br>Cast Range: <span class = 'orange'>" 
-    + skill.range + " m</span><br>Cast Time: <span class = 'orange'>" + skill.speed + "</span><br>Cooldown: <span class = 'orange'>" + skill.cooldown + " sec</span><br><br>" + eval('`'+ skill.description +'`');
-    }
 }
 
 function skillCostPopup(value) {
@@ -261,8 +257,8 @@ function buildsCreatePopup(value, e) {
 
     var tab3 = document.createElement("div");
     tab3.classList.add("tab3");
-    tab3.id = "chat";
-    tab3.setAttribute("onclick", "buildsChat('" + value + "')");
+    tab3.id = "gear";
+    tab3.setAttribute("onclick", "buildsGear('" + value + "')");
 
     var popupMain = document.createElement("div");
     popupMain.classList.add("popupMain");
@@ -274,13 +270,13 @@ function buildsCreatePopup(value, e) {
     document.getElementById("buildsPopup").appendChild(tab3);
     document.getElementById("buildsPopup").appendChild(popupMain);
     if (document.URL.includes("index.html")) {
-    document.getElementById("summary").innerHTML = "<img class='tabItem' src='./Icons/summary.png'>";
-    document.getElementById("macro").innerHTML = "<img class='tabItem' src='./Icons/macro.png'>";
-    document.getElementById("chat").innerHTML = "<img class='tabItem' src='./Icons/chat.png'>";
+    document.getElementById("summary").innerHTML = "<img class='tabItem' src='/Icons/summary.png'>";
+    document.getElementById("macro").innerHTML = "<img class='tabItem' src='/Icons/macro.png'>";
+    document.getElementById("gear").innerHTML = "<img class='tabItem' src='/Icons/chat.png'>";
     } else {
-    document.getElementById("summary").innerHTML = "<img class='tabItem' src='../Icons/summary.png'>";
-    document.getElementById("macro").innerHTML = "<img class='tabItem' src='../Icons/macro.png'>";
-    document.getElementById("chat").innerHTML = "<img class='tabItem' src='../Icons/chat.png'>";
+    document.getElementById("summary").innerHTML = "<img class='tabItem' src='/Icons/summary.png'>";
+    document.getElementById("macro").innerHTML = "<img class='tabItem' src='/Icons/macro.png'>";
+    document.getElementById("gear").innerHTML = "<img class='tabItem' src='/Icons/chat.png'>";
     }
     document.getElementById("buildsText").innerHTML = "<p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href='https://discord.com/channels/1070905779370074153/1259420808116174864'>discord</a> thread</p>"; 
     buildsInfo(value);
@@ -288,23 +284,19 @@ function buildsCreatePopup(value, e) {
 
 function buildsInfo(value) {
     document.getElementById('macro').classList.add('inactive');
-    document.getElementById('chat').classList.add('inactive');
+    document.getElementById('gear').classList.add('inactive');
     document.getElementById('summary').classList.remove('inactive');
     function search(v){
         return value === v.id;
     }
     let skill = builds.find(search);
     const info = skill.variable.split(",");
-    if (document.URL.includes("index.html")) {
     document.getElementById("buildsText").innerHTML = "<img class='popImgBuild' src='"+ skill.summaryIcon + "'><img class='popImgBuild circle' src='"+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "<br><small>Build Overview</small></h2><br>" + eval('`'+ skill.summary +'`');
-    } else {
-    document.getElementById("buildsText").innerHTML = "<img class='popImgBuild' src='."+ skill.summaryIcon + "'><img class='popImgBuild circle' src='."+ skill.icon + "'><h2> " + eval('`'+ skill.name +'`') + "<br><small>Build Overview</small></h2><br>" + eval('`'+ skill.summary +'`');    
-    }
 }
 
 function buildsMacro(value) {
     document.getElementById('summary').classList.add('inactive');
-    document.getElementById('chat').classList.add('inactive');
+    document.getElementById('gear').classList.add('inactive');
     document.getElementById('macro').classList.remove('inactive');
     function search(v){
         return value === v.id;
@@ -314,11 +306,16 @@ function buildsMacro(value) {
     document.getElementById("buildsText").innerHTML = eval('`'+ skill.macro +'`');
 }
 
-function buildsChat(value) {
+function buildsGear(value) {
     document.getElementById('summary').classList.add('inactive');
     document.getElementById('macro').classList.add('inactive');
-    document.getElementById('chat').classList.remove('inactive');
-    document.getElementById("buildsText").innerHTML = "chat box hopefully added here soonish? maybe?";
+    document.getElementById('gear').classList.remove('inactive');
+    function search(v){
+        return value === v.id;
+    }
+    let skill = builds.find(search);
+    const info = skill.variable.split(",");
+    document.getElementById("buildsText").innerHTML = "<div><h2>Gearing</h2></div><div class='gear'><div><img src='/Icons/Gear/weapon.png'></div><div><b>Weapon</b><br><small class='beige'>" + skill.weapon + "</small></div><div><img src='/Icons/Gear/helmet.png'></div><div><b>Helmet</b><br><small class='beige'>" + skill.helmet + "</small></div><div><img src='/Icons/Gear/shoulder.png'></div><div><b>Shoulder</b><br><small class='beige'>" + skill.shoulder + "</small></div><div><img src='/Icons/Gear/chest.png'></div><div><b>Armor (Chest)</b><br><small class='beige'>" + skill.chest + "</small></div><div><img src='/Icons/Gear/belt.png'></div><div><b>Belt</b><br><small class='beige'>" + skill.belt + "</small></div><div><img src='/Icons/Gear/legs.png'></div><div><b>Greaves (Legs)</b><br><small class='beige'>" + skill.legs + "</small></div><div><img src='/Icons/Gear/wrist.png'></div><div><b>Gauntlets (Wrist)</b><br><small class='beige'>" + skill.wrist + "</small></div><div><img src='/Icons/Gear/gloves.png'></div><div><b>Leather Gauntlets (Gloves)</b><br><small class='beige'>" + skill.gloves + "</small></div><div><img src='/Icons/Gear/boots.png'></div><div><b>Boots</b><br><small class='beige'>" + skill.boots + "</small></div><div><img src='/Icons/Gear/ring.png'></div><div><b>Ring</b><br><small class='beige'>" + skill.ring + "</small></div><div><img src='/Icons/Gear/neck.png'></div><div><b>Necklace</b><br><small class='beige'>" + skill.neck + "</small></div><div><img src='/Icons/Gear/badge.png'></div><div><b>Badge</b><br><small class='beige'>" + skill.badge + "</small></div><div><img src='/Icons/Gear/accessories.png'></div><div><b>Accessory</b><br><small class='beige'>" + skill.accessories + "</small></div></div>";
 }
 
 function selectClass(active) {   

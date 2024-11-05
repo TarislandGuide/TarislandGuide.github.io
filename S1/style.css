@@ -560,6 +560,7 @@ body {
     border-radius: 0 1rem 1rem 1rem;
     width: 25rem;
     min-height: 20rem;
+    max-height: 70vh;
     margin-left: 2px;
     background-color: var(--brown); 
     color:var(--beige);
@@ -567,6 +568,8 @@ body {
     outline: 2px solid var(--pale);
     box-shadow: 0px 0px 5px var(--brown);
     z-index: 3;
+    overflow: scroll;
+
 }
 .inactive {
     background-color: var(--midBrown); 
@@ -595,6 +598,9 @@ body {
 }
 .white {
     color: var(--bright);
+}
+.beige {
+    color: var(--darkBeige)
 }
 .outYellow, .outYellowCircle {
     outline: 2px solid var(--yellow);
@@ -811,6 +817,18 @@ body {
 }
 .role img {
     width: 2.5rem;
+}
+.gear img {
+    float: left;
+    width: 4rem;
+    margin-right: 0.5rem;
+}
+.gear {
+    display: grid;
+    grid-template-columns: 4.5rem auto;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .role {
     display: flex;
