@@ -269,15 +269,11 @@ function buildsCreatePopup(value, e) {
     document.getElementById("buildsPopup").appendChild(tab2);
     document.getElementById("buildsPopup").appendChild(tab3);
     document.getElementById("buildsPopup").appendChild(popupMain);
-    if (document.URL.includes("index.html")) {
+
     document.getElementById("summary").innerHTML = "<img class='tabItem' src='/Icons/summary.png'>";
     document.getElementById("macro").innerHTML = "<img class='tabItem' src='/Icons/macro.png'>";
-    document.getElementById("gear").innerHTML = "<img class='tabItem' src='/Icons/chat.png'>";
-    } else {
-    document.getElementById("summary").innerHTML = "<img class='tabItem' src='/Icons/summary.png'>";
-    document.getElementById("macro").innerHTML = "<img class='tabItem' src='/Icons/macro.png'>";
-    document.getElementById("gear").innerHTML = "<img class='tabItem' src='/Icons/chat.png'>";
-    }
+    document.getElementById("gear").innerHTML = "<img class='tabItem' src='/Icons/gear.png'>";
+    
     document.getElementById("buildsText").innerHTML = "<p>Error<br>try force refreshing the page (ctrl + shift + R) or clearing the cache<br>if error persists please report the bug on the <a href='https://discord.com/channels/1070905779370074153/1259420808116174864'>discord</a> thread</p>"; 
     buildsInfo(value);
 }

@@ -552,8 +552,9 @@ body {
     z-index: 5;
 }
 .tabItem {
-    width: 4rem;
-    margin-left: 0.5rem;
+    width: 3rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
 }
 .popupMain {
     grid-area: main;
