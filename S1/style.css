@@ -387,14 +387,14 @@ body {
 }
 .linkB, .linkBL, .linkBR, .linkBXL {
     position: absolute;
-    width: 2px;
+    width: 3px;
     background-color: var(--sepia);
     transform-origin: top center;
     z-index: auto;
 }
 .req, .long {
     position: absolute;
-    right: 2.75rem;
+    right: 2.25rem;
     background-color: var(--sepia);
     width: 0.5rem;
 }
